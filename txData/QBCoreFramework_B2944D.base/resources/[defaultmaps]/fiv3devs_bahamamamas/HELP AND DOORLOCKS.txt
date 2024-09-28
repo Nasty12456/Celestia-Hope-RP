@@ -1,0 +1,22 @@
+Thank you for purchasing our Bahama Mamas map! https://discord.gg/8shfvxsPDg
+
+If you need quick help please visit our FAQ page here: https://fiv3devs.tebex.io/faq
+
+For any additional support, we're available here: https://discord.gg/8shfvxsPDg
+
+IF YOU BOUGHT OUR BAHAMA MAMAS ADDON MAP, READ THE INSTRUCTIONS INSIDE THE MAIN FOLDER.
+
+Door Locks:
+- portabahamas X:-1387,054 Y:-586,5788 Z:30,38658 (entrance)
+- portabahamas X:-1389,23 Y:-587,9962 Z:30,38635 (entrance)
+- portahub X:-1372,851 Y:-609,1752 Z:30,33613 (acquarium)
+- ba_prop_door_club_edgy_generic X:-1383,972 Y:-621,2345 Z:30,38011 (changing room)
+- ba_prop_door_club_edgy_generic X:-1379,832 Y:-618,5457 Z:30,38011 (bathroom)
+- ba_prop_door_club_edgy_generic X:-1379,055 Y:-613,3293 Z:30,3748 (main corridor)
+- vw_prop_vw_casino_door_01c X:-1389,488 Y:-623,2333 Z:30,3636 (deposit from corridor)
+- ba_prop_door_club_entrance X:-1393,737 Y:-636,3479 Z:30,37878 (deposit from garage)
+- h4_p_mp_yacht_door_02 X:-1390,699 Y:-621,5075 Z:36,04218 (deposit from top bar)
+- h4_p_mp_yacht_door_02 X:-1382,32 Y:-620,4327 Z:36,05037 (boss room)
+- h4_p_mp_yacht_door_02 X:-1380,909 Y:-622,5834 Z:36,05037 (boss room)
+- prop_ch3_04_door_02 X:-1379,417 Y:-628,7462 Z:28,88885 (addon door)
+- prop_5d_garage_door X:-1379,301 Y:-636,8531 Z:29,62729 (garage door)
