@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>  <!--Metas Made by SkiddDoctor https://discord.com/invite/jgtX8xxhRT-->
+
+<CHandlingDataMgr>
+  <HandlingData>
+	<Item type="CHandlingData">
+      <handlingName>GODzWRZWB</handlingName>     <!--Vehicle Spawn Code Here(X CLASS Handling)-->
+      <fMass value="1700.0" />							<!--FMASS: Vehicle weight (in KG)-->
+			<fInitialDragCoeff value="8.757" />			<!--Vehicle drag coefficient. (Value: 10-120)-->
+			<fDownforceModifier value="0.0" />
+			<fPercentSubmerged value="85.0" />
+			<vecCentreOfMassOffset x="0.0" y="0.0" z="-0.0" />						<!--Center of gravity of the vehicle (from -10.0 to 10.0) in the X,Y,Z-->
+			<vecInertiaMultiplier x="1.0" y="1.3999999761581" z="1.7999999523163" />
+			<fDriveBiasFront value="0.5" />											<!--Controls 4WD/RWD/FWD/All-wheel drive: (0.0 rear axle; 1.0 front wheel drive; 0.5 4 wheel drive)-->
+			<nInitialDriveGears value="5" />										<!--Determine how many gears the car's gearbox contains (from 1 or more)-->
+			<fInitialDriveForce value="0.62" />										<!--The driving force of the vehicle (from 0.01 -1.0 - 2.0) accelerates fast or slow-->	
+			<fDriveInertia value="0.50" />											<!--Speed, How fast engine revs in gear -->	
+			<fClutchChangeRateScaleUpShift value="2.7" />							<!--Clutch speed up and down gears (larger gears shift faster)-->
+			<fClutchChangeRateScaleDownShift value="6.7" />							<!--Clutch speed up and down gears (larger gears shift faster)-->
+			<fInitialDriveMaxFlatVel value="240.0" />								<!--Top speed (x1.32 in km/h)-->
+			<fBrakeForce value="2.0" />												<!--Brake force (0.01 - 1.0 - 2.0)-->
+			<fBrakeBiasFront value="0.525" />										<!--Brake force distribution: (0.0 rear axle - 1.0 front axle)-->
+			<fHandBrakeForce value="1.0" />											<!--Handbrake (0.0 or higher, the harder it is to brake)-->
+			<fSteeringLock value="43.0" />											<!--Control the steering wheel all the way to the end (from 0.1, the larger the number, the faster the rotation)-->
+			<fTractionCurveMax value="4.2" />										<!--Controls Stickiness - The car's cornering grip-->
+			<fTractionCurveMin value="4.2" />										<!--Controls Stickiness - Grip when accelerating, braking-->
+			<fTractionCurveLateral value="25.5" />
+			<fTractionSpringDeltaMax value="0.15" />								<!--Determine the distance from the ground, the vehicle loses traction-->
+			<fLowSpeedTractionLossMult value="0.5" />								<!--Traction at low speeds (burns out tires on start, 0.0 is normal, takes more traction)-->
+			<fCamberStiffnesss value="0.0" />
+			<fTractionBiasFront value="0.485" />									<!--Traction distribution between the axles (0.01 rear - 0.5 both - 0.99 front)-->
+			<fTractionLossMult value="0.4" />										<!--Vehicle grip on asphalt and mud (the higher the value, the less responsive and skidding)-->
+			<fSuspensionForce value="2.0" />
+			<fSuspensionCompDamp value="0.8" />
+			<fSuspensionReboundDamp value="1.4" />
+			<fSuspensionUpperLimit value="0.12" />
+			<fSuspensionLowerLimit value="-0.14" />
+			<fSuspensionRaise value="0.0" />
+			<fSuspensionBiasFront value="0.5" />
+			<fAntiRollBarForce value="0.4" />
+			<fAntiRollBarBiasFront value="0.66" />
+			<fRollCentreHeightFront value="0.55" />									<!--Controls flipping,  Lower = Looser Suspension,  Higher = Tighter Suspension-->
+			<fRollCentreHeightRear value="0.55" />									<!--Controls flipping,  Lower = Looser Suspension,  Higher = Tighter Suspension-->
+			<fCollisionDamageMult value="0.7" />									<!--Collision damage-->
+			<fWeaponDamageMult value="1.0" />										<!--Weapon damage-->
+			<fDeformationDamageMult value="1.2" />									<!--Deformation damage-->
+			<fEngineDamageMult value="1.5" />										<!--Engine damage (from 0.0 - 10.0)-->
+			<fPetrolTankVolume value="200.0" />
+			<fOilVolume value="10.0" />
+			<fSeatOffsetDistX value="0.125" />
+			<fSeatOffsetDistY value="0.0" />
+			<fSeatOffsetDistZ value="0.1" />
+			<nMonetaryValue value="150000" />
+      <strModelFlags>440010</strModelFlags>
+      <strHandlingFlags>0</strHandlingFlags>
+      <strDamageFlags>0</strDamageFlags>
+      <AIHandling>AVERAGE</AIHandling>
+      <SubHandlingData>
+        <Item type="NULL" />
+        <Item type="NULL" />
+      </SubHandlingData>
+    </Item>
+  </HandlingData>
+</CHandlingDataMgr>
