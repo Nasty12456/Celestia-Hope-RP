@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CHandlingDataMgr>
+
+  <HandlingData>
+    <Item type="CHandlingData">
+      <handlingName>gt63beast</handlingName>
+      <fMass value="2200.0"/> <!-- Reduced to more realistic value for improved agility -->
+      <fInitialDragCoeff value="1.5"/> <!-- Slightly increased to balance speed with realistic drag -->
+      <fDownforceModifier value="5.0"/> <!-- Adjusted downforce for stability at high speeds -->
+      <fPercentSubmerged value="85.0"/>
+      <vecCentreOfMassOffset x="0.0" y="-0.125" z="-0.20000000298023"/>
+      <vecInertiaMultiplier x="1.0" y="1.5" z="1.5"/> <!-- Adjusted for better control and stability -->
+      <fDriveBiasFront value="0.3"/> <!-- Changed to rear-biased for sportier handling -->
+      <nInitialDriveGears value="7"/>
+      <fInitialDriveForce value="0.400000"/> <!-- Adjusted for realistic acceleration -->
+      <fDriveInertia value="1.0"/> <!-- Reduced for more responsive acceleration -->
+      <fClutchChangeRateScaleUpShift value="3.5"/> <!-- Reduced to more realistic shifting speed -->
+      <fClutchChangeRateScaleDownShift value="3.5"/>
+      <fInitialDriveMaxFlatVel value="320.0"/> <!-- Adjusted top speed for realism -->
+      <fBrakeForce value="1.800000"/> <!-- Adjusted braking force for controlled stopping -->
+      <fBrakeBiasFront value="0.6"/> <!-- Adjusted for balanced braking -->
+      <fHandBrakeForce value="1.3"/> <!-- Reduced to more realistic handbrake power -->
+      <fSteeringLock value="40.0"/> <!-- Adjusted for more controlled steering response -->
+      <fTractionCurveMax value="2.700000"/> <!-- Increased grip for better handling -->
+      <fTractionCurveMin value="2.500000"/> <!-- Adjusted to match the max traction curve for consistent grip -->
+      <fTractionCurveLateral value="22.0"/> <!-- Enhanced lateral traction for cornering stability -->
+      <fTractionSpringDeltaMax value="0.15"/>
+      <fLowSpeedTractionLossMult value="0.8"/> <!-- Reduced to improve low-speed traction -->
+      <fCamberStiffnesss value="0.0"/>
+      <fTractionBiasFront value="0.480000"/> <!-- Slightly rear-biased for better high-speed stability -->
+      <fTractionLossMult value="1.0"/>
+      <fSuspensionForce value="2.5"/> <!-- Stiffer suspension for improved handling -->
+      <fSuspensionCompDamp value="2.0"/> <!-- Increased compression damping for better road feel -->
+      <fSuspensionReboundDamp value="3.0"/> <!-- Increased rebound damping for stability after bumps -->
+      <fSuspensionUpperLimit value="0.04"/>
+      <fSuspensionLowerLimit value="-0.06"/>
+      <fSuspensionRaise value="0.04"/>
+      <fSuspensionBiasFront value="0.50"/> <!-- Balanced suspension bias for overall stability -->
+      <fAntiRollBarForce value="2.0"/> <!-- Increased anti-roll bar force for reduced body roll -->
+      <fAntiRollBarBiasFront value="0.55"/> <!-- Slightly front-biased for better turn-in response -->
+      <fRollCentreHeightFront value="0.3"/> <!-- Lowered for a lower center of gravity -->
+      <fRollCentreHeightRear value="0.3"/>
+      <fCollisionDamageMult value="1.0"/>
+      <fWeaponDamageMult value="1.0"/>
+      <fDeformationDamageMult value="0.7"/> <!-- Increased for more realistic vehicle damage -->
+      <fEngineDamageMult value="1.0"/>
+      <fPetrolTankVolume value="65.0"/>
+      <fOilVolume value="5.0"/>
+      <fSeatOffsetDistX value="0.0"/>
+      <fSeatOffsetDistY value="0.0"/>
+      <fSeatOffsetDistZ value="0.0"/>
+      <nMonetaryValue value="35000"/>
+    <strModelFlags>00441010</strModelFlags>
+    <strHandlingFlags>00020002</strHandlingFlags>
+    <strDamageFlags>00000001</strDamageFlags>
+    <AIHandling>AVERAGE</AIHandling>
+    <SubHandlingData>
+        <Item type="NULL"/>
+        <Item type="NULL"/>
+        <Item type="NULL"/>
+    </SubHandlingData>
+    </Item>
+  </HandlingData>
+
+</CHandlingDataMgr>

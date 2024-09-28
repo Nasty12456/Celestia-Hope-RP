@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CHandlingDataMgr>
+  <HandlingData>
+  <Item type="CHandlingData">
+      <handlingName>HycadeSA90</handlingName>
+       <fMass value="1650.000000" /> <!-- Increased mass slightly for a more planted feel -->
+      <fInitialDragCoeff value="3.500000" /> <!-- Adjusted drag coefficient for balanced aerodynamics -->
+      <fPercentSubmerged value="85.000000" />
+      <vecCentreOfMassOffset x="0.000000" y="-0.100000" z="-0.050000" /> <!-- Lowered center of mass for better stability -->
+      <vecInertiaMultiplier x="1.100000" y="1.400000" z="1.600000" /> <!-- Adjusted inertia for improved responsiveness -->
+      <fDriveBiasFront value="0.000000" /> <!-- Rear-wheel drive -->
+      <nInitialDriveGears value="8" /> <!-- Added an extra gear for smoother acceleration -->
+      <fInitialDriveForce value="0.500000" /> <!-- Increased drive force for enhanced acceleration -->
+      <fDriveInertia value="1.100000" />
+      <fClutchChangeRateScaleUpShift value="8.000000" /> <!-- Balanced shift rates for a sportier feel -->
+      <fClutchChangeRateScaleDownShift value="7.500000" />
+      <fInitialDriveMaxFlatVel value="310.000000" /> <!-- Increased top speed -->
+      <fBrakeForce value="2.200000" /> <!-- Enhanced braking for better stopping power -->
+      <fBrakeBiasFront value="0.550000" /> <!-- Balanced brake bias -->
+      <fHandBrakeForce value="1.100000" />
+      <fSteeringLock value="40.000000" /> <!-- Adjusted steering lock for better control at high speeds -->
+      <fTractionCurveMax value="4.500000" /> <!-- Improved maximum traction for enhanced grip -->
+      <fTractionCurveMin value="4.200000" />
+      <fTractionCurveLateral value="23.000000" /> <!-- Enhanced lateral traction for better cornering -->
+      <fTractionSpringDeltaMax value="0.120000" />
+      <fLowSpeedTractionLossMult value="0.800000" />
+      <fCamberStiffnesss value="0.000000" />
+      <fTractionBiasFront value="0.480000" /> <!-- Slightly rear-biased for improved acceleration out of corners -->
+      <fTractionLossMult value="0.900000" />
+      <fSuspensionForce value="2.800000" /> <!-- Stiffer suspension for better handling response -->
+      <fSuspensionCompDamp value="1.600000" />
+      <fSuspensionReboundDamp value="2.800000" /> <!-- Improved rebound damping for smoother ride quality -->
+      <fSuspensionUpperLimit value="0.090000" />
+      <fSuspensionLowerLimit value="-0.120000" />
+      <fSuspensionRaise value="0.000000" />
+      <fSuspensionBiasFront value="0.500000" /> <!-- Balanced suspension bias -->
+      <fAntiRollBarForce value="1.000000" /> <!-- Increased anti-roll bar force to reduce body roll -->
+      <fAntiRollBarBiasFront value="0.550000" />
+      <fRollCentreHeightFront value="0.300000" /> <!-- Adjusted roll center for improved stability -->
+      <fRollCentreHeightRear value="0.280000" />
+      <fCollisionDamageMult value="0.700000" /> <!-- Standard collision damage multiplier -->
+      <fWeaponDamageMult value="1.000000" />
+      <fDeformationDamageMult value="0.700000" />
+      <fEngineDamageMult value="1.500000" />
+      <fPetrolTankVolume value="65.000000" />
+      <fOilVolume value="5.000000" />
+      <fSeatOffsetDistX value="0.000000" />
+      <fSeatOffsetDistY value="0.000000" />
+      <fSeatOffsetDistZ value="0.000000" />
+      <nMonetaryValue value="35000" />
+      <strModelFlags>440010</strModelFlags>
+      <strHandlingFlags>0</strHandlingFlags>
+      <strDamageFlags>20</strDamageFlags>
+      <AIHandling>AVERAGE</AIHandling>
+      <SubHandlingData>
+        <Item type="CCarHandlingData">
+          <fBackEndPopUpCarImpulseMult value="0.075000" />
+          <fBackEndPopUpBuildingImpulseMult value="0.030000" />
+          <fBackEndPopUpMaxDeltaSpeed value="0.250000" />
+        </Item>
+        <Item type="NULL" />
+        <Item type="NULL" />
+      </SubHandlingData>
+  </Item>
+  </HandlingData>
+</CHandlingDataMgr>

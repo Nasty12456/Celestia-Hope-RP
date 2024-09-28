@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CHandlingDataMgr>
+
+  <HandlingData>
+    <Item type="CHandlingData">
+      <handlingName>rmodjeepg</handlingName>
+      <fMass value="2400.000000"/> <!-- Kept realistic for a Jeep 4x4 -->
+      <fInitialDragCoeff value="3.500000"/> <!-- Reduced drag coefficient for better speed -->
+      <fPercentSubmerged value="85.000000"/>
+      <vecCentreOfMassOffset x="0.000000" y="0.000000" z="-0.100000"/> <!-- Lowered center of mass for improved stability -->
+      <vecInertiaMultiplier x="1.000000" y="1.200000" z="1.300000"/> <!-- Adjusted for enhanced handling -->
+      <fDriveBiasFront value="0.200000"/> <!-- Adjusted to maintain some rear bias for off-road capability -->
+      <nInitialDriveGears value="6"/> <!-- Increased gears for better acceleration and top speed -->
+      <fInitialDriveForce value="0.300000"/> <!-- Increased drive force for enhanced acceleration -->
+      <fDriveInertia value="0.900000"/> <!-- Reduced inertia for more responsive driving -->
+      <fClutchChangeRateScaleUpShift value="3.000000"/> <!-- Increased for quicker shifts -->
+      <fClutchChangeRateScaleDownShift value="3.000000"/>
+      <fInitialDriveMaxFlatVel value="220.000000"/> <!-- Increased top speed for better on-road performance -->
+      <fBrakeForce value="1.800000"/> <!-- Enhanced braking force for improved stopping power -->
+      <fBrakeBiasFront value="0.550000"/> <!-- Adjusted brake bias for balanced braking -->
+      <fHandBrakeForce value="1.200000"/> <!-- Enhanced handbrake force for better control in off-road conditions -->
+      <fSteeringLock value="38.000000"/> <!-- Adjusted steering lock for improved stability at high speeds -->
+      <fTractionCurveMax value="3.500000"/> <!-- Increased max traction for better grip -->
+      <fTractionCurveMin value="3.000000"/> <!-- Adjusted for balanced traction across conditions -->
+      <fTractionCurveLateral value="22.000000"/>
+      <fTractionSpringDeltaMax value="0.150000"/>
+      <fLowSpeedTractionLossMult value="0.800000"/> <!-- Reduced to improve low-speed traction -->
+      <fCamberStiffnesss value="0.000000"/>
+      <fTractionBiasFront value="0.480000"/> <!-- Slight rear bias for improved handling dynamics -->
+      <fTractionLossMult value="0.850000"/> <!-- Adjusted for controlled traction loss -->
+      <fSuspensionForce value="3.500000"/> <!-- Enhanced suspension force for better handling and comfort balance -->
+      <fSuspensionCompDamp value="2.000000"/> <!-- Increased compression damping for improved road response -->
+      <fSuspensionReboundDamp value="3.000000"/> <!-- Enhanced rebound damping for better control over bumps -->
+      <fSuspensionUpperLimit value="0.100000"/>
+      <fSuspensionLowerLimit value="-0.150000"/> <!-- Slightly adjusted lower limit for sportier handling -->
+      <fSuspensionRaise value="0.050000"/>
+      <fSuspensionBiasFront value="0.500000"/> <!-- Balanced suspension bias for stability -->
+      <fAntiRollBarForce value="1.500000"/> <!-- Increased anti-roll bar force to reduce body roll -->
+      <fAntiRollBarBiasFront value="0.550000"/> <!-- Slightly front-biased for better cornering response -->
+      <fRollCentreHeightFront value="0.400000"/> <!-- Lowered roll center for improved stability -->
+      <fRollCentreHeightRear value="0.400000"/>
+      <fCollisionDamageMult value="0.700000"/>
+      <fWeaponDamageMult value="1.000000"/>
+      <fDeformationDamageMult value="0.700000"/>
+      <fEngineDamageMult value="1.000000"/>
+      <fPetrolTankVolume value="90.000000"/>
+      <fOilVolume value="5.000000"/>
+      <fSeatOffsetDistX value="0.000000"/>
+      <fSeatOffsetDistY value="0.000000"/>
+      <fSeatOffsetDistZ value="0.000000"/>
+      <nMonetaryValue value="50000"/>
+      <strModelFlags>440010</strModelFlags>
+      <strHandlingFlags>0</strHandlingFlags>
+      <strDamageFlags>0</strDamageFlags>
+      <AIHandling>AVERAGE</AIHandling>
+      <SubHandlingData>
+        <Item type="CCarHandlingData">
+          <fBackEndPopUpCarImpulseMult value="0.100000" />
+          <fBackEndPopUpBuildingImpulseMult value="0.030000" />
+          <fBackEndPopUpMaxDeltaSpeed value="0.600000" />
+        </Item>
+        <Item type="NULL" />
+        <Item type="NULL" />
+      </SubHandlingData>
+    </Item>
+  </HandlingData>
+
+</CHandlingDataMgr>

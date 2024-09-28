@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CHandlingDataMgr>
+  <HandlingData>
+    <Item type="CHandlingData">
+      <handlingName>DBc8</handlingName>
+     <fMass value="1600.0"/> <!-- Adjusted to a more realistic weight for a Corvette C8 -->
+      <fInitialDragCoeff value="2.500000"/> <!-- Reduced drag coefficient for improved speed and efficiency -->
+      <fDownforceModifier value="1.200000"/> <!-- Added downforce for stability at higher speeds -->
+      <fPercentSubmerged value="85.0"/>
+      <vecCentreOfMassOffset x="0.0" y="0.0" z="-0.100000"/> <!-- Lowered center of mass for improved stability -->
+      <vecInertiaMultiplier x="1.000000" y="1.200000" z="1.300000"/> <!-- Adjusted for enhanced handling and stability -->
+      <fDriveBiasFront value="0.300000"/> <!-- Adjusted to rear bias for sportier handling -->
+      <nInitialDriveGears value="7"/> <!-- Increased gears for better acceleration and speed management -->
+      <fInitialDriveForce value="0.600000"/> <!-- Adjusted drive force for balanced acceleration and control -->
+      <fDriveInertia value="0.900000"/> <!-- Reduced inertia for more responsive acceleration -->
+      <fClutchChangeRateScaleUpShift value="6.000000"/> <!-- Optimized shift rates for quicker acceleration -->
+      <fClutchChangeRateScaleDownShift value="6.000000"/>
+      <fInitialDriveMaxFlatVel value="320.0"/> <!-- Increased top speed for better performance -->
+      <fBrakeForce value="1.800000"/> <!-- Enhanced braking force for better stopping power -->
+      <fBrakeBiasFront value="0.600000"/> <!-- Adjusted brake bias for more effective braking balance -->
+      <fHandBrakeForce value="1.200000"/> <!-- Enhanced handbrake force for better control in slides -->
+      <fSteeringLock value="38.0"/> <!-- Adjusted steering lock for improved high-speed stability -->
+      <fTractionCurveMax value="3.800000"/> <!-- Increased max traction for improved grip and handling -->
+      <fTractionCurveMin value="3.500000"/> <!-- Adjusted for balanced traction across various conditions -->
+      <fTractionCurveLateral value="25.0"/>
+      <fTractionSpringDeltaMax value="0.150000"/>
+      <fLowSpeedTractionLossMult value="0.700000"/> <!-- Reduced to improve low-speed traction and control -->
+      <fCamberStiffnesss value="0.000000"/>
+      <fTractionBiasFront value="0.480000"/> <!-- Slight rear bias for better handling dynamics -->
+      <fTractionLossMult value="0.900000"/> <!-- Adjusted for controlled traction loss -->
+      <fSuspensionForce value="3.500000"/> <!-- Enhanced suspension force for improved handling and stability -->
+      <fSuspensionCompDamp value="2.000000"/> <!-- Increased compression damping for better road feel -->
+      <fSuspensionReboundDamp value="3.500000"/> <!-- Enhanced rebound damping for stability over bumps -->
+      <fSuspensionUpperLimit value="0.100000"/>
+      <fSuspensionLowerLimit value="-0.150000"/> <!-- Slightly adjusted lower limit for sportier handling -->
+      <fSuspensionRaise value="0.000000"/>
+      <fSuspensionBiasFront value="0.500000"/> <!-- Balanced suspension bias for overall stability -->
+      <fAntiRollBarForce value="1.800000"/> <!-- Increased to reduce body roll and improve cornering performance -->
+      <fAntiRollBarBiasFront value="0.550000"/> <!-- Slightly front-biased for better turn-in response -->
+      <fRollCentreHeightFront value="0.500000"/> <!-- Lowered roll center for improved cornering stability -->
+      <fRollCentreHeightRear value="0.500000"/>
+      <fCollisionDamageMult value="0.700000"/>
+      <fWeaponDamageMult value="1.000000"/>
+      <fDeformationDamageMult value="0.700000"/>
+      <fEngineDamageMult value="1.000000"/>
+      <fPetrolTankVolume value="65.000000"/>
+      <fOilVolume value="5.000000"/>
+      <fSeatOffsetDistX value="0.000000"/>
+      <fSeatOffsetDistY value="0.000000"/>
+      <fSeatOffsetDistZ value="0.000000"/>
+      <nMonetaryValue value="85000"/>
+      <strModelFlags>440010</strModelFlags>
+      <strHandlingFlags>0</strHandlingFlags>
+      <strDamageFlags>0</strDamageFlags>
+      <AIHandling>AVERAGE</AIHandling>
+      <SubHandlingData>
+        <Item type="CCarHandlingData">
+          <fBackEndPopUpCarImpulseMult value="0.100000" />
+          <fBackEndPopUpBuildingImpulseMult value="0.030000" />
+          <fBackEndPopUpMaxDeltaSpeed value="0.600000" />
+        </Item>
+        <Item type="NULL" />
+        <Item type="NULL" />
+      </SubHandlingData>
+    </Item>
+  </HandlingData>
+</CHandlingDataMgr>

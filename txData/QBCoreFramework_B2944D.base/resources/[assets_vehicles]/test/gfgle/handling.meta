@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CHandlingDataMgr>
+  <HandlingData>
+   <Item type="CHandlingData">
+      <handlingName>gfgle</handlingName>
+       <fMass value="1850.0" /> <!-- Increased mass slightly for a realistic SUV feel -->
+      <fInitialDragCoeff value="5.0" /> <!-- Adjusted drag coefficient for aerodynamic balance -->
+      <fDownforceModifier value="1.0" /> <!-- Reduced downforce for less excessive grip at high speeds -->
+      <fPercentSubmerged value="85.0" />
+      <vecCentreOfMassOffset x="0.0" y="0.0" z="-0.1" /> <!-- Lowered center of mass for better stability -->
+      <vecInertiaMultiplier x="1.1" y="1.3" z="1.5" /> <!-- Adjusted inertia for more controlled handling -->
+      <fDriveBiasFront value="0.4" /> <!-- Slight rear bias for a sportier handling feel -->
+      <nInitialDriveGears value="8" /> <!-- Increased gears for better acceleration and smoother transitions -->
+      <fInitialDriveForce value="0.65" /> <!-- Enhanced drive force for improved acceleration -->
+      <fDriveInertia value="1.0" />
+      <fClutchChangeRateScaleUpShift value="5.5" /> <!-- Adjusted shift rate for a more responsive drive -->
+      <fClutchChangeRateScaleDownShift value="4.5" />
+      <fInitialDriveMaxFlatVel value="260.0" /> <!-- Increased top speed for enhanced performance -->
+      <fBrakeForce value="2.2" /> <!-- Improved braking force for better stopping power -->
+      <fBrakeBiasFront value="0.55" /> <!-- Adjusted brake bias for balanced braking -->
+      <fHandBrakeForce value="1.2" /> <!-- Set handbrake force for effective emergency stops -->
+      <fSteeringLock value="40.0" /> <!-- Adjusted steering lock for high-speed stability -->
+      <fTractionCurveMax value="6.0" /> <!-- Improved traction curve for enhanced grip -->
+      <fTractionCurveMin value="5.8" />
+      <fTractionCurveLateral value="24.0" /> <!-- Adjusted lateral grip for stable cornering -->
+      <fTractionSpringDeltaMax value="0.15" />
+      <fLowSpeedTractionLossMult value="0.85" /> <!-- Improved low-speed traction for better maneuverability in traffic -->
+      <fCamberStiffnesss value="0.0" />
+      <fTractionBiasFront value="0.48" /> <!-- Adjusted traction bias for balanced handling -->
+      <fTractionLossMult value="0.9" />
+      <fSuspensionForce value="2.5" /> <!-- Increased suspension force for better handling of body roll -->
+      <fSuspensionCompDamp value="1.7" />
+      <fSuspensionReboundDamp value="2.2" /> <!-- Adjusted rebound damping for more controlled suspension behavior -->
+      <fSuspensionUpperLimit value="0.15" />
+      <fSuspensionLowerLimit value="-0.15" />
+      <fSuspensionRaise value="0.0" />
+      <fSuspensionBiasFront value="0.52" /> <!-- Balanced suspension bias for improved stability -->
+      <fAntiRollBarForce value="1.1" /> <!-- Increased anti-roll bar force to reduce body roll -->
+      <fAntiRollBarBiasFront value="0.6" />
+      <fRollCentreHeightFront value="0.5" />
+      <fRollCentreHeightRear value="0.5" />
+      <fCollisionDamageMult value="0.75" /> <!-- Set collision damage multiplier to be realistic but not too fragile -->
+      <fWeaponDamageMult value="1.0" />
+      <fDeformationDamageMult value="0.8" />
+      <fEngineDamageMult value="1.2" />
+      <fPetrolTankVolume value="80.0" />
+      <fOilVolume value="6.5" />
+      <fSeatOffsetDistX value="0.0" />
+      <fSeatOffsetDistY value="-0.2" />
+      <fSeatOffsetDistZ value="0.1" />
+      <nMonetaryValue value="180000" />
+      <strModelFlags>440010</strModelFlags>
+      <strHandlingFlags>0</strHandlingFlags>
+      <strDamageFlags>0</strDamageFlags>
+      <AIHandling>AVERAGE</AIHandling>
+      <SubHandlingData>
+        <Item type="CCarHandlingData">
+          <fBackEndPopUpCarImpulseMult value="0.100000" />
+          <fBackEndPopUpBuildingImpulseMult value="0.030000" />
+          <fBackEndPopUpMaxDeltaSpeed value="0.600000" />
+        </Item>
+        <Item type="NULL" />
+        <Item type="NULL" />
+      </SubHandlingData>
+    </Item>
+
+  </HandlingData>
+</CHandlingDataMgr>

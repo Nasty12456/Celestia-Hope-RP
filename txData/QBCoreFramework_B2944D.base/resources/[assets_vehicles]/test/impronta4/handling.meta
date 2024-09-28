@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CHandlingDataMgr>
+  <HandlingData>
+    <Item type="CHandlingData">
+      <handlingName>impronta4</handlingName>
+      <fMass value="1400.0" /> <!-- Reduced mass for a lighter, more agile feel -->
+      <fInitialDragCoeff value="6.0" /> <!-- Reduced drag for improved top speed -->
+      <fDownforceModifier value="1.5" /> <!-- Added downforce for better high-speed stability -->
+      <fPercentSubmerged value="85.0" />
+      <vecCentreOfMassOffset x="0.0" y="0.0" z="-0.1" /> <!-- Lowered center of mass to improve cornering -->
+      <vecInertiaMultiplier x="1.0" y="1.1" z="1.2" /> <!-- Adjusted inertia for better responsiveness -->
+      <fDriveBiasFront value="0.3" /> <!-- More rear-wheel drive bias for a sportier feel -->
+      <nInitialDriveGears value="7" /> <!-- Increased gears for smoother acceleration and better speed management -->
+      <fInitialDriveForce value="0.85" /> <!-- Adjusted drive force for balanced acceleration and control -->
+      <fDriveInertia value="1.0" /> <!-- Standardized inertia for smoother acceleration -->
+      <fClutchChangeRateScaleUpShift value="6.0" /> <!-- Faster upshift for aggressive acceleration -->
+      <fClutchChangeRateScaleDownShift value="4.5" />
+      <fInitialDriveMaxFlatVel value="280.0" /> <!-- Increased top speed for high-performance capability -->
+      <fBrakeForce value="1.8" /> <!-- Improved braking force for shorter stopping distances -->
+      <fBrakeBiasFront value="0.55" /> <!-- Balanced brake bias for stability during braking -->
+      <fHandBrakeForce value="1.2" />
+      <fSteeringLock value="42.0" /> <!-- Slightly reduced steering lock for more controlled handling -->
+      <fTractionCurveMax value="5.8" /> <!-- Increased traction for better grip on turns -->
+      <fTractionCurveMin value="5.6" />
+      <fTractionCurveLateral value="24.0" /> <!-- Improved lateral grip for stability at high speeds -->
+      <fTractionSpringDeltaMax value="0.1" />
+      <fLowSpeedTractionLossMult value="0.8" /> <!-- Better low-speed traction for smooth driving in urban areas -->
+      <fCamberStiffnesss value="0.0" />
+      <fTractionBiasFront value="0.46" /> <!-- Adjusted traction bias for balanced handling dynamics -->
+      <fTractionLossMult value="0.0" />
+      <fSuspensionForce value="3.2" /> <!-- Enhanced suspension force for better handling on uneven surfaces -->
+      <fSuspensionCompDamp value="1.5" />
+      <fSuspensionReboundDamp value="2.0" /> <!-- Improved suspension rebound for a smoother ride over bumps -->
+      <fSuspensionUpperLimit value="0.05" />
+      <fSuspensionLowerLimit value="-0.09" />
+      <fSuspensionRaise value="0.0" />
+      <fSuspensionBiasFront value="0.5" /> <!-- Balanced suspension bias for even weight distribution -->
+      <fAntiRollBarForce value="1.2" /> <!-- Increased anti-roll bar force to reduce body roll during high-speed turns -->
+      <fAntiRollBarBiasFront value="0.55" />
+      <fRollCentreHeightFront value="0.35" /> <!-- Adjusted roll center for improved cornering stability -->
+      <fRollCentreHeightRear value="0.34" />
+      <fCollisionDamageMult value="0.8" />
+      <fWeaponDamageMult value="1.0" />
+      <fDeformationDamageMult value="0.7" />
+      <fEngineDamageMult value="1.2" />
+      <fPetrolTankVolume value="70.0" />
+      <fOilVolume value="5.0" />
+      <fSeatOffsetDistX value="0.0" />
+      <fSeatOffsetDistY value="0.0" />
+      <fSeatOffsetDistZ value="0.0" />
+      <nMonetaryValue value="200000" />
+      <strModelFlags>440010</strModelFlags>
+      <strHandlingFlags>20002</strHandlingFlags>
+      <strDamageFlags>0</strDamageFlags>
+      <AIHandling>AVERAGE</AIHandling>
+      <SubHandlingData>
+        <Item type="NULL" />
+        <Item type="NULL" />
+        <Item type="NULL" />
+      </SubHandlingData>
+    </Item>
+  </HandlingData>
+</CHandlingDataMgr>
