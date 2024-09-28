@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0Bug - Scoreboard</title>
+    <link rel="stylesheet" href="zr-css/zr-style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/> <!-- 'nano' theme -->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+</head>
+<body class="left">
+    <div class="zr-gradient"></div>
+    <div class="zr-info-container">
+        <div class="zr-background"></div>
+        <div class="zr-icon zr-hide"></div>
+        <div class="zr-content">
+            <div class="zr-header">
+                <div class="zr-logo">
+                    <img src="zr-assets/zr-img/zr-logo.png" alt="Logo 0Bug Remastered">
+                </div>
+                <div class="zr-total-player">
+                    <div class="zr-icon zr-total-player-icon"></div>
+                    <div class="zr-total-player-title-numbers">
+                        <div id="zr-total-player-title" class="zr-total-player-title">Total players</div>
+                        <div id="zr-total-player-number" class="zr-total-player-number">76 Online</div>
+                    </div>
+                </div>
+            </div>
+            <div class="zr-navbar">
+                <div class="zr-avatar">
+                    <div class="zr-avatar-img">
+                        <img id="zr-avatar-img-src" src="zr-img/zr-default-avatar.png" alt="Player avatar">
+                    </div>
+                    <div class="zr-avatar-title-player-name">
+                        <div id="zr-avatar-title" class="zr-avatar-title">Welcome</div>
+                        <div id="zr-avatar-player-name" class="zr-avatar-player-name">John Smith</div>
+                    </div>
+                </div>
+                <div class="zr-menu">
+                    <div id="zr-menu-option-players" class="zr-menu-option active">
+                        <div class="zr-icon zr-menu-option-players"></div>
+                    </div>
+                    <div id="zr-menu-option-jobs" class="zr-menu-option">
+                        <div class="zr-icon zr-menu-option-jobs"></div>
+                    </div>
+                    <div id="zr-menu-option-binds-commands" class="zr-menu-option">
+                        <div class="zr-icon zr-menu-option-binds"></div>
+                    </div>
+                    <div id="zr-menu-option-annoucements" class="zr-menu-option">
+                        <div class="zr-icon zr-menu-option-annoucements"></div>
+                    </div>
+                    <div id="zr-menu-option-settings" class="zr-menu-option">
+                        <div class="zr-icon zr-menu-option-settings"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="zr-section-players">
+                <div class="zr-section-title-icon-text">
+                    <div class="zr-section-title-icon"></div>
+                    <div id="zr-section-players-title-text" class="zr-section-title-text">Online Players</div>
+                </div>
+                <div id="zr-section-player-content" class="zr-section-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="zr-section-player-id">ID</th>
+                                <th id="zr-section-player-name">Name</th>
+                                <th id="zr-section-player-role">Role</th>
+                                <th id="zr-section-player-ping">Ping</th>
+                                <th id="zr-section-player-time">Play Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zr-section-player-content-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="zr-section-jobs-heists">
+                <div class="zr-section-jobs">
+                    <div class="zr-section-title-icon-text">
+                        <div class="zr-icon zr-section-title-icon"></div>
+                        <div id="zr-section-jobs-title-text" class="zr-section-title-text">Jobs Count</div>
+                    </div>
+                    <div id="zr-section-jobs-content" class="zr-section-content"></div>
+                </div>
+                <div class="zr-section-heists">
+                    <div class="zr-section-title-icon-text">
+                        <div class="zr-icon zr-section-title-icon"></div>
+                        <div id="zr-section-heists-title-text" class="zr-section-title-text">Available Heists</div>
+                    </div>
+                    <div id="zr-section-heists-content" class="zr-section-content"></div>
+                </div>
+            </div>
+            <div id="zr-section-binds-commands" class="zr-section-binds-commands">
+                <div class="zr-section-binds">
+                    <div class="zr-section-title-icon-text">
+                        <div class="zr-icon zr-section-title-icon"></div>
+                        <div id="zr-section-keybinds-title-text" class="zr-section-title-text">Keybinds</div>
+                    </div>
+                    <div id="zr-section-binds-content" class="zr-section-content"></div>
+                </div>
+                <div class="zr-section-commands">
+                    <div class="zr-section-title-icon-text">
+                        <div class="zr-icon zr-section-title-icon"></div>
+                            <div id="zr-section-commands-title-text" class="zr-section-title-text">Commands</div>
+                    </div>
+                    <div id="zr-section-commands-content">
+                        <div class="zr-search">
+                            <div class="zr-search-bar-container">
+                                <div class="zr-search-bar">
+                                    <div class="zr-icon zr-search-icon"></div>
+                                    <input type="text" id="searchInput" placeholder="Search">
+                                </div>
+                            </div>
+                            <div id="zr-commands-select" tabindex="0">
+                                <div class="zr-commands-select-wrap">
+                                    <div class="zr-commands-select-option-container">
+                                        <div id="zr-commands-select-selected-option"></div>
+                                    </div>
+                                  
+                                  <ul id="zr-commands-select-dropdown"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="zr-section-commands-list" class="zr-section-commands-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="zr-section-annoucements">
+                <div class="zr-section-title-icon-text">
+                    <div class="zr-icon zr-section-title-icon"></div>
+                    <div id="zr-section-title-text" class="zr-section-title-text">Annoucements</div>
+                </div>
+                <div id="zr-section-annoucements-content" class="zr-section-content"></div>
+            </div>
+            <div class="zr-section-settings">
+                <div class="zr-section-title-icon-text">
+                    <div class="zr-icon zr-section-title-icon"></div>
+                    <div id="zr-section-title-text" class="zr-section-title-text">Settings</div>
+                </div>
+                <div id="zr-section-settings-content" class="zr-section-content">
+                    <div id="zr-section-setting-positioning" class="zr-section-setting">
+                        <div class="zr-section-setting-header">
+                            <div class="zr-section-setting-icon-title">
+                                <div class="zr-icon zr-section-setting-icon"></div>
+                                <div class="zr-section-setting-title">Positioning</div>
+                            </div>
+                            <div class="zr-section-setting-buttons">
+                                <div id="zr-section-setting-button-left" class="zr-section-setting-button">
+                                    <div class="zr-icon zr-section-setting-button-icon"></div>
+                                    <span>Left Side</span>
+                                </div>
+                                <div id="zr-section-setting-button-right" class="zr-section-setting-button">
+                                    <span>Right Side</span>
+                                    <div class="zr-icon zr-section-setting-button-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zr-section-setting-description"></div>
+                    </div>
+                    <div id="zr-section-setting-color" class="zr-section-setting">
+                        <div class="zr-section-setting-header">
+                            <div class="zr-section-setting-icon-title">
+                                <div class="zr-icon zr-section-setting-icon"></div>
+                                <div class="zr-section-setting-title">Positioning</div>
+                            </div>
+                            <div class="zr-section-setting-buttons">
+                                <div id="zr-section-setting-button-edit" class="zr-section-setting-button">
+                                    <span>Edit</span>
+                                    <div class="zr-icon zr-section-setting-button-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zr-section-setting-description"></div>
+                    </div>
+                    <div id="zr-section-setting-reset" class="zr-section-setting">
+                        <div class="zr-section-setting-header">
+                            <div class="zr-section-setting-icon-title">
+                                <div class="zr-icon zr-section-setting-icon"></div>
+                                <div class="zr-section-setting-title">Positioning</div>
+                            </div>
+                            <div class="zr-section-setting-buttons">
+                                <div id="zr-section-setting-button-reset" class="zr-section-setting-button">
+                                    <span>Reset</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zr-section-setting-description"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="zr-color-modal">
+        <div class="modal">
+            <div class="modal-content">
+                <div id="zr-color-modal-title" class="modal-title"></div>
+                <div class="zr-pickr"></div>
+            </div>
+        </div>
+    </div>
+    <script src="zr-js/zr-text.js"></script>
+    <script src="zr-js/zr-main.js"></script>
+    <script src="zr-js/zr-menu.js"></script>
+    <script src="zr-js/zr-search.js"></script>
+    <script src="zr-js/zr-settings.js"></script>
+    <script src="zr-js/zr-pickr.js"></script>
+</body>
+</html>

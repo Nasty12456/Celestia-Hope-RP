@@ -1,0 +1,13 @@
+#zr-camera-lines {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-image: url('../zr-assets/zr-img/zr-camera-lines.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    bottom: -180px;
+    left: 50%;
+    transform: rotateX(60deg) translateX(-50%);
+}

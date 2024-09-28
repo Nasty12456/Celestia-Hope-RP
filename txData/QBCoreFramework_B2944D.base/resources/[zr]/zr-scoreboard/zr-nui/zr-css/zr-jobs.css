@@ -1,0 +1,97 @@
+.zr-section-jobs-heists {
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    gap: 16px;
+    height: calc(100% - 55px - 41px);
+}
+.zr-section-jobs, .zr-section-heists {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: calc(50% - 16px);
+    overflow: hidden;
+}
+#zr-section-jobs-content, #zr-section-heists-content {
+    height: calc(100% - 55px);
+}
+#zr-section-heists-content {
+    display: grid;
+    grid-template-columns: 138px 138px 138px;
+    gap: 8px;
+}
+.zr-section-job {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 8px 24px;
+    color: white;
+    background: rgba(255, 255, 255, 0.07);
+}
+.zr-section-job-name-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.zr-section-heist {
+    position: relative;
+    height: 200px;
+    width: 138px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 8px;
+    background-image: url('../zr-img/zr-heist.png');
+}
+.zr-section-heist-gradient-available, .zr-section-heist-gradient-unavailable {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+}
+.zr-section-heist-gradient-available {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 204, 184, 0.64) 100%);
+}
+.zr-section-heist-gradient-unavailable {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(255, 0, 0, 0.64) 100%);
+}
+.zr-section-heist-available, .zr-section-heist-unavailable {
+    display: inline-flex;
+    padding: 0px 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.50);
+    z-index: 1;
+    text-transform: capitalize;
+}
+.zr-section-heist-available-circle, .zr-section-heist-unavailable-circle {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.zr-section-heist-available-circle {
+    background-color: var(--zr-primary);
+}
+.zr-section-heist-unavailable-circle {
+    background-color: #DC2626;
+}
+.zr-section-heist-icon-available, .zr-section-heist-icon-unavailable {
+    width: 90px;
+    height: 90px;
+    z-index: 1;
+}
+.zr-section-heist-name {
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 1;
+}

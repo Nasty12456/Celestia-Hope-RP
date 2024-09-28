@@ -1,0 +1,58 @@
+{
+    "b0af-a724-c12d-2e09": {
+        "description": "sexual harrassment he is humping me against my will",
+        "addUser": [],
+        "status": "resolving",
+        "date": "26-09-2024 02:28",
+        "ticketOwner": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+        "title": "Jayson is bothering me in city",
+        "claimed": false,
+        "solved": false,
+        "priority": {
+            "text": "Critical",
+            "type": "critical",
+            "color": "#F53D6B"
+        },
+        "category": {
+            "text": "Player Report",
+            "type": "player"
+        },
+        "claimedAdmin": [],
+        "messages": [
+            {
+                "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+                "name": "epik",
+                "player": {
+                    "xbl": "2535413006768216",
+                    "discordID": "728441602628124773",
+                    "discordName": "sackchaserduke",
+                    "avatar": "https://cdn.discordapp.com/avatars/728441602628124773/0ce4f596c8f6ddd9328b63fe46311f7d.png",
+                    "live": "1055519895215531",
+                    "identifier": "6df3228abec2dd0f48e28c4843603c937c9615b0",
+                    "name": "isoja",
+                    "licenseID": "6df3228abec2dd0f48e28c4843603c937c9615b0",
+                    "ping": 57,
+                    "ip": "73.211.165.179",
+                    "id": 14
+                },
+                "message": "sexual harrassment he is humping me against my will",
+                "date": "26-09-2024 02:28",
+                "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
+                "media": []
+            }
+        ],
+        "ticketID": "b0af-a724-c12d-2e09",
+        "ticketOwnerDetails": {
+            "discordID": "967626401375211530",
+            "discordName": "llepikll",
+            "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
+            "live": "1055519471993987",
+            "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+            "name": "epik",
+            "licenseID": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+            "ping": 110,
+            "ip": "98.97.58.201",
+            "id": 13
+        }
+    }
+}

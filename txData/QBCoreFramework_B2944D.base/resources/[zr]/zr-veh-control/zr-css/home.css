@@ -1,0 +1,603 @@
+#zr-home-section {
+    display: grid;
+    grid-template-columns: 480px 320px;
+    grid-auto-rows: 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    height: 100%;
+}
+
+#zr-vehicle-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+    height: 380px;
+    padding: 32px 24px 24px 24px;
+    border-radius: 24px;
+    border-top: 2px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+}
+#zr-vehicle-info-header {
+    display: flex;
+    align-self: center;
+    gap: 50px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+#zr-vehicle-info-name {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+}
+#zr-vehicle-info-speed-acceleration {
+    display: flex;
+    gap: 8px;
+}
+#zr-vehicle-info-speed,
+#zr-vehicle-info-acceleration {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 4.53px;
+    color: white;
+    background: rgba(5, 11, 19, 1);
+}
+
+#zr-vehicle-info-speed-icon,
+#zr-vehicle-info-acceleration-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+#zr-vehicle-info-speed-icon {
+    background-image: url('../zr-assets/zr-icon/home/zr-speed.svg');
+}
+#zr-vehicle-info-acceleration-icon {
+    background-image: url('../zr-assets/zr-icon/home/zr-acceleration.svg');
+}
+
+#zr-vehicle-info-img-container {
+    width: 152px;
+    height: 66px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#zr-vehicle-info-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#zr-vehicle-info-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 429px;
+    padding: 32px 24px 24px 24px;
+    border-radius: 24px;
+    border-top: 2px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+}
+
+#zr-vehicle-info-body-health,
+#zr-vehicle-info-engine-health,
+#zr-vehicle-info-dirt,
+#zr-vehicle-info-temperature {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    padding: 16px;
+    gap: 8px;
+    border-radius: 8px;
+    border-top: 2px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+}
+
+#zr-vehicle-info-body-health-icon,
+#zr-vehicle-info-engine-health-icon,
+#zr-vehicle-info-dirt-icon,
+#zr-vehicle-info-temperature-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+#zr-vehicle-info-body-health-icon.low {
+    background-image: url('../zr-assets/zr-icon/home/zr-body-health-low.svg');
+}
+#zr-vehicle-info-body-health-icon.medium {
+    background-image: url('../zr-assets/zr-icon/home/zr-body-health-medium.svg');
+}
+#zr-vehicle-info-body-health-icon.high {
+    background-image: url('../zr-assets/zr-icon/home/zr-body-health-high.svg');
+}
+#zr-vehicle-info-engine-health-icon.low {
+    background-image: url('../zr-assets/zr-icon/home/zr-engine-health-low.svg');
+}
+#zr-vehicle-info-engine-health-icon.medium {
+    background-image: url('../zr-assets/zr-icon/home/zr-engine-health-medium.svg');
+}
+#zr-vehicle-info-engine-health-icon.high {
+    background-image: url('../zr-assets/zr-icon/home/zr-engine-health-high.svg');
+}
+#zr-vehicle-info-dirt-icon.low {
+    background-image: url('../zr-assets/zr-icon/home/zr-dirt-low.svg');
+}
+#zr-vehicle-info-dirt-icon.medium {
+    background-image: url('../zr-assets/zr-icon/home/zr-dirt-medium.svg');
+}
+#zr-vehicle-info-dirt-icon.high {
+    background-image: url('../zr-assets/zr-icon/home/zr-dirt-high.svg');
+}
+#zr-vehicle-info-temperature-icon.low {
+    background-image: url('../zr-assets/zr-icon/home/zr-temperature-low.svg');
+}
+#zr-vehicle-info-temperature-icon.medium {
+    background-image: url('../zr-assets/zr-icon/home/zr-temperature-medium.svg');
+}
+#zr-vehicle-info-temperature-icon.high {
+    background-image: url('../zr-assets/zr-icon/home/zr-temperature-high.svg');
+}
+
+
+#zr-vehicle-info-body-health-title,
+#zr-vehicle-info-engine-health-title,
+#zr-vehicle-info-dirt-title,
+#zr-vehicle-info-temperature-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+#zr-vehicle-info-body-health-value,
+#zr-vehicle-info-engine-health-value,
+#zr-vehicle-info-dirt-value,
+#zr-vehicle-info-temperature-value {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    white-space: nowrap;
+}
+
+#zr-map-location {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 16px 16px 16px;
+    border-radius: 8px;
+    border-top: 2px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+    height: min-content;
+
+}
+
+#zr-map-location-title {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#zr-map-location-title-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background-image: url('../zr-assets/zr-icon/home/zr-location.svg');
+}
+#zr-map-location-title-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+#zr-map-location-container {
+    width: 288px;
+    height: 296px;
+    border-radius: 8px;
+}
+
+#zr-map-location-container-overlay {
+    position: relative;
+}
+#zr-map-location-street-overlay {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 225px;
+    height: 66px;
+    border-radius: 8px;
+    border-top: 1px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+}
+
+#zr-map-location-street-overlay-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-image: url('../zr-assets/zr-icon/home/zr-street.svg');
+}
+
+#zr-map-location-street-overlay-title {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15.73px;
+}
+
+#zr-map-location-street-overlay-subtitle, #zr-map-location-street-overlay-distance {
+    color: #87888C;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.52px;
+}
+
+#zr-music-player-stopwatch {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+#zr-music-player,
+#zr-stopwatch {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    border-radius: 8px;
+    border-top: 2px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+    padding: 16px 16px 16px 16px;
+}
+#zr-stopwatch {
+    gap: 8px;
+}
+
+#zr-stopwatch-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#zr-stopwatch-title-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    background-image: url('../zr-assets/zr-icon/home/zr-stopwatch.svg');
+}
+#zr-stopwatch-title-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+#zr-stopwatch-container {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+#zr-stopwatch-time {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+#zr-stopwatch-start,
+#zr-stopwatch-reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border-top: 2px solid rgba(57, 62, 70, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+    text-transform: uppercase;
+    color: white;
+}
+#zr-stopwatch-start {
+    border-top: 2px solid rgba(0, 204, 184, 1);
+}
+#zr-stopwatch-start.active {
+    border-top: 2px solid rgba(215, 0, 0, 1);
+}
+#zr-stopwatch-start:active,
+#zr-stopwatch-reset:active {
+    transform: scale(0.9);
+}
+
+#zr-fuel-indicator-quick-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 264px;
+    border-radius: 8px;
+    border-top: 2px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+    padding: 16px;
+}
+
+#zr-fuel-indicator {
+    width: 120px;
+    height: 220px;
+    position: relative;
+    border-radius: 8px;
+    border-top: 1px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1);
+    flex-shrink: 0;
+}
+
+#zr-fuel-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 65%;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 58px;
+    flex-shrink: 0;
+    background-image: url('../zr-assets/zr-icon/home/zr-fuel.svg');
+}
+
+.zr-fuel-level{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.zr-fuel-level .zr-fuel-value{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    align-self: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: #333 0 0 1vmin;
+}
+
+.zr-fuel-level .zr-fuel{
+    position: relative;
+    width: 100%;
+}
+
+.zr-fuel-level .wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.zr-fuel-level .shape-box{
+    position: absolute;
+    display: flex;
+    /* width:height should be 4:1 */
+    width: 400%;
+    height: 100%;
+    overflow: hidden;
+    /* make wave top at level line */
+    bottom: 8%;
+    transform-origin: 0 0;
+    transform: scaleX(100%) scaleY(120%);
+}
+
+.zr-fuel-level .shape{
+    position: relative;
+    display: block;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+}
+
+.zr-fuel-level .shape:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 100%;
+}
+.zr-fuel-level .shape:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: 100%;
+    background-color: var(--zr-fuel);
+}
+
+.zr-fuel-level .shape:nth-child(2n)::before{
+    background-image:radial-gradient(
+        300% 300% at 50% 300%,
+        var(--zr-fuel) 0%,
+            /* less than 100 here is for anti aliasing */
+        var(--zr-fuel) 99.8%,
+        transparent 100%
+    );
+}
+
+.zr-fuel-level .shape:nth-child(2n+1)::before{
+    background-image:radial-gradient(
+        300% 300% at 50% -291%,
+        rgba(206,33,156,0) 0%,
+            /* less than 100 here is for anti aliasing */
+        rgba(206,33,156,0) 99.8%,
+        var(--zr-fuel) 100%
+    );
+}
+
+.zr-fuel-level .wave1{
+    width: 100%;
+    left: -10%;
+    bottom: 0;
+    animation-name: wave1;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes wave1 {
+    0% {transform:translateX(-10%);}
+    100% {transform:translateX(-210%);}
+}
+
+.zr-fuel-level .wave2{
+    width: 100%;
+    left: -30%;
+    bottom: 0;
+    animation-name: wave2;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+@keyframes wave2 {
+    0% {transform:translateX(-10%);}
+    100% {transform:translateX(-210%);}
+}
+
+.zr-fuel-level .wave3{
+    width: 100%;
+    left: -30%;
+    bottom: 0;
+    animation-name: wave3;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes wave3 {
+    0% {transform:translateX(-210%);}
+    100% {transform:translateX(-10%);}
+}
+
+#zr-quick-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.item-container-quick-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 8px;
+    border-radius: 8px;
+    border-top: 1px solid rgba(37, 37, 37, 1);
+    background: linear-gradient(180deg, #1C1C1C 0%, #101010 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 1), 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+}
+.item-container-quick-actions:active {
+    transform: scale(0.9);
+}
+.circle {
+    border-radius: 50%;
+}
+.border-green {
+    border-top: 1px solid rgba(0, 204, 184, 1);
+}
+.border-red {
+    border-top: 1px solid rgba(215, 0, 0, 1);
+}
+.item-quick-actions {
+    width: 100%;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#zr-quick-actions-start-engine {
+    height: 40px;
+    background-image: url('../zr-assets/zr-icon/home/zr-start-engine.svg');
+}
+#zr-quick-actions-start-engine.active {
+    background-image: url('../zr-assets/zr-icon/home/zr-stop-engine.svg');
+}
+#zr-quick-actions-lock-doors {
+    background-image: url('../zr-assets/zr-icon/home/zr-lock-doors.svg');
+}
+#zr-quick-actions-lock-doors.active {
+    background-image: url('../zr-assets/zr-icon/home/zr-lock-doors-active.svg');
+}
+#zr-quick-actions-beam {
+    height: 32px;
+    background-image: url('../zr-assets/zr-icon/home/zr-beam.svg');
+}
+#zr-quick-actions-beam.active {
+    height: 32px;
+    background-image: url('../zr-assets/zr-icon/home/zr-beam-active.svg');
+}
+#zr-quick-actions-drift {
+    background-image: url('../zr-assets/zr-icon/home/zr-drift.svg');
+}
+#zr-quick-actions-drift.active {
+    background-image: url('../zr-assets/zr-icon/home/zr-drift-active.svg');
+}
+#zr-quick-actions-drift.disable {
+    background-image: url('../zr-assets/zr-icon/home/zr-drift-disable.svg');
+}
+#zr-quick-actions-hood {
+    background-image: url('../zr-assets/zr-icon/home/zr-hood.svg');
+}
+#zr-quick-actions-hood.active {
+    background-image: url('../zr-assets/zr-icon/home/zr-hood-active.svg');
+}
+#zr-quick-actions-trunk {
+    background-image: url('../zr-assets/zr-icon/home/zr-trunk.svg');
+}
+#zr-quick-actions-trunk.active {
+    background-image: url('../zr-assets/zr-icon/home/zr-trunk-active.svg');
+}
+
+#zr-quick-actions-neon-container:active {
+    transform: none;
+}

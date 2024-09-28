@@ -1,0 +1,432 @@
+@font-face {
+    font-family: akrobat;
+    src: url(./font/Akrobat-Black.otf);
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(./font/Gilroy-Medium.ttf);
+}
+@font-face {
+    font-family: akrobatbold;
+    src: url(./font/Akrobat-Bold.otf);
+}
+
+* {
+    transition: all .27s linear;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.705);
+    margin: 0;
+    padding: 0;
+}
+
+.test{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/test.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
+    opacity: 0.0;
+    z-index: 50;
+}
+.Boyraz{
+    height: 67.5rem;
+    width: 41rem;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    box-sizing: border-box;
+    opacity: 1;
+    background: radial-gradient(123.66% 68.71% at 50% 50%, rgba(23, 24, 31, 0.98) 0%, #000000 100%);
+    user-select: none;
+    .back{
+position: absolute;
+width: 41rem;
+height: 67.5rem;
+background-image: url(./img/back.svg);
+background-position: center center;
+background-size: contain;
+background-repeat: no-repeat;
+    }
+    .yellowtop{
+        position: absolute;
+        width: 43.125rem;
+        height: 8.677rem;
+        top: -5.063rem;
+        background-image: url("./img/yellowtop.svg");
+    }
+    .arrow{
+    position: absolute;
+    width: 4.875rem;
+    height: 4.875rem;
+    top: 0rem;
+    left: 0rem;
+    }
+    .header{
+        position: absolute;
+        width: 16rem;
+        height: 4.7rem;
+        top: 3.9rem;
+        left: 2.95rem;
+        .head{
+            >p{
+                margin-top: -0.7rem;
+                font-family: 'akrobat';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 2.5rem;
+                line-height: 3rem;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                margin-left: -.1rem;
+                >span{
+                    color: #FFCE50;
+                }
+            }
+        }
+        .headerdesc{
+            position: absolute;
+            width: 15rem;
+            height: 2rem;
+            bottom: 0rem;
+            left: 0rem;
+            >p{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 0.875rem;
+                line-height: 1rem;
+                color: #838383;
+                margin-left: -.1rem;
+                margin-top: -.1rem;
+            }
+        }
+    }
+    .premiumcontainer{
+        position: absolute;
+        width: 12.688rem;
+        height: 4.313rem;
+        left: 20.063rem;
+        top: 3.5rem;
+        .premiumstats{
+            width: 8.5rem;
+            height: 1rem;
+            top: .2rem;
+            position: absolute;
+            >p{
+                font-family: 'akrobatbold';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.063rem;
+                line-height: 1.25rem;
+                color: #FFFFFF;
+                margin-top: -.2rem;
+            }
+        }
+        .active{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0rem;
+            top: .05rem;
+            width: auto;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            height: 1.438rem;
+            background: rgba(137, 239, 90, 0.29);
+            border-radius: 0.313rem;
+            opacity: 1;
+            >p{
+            text-align: center;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.813rem;
+            line-height: 0.938rem;
+            color: #89EF5A;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            }
+        }
+        .codecontainer{
+        box-sizing: border-box;
+        position: absolute;
+        width: 12.688rem;
+        height: 2.25rem;
+        bottom: 0rem;
+        border: 0.063rem solid rgba(255, 255, 255, 0.15);
+        border-radius: 0.313rem;
+        .crown{
+        box-sizing: border-box;
+        position: absolute;
+        top: .3rem;
+        left: .45rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: rgba(255, 255, 255, 0.13);
+        border-radius: 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        }
+        .codeinput{
+            width: 10.5rem;
+            height: 2.1rem;
+            position: absolute;
+            left: 2rem;
+            >input{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 2rem;
+            color: rgba(255, 255, 255, 0.19);
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 10.5rem;
+            }
+        }
+    }
+    .playerimage{
+    position: absolute;
+    width: 4.313rem;
+    height: 4.313rem;
+    border-radius: 0.313rem;
+    left: 13.95rem;
+    top: 0rem;
+    }
+    .close{
+        position: absolute;
+        width: 1.75rem;
+        height: 1.75rem;
+        background: #FFFFFF;
+        border-radius: 0.313rem;
+        right: -.9rem;
+        top: 4.95rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .line{
+        position: absolute;
+        width: 35.5rem;
+        height: 0.063rem;
+        left: 2.875rem;
+        top: 10.375rem;
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 0.438rem;
+    }
+    .second{
+        position: absolute;
+        width: 35.5rem;
+        height: 2.25rem;
+        left: 2.875rem;
+        top: 12.5rem;
+        .basic{
+            box-sizing: border-box;
+            position: absolute;
+            width: 6.438rem;
+            height: 2.25rem;   
+            background: #EFC55A;
+            border: 0.063rem solid #EFC55A;
+            box-shadow: 0rem 1.125rem 1.85rem -0.688rem #EFC55A;
+            border-radius: 0.313rem;
+            text-align: center;
+            &:hover{
+                transform: scale(.95);
+            }
+            >p{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.063rem;
+            color: #06031F;
+            margin-top: 0.55rem;
+            }
+        }
+        .premium{
+        position: absolute;
+        width: 6.438rem;
+        height: 2.25rem; 
+        left: 6.75rem;
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 0.313rem;
+        text-align: center;
+        &:hover{
+            transform: scale(.95);
+        }
+        >p{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.063rem;
+        color: #FFFFFF;
+        margin-top: 0.6rem;
+        }
+        }
+        .date{
+            width: 7rem;
+            height: 1.188rem;
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+            >p{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.188rem;
+            color: #FFFFFF;
+            margin-top: -.2rem;
+            text-align: right;
+
+            }
+        }
+        .timeleft{
+            width: 15.313rem;
+            height: 1.063rem;
+            position: absolute; 
+            bottom: 0rem;
+            right: 0rem;
+            >p{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.063rem;
+            text-align: right;
+            color: rgba(188, 188, 188, 0.46);
+            margin-top: -.1rem;
+            }  
+        }
+    }
+    .giftcontainer{
+        position: absolute;
+        width: 36.5rem;
+        height: 47.125rem;
+        left: 2.875rem;
+        top: 16.188rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar-thumb{
+        background: #4E4E4E;
+        }
+        &::-webkit-scrollbar{
+        position: absolute;
+        width: 0.125rem;
+        height: 47.125rem;
+        left: 38.875rem;
+        top: 16.188rem;
+        background: #1F1F1F;
+        border-radius: 0.313rem;
+        }
+        .rewardcontainer{
+            height: 11.125rem;
+            width: 8.5rem;
+            position: relative;
+            top: -.875rem;
+            left: -.5rem;
+            margin-left: 0.5rem;
+            margin-top: 0.875rem;
+            float: left;
+            &:hover{
+                transform: scale(.95);
+            }
+            .gift{
+            position: absolute;
+            width: 8.5rem;
+            height: 8.5rem;
+            left: 0rem;
+            top: 0rem;
+            background: radial-gradient(69.12% 69.12% at 50% 50%, rgba(153, 153, 153, 0.21) 0%, rgba(153, 153, 153, 0) 100%);
+            border-radius: 0.569rem; 
+            border: 1px solid #34522600;
+            transition: all .27s linear;
+            .day{ 
+            position: absolute;
+            width: 2.375rem;
+            height: 1.25rem;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 0.25rem;
+            top: .75rem;
+            left: .8rem;
+            text-align: center;
+            >p{
+            font-family: 'akrobatbold';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.813rem;
+            line-height: 1rem;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-top: .1rem;
+              }
+             }
+             .tick{
+                right: .9rem;
+                top: 1rem;
+                position: absolute;
+                opacity: 0;
+             }
+             .giftimg{
+                position: absolute;
+                width: 72px;
+                height: 72px;
+                top: 2rem;
+                left: 2rem;
+             }
+             .giftname{
+                position: absolute;
+                width: 100%;
+                height: 1rem;
+                bottom: 1rem;
+                left: 0rem;
+                text-align: center;
+                >p{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 0.875rem;
+                line-height: 1rem;
+                color: #838383;
+                margin-top: -.05rem;
+                }
+             }
+            }
+            .claim{
+            position: absolute;
+            width: 8.5rem;
+            height: 2.25rem;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 0.313rem;
+            bottom: 0rem;
+            text-align: center;
+            pointer-events: all;
+            >p{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.063rem;
+            color: rgba(255, 255, 255, 0.28);
+            margin-top: .6rem;
+            }
+            }
+        }
+    }
+    }
+    

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="./zr-assets/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./zr-design.css">
+    <link href="./zr-assets/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="zr-container">
+        <div id="zr-logo"></div>
+        <div id="zr-left">
+            <div id="zr-input-title"></div>
+            <div class="zr-input">
+                <div class="zr-input-cont">
+                    <div class="zr-input-holder">
+                        <input type="text" class="zr-input-inpt" id="zr-fname" required>
+                        <label class="zr-label" id="zr-lfname"></label>
+                        <div class="icon-alert-fill"></div>
+                    </div>
+                    <div class="zr-input-disc" id="maxch"></div>
+                </div>
+            </div>
+            <div class="zr-input">
+                <div class="zr-input-cont">
+                    <div class="zr-input-holder">
+                        <input type="text" class="zr-input-inpt" id="zr-lname" required>
+                        <label class="zr-label" id="zr-llname"></label>
+                        <div class="icon-alert-fill"></div>
+                    </div>
+                    <div class="zr-input-disc" id="maxch2"></div>
+                </div>
+            </div>
+            <div class="zr-input">
+                <div class="zr-input-cont">
+                    <div class="zr-input-holder zr-input-holder-nat">
+                        <select class="zr-input-inpt" id="zr-nat-qb" required>
+                        </select> 
+                        <input type="number" class="zr-input-inpt" id="zr-nat" min="1" required>
+                        <label class="zr-label" id="zr-lnat"></label>
+                    </div>
+                    <div class="zr-input-disc" id="nat"></div>
+                </div>
+            </div>
+
+            <div class="zr-input-nat-gender">
+                <div class="zr-input">
+                    <div class="zr-input-cont zr-input-cont-date">
+                        <div class="zr-input-holder">
+                            <input id="zr-cl-date" type="text" class="zr-input-inpt" required>
+                            <label class="zr-label" id="zr-cl-ldate"></label>
+                            <div class="icon-calendar"></div>
+                        </div>
+                        <div class="zr-input-disc" id="miny"></div>
+                    </div>
+                </div>
+                
+                <div id="zr-gender">
+                    <label class="zr-label" id="zr-cl-lgender"></label>
+                    <div class="zr-gender-box" id="zr-female">
+                        <div class="zr-gender-img zr-female"></div>
+                    </div>
+                    <div class="zr-gender-box" id="zr-male" style="border-color: var(--zr-green);">
+                        <div class="zr-gender-img zr-male"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="zr-buttons">
+                <button class="zr-button" id="zr-create"></button>
+                <button class="zr-button" id="zr-cancel"></button>
+            </div>
+        </div>
+
+        <div id="zr-right">
+            <div id="zr-r-title"></div>
+            <div id="zr-rules"></div>
+            <div id="zr-signature">
+                <div id="zr-signature-show" class="zr-signature-show"></div>
+                <div id="zr-signature-label" class="zr-signature-label"></div>
+            </div>
+            <div id="zr-rules-confirm">
+                <div id="zr-rules-conftext"></div>
+                <div id="zr-rc-accept"></div>
+            </div>            
+        </div>
+    </div>
+    <script src="./zr-assets/countries.js"></script>
+    <script src="./zr-assets/datedropper-jquery.js"></script>
+    <script src="./zr-assets/select2.full.min.js"></script>
+    <script type="text/javascript" src="./badwords.js"></script>
+	<script src="./zr-app.js" type="text/javascript"></script>
+</body>
+</html>

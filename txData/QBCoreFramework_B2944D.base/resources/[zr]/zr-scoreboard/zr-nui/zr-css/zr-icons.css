@@ -1,0 +1,120 @@
+
+/* Icons */
+.zr-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+}
+.zr-hide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background-image: url('../zr-assets/zr-icon/zr-hide.svg');
+}
+.zr-total-player-icon {
+    background-image: url('../zr-assets/zr-icon/zr-total-player-icon.svg');
+    width: 24px;
+    height: 24px;
+}
+.zr-section-title-icon-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 38px;
+}
+.zr-section-players .zr-section-title-icon {
+    width: 8px;
+    height: 8px;
+    background-color: var(--zr-primary);
+    border-radius: 50%;
+}
+.zr-section-jobs .zr-section-title-icon {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-jobs-white.svg');
+}
+.zr-section-heists .zr-section-title-icon {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-heists.svg');
+}
+.zr-section-binds .zr-section-title-icon {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-binds-white.svg');
+}
+.zr-section-commands .zr-section-title-icon {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-commands-white.svg');
+}
+.zr-section-annoucements .zr-section-title-icon {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-annoucements-white.svg');
+}
+.zr-section-settings .zr-section-title-icon {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-settings-white.svg');
+}
+.zr-menu-option-players {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-players.svg');
+}
+#zr-menu-option-players.active .zr-menu-option-players{
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-players-white.svg');
+}
+.zr-menu-option-jobs {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-jobs.svg');
+}
+#zr-menu-option-jobs.active .zr-menu-option-jobs{
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-jobs-white.svg');
+}
+.zr-menu-option-binds {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-binds.svg');
+}
+#zr-menu-option-binds-commands.active .zr-menu-option-binds{
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-binds-white.svg');
+}
+.zr-menu-option-annoucements {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-annoucements.svg');
+}
+#zr-menu-option-annoucements.active .zr-menu-option-annoucements{
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-annoucements-white.svg');
+}
+.zr-menu-option-settings {
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-settings.svg');
+}
+#zr-menu-option-settings.active .zr-menu-option-settings{
+    background-image: url('../zr-assets/zr-icon/zr-menu-option-settings-white.svg');
+}
+.zr-search-icon {
+    background-image: url('../zr-assets/zr-icon/zr-search-icon.svg');
+}
+.zr-section-heist-icon-available {
+    background-image: url('../zr-assets/zr-icon/zr-section-heist-icon-available.svg');
+}
+.zr-section-heist-icon-unavailable {
+    background-image: url('../zr-assets/zr-icon/zr-section-heist-icon-unavailable.svg');
+}
+#zr-section-setting-positioning .zr-section-setting-icon {
+    background-image: url('../zr-assets/zr-icon/zr-section-settings-positioning.svg');
+}
+#zr-section-setting-color .zr-section-setting-icon {
+    background-image: url('../zr-assets/zr-icon/zr-section-settings-color.svg');
+}
+#zr-section-setting-reset .zr-section-setting-icon {
+    background-image: url('../zr-assets/zr-icon/zr-section-settings-reset.svg');
+}
+#zr-section-setting-button-left .zr-section-setting-button-icon {
+    background-image: url('../zr-assets/zr-icon/zr-section-settings-positioning-left.svg');
+}
+#zr-section-setting-button-right .zr-section-setting-button-icon {
+    background-image: url('../zr-assets/zr-icon/zr-section-settings-positioning-right.svg');
+}
+#zr-section-setting-color .zr-section-setting-button-icon {
+    background-image: url('../zr-assets/zr-icon/zr-section-settings-color-edit.svg');
+}
+
+
+
+
+.left .zr-hide {
+    right: 8px;
+}
+.right .zr-hide {
+    transform: rotate(180deg);
+    left: 8px;
+}

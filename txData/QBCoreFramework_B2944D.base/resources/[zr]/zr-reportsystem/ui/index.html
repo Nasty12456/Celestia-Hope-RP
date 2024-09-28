@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zerobug-report</title>
+    <link rel="stylesheet" href="./font/style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      Vue.config.productionTip = false;
+      Vue.config.devtools = false;
+    </script>
+  </head>
+  <body>
+    <div class="OBug">
+      <div class="anotifications" v-if="!isVisible">
+        <div class="anotification" v-for="item in aNotification" v-if="item.isVisible">
+         
+          <div class="anotification-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 15C4 15 5 14 8 14C11 14 13 16 16 16C19 16 20 15 20 15V3C20 3 19 4 16 4C13 4 11 2 8 2C5 2 4 3 4 3V15Z" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 22V15" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+          </div>
+          <div class="anotification-text">
+            <span class="truncate">{{item.title}}</span>
+            <span class="truncate">{{item.description}}</span>
+          </div>
+        </div>
+        
+      </div>  
+      <!-- <img style="width: 1920px; height: 1080px;" src="./img/background.jpg" alt=""> -->
+      <div class="body-hult" v-if="isVisible">
+        <div class="container">
+          
+          <div>
+            <div class="header">
+              <div class="layout1">
+                <div class="profil">
+                  <img class="avatar" :src="playerProfilInfo.avatar" alt="">
+                  <div class="infos">
+                    <span>{{lang["welcome"]}}</span>
+                    <span>{{playerProfilInfo.name}}</span>
+                  </div>
+                </div>
+                <div class="server-info">
+                  <div class="players-online">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M7.99935 8.66667C9.8403 8.66667 11.3327 7.17428 11.3327 5.33333C11.3327 3.49238 9.8403 2 7.99935 2C6.1584 2 4.66602 3.49238 4.66602 5.33333C4.66602 7.17428 6.1584 8.66667 7.99935 8.66667Z" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.3327 14C13.3327 12.5855 12.7708 11.2289 11.7706 10.2287C10.7704 9.22853 9.41384 8.66663 7.99935 8.66663C6.58486 8.66663 5.22831 9.22853 4.22811 10.2287C3.22792 11.2289 2.66602 12.5855 2.66602 14" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    
+                      <span>
+                        {{lang["players_online"]}}: {{playersCount}}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="supports-online">
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 7.33337H4C4.35362 7.33337 4.69276 7.47385 4.94281 7.7239C5.19286 7.97395 5.33333 8.31309 5.33333 8.66671V10.6667C5.33333 11.0203 5.19286 11.3595 4.94281 11.6095C4.69276 11.8596 4.35362 12 4 12H3.33333C2.97971 12 2.64057 11.8596 2.39052 11.6095C2.14048 11.3595 2 11.0203 2 10.6667V7.33337ZM2 7.33337C2 6.54544 2.15519 5.76523 2.45672 5.03727C2.75825 4.30932 3.20021 3.64788 3.75736 3.09073C4.31451 2.53358 4.97595 2.09163 5.7039 1.7901C6.43185 1.48857 7.21207 1.33337 8 1.33337C8.78793 1.33337 9.56815 1.48857 10.2961 1.7901C11.0241 2.09163 11.6855 2.53358 12.2426 3.09073C12.7998 3.64788 13.2417 4.30932 13.5433 5.03727C13.8448 5.76523 14 6.54544 14 7.33337M14 7.33337V10.6667C14 11.0203 13.8595 11.3595 13.6095 11.6095C13.3594 11.8596 13.0203 12 12.6667 12H12C11.6464 12 11.3072 11.8596 11.0572 11.6095C10.8071 11.3595 10.6667 11.0203 10.6667 10.6667V8.66671C10.6667 8.31309 10.8071 7.97395 11.0572 7.7239C11.3072 7.47385 11.6464 7.33337 12 7.33337H14Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 10.6666V12C14 12.7072 13.719 13.3855 13.219 13.8856C12.7189 14.3857 12.0406 14.6666 11.3333 14.6666H8" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>
+                        {{lang["supports_online"]}}: {{supportsCount}}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="layout2">
+                <img src="./img/0bug.png" alt="">
+              </div>
+              <div class="layout3">
+                <svg v-if="knotification === false" @click="knotification = true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M19.4 14.9C20.2 16.4 21 17 21 17H3C3 17 6 15 6 8C6 4.7 8.7 2 12 2C12.7 2 13.3 2.1 13.9 2.3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.3008 21C10.4682 21.3044 10.7142 21.5583 11.0133 21.7352C11.3123 21.912 11.6534 22.0053 12.0008 22.0053C12.3482 22.0053 12.6892 21.912 12.9883 21.7352C13.2873 21.5583 13.5334 21.3044 13.7008 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18 11C19.6569 11 21 9.65685 21 8C21 6.34315 19.6569 5 18 5C16.3431 5 15 6.34315 15 8C15 9.65685 16.3431 11 18 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg v-else-if="knotification === true" @click="knotification = false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M19.4 14.9C20.2 16.4 21 17 21 17H3C3 17 6 15 6 8C6 4.7 8.7 2 12 2C12.7 2 13.3 2.1 13.9 2.3" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M10.3008 21C10.4682 21.3044 10.7142 21.5583 11.0133 21.7352C11.3123 21.912 11.6534 22.0053 12.0008 22.0053C12.3482 22.0053 12.6892 21.912 12.9883 21.7352C13.2873 21.5583 13.5334 21.3044 13.7008 21" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18 11C19.6569 11 21 9.65685 21 8C21 6.34315 19.6569 5 18 5C16.3431 5 15 6.34315 15 8C15 9.65685 16.3431 11 18 11Z" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{lang["report_menu"]}}</span>
+              </div>
+            </div>
+            <div class="knotifications" v-if="knotification">
+              <div class="kframe-1000008386">
+                <div class="kframe-1000008375">
+                  <div class="knotifications2">{{lang["notification"]}}</div>
+                </div>
+                <div class="kframe-1000008390">
+                  <div class="kmark-all-as-read" @click="aNotification = []">{{lang["mark_all_as_read"]}}</div>
+                  <svg @click="knotification = false" xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path d="M12 4.5L4 12.5" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 4.5L12 12.5" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <svg class="kline-613" xmlns="http://www.w3.org/2000/svg" width="318" height="2" viewBox="0 0 318 2" fill="none">
+                <path d="M1 1H317" stroke="white" stroke-opacity="0.08" stroke-linecap="round"/>
+              </svg>
+
+              <div class="knotification-main" >
+                <div v-for="item in aNotification" @click="openNotificationTicket(item, item.ticketID)">
+                  <div class="kframe-1000008387" >
+                    <div class="kframe-1000008388">
+                      <svg v-if="item.icon === 'ticket'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2.66602 9.99992C2.66602 9.99992 3.33268 9.33325 5.33268 9.33325C7.33268 9.33325 8.66602 10.6666 10.666 10.6666C12.666 10.6666 13.3327 9.99992 13.3327 9.99992V1.99992C13.3327 1.99992 12.666 2.66659 10.666 2.66659C8.66602 2.66659 7.33268 1.33325 5.33268 1.33325C3.33268 1.33325 2.66602 1.99992 2.66602 1.99992V9.99992Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.66602 14.6667V10" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <svg v-if="item.icon === 'message'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M5.26732 13.3334C6.5397 13.9862 8.00337 14.1629 9.39458 13.832C10.7858 13.501 12.013 12.684 12.8552 11.5282C13.6973 10.3725 14.0989 8.95392 13.9877 7.52822C13.8765 6.10252 13.2597 4.76343 12.2485 3.75224C11.2373 2.74106 9.89824 2.12428 8.47254 2.01306C7.04684 1.90183 5.6283 2.30348 4.47253 3.14561C3.31676 3.98774 2.49978 5.21499 2.1688 6.60619C1.83782 7.99739 2.01461 9.46106 2.66732 10.7334L1.33398 14.6668L5.26732 13.3334Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.33398 8H5.34065" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 8H8.00667" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.666 8H10.6727" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="ka-new-ticket-has-been-created-with-ticket-id-12233">
+                      <span>
+                        <span class="ka-new-ticket-has-been-created-with-ticket-id-12233-span">
+                          {{item.description}}
+                        </span>
+                      </span>
+                    </div>
+                    
+                  </div>
+                  <svg class="kline-613" xmlns="http://www.w3.org/2000/svg" width="318" height="2" viewBox="0 0 318 2" fill="none">
+                    <path d="M1 1H317" stroke="white" stroke-opacity="0.08" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+            <main>
+
+
+              <div class="notification-main">
+                <div v-if="currentNotification" class="notification" :class="currentNotification.type" >
+                  <div class="notification-type" v-if="currentNotification.type === 'info'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 9C11 8.44772 11.4477 8 12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9ZM12 12C12.5523 12 13 12.4477 13 13V15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15V13C11 12.4477 11.4477 12 12 12Z" fill="#00ACFF"/>
+                    </svg>
+                  </div>
+                  <div class="notification-type" v-else-if="currentNotification.type === 'error'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 9C11 8.44772 11.4477 8 12 8C12.5523 8 13 8.44772 13 9C13 9.55228 12.5523 10 12 10C11.4477 10 11 9.55228 11 9ZM12 12C12.5523 12 13 12.4477 13 13V15C13 15.5523 12.5523 16 12 16C11.4477 16 11 15.5523 11 15V13C11 12.4477 11.4477 12 12 12Z" fill="#FFC233"/>
+                    </svg>
+                  </div>
+                  <div class="notification-type" v-else-if="currentNotification.type === 'success'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M5.75 12.8665L8.33995 16.4138C9.15171 17.5256 10.8179 17.504 11.6006 16.3715L18.25 6.75" stroke="#2DCA72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                  <div class="notification-text">
+                    <span>
+                      {{currentNotification.title}}
+                    </span>
+                    &nbsp;
+                    <span>
+                      {{currentNotification.description}}
+                    </span>
+                  </div>
+                  <div class="notification-close" @click="closeNotification('send-report')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M14.375 5.625L5.625 14.375M5.625 5.625L14.375 14.375" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="my-report animate__animated animate__fadeIn" v-if="!admin">
+                <div class="my-report-main">
+                  <div class="my-report-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                      <path d="M2.66602 10.5C2.66602 10.5 3.33268 9.83337 5.33268 9.83337C7.33268 9.83337 8.66602 11.1667 10.666 11.1667C12.666 11.1667 13.3327 10.5 13.3327 10.5V2.50004C13.3327 2.50004 12.666 3.16671 10.666 3.16671C8.66602 3.16671 7.33268 1.83337 5.33268 1.83337C3.33268 1.83337 2.66602 2.50004 2.66602 2.50004V10.5Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.66602 15.1667V10.5" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>{{lang["my_reports"]}}</span>
+                  </div>
+                  <div class="my-report-search">
+                    <input type="text" :placeholder="lang['search_reports']" v-model="searchMyReport">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66732 7.33337C2.66732 4.75605 4.75666 2.66671 7.33398 2.66671C9.91131 2.66671 12.0007 4.75605 12.0007 7.33337C12.0007 9.9107 9.91131 12 7.33398 12C4.75666 12 2.66732 9.9107 2.66732 7.33337ZM7.33398 1.33337C4.02028 1.33337 1.33398 4.01967 1.33398 7.33337C1.33398 10.6471 4.02028 13.3334 7.33398 13.3334C8.75065 13.3334 10.0526 12.8424 11.0791 12.0213L13.5292 14.4714C13.7896 14.7318 14.2117 14.7318 14.472 14.4714C14.7324 14.2111 14.7324 13.789 14.472 13.5286L12.0219 11.0785C12.843 10.0521 13.334 8.75006 13.334 7.33337C13.334 4.01967 10.6477 1.33337 7.33398 1.33337Z" fill="white" fill-opacity="0.5"/>
+                    </svg>
+                  </div>
+
+                  <div class="my-report-line"></div>
+
+
+                  <div class="my-report-list" >
+                    <div class="my-report-item" v-for="item in filteredTicket" v-if="!item.solved" @click="openReport(item.ticketID)" :class="selectionTicketID == item.ticketID ? 'selecetedTicket' : ''">
+                      <div>
+                        <span class="truncate">{{item.title}}</span>
+                        <div>
+                          <tag v-if="item.status === 'open'">
+                            <span :class="item.status">{{lang["open"]}}</span>
+                          </tag>
+                          <tag v-else-if="item.status === 'resolving'">
+                            <span :class="item.status">{{lang["resolving"]}}</span>
+                          </tag>
+                          <tag v-else-if="item.status === 'closed'">
+                            <span :class="item.status">{{lang["closed"]}}</span>
+                          </tag>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="my-report-line"></div>
+                  <div class="my-report-leave-menu" @click="leaveReportMenu()">
+                    <div>
+                      <span>{{lang["leave_report_menu"]}}</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H6" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.666 11.3334L13.9993 8.00002L10.666 4.66669" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 8H6" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="my-report" v-if="admin">
+                <div class="admin-report-main">
+                  <div class="admin-report-title">
+                    <div class="admin-report-claimed" @click="selectAdminCategory = 'claimed'">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 15C4 15 5 14 8 14C11 14 13 16 16 16C19 16 20 15 20 15V3C20 3 19 4 16 4C13 4 11 2 8 2C5 2 4 3 4 3V15Z" :stroke="selectAdminCategory === 'claimed' ? '#00CCB8' : '#8996A9'" :stroke-opacity="selectAdminCategory === 'claimed' ? '1' : '0.5'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 22V15" :stroke="selectAdminCategory === 'claimed' ? '#00CCB8' : '#8996A9'" :stroke-opacity="selectAdminCategory === 'claimed' ? '1' : '0.5'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span :style="{ 'color': selectAdminCategory === 'claimed' ? '#8996A9' : '#8996a980' }">
+                        {{lang["claimed_reports"]}}
+                      </span>
+                    </div>
+                    <div class="admin-report-title-line">
+                      
+                    </div>
+                    <div class="admin-report-leaderboard" @click="selectAdminCategory = 'leaderboard'">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none">
+                        <path d="M11.5614 3.26605C11.6046 3.18765 11.668 3.12228 11.7451 3.07675C11.8221 3.03122 11.91 3.0072 11.9994 3.0072C12.0889 3.0072 12.1768 3.03122 12.2538 3.07675C12.3309 3.12228 12.3943 3.18765 12.4374 3.26605L15.3894 8.87005C15.4598 8.99981 15.5581 9.11238 15.6772 9.19967C15.7962 9.28695 15.9331 9.3468 16.078 9.37491C16.223 9.40301 16.3723 9.39868 16.5154 9.36222C16.6584 9.32577 16.7916 9.25809 16.9054 9.16405L21.1824 5.50005C21.2646 5.43327 21.3657 5.39426 21.4714 5.38865C21.5771 5.38303 21.6818 5.41109 21.7705 5.46879C21.8593 5.52649 21.9274 5.61086 21.9651 5.70974C22.0028 5.80862 22.0082 5.91692 21.9804 6.01905L19.1464 16.265C19.0886 16.4747 18.964 16.6598 18.7915 16.7923C18.6189 16.9247 18.4079 16.9973 18.1904 16.999H5.80945C5.59178 16.9975 5.38056 16.925 5.20784 16.7926C5.03512 16.6601 4.91034 16.4749 4.85245 16.265L2.01945 6.02005C1.9917 5.91792 1.99707 5.80962 2.03479 5.71074C2.07251 5.61186 2.14063 5.52749 2.22935 5.46979C2.31807 5.41209 2.42281 5.38403 2.52849 5.38965C2.63417 5.39526 2.73534 5.43427 2.81745 5.50105L7.09345 9.16505C7.20725 9.25909 7.34046 9.32677 7.48351 9.36322C7.62657 9.39968 7.77592 9.40401 7.92085 9.37591C8.06578 9.3478 8.20268 9.28795 8.32174 9.20066C8.4408 9.11338 8.53905 9.00081 8.60945 8.87105L11.5614 3.26605Z" :stroke="selectAdminCategory === 'leaderboard' ? '#00CCB8' : '#8996A9'" :stroke-opacity="selectAdminCategory === 'leaderboard' ? '1' : '0.5'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 21H19" :stroke="selectAdminCategory === 'leaderboard' ? '#00CCB8' : '#8996A9'" :stroke-opacity="selectAdminCategory === 'leaderboard' ? '1' : '0.5'"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span :style="{ 'color': selectAdminCategory === 'leaderboard' ? '#8996A9' : '#8996a980' }">{{lang["staff_leaderboard"]}}</span>
+                    </div>
+                  </div>
+
+                  <div class="my-report-line"></div>
+
+
+                  <div class="admin-report-list" v-if="selectAdminCategory === 'claimed'">
+                    <div class="admin-report-item" v-for="item in adminFilteredTicket" @click="openAdminReport(item.ticketID)" :class="selectionTicketID == item.ticketID ? 'selecetedTicket' : ''">
+                      <div>
+                        <span>{{item.title}}</span>
+                        <div>
+                          <tag>
+                            <span :style="{ 'color': item.priority.color }">{{item.priority.text}}</span>
+                          </tag>
+                          <tag v-if="item.status === 'open'">
+                            <span :class="item.status">{{lang["open"]}}</span>
+                          </tag>
+                          <tag v-else-if="item.status === 'resolving'">
+                            <span :class="item.status">{{lang["resolving"]}}</span>
+                          </tag>
+                          
+                          <tag v-else-if="item.status === 'closed'">
+                            <span :class="item.status">{{lang["closed"]}}</span>
+                          </tag>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="admin-leaderboard-list" v-else-if="selectAdminCategory === 'leaderboard'">
+                    <div class="admin-leaderboard-item" v-for="item in sortedAdminLeaderboard">
+                      <div>
+                        <span>{{ item.id }}</span>
+                        <img :src="item.avatar" alt="">
+                        <div>
+                          <span>{{item.name}}</span>
+                          <span>{{item.resolvedCount}} {{lang["resolved_reports"]}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-report-line"></div>
+
+                  <div class="my-report-leave-menu" >
+                    <div @click="leaveReportMenu()">
+                      <span>{{lang["leave_report_menu"]}}</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H6" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.666 11.3334L13.9993 8.00002L10.666 4.66669" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 8H6" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="admin-main-page" v-show="page == 'admin-main'">
+                <div class="admin-main-page-main">
+                  <div class="admin-main-title">
+                    <div class="admin-main-title-top">
+                      <div class="admin-main-title-top-top">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M5.33398 20C5.33398 20 6.66732 18.6666 10.6673 18.6666C14.6673 18.6666 17.334 21.3333 21.334 21.3333C25.334 21.3333 26.6673 20 26.6673 20V3.99996C26.6673 3.99996 25.334 5.33329 21.334 5.33329C17.334 5.33329 14.6673 2.66663 10.6673 2.66663C6.66732 2.66663 5.33398 3.99996 5.33398 3.99996V20Z" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.33398 29.3333V20" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <span>{{lang["all_reports"]}}</span>
+                        </div>
+                        <span>{{lang["all_reports_subtitle"]}}</span>
+                      </div>
+                      <div class="admin-main-title-top-bottom">
+                        <div class="admin-main-title-top-bottom-main">
+                          <div class="admin-main-title-top-bottom-input">
+                            <input type="text" :placeholder="lang['search_admin_reports']" v-model="searchAdminMain">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#D1D1DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M20.9992 21L16.6992 16.7" stroke="#D1D1DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </div>
+                          <div class="admin-main-title-top-bottom-filter">
+                            <div class="admin-main-title-top-bottom-filter-main">
+                              <div class="admin-main-filter-priority">
+                                <nav>
+                                  <input id="toggle" type="checkbox"  v-model="isCheckedFilterPriority" @click="isCheckedFilterPriority = true">
+                                  <h2>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                      <path d="M14.6673 8.00004H13.014C12.7226 7.99942 12.4391 8.09424 12.2067 8.27002C11.9744 8.44579 11.806 8.69284 11.7273 8.97337L10.1607 14.5467C10.1506 14.5813 10.1295 14.6117 10.1007 14.6334C10.0718 14.655 10.0367 14.6667 10.0007 14.6667C9.96459 14.6667 9.9295 14.655 9.90065 14.6334C9.8718 14.6117 9.85075 14.5813 9.84065 14.5467L6.16065 1.45337C6.15055 1.41875 6.1295 1.38834 6.10065 1.36671C6.0718 1.34507 6.03671 1.33337 6.00065 1.33337C5.96459 1.33337 5.9295 1.34507 5.90065 1.36671C5.8718 1.38834 5.85075 1.41875 5.84065 1.45337L4.27398 7.02671C4.19563 7.30614 4.02824 7.55238 3.79723 7.72805C3.56622 7.90371 3.2842 7.99921 2.99398 8.00004H1.33398" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span
+                                      
+                                    >
+                                    {{lang["priority"]}}
+                                    </span>
+                                    <svg v-if="isCheckedFilterPriority"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16" height="16"
+                                      viewBox="0 0 16 16"
+                                      fill="none"
+                                    >
+                                      <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    
+                                    <svg v-else
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="16" height="16"
+                                          viewBox="0 0 16 16"
+                                          fill="none"
+                                          style="transform: rotate(180deg);"
+                                    >
+                                      <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </h2>
+                                  <ul class="send-report-priority-box">
+                                    <li 
+                                      v-for="(item, index) in priorityList" 
+                                      :key="index" 
+                                      class="send-report-priority-box-li" 
+                                      @click="selectedFilterPriority(item)"
+                                      :style="{ 'color': item.color }"
+        
+                                    >
+                                      <svg v-if="isSelectedPriority(item)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8ZM15.7902 10.2702C16.0776 9.97186 16.0686 9.49708 15.7702 9.20976C15.4719 8.92244 14.9971 8.9314 14.7098 9.22977L10.9458 13.1385L9.31677 11.2588C9.04549 10.9458 8.57182 10.912 8.2588 11.1832C7.94579 11.4545 7.91195 11.9282 8.18323 12.2412L10.3499 14.7412C10.4879 14.9004 10.6864 14.9942 10.897 14.9997C11.1076 15.0053 11.3108 14.922 11.4569 14.7702L15.7902 10.2702Z" fill="#00CCB8"/>
+                                      </svg>
+                                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g filter="url(#filter0_d_69_11712)">
+                                          <path d="M4.75 8.75C4.75 6.54086 6.54086 4.75 8.75 4.75H15.25C17.4591 4.75 19.25 6.54086 19.25 8.75V15.25C19.25 17.4591 17.4591 19.25 15.25 19.25H8.75C6.54086 19.25 4.75 17.4591 4.75 15.25V8.75Z" stroke="white" stroke-opacity="0.3" stroke-width="1.5" shape-rendering="crispEdges"/>
+                                        </g>
+                                        <defs>
+                                          <filter id="filter0_d_69_11712" x="2" y="3" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="1"/>
+                                            <feGaussianBlur stdDeviation="1"/>
+                                            <feComposite in2="hardAlpha" operator="out"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0901961 0 0 0 0.05 0"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_69_11712"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_69_11712" result="shape"/>
+                                          </filter>
+                                        </defs>
+                                      </svg>
+                                      <span>{{item.text}}</span>
+                                    </li>
+                                   
+                     
+                                  </ul>
+                                </nav>
+          
+                              </div>
+                              <div class="admin-main-filter-categories">
+
+
+                                <nav>
+                                  <input id="toggle" type="checkbox"  v-model="isCheckedFilterCategory" @click="isCheckedFilterCategory = true">
+                                  <h2>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                      <path d="M14.6673 2H1.33398L6.66732 8.30667V12.6667L9.33398 14V8.30667L14.6673 2Z" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span
+                                      
+                                    >
+                                    {{lang["categories"]}}
+                                    </span>
+                                    <svg v-if="isCheckedFilterCategory"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16" height="16"
+                                      viewBox="0 0 16 16"
+                                      fill="none"
+                                    >
+                                      <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    
+                                    <svg v-else
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="16" height="16"
+                                          viewBox="0 0 16 16"
+                                          fill="none"
+                                          style="transform: rotate(180deg);"
+                                    >
+                                      <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                  </h2>
+                                  <ul class="send-report-priority-box">
+                                    <li 
+                                      v-for="(item, index) in categoryList" 
+                                      :key="index" 
+                                      class="send-report-priority-box-li" 
+                                      @click="selectedFilterCategory(item)"
+                                      
+        
+                                    >
+                                      <svg v-if="isSelectedCategory(item)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8ZM15.7902 10.2702C16.0776 9.97186 16.0686 9.49708 15.7702 9.20976C15.4719 8.92244 14.9971 8.9314 14.7098 9.22977L10.9458 13.1385L9.31677 11.2588C9.04549 10.9458 8.57182 10.912 8.2588 11.1832C7.94579 11.4545 7.91195 11.9282 8.18323 12.2412L10.3499 14.7412C10.4879 14.9004 10.6864 14.9942 10.897 14.9997C11.1076 15.0053 11.3108 14.922 11.4569 14.7702L15.7902 10.2702Z" fill="#00CCB8"/>
+                                      </svg>
+                                      <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g filter="url(#filter0_d_69_11712)">
+                                          <path d="M4.75 8.75C4.75 6.54086 6.54086 4.75 8.75 4.75H15.25C17.4591 4.75 19.25 6.54086 19.25 8.75V15.25C19.25 17.4591 17.4591 19.25 15.25 19.25H8.75C6.54086 19.25 4.75 17.4591 4.75 15.25V8.75Z" stroke="white" stroke-opacity="0.3" stroke-width="1.5" shape-rendering="crispEdges"/>
+                                        </g>
+                                        <defs>
+                                          <filter id="filter0_d_69_11712" x="2" y="3" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="1"/>
+                                            <feGaussianBlur stdDeviation="1"/>
+                                            <feComposite in2="hardAlpha" operator="out"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0901961 0 0 0 0.05 0"/>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_69_11712"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_69_11712" result="shape"/>
+                                          </filter>
+                                        </defs>
+                                      </svg>
+                                      <span>{{item.text}}</span>
+                                    </li>
+                                   
+                     
+                                  </ul>
+                                </nav>
+
+
+                                
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-1000008350">
+                    <div class="frame-1000008348">
+                      <div class="ticket-id truncate">{{lang["ticket_id"]}}</div>
+                      <div class="title truncate">{{lang["title"]}}</div>
+                    </div>
+                    <div class="frame-1000008349">
+                      <div class="created-by truncate">{{lang["created_by"]}}</div>
+                      <div class="frame-1000008346">
+                        <div class="category truncate">{{lang["category"]}}</div>
+                        <div class="priority truncate">{{lang["priority"]}}</div>
+                        <div class="status truncate">{{lang["status"]}}</div>
+                        <div class="assigned truncate">{{lang["assigned"]}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-1000008339">
+                    <div v-for="(ticket, index) in adminMainFilteredTicket" :key="index" class="frame-1000008329">
+                      <div class="frame-1000008338">
+                        <div class="_001 truncate">{{ String(index + 1).padStart(3, '0') }}</div>
+                        <div class="inappropriate-language-by-player truncate">{{ ticket.title }}</div>
+                        <div class="ratchaw truncate">{{ ticket.ticketOwnerDetails.name }}</div>
+                        <div class="frame-1000008271">
+                          <div class="player-report">
+                            <template v-if="ticket.category.type === 'player'">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                <path d="M8.00065 4.49996C8.36884 4.49996 8.66732 4.20148 8.66732 3.83329C8.66732 3.4651 8.36884 3.16663 8.00065 3.16663C7.63246 3.16663 7.33398 3.4651 7.33398 3.83329C7.33398 4.20148 7.63246 4.49996 8.00065 4.49996Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 13.8334L8 9.83337L10 13.8334" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 5.83337L8 7.16671L12 5.83337" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 7.16663V9.83329" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <div class="player-report2 truncate">{{ticket.category.text}}</div>
+                            </template>
+                            <template v-else-if="ticket.category.type === 'bug'">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                <path d="M5.33398 1.83337L6.58732 3.08671" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.41406 3.08671L10.6674 1.83337" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.00005 5.25337V4.5867C5.98796 4.31654 6.03074 4.04672 6.1258 3.79354C6.22086 3.54036 6.36623 3.30906 6.55313 3.1136C6.74004 2.91815 6.96461 2.76259 7.21329 2.65631C7.46197 2.55003 7.72961 2.49524 8.00005 2.49524C8.27049 2.49524 8.53812 2.55003 8.7868 2.65631C9.03548 2.76259 9.26005 2.91815 9.44696 3.1136C9.63387 3.30906 9.77924 3.54036 9.8743 3.79354C9.96935 4.04672 10.0121 4.31654 10 4.5867V5.25337" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 13.8333C5.8 13.8333 4 12.0333 4 9.83329V7.83329C4 7.12605 4.28095 6.44777 4.78105 5.94767C5.28115 5.44758 5.95942 5.16663 6.66667 5.16663H9.33333C10.0406 5.16663 10.7189 5.44758 11.219 5.94767C11.719 6.44777 12 7.12605 12 7.83329V9.83329C12 12.0333 10.2 13.8333 8 13.8333Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 13.8334V7.83337" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.35333 6.50004C3.06667 6.36671 2 5.23337 2 3.83337" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.00065 9.16663H1.33398" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 14.5C2 13.1 3.13333 11.9 4.53333 11.8334" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.9798 3.83337C13.9798 5.23337 12.9132 6.36671 11.6465 6.50004" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.6667 9.16663H12" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.4668 11.8334C12.8668 11.9 14.0001 13.1 14.0001 14.5" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <div class="player-report2 truncate">{{ticket.category.text}}</div>
+                            </template>
+                            <template v-else-if="ticket.category.type === 'question'">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                <path d="M8.00065 15.1667C11.6825 15.1667 14.6673 12.1819 14.6673 8.50004C14.6673 4.81814 11.6825 1.83337 8.00065 1.83337C4.31875 1.83337 1.33398 4.81814 1.33398 8.50004C1.33398 12.1819 4.31875 15.1667 8.00065 15.1667Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.06055 6.50001C6.21728 6.05446 6.52665 5.67875 6.93385 5.43944C7.34105 5.20012 7.81981 5.11264 8.28533 5.19249C8.75085 5.27234 9.17309 5.51436 9.47727 5.8757C9.78144 6.23703 9.94792 6.69436 9.94721 7.16668C9.94721 8.50001 7.94721 9.16668 7.94721 9.16668" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 11.8334H8.00667" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              <div class="player-report2 truncate">{{ticket.category.text}}</div>
+                            </template>
+                          </div>
+                          <div class="tag">
+                            <div class="status-kenks truncate" :style="{ 'color': ticket.priority.color }">{{ ticket.priority.text }}</div>
+                          </div>
+                          <div class="tag">
+                            <template v-if="ticket.status === 'open'">
+                              <span class="status-kenks truncate" :class="ticket.status">{{lang["open"]}}</span>
+                            </template>
+                            <template v-else-if="ticket.status === 'resolving'">
+                              <span class="status-kenks truncate" :class="ticket.status">{{lang["resolving"]}}</span>
+                            </template>
+                            <template v-else-if="ticket.status === 'closed'">
+                              <span class="status-kenks truncate" :class="ticket.status">{{lang["closed"]}}</span>
+                            </template>
+                 
+                            
+                          </div>
+                          <div class="frame-1000008302">
+                            <div class="button claimed" v-if="ticket.claimed">
+                              <div class="wrap" >
+                                <div class="claimed truncate">{{lang["claimed"]}}</div>
+                              </div>
+                              
+                            </div>
+                            <div class="button claim" v-else @click="claimTicket(ticket)">
+                              
+                              <div class="wrap">
+                                <div class="claim truncate">{{lang["claim"]}}</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="trash-icon" @click="clickOpenDeleteTicket(ticket)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                          <path d="M2 4.5H14" stroke="#4F4F4F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12.6673 4.5V13.8333C12.6673 14.5 12.0007 15.1667 11.334 15.1667H4.66732C4.00065 15.1667 3.33398 14.5 3.33398 13.8333V4.5" stroke="#4F4F4F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5.33398 4.50004V3.16671C5.33398 2.50004 6.00065 1.83337 6.66732 1.83337H9.33398C10.0007 1.83337 10.6673 2.50004 10.6673 3.16671V4.50004" stroke="#4F4F4F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6.66602 7.83337V11.8334" stroke="#4F4F4F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9.33398 7.83337V11.8334" stroke="#4F4F4F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="delete-ticket-main" v-if="deleteTicketBox">
+                    <div class="delete-ticket-box">
+                      <div class="delete-ticket-box-top">
+                        <span>{{lang["delete_report_title"]}}</span>
+                        <span>{{lang["connot_be_undone"]}}</span>
+                      </div>
+                      <div class="delete-ticket-box-bottom">
+                        <div @click="deleteTicketBox = false">
+                          <span>{{lang["cancel"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M12.5 4L4.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.5 4L12.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div @click="clickTicketDelete">
+                          <span>{{lang["yes_delete"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 4H14" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.6673 4V13.3333C12.6673 14 12.0007 14.6667 11.334 14.6667H4.66732C4.00065 14.6667 3.33398 14 3.33398 13.3333V4" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.33398 4.00004V2.66671C5.33398 2.00004 6.00065 1.33337 6.66732 1.33337H9.33398C10.0007 1.33337 10.6673 2.00004 10.6673 2.66671V4.00004" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.66602 7.33337V11.3334" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.33398 7.33337V11.3334" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="main-page" v-show="page == 'main'">
+                <div class="main-page-main">
+                  <div class="report-unwanted">
+                    <div class="report-unwanted-title">
+                      <span>{{lang["main_title"]}}</span>
+                      <span>{{lang["main_subtitle"]}}</span>
+                    </div>
+                    <div class="report-unwanted-categories" >
+                      <div class="unwanted-categories bug animate__animated animate__fadeIn" @click="openSendReport('bug')">
+                        <div>
+                          <div class="unwanted-categories-title">
+                            <span>{{lang["found_a_bug"]}}</span>
+                            <span>{{lang["found_a_bug2"]}}</span>
+                          </div>
+                          <div class="unwanted-categories-send-report">
+                            <div class="send-report-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                <path d="M4.33398 1.66663H6.33398V3.66663" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.33268 1.66663L1.66602 6.33329" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                            <span>{{lang["send_report"]}}</span>
+                          </div>
+                        </div>
+                   
+                      </div>
+                      <div class="unwanted-categories player animate__animated animate__fadeIn" @click="openSendReport('player')">
+                        <div>
+                          <div class="unwanted-categories-title">
+                            <span>{{lang["player_misconduct"]}}</span>
+                            <span>{{lang["player_misconduct2"]}}</span>
+                          </div>
+                          <div class="unwanted-categories-send-report">
+                            <div class="send-report-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                <path d="M4.33398 1.66663H6.33398V3.66663" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.33268 1.66663L1.66602 6.33329" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                            <span>{{lang["send_report"]}}</span>
+                          </div>
+                        </div>
+                   
+                      </div>
+                      <div class="unwanted-categories question animate__animated animate__fadeIn" @click="openSendReport('question')">
+                        <div>
+                          <div class="unwanted-categories-title">
+                            <span>{{lang["have_a_question"]}}</span>
+                            <span>{{lang["have_a_question2"]}}</span>
+                          </div>
+                          <div class="unwanted-categories-send-report">
+                            <div class="send-report-icon">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                <path d="M4.33398 1.66663H6.33398V3.66663" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.33268 1.66663L1.66602 6.33329" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                            <span>{{lang["send_report"]}}</span>
+                          </div>
+                        </div>
+                   
+                      </div>
+                    </div>
+                    <div class="report-unwanted-line"></div>
+                    <div class="report-quetion">
+                      <div class="report-quetion-title">
+                        <span>{{lang["asked_questions"]}}</span>
+                        <span>{{lang["asked_questions"]}}</span>
+                      </div>
+                      <div class="report-quetion-main">
+                        <div class="report-quetion-main-surface">
+                          <div class="report-quetion-main-list">
+                            <div class="question-item "  v-for="(item, index) in questions" :key="index">
+                              <div class="surface">
+                                <div class="surface-header" @click="Question(index)">
+                                  <div class="surface-header-title">
+                                    <span>{{ item.title }}</span>
+                                  </div>
+                                  <div class="surface-chevron" v-if="!item.visible">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                      <path d="M9.24218 8.0825L5.58518 4.4255C5.51209 4.35894 5.4531 4.27839 5.41169 4.18863C5.37029 4.09887 5.34732 4.00171 5.34413 3.90291C5.34095 3.80411 5.35762 3.70568 5.39316 3.61343C5.42869 3.52119 5.48238 3.43702 5.55103 3.36589C5.61968 3.29476 5.7019 3.23813 5.79282 3.19935C5.88375 3.16057 5.98153 3.14043 6.08038 3.14011C6.17924 3.13979 6.27715 3.15931 6.36832 3.19751C6.45949 3.23571 6.54207 3.29181 6.61118 3.3625L6.62918 3.3805L10.8092 7.5595C10.9477 7.69808 11.0256 7.88603 11.0256 8.082C11.0256 8.27797 10.9477 8.46591 10.8092 8.6045L6.63018 12.7835C6.56274 12.8533 6.48222 12.9091 6.39321 12.9478C6.3042 12.9865 6.20844 13.0073 6.11141 13.0089C6.01437 13.0106 5.91795 12.9931 5.82766 12.9575C5.73737 12.922 5.65498 12.8689 5.58518 12.8015C5.51538 12.7341 5.45955 12.6535 5.42087 12.5645C5.38219 12.4755 5.36142 12.3798 5.35975 12.2827C5.35808 12.1857 5.37554 12.0893 5.41113 11.999C5.44672 11.9087 5.49974 11.8263 5.56718 11.7565L5.58518 11.7385L9.24218 8.0825Z" fill="#00CCB8" stroke="#00CCB8" stroke-width="0.5"/>
+                                    </svg>
+                                  </div>
+                                  <div class="surface-chevron" v-else-if="item.visible">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                      <path d="M8.17654 9.13207L11.8335 5.47507C11.9001 5.40198 11.9806 5.34299 12.0704 5.30159C12.1602 5.26018 12.2573 5.23721 12.3561 5.23403C12.4549 5.23084 12.5534 5.24751 12.6456 5.28305C12.7378 5.31859 12.822 5.37227 12.8931 5.44092C12.9643 5.50957 13.0209 5.59179 13.0597 5.68272C13.0985 5.77364 13.1186 5.87143 13.1189 5.97028C13.1192 6.06913 13.0997 6.16704 13.0615 6.25821C13.0233 6.34938 12.9672 6.43197 12.8965 6.50107L12.8785 6.51907L8.69954 10.6991C8.56095 10.8376 8.37301 10.9155 8.17704 10.9155C7.98107 10.9155 7.79312 10.8376 7.65454 10.6991L3.47554 6.52007C3.40574 6.45264 3.34991 6.37212 3.31123 6.2831C3.27255 6.19409 3.25178 6.09834 3.25011 6.0013C3.24844 5.90426 3.2659 5.80784 3.30149 5.71755C3.33708 5.62726 3.3901 5.54487 3.45754 5.47507C3.52497 5.40527 3.60549 5.34944 3.6945 5.31076C3.78351 5.27208 3.87927 5.25132 3.97631 5.24964C4.07335 5.24797 4.16976 5.26543 4.26005 5.30102C4.35034 5.33661 4.43274 5.38964 4.50254 5.45707L4.52054 5.47507L8.17654 9.13207Z" fill="#00CCB8" stroke="#00CCB8" stroke-width="0.5"/>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <transition name="slide-fade">
+                                  <div class="surface-text" v-show="item.visible">
+                                      <p>{{ item.text }}</p>
+                                  </div>
+                               </transition>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="send-report-page" v-show="page == 'send-report'">
+                <div class="send-report-page-main">
+                  <div class="send-report-header">
+                    <div class="send-report-title">
+                      <div class="send-report-title-top">
+                        <div>
+                          <template v-if="sendReport.selectCategory.type === 'bug'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                              <path d="M10.666 2.66663L13.1727 5.17329" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M18.8262 5.17329L21.3328 2.66663" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12.0001 9.50662V8.17329C11.9759 7.63295 12.0615 7.09332 12.2516 6.58695C12.4417 6.08059 12.7325 5.618 13.1063 5.22709C13.4801 4.83617 13.9292 4.52505 14.4266 4.3125C14.9239 4.09994 15.4592 3.99036 16.0001 3.99036C16.541 3.99036 17.0762 4.09994 17.5736 4.3125C18.071 4.52505 18.5201 4.83617 18.8939 5.22709C19.2677 5.618 19.5585 6.08059 19.7486 6.58695C19.9387 7.09332 20.0243 7.63295 20.0001 8.17329V9.50662" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M16 26.6667C11.6 26.6667 8 23.0667 8 18.6667V14.6667C8 13.2522 8.5619 11.8957 9.5621 10.8955C10.5623 9.89528 11.9188 9.33337 13.3333 9.33337H18.6667C20.0812 9.33337 21.4377 9.89528 22.4379 10.8955C23.4381 11.8957 24 13.2522 24 14.6667V18.6667C24 23.0667 20.4 26.6667 16 26.6667Z" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M16 26.6666V14.6666" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M8.70667 12C6.13333 11.7333 4 9.46663 4 6.66663" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M7.99935 17.3334H2.66602" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M4 28C4 25.2 6.26667 22.8 9.06667 22.6666" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M27.9596 6.66663C27.9596 9.46663 25.8263 11.7333 23.293 12" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M29.3333 17.3334H24" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M22.9336 22.6666C25.7336 22.8 28.0003 25.2 28.0003 28" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>{{lang["report_a_system_issue"]}}</span>
+                          </template>
+
+                          <template v-if="sendReport.selectCategory.type === 'player'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                              <path d="M15.9993 8.00001C16.7357 8.00001 17.3327 7.40306 17.3327 6.66668C17.3327 5.9303 16.7357 5.33334 15.9993 5.33334C15.263 5.33334 14.666 5.9303 14.666 6.66668C14.666 7.40306 15.263 8.00001 15.9993 8.00001Z" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12 26.6667L16 18.6667L20 26.6667" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M8 10.6667L16 13.3333L24 10.6667" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M16 13.3333V18.6667" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            <span>{{lang["report_player_misconduct"]}}</span>
+                          </template>
+
+                          <template v-if="sendReport.selectCategory.type === 'question'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                              <path d="M15.9993 29.3334C23.3631 29.3334 29.3327 23.3638 29.3327 16C29.3327 8.63622 23.3631 2.66669 15.9993 2.66669C8.63555 2.66669 2.66602 8.63622 2.66602 16C2.66602 23.3638 8.63555 29.3334 15.9993 29.3334Z" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M12.1191 12C12.4326 11.1089 13.0513 10.3575 13.8657 9.87887C14.6802 9.40024 15.6377 9.22528 16.5687 9.38498C17.4998 9.54467 18.3442 10.0287 18.9526 10.7514C19.5609 11.4741 19.8939 12.3887 19.8925 13.3334C19.8925 16 15.8925 17.3334 15.8925 17.3334" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M16 22.6667H16.0133" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            <span>{{lang["ask_a_questions"]}}</span>
+                          </template>
+                          
+                        </div>
+                        <template>
+                          <svg @click="page = 'main'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M24 8L8 24" stroke="#6C6C89" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 8L24 24" stroke="#6C6C89" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </template>
+                      </div>
+                      <p class="send-report-title-description">{{lang["detailed_information"]}}</p>
+                    </div>
+
+                    <div class="send-report-title-container" >
+                      <div class="send-report-title-container-start" :style="{
+                        width: sendReport.selectCategory.type === 'player' ? '659px' : '788px'
+                    }">
+                        <div class="send-report-title-input-container" >
+                          <div class="send-report-title-wrap">
+                            <input type="text" v-model="sendReport.title" class="send-report-title-input" name="" id="" :placeholder="lang['enter_a_brief_title']">
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="send-report-dropdown-priority" v-if="sendReport.selectCategory.type === 'player'">
+                        <nav>
+                          <input id="toggle" type="checkbox"  v-model="isCheckedPlayer" @click="isCheckedPriority = true">
+                          <h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M7.99935 8.66667C9.8403 8.66667 11.3327 7.17428 11.3327 5.33333C11.3327 3.49238 9.8403 2 7.99935 2C6.1584 2 4.66602 3.49238 4.66602 5.33333C4.66602 7.17428 6.1584 8.66667 7.99935 8.66667Z" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M13.3327 14C13.3327 12.5855 12.7708 11.2289 11.7706 10.2288C10.7704 9.22856 9.41384 8.66666 7.99935 8.66666C6.58486 8.66666 5.22831 9.22856 4.22811 10.2288C3.22792 11.2289 2.66602 12.5855 2.66602 14" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            <span
+                              
+                            >
+                            {{lang["player"]}}
+                            </span>
+                            <svg v-if="isCheckedPlayer"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16" height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                            >
+                              <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                            <svg v-else
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16" height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                  style="transform: rotate(180deg);"
+                            >
+                              <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </h2>
+                          <ul class="send-report-player-box">
+                            <li v-for="(item, index) in playerList" :key="index" class="send-report-player-box-li" @click="sendReport.selectPlayer = item">
+                              <svg v-if="sendReport.selectPlayer === item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8ZM15.7902 10.2702C16.0776 9.97186 16.0686 9.49708 15.7702 9.20976C15.4719 8.92244 14.9971 8.9314 14.7098 9.22977L10.9458 13.1385L9.31677 11.2588C9.04549 10.9458 8.57182 10.912 8.2588 11.1832C7.94579 11.4545 7.91195 11.9282 8.18323 12.2412L10.3499 14.7412C10.4879 14.9004 10.6864 14.9942 10.897 14.9997C11.1076 15.0053 11.3108 14.922 11.4569 14.7702L15.7902 10.2702Z" fill="#00CCB8"/>
+                              </svg>
+                              <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g filter="url(#filter0_d_69_11712)">
+                                  <path d="M4.75 8.75C4.75 6.54086 6.54086 4.75 8.75 4.75H15.25C17.4591 4.75 19.25 6.54086 19.25 8.75V15.25C19.25 17.4591 17.4591 19.25 15.25 19.25H8.75C6.54086 19.25 4.75 17.4591 4.75 15.25V8.75Z" stroke="white" stroke-opacity="0.3" stroke-width="1.5" shape-rendering="crispEdges"/>
+                                </g>
+                                <defs>
+                                  <filter id="filter0_d_69_11712" x="2" y="3" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="1"/>
+                                    <feGaussianBlur stdDeviation="1"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0901961 0 0 0 0.05 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_69_11712"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_69_11712" result="shape"/>
+                                  </filter>
+                                </defs>
+                              </svg>
+                              <span>{{ shortenText(item.name, 20) }}</span>
+                              <div>{{ item.id }}</div>
+                            </li>
+                          </ul>
+                          
+                        </nav>
+  
+                      </div>
+                      <div class="send-report-dropdown-priority">
+                        <nav>
+                          <input id="toggle" type="checkbox"  v-model="isCheckedPriority" @click="isCheckedPlayer = true">
+                          <h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M14.6673 4.66663L9.00065 10.3333L5.66732 6.99996L1.33398 11.3333" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M10.666 4.66663H14.666V8.66663" stroke="#D1D1DB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span
+                              
+                            >
+                            {{lang["priority"]}}
+                            </span>
+                            <svg v-if="isCheckedPriority"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16" height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                            >
+                              <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                            <svg v-else
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="16" height="16"
+                                  viewBox="0 0 16 16"
+                                  fill="none"
+                                  style="transform: rotate(180deg);"
+                            >
+                              <path d="M4 6L8 10L12 6" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </h2>
+                          <ul class="send-report-priority-box">
+                            <li 
+                              v-for="(item, index) in priorityList" 
+                              :key="index" 
+                              class="send-report-priority-box-li" 
+                              @click="sendReport.selectedPriority = item"
+                              :style="{ 'color': item.color }"
+
+                            >
+                              <svg v-if="sendReport.selectedPriority === item" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8ZM15.7902 10.2702C16.0776 9.97186 16.0686 9.49708 15.7702 9.20976C15.4719 8.92244 14.9971 8.9314 14.7098 9.22977L10.9458 13.1385L9.31677 11.2588C9.04549 10.9458 8.57182 10.912 8.2588 11.1832C7.94579 11.4545 7.91195 11.9282 8.18323 12.2412L10.3499 14.7412C10.4879 14.9004 10.6864 14.9942 10.897 14.9997C11.1076 15.0053 11.3108 14.922 11.4569 14.7702L15.7902 10.2702Z" fill="#00CCB8"/>
+                              </svg>
+                              <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g filter="url(#filter0_d_69_11712)">
+                                  <path d="M4.75 8.75C4.75 6.54086 6.54086 4.75 8.75 4.75H15.25C17.4591 4.75 19.25 6.54086 19.25 8.75V15.25C19.25 17.4591 17.4591 19.25 15.25 19.25H8.75C6.54086 19.25 4.75 17.4591 4.75 15.25V8.75Z" stroke="white" stroke-opacity="0.3" stroke-width="1.5" shape-rendering="crispEdges"/>
+                                </g>
+                                <defs>
+                                  <filter id="filter0_d_69_11712" x="2" y="3" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="1"/>
+                                    <feGaussianBlur stdDeviation="1"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0901961 0 0 0 0.05 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_69_11712"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_69_11712" result="shape"/>
+                                  </filter>
+                                </defs>
+                              </svg>
+                              <span>{{item.text}}</span>
+                            </li>
+                           
+             
+                          </ul>
+                        </nav>
+  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="send-report-message">
+                    <textarea :placeholder="lang['enter_description']" name="" id="" v-model="sendReport.description"></textarea>
+                  </div>
+                  <div class="send-report-upload-attach-file ">
+                    <span>{{lang["attach_files"]}}</span>
+                    <div class="send-report-upload-box" @click="openGallery('send-report')">
+                      <div class="send-report-upload" >
+                        <div class="send-report-upload-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" viewBox="0 0 25 28" fill="none">
+                            <path d="M13.75 1.5H14.0909C18.1674 1.5 20.2057 1.5 21.6212 2.49729C22.0267 2.78304 22.3868 3.12191 22.6904 3.50361C23.75 4.83584 23.75 6.7542 23.75 10.5909V13.7727C23.75 17.4767 23.75 19.3287 23.1638 20.8078C22.2215 23.1857 20.2286 25.0614 17.702 25.9483C16.1305 26.5 14.1627 26.5 10.2273 26.5C7.97844 26.5 6.85402 26.5 5.95597 26.1848C4.51224 25.6779 3.37344 24.6061 2.83495 23.2473C2.5 22.4021 2.5 21.3438 2.5 19.2273V14" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23.752 14C23.752 16.3012 21.8865 18.1667 19.5853 18.1667C18.7531 18.1667 17.7719 18.0208 16.9627 18.2377C16.2438 18.4303 15.6822 18.9919 15.4896 19.7108C15.2728 20.52 15.4186 21.5011 15.4186 22.3333C15.4186 24.6345 13.5531 26.5 11.252 26.5" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.25 6.5L1.25 6.5M6.25 1.5V11.5" stroke="#00CCB8" stroke-width="2" stroke-linecap="round"/>
+                          </svg>
+                        </div>
+                        <span>{{lang["attach_files2"]}}</span>
+                      </div>
+                    </div>
+                    <div class="send-report-upload-info">
+                      <div>
+                        PNG
+                      </div>
+                      <div>
+                        JPEG
+                      </div>
+                      <div>
+                        GIF
+                      </div>
+                      <div>
+                        MP4
+                      </div>
+                      <span>> 10 MB</span>
+                    </div>
+                    <div class="send-report-upload-list" ref="scrollContainer"ref="scrollContainer" >
+                      <div class="send-report-upload-item" v-for="(item, index) in sendReport.selectMedia" :key="index">
+                        <div class="send-report-upload-item-info">
+                          <span>{{item.fileName}}</span>
+                          <span>{{lang["upload_complate"]}}</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M9.28581 1.91925C8.51801 2.68705 7.75716 3.04352 6.66252 3.04352C5.70674 3.04352 4.34693 2.85815 3.60001 3.61135C2.859 4.35859 3.04355 5.71281 3.04355 6.66249C3.04355 7.75716 2.68705 8.51801 1.91923 9.28583C0.639751 10.5653 1.10583e-05 11.205 0 12C1.96761e-05 12.795 0.639767 13.4348 1.91926 14.7143C2.7794 15.5744 3.04355 16.1298 3.04355 17.3376C3.04355 18.2933 2.85818 19.6532 3.6114 20.4001C4.35864 21.141 5.71283 20.9565 6.6625 20.9565C7.82821 20.9565 8.38957 21.1845 9.22152 22.0165C9.92994 22.7249 10.8796 24.0001 12.0001 24.0001C13.1205 24.0001 14.0702 22.7249 14.7786 22.0165C15.6105 21.1845 16.1719 20.9565 17.3376 20.9565C18.2872 20.9565 19.6414 21.141 20.3887 20.4001C21.1419 19.6532 20.9565 18.2933 20.9565 17.3376C20.9565 16.1298 21.2207 15.5743 22.0808 14.7143C23.3603 13.4348 24.0001 12.795 24.0001 12C24.0001 11.205 23.3603 10.5653 22.0808 9.28583C21.2207 8.42568 20.9565 7.87032 20.9565 6.66249C20.9565 5.70673 21.1419 4.34693 20.3887 3.60001C19.6415 2.85897 18.2873 3.04352 17.3376 3.04352C16.2426 3.04352 15.4819 2.68689 14.7143 1.91925C13.4348 0.63975 12.795 2.28792e-07 12 0C11.2051 3.05056e-07 10.5653 0.63975 9.28581 1.91925Z" fill="#00CCB8"/>
+                          <path d="M7.45312 13.0827C7.45312 13.0827 9.27208 13.8731 10.1816 15.0316C10.1816 15.0316 12.91 10.4842 16.5479 8.96839" stroke="black" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      
+
+                    </div>
+                  </div>
+                  <div class="send-report-button-container">
+                    <div class="send-report-button" @click="newSendReport()">
+                      <div>{{lang["send_report"]}}</div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 2L4 8L2 14L14.6667 8L2 2Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 8H14.6667" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                  
+                 
+                </div>
+                
+              </div>
+              <div class="select-media-file-page" v-show="page == 'select-media'">
+                <div class="select-media-file-page-main">
+                  <div class="select-media-header">
+                    <div class="select-media-title">
+                      <div class="select-media-title-top">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M28.5858 14.7333L16.3324 26.9867C14.8313 28.4878 12.7953 29.3311 10.6724 29.3311C8.54951 29.3311 6.51354 28.4878 5.01242 26.9867C3.51129 25.4855 2.66797 23.4496 2.66797 21.3267C2.66797 19.2037 3.51129 17.1678 5.01242 15.6667L16.4391 4.23998C17.4398 3.23747 18.7978 2.67355 20.2144 2.6723C21.6309 2.67105 22.9899 3.23257 23.9924 4.23332C24.9949 5.23407 25.5588 6.59208 25.5601 8.0086C25.5613 9.42513 24.9998 10.7841 23.9991 11.7867L12.5458 23.2133C12.0454 23.7137 11.3667 23.9948 10.6591 23.9948C9.95145 23.9948 9.27279 23.7137 8.77242 23.2133C8.27204 22.7129 7.99093 22.0343 7.99093 21.3267C7.99093 20.619 8.27204 19.9404 8.77242 19.44L20.0924 8.13332" stroke="#00CCB8" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          <span>{{lang["select_files"]}}</span>
+                        </div>
+                      </div>
+                      <span>{{lang["select_files2"]}}</span>
+                    </div>
+                  </div>
+                  <div class="select-media-container">
+                    <div class="select-media-list">
+                      <div class="select-media-item" v-for="(item, index) in gallery" :key="index" :style="{ 'background-image': 'url(' + item.url + ')' }" >
+                        <video v-if="item.video">
+                          <source :src="item.fileURL" type="video/webm">
+                        </video>
+                        <div class="video-icon" v-if="item.video"  @click="viewMedia(item, null, true)" >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="57" height="38" viewBox="0 0 57 38" fill="none">
+                            <rect width="57" height="38" rx="8" fill="black" fill-opacity="0.7"/>
+                            <path d="M22 13.3175C22 11.8114 23.6018 10.8457 24.9338 11.5489L34.7696 16.7417C36.1912 17.4923 36.1912 19.5285 34.7696 20.279L24.9338 25.4719C23.6018 26.1751 22 25.2094 22 23.7032V13.3175Z" fill="white"/>
+                          </svg>
+                        </div>
+                        <img v-else :src="item.fileURL" alt="" @click="viewMedia(item, null, true)">
+
+                        <svg @click="selectsMedia(index)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" v-if="item.select === false">
+                          <g filter="url(#filter0_d_66_9719)">
+                          <path d="M4.75 8.75C4.75 6.54086 6.54086 4.75 8.75 4.75H15.25C17.4591 4.75 19.25 6.54086 19.25 8.75V15.25C19.25 17.4591 17.4591 19.25 15.25 19.25H8.75C6.54086 19.25 4.75 17.4591 4.75 15.25V8.75Z" stroke="white" stroke-opacity="0.7" stroke-width="1.5" shape-rendering="crispEdges"/>
+                          </g>
+                          <defs>
+                          <filter id="filter0_d_66_9719" x="2" y="3" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                          <feOffset dy="1"/>
+                          <feGaussianBlur stdDeviation="1"/>
+                          <feComposite in2="hardAlpha" operator="out"/>
+                          <feColorMatrix type="matrix" values="0 0 0 0 0.0705882 0 0 0 0 0.0705882 0 0 0 0 0.0901961 0 0 0 0.05 0"/>
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_66_9719"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_66_9719" result="shape"/>
+                          </filter>
+                          </defs>
+                        </svg>
+
+                        <svg @click="selectsMedia(index)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" v-if="item.select === true">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C5.79086 4 4 5.79086 4 8V16C4 18.2091 5.79086 20 8 20H16C18.2091 20 20 18.2091 20 16V8C20 5.79086 18.2091 4 16 4H8ZM15.7902 10.2702C16.0776 9.97186 16.0686 9.49708 15.7702 9.20976C15.4719 8.92244 14.9971 8.9314 14.7098 9.22977L10.9458 13.1385L9.31677 11.2588C9.04549 10.9458 8.57182 10.912 8.2588 11.1832C7.94579 11.4545 7.91195 11.9282 8.18323 12.2412L10.3499 14.7412C10.4879 14.9004 10.6864 14.9942 10.897 14.9997C11.1076 15.0053 11.3108 14.922 11.4569 14.7702L15.7902 10.2702Z" fill="#00CCB8"/>
+                        </svg>
+                   
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="select-media-send-button-cancel" >
+                    <!-- <div class="frame-1000008325"> -->
+                      <div class="frame-1000008392">
+                        <div class="frame-1000008306" @click="saveLastPage()" v-if="sendReport.selectMedia.length > 0 || selectChatMedia.length > 0">
+                          <div class="button-xxx">
+                            <div class="wrap-xxx">
+                              <div class="add-selected-files">{{lang["add_selected_files"]}}</div>
+                            </div>
+                            <svg class="frame3"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path d="M2 2L4 8L2 14L14.6667 8L2 2Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M4 8H14.6667" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="frame-1000008307" @click="attachFilesLink">
+                          <div class="button-xxx">
+                            <div class="wrap-xxx">
+                              <div class="attach-files-links">{{lang["attach_files_links"]}}</div>
+                            </div>
+                            <svg class="frame3"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <g clip-path="url(#clip0_462_2109)">
+                              <path d="M6.66699 8.66666C6.95329 9.04942 7.31856 9.36612 7.73803 9.59529C8.15749 9.82446 8.62133 9.96074 9.09809 9.99489C9.57485 10.029 10.0534 9.96024 10.5012 9.79319C10.9491 9.62613 11.3557 9.36471 11.6937 9.02666L13.6937 7.02666C14.3009 6.39799 14.6368 5.55598 14.6292 4.68199C14.6216 3.808 14.2711 2.97196 13.6531 2.35394C13.035 1.73591 12.199 1.38535 11.325 1.37775C10.451 1.37016 9.609 1.70614 8.98033 2.31333L7.83366 3.45333" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9.33347 7.33332C9.04716 6.95057 8.68189 6.63387 8.26243 6.40469C7.84297 6.17552 7.37913 6.03924 6.90237 6.0051C6.4256 5.97095 5.94708 6.03974 5.49924 6.2068C5.0514 6.37386 4.64472 6.63527 4.3068 6.97332L2.3068 8.97332C1.69961 9.60199 1.36363 10.444 1.37122 11.318C1.37881 12.192 1.72938 13.028 2.3474 13.646C2.96543 14.2641 3.80147 14.6146 4.67546 14.6222C5.54945 14.6298 6.39146 14.2938 7.02013 13.6867L8.16013 12.5467" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_462_2109">
+                              <rect width="16" height="16" fill="white"/>
+                              </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="frame-1000008308" v-if="sendReport.selectMedia.length > 0 || selectChatMedia.length > 0" @click="deleteGalleryItem">   
+                          <div class="button-xxx">
+                            <div class="wrap-xxx">
+                              <div class="delete-files">{{lang["delete_files"]}}</div>
+                              
+                            </div>
+                            <svg class="frame3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00033 2.66669C6.00033 2.55017 6.06529 2.37786 6.22173 2.22142C6.37817 2.06499 6.55048 2.00002 6.66699 2.00002H9.33366C9.45017 2.00002 9.62249 2.06499 9.77892 2.22142C9.93536 2.37786 10.0003 2.55017 10.0003 2.66669V3.33334H6.00033V2.66669ZM5.32997 4.66668C5.3312 4.66668 5.33243 4.66669 5.33366 4.66669C5.33489 4.66669 5.33612 4.66668 5.33735 4.66668H10.6633C10.6645 4.66668 10.6658 4.66669 10.667 4.66669C10.6682 4.66669 10.6695 4.66668 10.6707 4.66668H12.0003V13.3333C12.0003 13.4499 11.9354 13.6222 11.7789 13.7786C11.6225 13.935 11.4502 14 11.3337 14H4.66699C4.55048 14 4.37817 13.935 4.22173 13.7786C4.06529 13.6222 4.00033 13.4499 4.00033 13.3333V4.66668H5.32997ZM4.66699 3.33334V2.66669C4.66699 2.11653 4.93536 1.62218 5.27892 1.27862C5.62249 0.935052 6.11684 0.666687 6.66699 0.666687H9.33366C9.88381 0.666687 10.3782 0.935052 10.7217 1.27862C11.0653 1.62218 11.3337 2.11653 11.3337 2.66669V3.33334H12.667H13.9997C14.3679 3.33334 14.6663 3.63182 14.6663 4.00001C14.6663 4.3682 14.3679 4.66668 13.9997 4.66668H13.3337V13.3333C13.3337 13.8835 13.0653 14.3779 12.7217 14.7214C12.3782 15.065 11.8838 15.3333 11.3337 15.3333H4.66699C4.11684 15.3333 3.62249 15.065 3.27892 14.7214C2.93536 14.3779 2.66699 13.8835 2.66699 13.3333V4.66668H1.99967C1.63148 4.66668 1.33301 4.3682 1.33301 4.00001C1.33301 3.63182 1.63148 3.33334 1.99967 3.33334H3.33366H4.66699Z" fill="#DC2626"/>
+                              <path d="M6.66699 7.33334V11.3333" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9.33301 7.33334V11.3333" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="button-xxx" @click="lastPage()">
+                        <div class="wrap-xxx">
+                          <div class="cancel-and-return">{{lang["cancel_and_return"]}}</div>
+                        </div>
+                        <svg class="frame3"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M12 4L4 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M4 4L12 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    <!-- </div> -->
+                    
+
+
+
+
+
+
+
+                    <!-- <div class="select-media-cancel-send" @click="lastPage()">
+                      <span>Cancel and Return</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M12 4L4 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 4L12 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="select-media-confirm-send" @click="saveLastPage()">
+                      <span>Add Selected Files</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 2L4 8L2 14L14.6667 8L2 2Z" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 8H14.6667" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div> -->
+
+                  </div>
+
+                  <div class="sssolved-accept-main" v-if="deleteGalleryBox">
+                    <div class="sssolved-accept-box">
+                      <div class="sssolved-accept-box-top">
+                        <span>{{lang["delete_report_title"]}}</span>
+                        <span>{{lang["connot_be_undone"]}}</span>
+                      </div>
+                      <div class="sssolved-accept-box-bottom">
+                        <div @click="deleteGalleryBox = false">
+                          <span>{{lang["cancel"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M12.5 4L4.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.5 4L12.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div @click="deleteGalleryItem">
+                          <span>{{lang["yes_delete"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 4H14" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.6673 4V13.3333C12.6673 14 12.0007 14.6667 11.334 14.6667H4.66732C4.00065 14.6667 3.33398 14 3.33398 13.3333V4" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.33398 4.00004V2.66671C5.33398 2.00004 6.00065 1.33337 6.66732 1.33337H9.33398C10.0007 1.33337 10.6673 2.00004 10.6673 2.66671V4.00004" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.66602 7.33337V11.3334" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.33398 7.33337V11.3334" stroke="#DC2626" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="aasssolved-accept-main" v-if="attachFilesLinkBox">
+                    <div class="aasssolved-accept-box">
+                      <div class="aasssolved-accept-box-top">
+                        <div>
+                          <span>{{lang["website_url"]}}</span>
+                          <span>*</span>
+                        </div>
+                        <div>
+                          <span>http://</span>
+                          <input placeholder="www.example.com" v-model="attachLink" type="text">
+                        </div>
+                        
+                      </div>
+                      <div class="aasssolved-accept-box-bottom">
+                        <div @click="attachFilesLinkBox = false">
+                          <span>{{lang["cancel"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M12.5 4L4.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.5 4L12.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div @click="attachFilesLink">
+                          <span>{{lang["submit"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M15.1673 7.38667V8C15.1665 9.43762 14.701 10.8365 13.8402 11.9879C12.9794 13.1393 11.7695 13.9817 10.3909 14.3893C9.01227 14.7969 7.53882 14.7479 6.1903 14.2497C4.84177 13.7515 3.69042 12.8307 2.90796 11.6247C2.1255 10.4187 1.75385 8.99204 1.84844 7.55754C1.94303 6.12304 2.49879 4.75755 3.43284 3.66472C4.36689 2.57188 5.62917 1.81025 7.03144 1.49343C8.43371 1.17661 9.90083 1.32156 11.214 1.90667" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.5 7.33333L8.5 9.33333L15.1667 2.66667" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="view-image-video-page" v-show="page == 'view-video-img'">
+                <div class="view-image-video-page-main">
+                  <div class="view-image-video">
+                    <video v-if="viewMediaURL.video" controls>
+                      <source :src="viewMediaURL.fileURL" type="video/webm">
+                    </video>
+                    <img v-else :src="viewMediaURL.fileURL" alt="">
+                    
+                    <svg @click="viewClose" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="32" height="32" rx="4" fill="black" fill-opacity="0.7"/>
+                      <path d="M22 10L10 22" stroke="#6C6C89" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 10L22 22" stroke="#6C6C89" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                      
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-page" v-if="page == 'chat'">
+                <div class="chat-page-main">
+                  <div class="chat-title">
+                    <div class="chat-title-left">
+                      <span>{{ticket[selectionTicketID].title}}</span>
+                      <template v-if="ticket[selectionTicketID].status === 'open'">
+                        <span :class="ticket[selectionTicketID].status">Open</span>
+                      </template>
+                      <template v-else-if="ticket[selectionTicketID].status === 'resolving'">
+                        <span :class="ticket[selectionTicketID].status">Resolving</span>
+                      </template>
+                      <template v-else-if="ticket[selectionTicketID].status === 'closed'">
+                        <span :class="ticket[selectionTicketID].status">Closed</span>
+                      </template>
+                    </div>
+                    <div class="chat-title-right">
+                      <div class="chat-title-solved" v-if="!ticket[selectionTicketID].solved" @click="solvedBox = true">
+                        <span>{{lang["mark_as_solved"]}}</span>
+                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                          <path d="M14.6673 7.88668V8.50001C14.6665 9.93763 14.201 11.3365 13.3402 12.4879C12.4794 13.6393 11.2695 14.4817 9.89089 14.8893C8.51227 15.2969 7.03882 15.2479 5.6903 14.7497C4.34177 14.2515 3.19042 13.3307 2.40796 12.1247C1.6255 10.9187 1.25385 9.49205 1.34844 8.05755C1.44303 6.62305 1.99879 5.25756 2.93284 4.16473C3.86689 3.07189 5.12917 2.31027 6.53144 1.99344C7.93371 1.67662 9.40083 1.82157 10.714 2.40668" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7.83335L8 9.83335L14.6667 3.16669" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div class="chat-title-solved-no" v-if="ticket[selectionTicketID].solved">
+                        <span>{{lang["marked_as_solved"]}}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                          <path d="M14.6673 7.88662V8.49995C14.6665 9.93757 14.201 11.3364 13.3402 12.4878C12.4794 13.6393 11.2695 14.4816 9.89089 14.8892C8.51227 15.2968 7.03882 15.2479 5.6903 14.7497C4.34177 14.2515 3.19042 13.3307 2.40796 12.1247C1.6255 10.9186 1.25385 9.49199 1.34844 8.05749C1.44303 6.62299 1.99879 5.2575 2.93284 4.16467C3.86689 3.07183 5.12917 2.31021 6.53144 1.99338C7.93371 1.67656 9.40083 1.82151 10.714 2.40662" stroke="white" stroke-opacity="0.1" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 7.83329L8 9.83329L14.6667 3.16663" stroke="white" stroke-opacity="0.1" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <svg @click="exitChat()" xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                        <path d="M24 8.5L8 24.5" stroke="#6C6C89" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 8.5L24 24.5" stroke="#6C6C89" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="chat" ref="chatContainer">
+                    
+                    <div class="chat-message" v-for="chat in formattedMessages">
+                      <template v-if="chat.type == 'me'">
+                        
+                        <div class="chat-message-me">
+                          <div class="chat-message-title">
+                           
+  
+                            <span class="chat-date">{{ chat.date }}</span>
+                            <span class="chat-me">{{lang["me"]}}</span>
+                          </div>
+                          <div class="chat-message-text-me" v-if="chat.message.length > 0">{{chat.message}}</div>
+                          <div class="frame-1000008397ss" v-if="chat.player">
+                            <div class="frame-1000008395ss">
+                              <div class="frame-1000008298ss">
+                                <img class="b-3-x-8-f-df-1ss" :src="chat.player.avatar" />
+                              </div>
+                              <div class="frame-10000083952ss">
+                                <div class="frame-1000008372ss">
+                                  <div class="in-game-id">{{lang["name"]}}:</div>
+                                  <div class="frame-1000008368ss" tabindex="0" @click="copyText(chat.player.name)">
+                                    <div class="frame-1000008355ss">
+                                      <div class="frame-1000008353ss">
+                                        <div class="_1342ss truncate">{{chat.player.name}}</div>
+                                      </div>
+                                    </div>
+                                    <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                      <g clip-path="url(#clip0_496_2185)">
+                                      <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </g>
+                                      <defs>
+                                      <clipPath id="clip0_496_2185ss">
+                                      <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                      </clipPath>
+                                      </defs>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="frame-1000008372ss">
+                                  <div class="in-game-id">{{lang["in_game_id"]}}:</div>
+                                  <div class="frame-1000008368ss"  tabindex="0" @click="copyText(chat.player.id)">
+                                    <div class="frame-1000008355ss">
+                                      <div class="frame-1000008353ss">
+                                        <div class="_1342ss truncate">{{chat.player.id}}</div>
+                                      </div>
+                                    </div>
+                                    <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                      <g clip-path="url(#clip0_496_2185)">
+                                      <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </g>
+                                      <defs>
+                                      <clipPath id="clip0_496_2185ss">
+                                      <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                      </clipPath>
+                                      </defs>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="frame-1000008372ss">
+                                  <div class="in-game-id">{{lang["identifier"]}}:</div>
+                                  <div class="frame-1000008368ss" tabindex="0" @click="copyText(chat.player.identifier)">
+                                    <div class="frame-1000008355ss">
+                                      <div class="frame-1000008353ss">
+                                        <div class="_1342ss truncate">{{chat.player.identifier}}</div>
+                                      </div>
+                                    </div>
+                                    <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                      <g clip-path="url(#clip0_496_2185)">
+                                      <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                      <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </g>
+                                      <defs>
+                                      <clipPath id="clip0_496_2185ss">
+                                      <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                      </clipPath>
+                                      </defs>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="chat-message-img-other" >
+                            <div v-for="(item, index) in chat.media">
+                              <video v-if="item.video" @click="viewMedia(item, 'chat')">
+                                <source :src="item.fileURL" type="video/webm">
+                              </video>
+                               
+                              <img v-else :src="item.fileURL" alt="" @click="viewMedia(item, 'chat')">
+      
+                            </div>
+                            
+                          </div>
+                        </div>
+                        
+                        <div class="chat-message-avatar">
+                          <img :src="chat.avatar" alt="">
+                        </div>
+                      </template>
+                      
+                      <template v-else-if="chat.type == 'you'">
+                        <div class="chat-message-avatar">
+                          <img :src="chat.avatar" alt="">
+                        </div>
+                        <div class="chat-message-other">
+                          <div class="chat-message-title">
+                            <span class="chat-me">{{
+                              ticket[selectionTicketID].claimedAdmin.some(admin => admin.identifier === chat.identifier) 
+                                  ? lang["support_staff"] 
+                                  : chat.name
+                          }}</span>
+  
+                            <span class="chat-date">{{ chat.date }}</span>
+                          </div>
+                          <div class="chat-message-text-other" v-if="chat.message.length > 0">{{chat.message }}</div>
+
+                          <div class="chat-message-img-other" >
+                            <div v-for="(item, index) in chat.media">
+                              <video v-if="item.video" @click="viewMedia(item, 'chat')">
+                                <source :src="item.fileURL" type="video/webm">
+                              </video>
+                               
+                              <img v-else :src="item.fileURL" alt="" @click="viewMedia(item, 'chat')">
+      
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </template>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="chat-bottom-input">
+                    <input type="text" class="chat-input" v-model="messageText" :disabled="ticket[selectionTicketID].solved" :placeholder="ticket[selectionTicketID].solved ? lang['this_ticlet_was_marked'] + ticket[selectionTicketID].solvedPlayer.name : lang['enter_your_message']">
+                    <div class="chat-bottom-input-action" v-if="ticket[selectionTicketID].solved">
+                      <div @>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M3 3L6 12L3 21L22 12L3 3Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 12H22" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="chat-bottom-input-action" v-else-if="!ticket[selectionTicketID].solved">
+                      <div @click="openGallery('chat')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <div @click="addMessage()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M3 3L6 12L3 21L22 12L3 3Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6 12H22" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="solved-accept-main" v-if="solvedBox">
+                    <div class="solved-accept-box">
+                      <div class="solved-accept-box-top">
+                        <span>{{lang["mark_this_report"]}}</span>
+                        <span>{{lang["connot_be_undone"]}}</span>
+                      </div>
+                      <div class="solved-accept-box-bottom">
+                        <div @click="solvedBox = false">
+                          <span>{{lang["cancel"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M12.5 4L4.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.5 4L12.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div @click="clickSolved">
+                          <span>{{lang["yes_mark_solved"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M15.1673 7.38662V7.99995C15.1665 9.43757 14.701 10.8364 13.8402 11.9878C12.9794 13.1393 11.7695 13.9816 10.3909 14.3892C9.01227 14.7968 7.53882 14.7479 6.1903 14.2497C4.84177 13.7515 3.69042 12.8307 2.90796 11.6247C2.1255 10.4186 1.75385 8.99199 1.84844 7.55749C1.94303 6.12299 2.49879 4.7575 3.43284 3.66467C4.36689 2.57183 5.62917 1.81021 7.03144 1.49338C8.43371 1.17656 9.90083 1.32151 11.214 1.90662" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.5 7.33329L8.5 9.33329L15.1667 2.66663" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="admin-chat-page" v-if="page == 'admin-chat'">
+                <div class="admin-chat-page-main">
+                  <div class="admin-chat-page-main-ayrim">
+                    <div class="admin-chat-title">
+                      <div class="admin-chat-title-left">
+                        <span>{{ticket[selectionTicketID].title}}</span>
+                        <template v-if="ticket[selectionTicketID].status === 'open'">
+                          <span :class="ticket[selectionTicketID].status">{{lang["open"]}}</span>
+                        </template>
+                        <template v-else-if="ticket[selectionTicketID].status === 'resolving'">
+                          <span :class="ticket[selectionTicketID].status">{{lang["resolving"]}}</span>
+                        </template>
+                        <template v-else-if="ticket[selectionTicketID].status === 'closed'">
+                          <span :class="ticket[selectionTicketID].status">{{lang["closed"]}}</span>
+                        </template>
+                      </div>
+                      <div class="admin-chat-title-right">
+                        <div class="admin-chat-title-solved" v-if="!ticket[selectionTicketID].solved" @click="solvedBox = true">
+                          <span>{{lang["mark_as_solved"]}}</span>
+                          <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <path d="M14.6673 7.88668V8.50001C14.6665 9.93763 14.201 11.3365 13.3402 12.4879C12.4794 13.6393 11.2695 14.4817 9.89089 14.8893C8.51227 15.2969 7.03882 15.2479 5.6903 14.7497C4.34177 14.2515 3.19042 13.3307 2.40796 12.1247C1.6255 10.9187 1.25385 9.49205 1.34844 8.05755C1.44303 6.62305 1.99879 5.25756 2.93284 4.16473C3.86689 3.07189 5.12917 2.31027 6.53144 1.99344C7.93371 1.67662 9.40083 1.82157 10.714 2.40668" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 7.83335L8 9.83335L14.6667 3.16669" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div class="admin-chat-title-solved-no" v-if="ticket[selectionTicketID].solved">
+                          <span>{{lang["marked_as_solved"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <path d="M14.6673 7.88662V8.49995C14.6665 9.93757 14.201 11.3364 13.3402 12.4878C12.4794 13.6393 11.2695 14.4816 9.89089 14.8892C8.51227 15.2968 7.03882 15.2479 5.6903 14.7497C4.34177 14.2515 3.19042 13.3307 2.40796 12.1247C1.6255 10.9186 1.25385 9.49199 1.34844 8.05749C1.44303 6.62299 1.99879 5.2575 2.93284 4.16467C3.86689 3.07183 5.12917 2.31021 6.53144 1.99338C7.93371 1.67656 9.40083 1.82151 10.714 2.40662" stroke="white" stroke-opacity="0.1" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 7.83329L8 9.83329L14.6667 3.16663" stroke="white" stroke-opacity="0.1" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        
+                      </div>
+                    </div>
+  
+                    <div class="admin-chat" ref="chatContainer">
+                      
+                      <div class="admin-chat-message" v-for="chat in formattedMessages">
+                        <template v-if="chat.type == 'me'">
+                          <div class="admin-chat-message-me">
+                            <div class="messages-top-kene">
+                              <div class="admin-chat-message-me">
+                              
+                                <div class="admin-chat-message-title">
+                                 
+        
+                                  <span class="admin-chat-date">{{ chat.date }}</span>
+                                  <span class="admin-chat-me">{{lang["me"]}}</span>
+                                </div>
+                                <div class="admin-chat-message-text-me" v-if="chat.message.length > 0">{{chat.message}}</div>
+                                <div class="frame-1000008397ss" v-if="chat.player">
+                                  <div class="frame-1000008395ss">
+                                    <div class="frame-1000008298ss">
+                                      <img class="b-3-x-8-f-df-1ss" :src="chat.player.avatar" />
+                                    </div>
+                                    <div class="frame-10000083952ss">
+                                      <div class="frame-1000008372ss">
+                                        <div class="in-game-id">{{lang["name"]}}:</div>
+                                        <div class="frame-1000008368ss" tabindex="0" @click="copyText(chat.player.name)">
+                                          <div class="frame-1000008355ss">
+                                            <div class="frame-1000008353ss">
+                                              <div class="_1342ss truncate">{{chat.player.name}}</div>
+                                            </div>
+                                          </div>
+                                          <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                            <g clip-path="url(#clip0_496_2185)">
+                                            <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_496_2185ss">
+                                            <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <div class="frame-1000008372ss">
+                                        <div class="in-game-id">{{lang["in_game_id"]}}:</div>
+                                        <div class="frame-1000008368ss"  tabindex="0" @click="copyText(chat.player.id)">
+                                          <div class="frame-1000008355ss">
+                                            <div class="frame-1000008353ss">
+                                              <div class="_1342ss truncate">{{chat.player.id}}</div>
+                                            </div>
+                                          </div>
+                                          <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                            <g clip-path="url(#clip0_496_2185)">
+                                            <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_496_2185ss">
+                                            <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <div class="frame-1000008372ss">
+                                        <div class="in-game-id">{{lang["identifier"]}}:</div>
+                                        <div class="frame-1000008368ss" tabindex="0" @click="copyText(chat.player.identifier)">
+                                          <div class="frame-1000008355ss">
+                                            <div class="frame-1000008353ss">
+                                              <div class="_1342ss truncate">{{chat.player.identifier}}</div>
+                                            </div>
+                                          </div>
+                                          <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                            <g clip-path="url(#clip0_496_2185)">
+                                            <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_496_2185ss">
+                                            <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+      
+                                
+                              </div>
+                              <div class="admin-chat-message-avatar">
+                                <img :src="chat.avatar" alt="">
+                              </div>
+                            </div>
+                           
+                            
+                            <div class="admin-chat-message-img-me" >
+                              <div v-for="(item, index) in chat.media">
+                                <video v-if="item.video" @click="viewMedia(item, 'admin-chat')">
+                                  <source :src="item.fileURL" type="video/webm">
+                                </video>
+                                 
+                                <img v-else :src="item.fileURL" alt="" @click="viewMedia(item, 'admin-chat')">
+        
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </template>
+                        
+                        <template v-else-if="chat.type == 'you'">
+                          <div class="admin-chat-message-other">
+                            <div class="messages-top-kene">
+                              <div class="admin-chat-message-avatar">
+                                <img :src="chat.avatar" alt="">
+                              </div>
+                              <div class="admin-chat-message-other">
+                                <div class="admin-chat-message-title">
+                                  <span class="admin-chat-me">{{
+                                    ticket[selectionTicketID].claimedAdmin.some(admin => admin.identifier === chat.identifier) 
+                                        ? lang["support_staff"] 
+                                        : chat.name
+                                }}</span>
+        
+                                  <span class="admin-chat-date">{{ chat.date }}</span>
+                                </div>
+                                <div class="admin-chat-message-text-other" v-if="chat.message.length > 0">{{chat.message }}</div>
+                                <div class="frame-1000008397ss" v-if="chat.player">
+                                  <div class="frame-1000008395ssother">
+                                    <div class="frame-1000008298ss">
+                                      <img class="b-3-x-8-f-df-1ss" :src="chat.player.avatar" />
+                                    </div>
+                                    <div class="frame-10000083952ss">
+                                      <div class="frame-1000008372ss">
+                                        <div class="in-game-id">{{lang["name"]}}:</div>
+                                        <div class="frame-1000008368ss" tabindex="0" @click="copyText(chat.player.name)">
+                                          <div class="frame-1000008355ss">
+                                            <div class="frame-1000008353ss">
+                                              <div class="_1342ss truncate">{{chat.player.name}}</div>
+                                            </div>
+                                          </div>
+                                          <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                            <g clip-path="url(#clip0_496_2185)">
+                                            <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_496_2185ss">
+                                            <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <div class="frame-1000008372ss">
+                                        <div class="in-game-id">{{lang["in_game_id"]}}:</div>
+                                        <div class="frame-1000008368ss"  tabindex="0" @click="copyText(chat.player.id)">
+                                          <div class="frame-1000008355ss">
+                                            <div class="frame-1000008353ss">
+                                              <div class="_1342ss truncate">{{chat.player.id}}</div>
+                                            </div>
+                                          </div>
+                                          <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                            <g clip-path="url(#clip0_496_2185)">
+                                            <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_496_2185ss">
+                                            <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                      <div class="frame-1000008372ss">
+                                        <div class="in-game-id">{{lang["identifier"]}}:</div>
+                                        <div class="frame-1000008368ss" tabindex="0" @click="copyText(chat.player.identifier)">
+                                          <div class="frame-1000008355ss">
+                                            <div class="frame-1000008353ss">
+                                              <div class="_1342ss truncate">{{chat.player.identifier}}</div>
+                                            </div>
+                                          </div>
+                                          <svg class="copyss" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                                            <g clip-path="url(#clip0_496_2185)">
+                                            <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#8996A9" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_496_2185ss">
+                                            <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="admin-chat-message-img-other" >
+                              <div v-for="(item, index) in chat.media">
+                                <video v-if="item.video" @click="viewMedia(item, 'admin-chat')">
+                                  <source :src="item.fileURL" type="video/webm">
+                                </video>
+                                 
+                                <img v-else :src="item.fileURL" alt="" @click="viewMedia(item, 'admin-chat')">
+        
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </template>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="admin-chat-bottom-input">
+                      <input type="text" class="admin-chat-input" v-model="messageText" :disabled="ticket[selectionTicketID].solved" :placeholder="ticket[selectionTicketID].solved ? lang['this_ticlet_was_marked'] + ticket[selectionTicketID].solvedPlayer.name : lang['enter_your_message']">
+                      <div class="admin-chat-bottom-input-action" v-if="ticket[selectionTicketID].solved">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3L6 12L3 21L22 12L3 3Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12H22" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="admin-chat-bottom-input-action" v-else-if="!ticket[selectionTicketID].solved">
+                        <div @click="openGallery('admin-chat')" >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M14.5 4H9.5L7 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V18C2 18.5304 2.21071 19.0391 2.58579 19.4142C2.96086 19.7893 3.46957 20 4 20H20C20.5304 20 21.0391 19.7893 21.4142 19.4142C21.7893 19.0391 22 18.5304 22 18V9C22 8.46957 21.7893 7.96086 21.4142 7.58579C21.0391 7.21071 20.5304 7 20 7H17L14.5 4Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 16C13.6569 16 15 14.6569 15 13C15 11.3431 13.6569 10 12 10C10.3431 10 9 11.3431 9 13C9 14.6569 10.3431 16 12 16Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div @click="addMessage()" >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3L6 12L3 21L22 12L3 3Z" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12H22" stroke="#8996A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="frame-1000008352">
+                    <div class="line-610"></div>
+                    <div class="frame-1000008367">
+                      <div class="frame-1000008239">
+                        <div class="frame-1000008298">
+                          <img class="b-3-x-8-f-df-1" :src="ticket[selectionTicketID].ticketOwnerDetails.avatar" />
+                        </div>
+                        <div class="frame-1000008356">
+                          <div class="frame-1000008297">
+                            <div class="player-nickname">{{lang["player_nickname"]}}</div>
+                            <div class="frame-1000008355">
+                              <div class="frame-1000008353">
+                                <div class="hamid truncate" :title="ticket[selectionTicketID].ticketOwnerDetails.name">{{ticket[selectionTicketID].ticketOwnerDetails.name}}</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="frame-1000008354" :class="playerList[ticket[selectionTicketID].ticketOwnerDetails.identifier] ? 'green' : 'red'"></div>
+                        </div>
+                      </div>
+                      <div class="frame-1000008360">
+                        <div class="frame-1000008369">
+                          <div class="discord-name">{{lang["discord_name"]}}:</div>
+                          <div class="frame-1000008368" tabindex="0" :title="ticket[selectionTicketID].ticketOwnerDetails.discordName">
+                            <div class="frame-1000008355">
+                              <div class="frame-1000008353">
+                                <div class="hamid-hdh truncate" @click="Copy(ticket[selectionTicketID].ticketOwnerDetails.discordName)">{{ticket[selectionTicketID].ticketOwnerDetails.discordName}}</div>
+                              </div>
+                            </div>
+                            <svg @click="copyText(ticket[selectionTicketID].ticketOwnerDetails.discordName)" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                              <g clip-path="url(#clip0_113_1341)">
+                              <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_113_1341">
+                              <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                              </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="frame-1000008371">
+                          <div class="discord-id">{{lang["discord_id"]}}:</div>
+                          <div class="frame-1000008368" tabindex="0">
+                            <div class="frame-1000008355">
+                              <div class="frame-1000008353">
+                                <div class="_5678901256789012 truncate" :title="ticket[selectionTicketID].ticketOwnerDetails.discordID" @click="Copy(ticket[selectionTicketID].ticketOwnerDetails.discordID)">{{ticket[selectionTicketID].ticketOwnerDetails.discordID}}</div>
+                              </div>
+                            </div>
+                            <svg @click="copyText(ticket[selectionTicketID].ticketOwnerDetails.discordID)" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                              <g clip-path="url(#clip0_113_1341)">
+                              <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_113_1341">
+                              <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                              </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="frame-1000008363">
+                          <div class="in-game-id">{{lang["in_game_id"]}}:</div>
+                          <div class="frame-1000008368" tabindex="0">
+                            <div class="frame-1000008355">
+                              <div class="frame-1000008353">
+                                <div class="_1342 truncate" :title="ticket[selectionTicketID].ticketOwnerDetails.id" >{{ticket[selectionTicketID].ticketOwnerDetails.id}}</div>
+                              </div>
+                            </div>
+                            <svg @click="copyText(ticket[selectionTicketID].ticketOwnerDetails.id)" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                              <g clip-path="url(#clip0_113_1341)">
+                              <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_113_1341">
+                              <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                              </clipPath>
+                              </defs>
+                              </svg>
+                          </div>
+                        </div>
+                        <div class="frame-1000008369">
+                          <div class="steam-id">{{lang["steam_id"]}}:</div>
+                          <div class="frame-1000008368" tabindex="0" >
+                            <div class="frame-1000008355">
+                              <div class="frame-1000008353">
+                                <div class="_5678901256789012 truncate" :title="ticket[selectionTicketID].ticketOwnerDetails.steamID"  >{{ticket[selectionTicketID].ticketOwnerDetails.steamID}}</div>
+                              </div>
+                            </div>
+                            <svg @click="copyText(ticket[selectionTicketID].ticketOwnerDetails.steamID)" xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                              <g clip-path="url(#clip0_113_1341)">
+                              <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_113_1341">
+                              <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                              </clipPath>
+                              </defs>
+                              </svg>
+                          </div>
+                        </div>
+                        <div class="frame-1000008369">
+                          <div class="license-id">{{lang["license_id"]}}:</div>
+                          <div class="frame-1000008368" tabindex="0" >
+                            <div class="frame-1000008355">
+                              <div class="frame-1000008353">
+                                <div class="_123456789012345678 truncate" :title="ticket[selectionTicketID].ticketOwnerDetails.licenseID" >{{ticket[selectionTicketID].ticketOwnerDetails.licenseID}}</div>
+                              </div>
+                            </div>
+                            <svg @click="copyText(ticket[selectionTicketID].ticketOwnerDetails.licenseID)"  xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none">
+                              <g clip-path="url(#clip0_113_1341)">
+                              <path d="M6.66602 3.16663H3.33268C2.96449 3.16663 2.66602 3.4651 2.66602 3.83329V7.16663C2.66602 7.53482 2.96449 7.83329 3.33268 7.83329H6.66602C7.03421 7.83329 7.33268 7.53482 7.33268 7.16663V3.83329C7.33268 3.4651 7.03421 3.16663 6.66602 3.16663Z" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1.33268 5.83329C0.966016 5.83329 0.666016 5.53329 0.666016 5.16663V1.83329C0.666016 1.46663 0.966016 1.16663 1.33268 1.16663H4.66602C5.03268 1.16663 5.33268 1.46663 5.33268 1.83329" stroke="#6C6C89" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_113_1341">
+                              <rect width="8" height="8" fill="white" transform="translate(0 0.5)"/>
+                              </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="frame-1000008370">
+                          <div class="total-playtime">{{lang["total_playtime"]}}:</div>
+                          <div class="frame-1000008368">
+                            <div class="frame-1000008355">
+                              <div class="frame-1000008353">
+                                <div class="_150-hours truncate" >{{playTime[ticket[selectionTicketID].ticketOwnerDetails.identifier]}} hours</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="frame-1000008361">
+                      <div class="frame-1000008237">
+                        <div class="player-info">{{lang["player_info"]}}</div>
+                      </div>
+                      <svg @click="closeAdminChat" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18" stroke="#6C6C89" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="#6C6C89" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <div class="frame-1000008364">
+                      <div class="tabs">
+                        <div class="tab-1" :class="staffaction ? 'selectionAction' : ''" @click="staffaction = true">
+                          <div class="wrap">
+                            <div class="tab-label">{{lang["staff_action"]}}</div>
+                          </div>
+                        </div>
+                        <div class="tab-8" :class="!staffaction ? 'selectionAction' : ''" @click="staffaction = false">
+                          <div class="wrap">
+                            <div class="tab-label">{{lang["logs"]}}</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="frame-10000083522" v-if="staffaction">
+                        <div class="frame-1000008362">
+                          <div class="leave-report-menu" @click="clickAction('goto')">
+                            <div class="frame-1000008315">
+                              <div class="go-to">{{lang["goto"]}}</div>
+                            </div>
+                          </div>
+                          <div class="leave-report-menu" @click="clickAction('bring')">
+                            <div class="frame-1000008315" >
+                              <div class="bring">{{lang["bring"]}}</div>
+                            </div>
+                          </div>
+                          <div class="leave-report-menu" @click="clickAction('heal')">
+                            <div class="frame-1000008315">
+                              <div class="heal">{{lang["heal"]}}</div>
+                            </div>
+                          </div>
+                          <div class="leave-report-menu" @click="clickAction('freeze')">
+                            <div class="frame-1000008315">
+                              <div class="freeze">{{lang["freeze"]}}</div>
+                            </div>
+                          </div>
+                          <div class="leave-report-menu" @click="clickAction('kill')">
+                            <div class="frame-1000008315">
+                              <div class="kill">{{lang["kill"]}}</div>
+                            </div>
+                          </div>
+                          <div class="leave-report-menu2" @click="clickAction('revive')">
+                            <div class="frame-1000008315">
+                              <div class="revive">{{lang["revive"]}}</div>
+                            </div>
+                          </div>
+                          <div class="leave-report-menu3" @click="clickAction('kick')">
+                            <div class="frame-1000008315">
+                              <div class="kick">{{lang["kick"]}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wiframe-1000008366">
+                        <div class="wiframe-1000008365">
+                          <div class="wileave-report-menu" v-for="item in log">
+                            <div class="wiframe-1000008297" >
+                              <div class="wiratchaw-joined-the-city">{{item.text}}</div>
+                              <div class="wi_24-06-12-06-15-pm">{{item.date}}</div>
+                            </div>
+                          </div>
+                          
+                          
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+                  
+
+                  <div class="solved-accept-main" v-if="solvedBox">
+                    <div class="solved-accept-box">
+                      <div class="solved-accept-box-top">
+                        <span>{{lang["mark_this_report"]}}</span>
+                        <span>{{lang["connot_be_undone"]}}</span>
+                      </div>
+                      <div class="solved-accept-box-bottom">
+                        <div @click="solvedBox = false">
+                          <span>{{lang["cancel"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M12.5 4L4.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.5 4L12.5 12" stroke="#6C6C89" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
+                        <div @click="clickSolved">
+                          <span>{{lang["yes_mark_solved"]}}</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                            <path d="M15.1673 7.38662V7.99995C15.1665 9.43757 14.701 10.8364 13.8402 11.9878C12.9794 13.1393 11.7695 13.9816 10.3909 14.3892C9.01227 14.7968 7.53882 14.7479 6.1903 14.2497C4.84177 13.7515 3.69042 12.8307 2.90796 11.6247C2.1255 10.4186 1.75385 8.99199 1.84844 7.55749C1.94303 6.12299 2.49879 4.7575 3.43284 3.66467C4.36689 2.57183 5.62917 1.81021 7.03144 1.49338C8.43371 1.17656 9.90083 1.32151 11.214 1.90662" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.5 7.33329L8.5 9.33329L15.1667 2.66663" stroke="#00CCB8" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+              
+            </main>
+            
+          </div>
+        </div> 
+      </div>
+      
+
+      <div class="record">
+          <button class="Rec"></button>
+          <span class="text-lg text-white">{{lang["rec"]}}</span>
+      </div>
+
+      <div class="updatingMedia">
+        <svg class="loader" viewBox="0 0 50 50">
+          <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+        <div>{{lang["uploading_media"]}}</div>
+      </div>
+    </div>
+
+
+    <canvas id="videocall-canvas" style="display: none;"></canvas>
+    <script type="module" src="script.js"></script>
+    <script src="recScript.js"></script>
+    <script>
+      
+    </script>
+    <script src="introduction.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.min.js"></script>
+  </body>
+</html>

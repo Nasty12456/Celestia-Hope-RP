@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('zr-main.css');
+@import url('zr-players.css');
+@import url('zr-jobs.css');
+@import url('zr-binds.css');
+@import url('zr-annoucements.css');
+@import url('zr-settings.css');
+@import url('zr-icons.css');
+@import url('zr-scroll.css');
+@import url('zr-pickr.css');
+
+:root {
+    --zr-primary: #AC4FC6;
+}

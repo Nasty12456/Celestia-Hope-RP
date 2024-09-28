@@ -1,0 +1,23 @@
+INSERT INTO `items` (name, label, weight) VALUES
+  ('boombox_white_large','Large Boombox (White)', 1),
+  ('boombox_red_large','Large Boombox (Red)', 1),
+  ('boombox_purple_large','Large Boombox (Purple)', 1),
+  ('boombox_pink_large','Large Boombox (Pink)', 1),
+  ('boombox_orange_large','Large Boombox (Orange)', 1),
+  ('boombox_green_large','Large Boombox (Green)', 1),
+  ('boombox_blue_large','Large Boombox (Blue)', 1),
+  ('boombox_white_medium','Medium Boombox (Blue)', 1),
+  ('boombox_red_medium','Medium Boombox (Red)', 1),
+  ('boombox_purple_medium','Medium Boombox (Purple)', 1),
+  ('boombox_pink_medium','Medium Boombox (Pink)', 1),
+  ('boombox_orange_medium','Medium Boombox (Orange)', 1),
+  ('boombox_green_medium','Medium Boombox (Green)', 1),
+  ('boombox_blue_medium','Medium Boombox (Blue)', 1),
+  ('boombox_white_small','Small Boombox (White)', 1),
+  ('boombox_red_small','Small Boombox (Red)', 1),
+  ('boombox_purple_small','Small Boombox (Purple)', 1),
+  ('boombox_pink_small','Small Boombox (Pink)', 1),
+  ('boombox_orange_small','Small Boombox (Orange)', 1),
+  ('boombox_green_small','Small Boombox (Green)', 1),
+  ('boombox_blue_small','Small Boombox (Blue)', 1)
+;

@@ -1,0 +1,85 @@
+.zr-section-players, .zr-section-jobs, .zr-section-annoucements {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    gap: 16px;
+    height: calc(100% - 55px - 41px);
+}
+.zr-section-jobs, .zr-section-annoucements {
+    display: none;
+}
+.zr-section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: calc(100% - 55px);
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+.zr-section-title-icon-text {
+    display: flex;
+    padding: 4px 4px 8px 4px;
+    border-bottom: 1px solid var(--zr-primary);
+    color: white;
+}
+.zr-section-players table {
+    color: white;
+    font-size: 14px;
+    border-collapse: separate; 
+    border-spacing: 0 16px;
+    width: 100%;
+}
+.zr-section-players tr {
+    height: 36px;
+}
+.zr-section-players td:first-child {
+    border-radius: 4px 0px 0px 4px;
+}
+.zr-section-players td:last-child {
+    border-radius: 0px 4px 4px 0px;
+}
+.zr-section-players td {
+    background: rgba(255, 255, 255, 0.07);
+}
+.zr-section-players th, .zr-section-players td {
+    text-align: left;
+}
+.zr-section-players th:first-child, .zr-section-players td:first-child {
+    padding-left: 24px;
+}
+.zr-section-players th:nth-child(n+4), .zr-section-players td:nth-child(n+4) {
+    text-align: center;
+}
+.zr-section-player-avatar-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 36px;
+}
+.zr-section-player-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.zr-section-player-avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.zr-section-player-role {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+@media
+    only screen and (aspect-ratio: 21/9),
+    only screen and (aspect-ratio: 3440/1440)
+{
+    .zr-section-players table {
+        font-size: 16px;
+    }
+}
