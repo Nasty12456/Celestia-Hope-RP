@@ -1,0 +1,370 @@
+[
+  {
+    "name": "PumaUniverse",
+    "master": true,
+    "password_hash": "$2a$11$LIAoMJqkg3Alxn26d4VE0ulalhbh0CXOWE8fcHRAmRdRDOasuENpS",
+    "providers": {
+      "citizenfx": {
+        "id": "PumaUniverse",
+        "identifier": "fivem:7924468",
+        "data": {
+          "name": "PumaUniverse",
+          "profile": "https://forum.cfx.re/u/PumaUniverse",
+          "nameid": "https://forum.cfx.re/internal/user/7924468",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/pumauniverse/256/3798720_2.png"
+        }
+      }
+    },
+    "permissions": []
+  },
+  {
+    "name": "cherribombz",
+    "master": false,
+    "password_hash": "$2a$11$uNdDWuE1ibS4hm4eP2Q1oucATgLCCK.wde2gSSRG7btMvZcwhM.My",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "Cherri4Bombz",
+        "identifier": "fivem:11969254",
+        "data": {}
+      },
+      "discord": {
+        "id": "772893898749509682",
+        "identifier": "discord:772893898749509682",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "menu.viewids",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport"
+    ]
+  },
+  {
+    "name": "hardven",
+    "master": false,
+    "password_hash": "$2a$11$gXDAK5ufb1RdxQQRd8egHuzc2mXhwUXBZTU0dtwmAYLAOlJ69A/C2",
+    "providers": {
+      "discord": {
+        "id": "455110498132819976",
+        "identifier": "discord:455110498132819976",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "walmartdrako",
+    "master": false,
+    "password_hash": "$2a$11$g5VxXL4FoNjWFxZB07CzA.r/qd184yZnWyCEi6bOCqDq6T8Vrm11u",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "Lynx999",
+        "identifier": "fivem:8005798",
+        "data": {}
+      },
+      "discord": {
+        "id": "298132847749758986",
+        "identifier": "discord:298132847749758986",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "menu.viewids",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport"
+    ]
+  },
+  {
+    "name": "andrewmiller7",
+    "master": false,
+    "password_hash": "$2a$11$eU42ZOLY4hf2sfHBt3F/nueRfIlAuoCjEI05qLs.UJgFki.OLTXpG",
+    "providers": {
+      "citizenfx": {
+        "id": "Andrew_Miller96",
+        "identifier": "fivem:11862241",
+        "data": {}
+      },
+      "discord": {
+        "id": "577696299000791053",
+        "identifier": "discord:577696299000791053",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "jellisbro",
+    "master": false,
+    "password_hash": "$2a$11$1StWlbY1tY.u53dt3ZBo5.vLvL5SSOBEkIjmIveWvLn7.84CBFQwy",
+    "providers": {
+      "citizenfx": {
+        "id": "Jacob_Ellis",
+        "identifier": "fivem:2028997",
+        "data": {}
+      },
+      "discord": {
+        "id": "362827888007053333",
+        "identifier": "discord:362827888007053333",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "erkan",
+    "master": false,
+    "password_hash": "$2a$11$8qsnReout5U7GdA2riexkuT7hv9fbvuW8BG33bT2K/Dny.wzGVdH.",
+    "providers": {
+      "discord": {
+        "id": "1178242093433495595",
+        "identifier": "discord:1178242093433495595",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "willi",
+    "master": false,
+    "password_hash": "$2a$11$pFsdS0LZOGfyjmqIZCJqPOH8UVmlhmO5h/0ep3mUXxA3MsC58KGG2",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "LordInvadeHer",
+        "identifier": "fivem:11464319",
+        "data": {}
+      },
+      "discord": {
+        "id": "693976654355103784",
+        "identifier": "discord:693976654355103784",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "menu.viewids",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport"
+    ]
+  },
+  {
+    "name": "bugs",
+    "master": false,
+    "password_hash": "$2a$11$86NfKxPyWcQz9MeE03UY5OLfnNHiyez5cr18z8B3CyUiR29aPlzXW",
+    "providers": {
+      "citizenfx": {
+        "id": "jimmybugs",
+        "identifier": "fivem:11565614",
+        "data": {}
+      },
+      "discord": {
+        "id": "688523221334884499",
+        "identifier": "discord:688523221334884499",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "txadmin.log.view",
+      "menu.vehicle",
+      "menu.clear_area",
+      "menu.viewids",
+      "players.message",
+      "players.whitelist",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport"
+    ]
+  },
+  {
+    "name": "nasty",
+    "master": false,
+    "password_hash": "$2a$11$i4ZaVtCHpfpjQ0Baf3GS9.Cg/AQLwybmzOHInINmTfQgt3eMMk84u",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "Nasty12",
+        "identifier": "fivem:2205797",
+        "data": {}
+      },
+      "discord": {
+        "id": "366666266049773568",
+        "identifier": "discord:366666266049773568",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  },
+  {
+    "name": "wglexdash",
+    "master": false,
+    "password_hash": "$2a$11$z8Vli.QWXOrtGFTEX4XX9OO3AQq/4SNygx6DBWeSM2tEMQoCA7AzO",
+    "providers": {
+      "citizenfx": {
+        "id": "WGLexDash",
+        "identifier": "fivem:7015454",
+        "data": {}
+      },
+      "discord": {
+        "id": "198864708659314688",
+        "identifier": "discord:198864708659314688",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "menu.viewids",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport"
+    ]
+  },
+  {
+    "name": "mtaylor41",
+    "master": false,
+    "password_hash": "$2a$11$SgKIHwseaOCv8zs4RvRSGuVyepfH8fb4.Nsy/BNuu1U6aiQc4YRsW",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "maktaylor1",
+        "identifier": "fivem:8839253",
+        "data": {}
+      },
+      "discord": {
+        "id": "1016881378748530738",
+        "identifier": "discord:1016881378748530738",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "menu.viewids",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport"
+    ]
+  },
+  {
+    "name": "omrrhino",
+    "master": false,
+    "password_hash": "$2a$11$Dy/7p8yuhtJEnLzrQf5MauF.wK3kxokadkMdixOqTbp2N9q3bFBNO",
+    "password_temporary": true,
+    "providers": {
+      "discord": {
+        "id": "928000975933952031",
+        "identifier": "discord:928000975933952031",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "menu.clear_area",
+      "menu.viewids",
+      "players.message",
+      "players.whitelist",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport",
+      "players.troll"
+    ]
+  },
+  {
+    "name": "chronic",
+    "master": false,
+    "password_hash": "$2a$11$BEl7yTsTZTKxTTnwxDTWTePuYz9bwqijOmao.4pNLjyTw7rwtG9Ga",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "smknchronic",
+        "identifier": "fivem:2035159",
+        "data": {}
+      },
+      "discord": {
+        "id": "1092523215760392203",
+        "identifier": "discord:1092523215760392203",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "menu.clear_area",
+      "menu.viewids",
+      "players.message",
+      "players.whitelist",
+      "players.warn",
+      "players.kick",
+      "players.ban",
+      "players.freeze",
+      "players.heal",
+      "players.playermode",
+      "players.spectate",
+      "players.teleport"
+    ]
+  },
+  {
+    "name": "duprative",
+    "master": false,
+    "password_hash": "$2a$11$o2xUeWBotnR4hbE1YfNS9uCEMI6XgXsA88cVjG/2ySmAgXC2Sfq4i",
+    "providers": {
+      "discord": {
+        "id": "782500841399517195",
+        "identifier": "discord:782500841399517195",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "all_permissions"
+    ]
+  }
+]

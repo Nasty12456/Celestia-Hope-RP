@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>0R - Mechanic</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- JQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' crossorigin='anonymous' />
+    <script src="jquery.minicolors.js"></script>
+    <link rel="stylesheet" href="jquery.minicolors.css">
+</head>
+<body >
+    <!-- <div class="background-sx"></div> -->
+    <div class="background-blur-main"></div>
+    <div class="eye">
+        <span id="eye-label">zart</span>
+        <i class="fa-solid fa-sort-down"></i>
+        <img src="img/settings.gif">
+    </div>
+    <div class="boss-menu-contain">
+        <div class="boss-menu-header">
+            <div class="ellipse-header"></div>
+            <h1>Boss Menu</h1>
+            <p>Mechanic</p>
+        </div>
+        <div class="main-contain-row">
+            <div class="money-actions-col">
+                <div class="col-header"><span>Money Actions</span>
+                    <img src="img/header-mask.png" alt="">
+                </div>
+                <div class="info">
+                    <h1>In Pocket: </h1>
+                    <p id="inpocket">189.500$</p>
+                </div>
+                <div class="info">
+                    <h1>In Case: </h1>
+                    <p id="incase">189.500$</p>
+                </div>
+                <div class="money-actions-box">
+                    <div class="box-header">
+                        <h1>Withdraw</h1>
+                        <p>Lorem ipsum simply dummy text.</p>
+                    </div>
+                    <div class="box-action-col">
+                        <div class="before">
+                            W
+                        </div>
+                        <div class="act-input">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8.08 11.22C8.08 11.308 8.148 11.38 8.23 11.38H11.93C12.012 11.38 12.08 11.308 12.08 11.22V10.26C12.08 10.172 12.012 10.1 11.93 10.1H8.23C8.148 10.1 8.08 10.172 8.08 10.26V11.22ZM4.182 11.342L8.022 8.122C8.098 8.058 8.098 7.94 8.022 7.876L4.182 4.658C4.15882 4.63829 4.13047 4.62564 4.10031 4.62156C4.07016 4.61748 4.03946 4.62214 4.01188 4.63499C3.98429 4.64783 3.96097 4.66832 3.94469 4.69403C3.9284 4.71973 3.91983 4.74957 3.92 4.78V6.034C3.92 6.082 3.94 6.126 3.978 6.156L6.174 8L3.978 9.844C3.96012 9.85896 3.94569 9.87761 3.93568 9.89867C3.92567 9.91972 3.92032 9.94269 3.92 9.966V11.22C3.92 11.356 4.078 11.43 4.182 11.342ZM15.36 0H0.64C0.286 0 0 0.286 0 0.64V15.36C0 15.714 0.286 16 0.64 16H15.36C15.714 16 16 15.714 16 15.36V0.64C16 0.286 15.714 0 15.36 0ZM14.56 14.56H1.44V1.44H14.56V14.56Z" fill="white"/>
+                              </svg>
+                              <input type="number" placeholder="Amount" id="withdrawamount">
+                    
+                        </div>
+                        <button class="act-btn-boss" id="withdraw">Withdraw</button>
+                    </div>
+                </div>
+                <div class="money-actions-box">
+                    <div class="box-header">
+                        <h1>Deposit</h1>
+                        <p>Lorem ipsum simply dummy text.</p>
+                    </div>
+                    <div class="box-action-col">
+                        <div class="before">
+                            D
+                        </div>
+                        <div class="act-input">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8.08 11.22C8.08 11.308 8.148 11.38 8.23 11.38H11.93C12.012 11.38 12.08 11.308 12.08 11.22V10.26C12.08 10.172 12.012 10.1 11.93 10.1H8.23C8.148 10.1 8.08 10.172 8.08 10.26V11.22ZM4.182 11.342L8.022 8.122C8.098 8.058 8.098 7.94 8.022 7.876L4.182 4.658C4.15882 4.63829 4.13047 4.62564 4.10031 4.62156C4.07016 4.61748 4.03946 4.62214 4.01188 4.63499C3.98429 4.64783 3.96097 4.66832 3.94469 4.69403C3.9284 4.71973 3.91983 4.74957 3.92 4.78V6.034C3.92 6.082 3.94 6.126 3.978 6.156L6.174 8L3.978 9.844C3.96012 9.85896 3.94569 9.87761 3.93568 9.89867C3.92567 9.91972 3.92032 9.94269 3.92 9.966V11.22C3.92 11.356 4.078 11.43 4.182 11.342ZM15.36 0H0.64C0.286 0 0 0.286 0 0.64V15.36C0 15.714 0.286 16 0.64 16H15.36C15.714 16 16 15.714 16 15.36V0.64C16 0.286 15.714 0 15.36 0ZM14.56 14.56H1.44V1.44H14.56V14.56Z" fill="white"/>
+                              </svg>
+                              <input type="number" placeholder="Amount" id="depositamount">
+                    
+                        </div>
+                        <button class="act-btn-boss" id="deposit">Deposit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="employee-actions-col">
+                <div class="col-header"><span>Employee Actions</span>
+                    <img src="img/header-mask.png" alt="">
+                </div>
+                <div class="info">
+                    <h1>Total Employees </h1>
+                    <p id="totalEmployees">13 Employee</p>
+                </div>
+                <div class="nav-of-boss">
+                    <div class="nav-item" id="employee">
+                        <span>Employees</span>
+                    </div>
+                    <div class="nav-item" id="active">
+                        <span>Active players</span>
+                    </div>
+                </div>
+                <div class="player-list">
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                    <div class="player">
+                        <img src="img/person.svg" alt="">
+                        <div class="name-of-player">
+                            <h1>Name</h1>
+                            <p>ADEZ TR</p>
+                        </div>
+                        <div class="hirefire">
+                            Hire
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="main-menu">
+        <div class="left-mechanic-part">
+            <div class="left-mechanic-top-bar">
+                <!-- <div id="inside-of-bar">
+                    <img src="img/bennyslogo.png" alt="">
+                </div> -->
+            </div>
+            <div class="mechanic-left-text">
+                <span>Yorem ipsum dolor sit amet,</span>  consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+            </div>
+            <div class="bottom-border">
+                <div></div> 
+            </div>
+            <div class="category-class">
+                <div class="category-one" id="customization">
+                    <!-- <div class="category-blur"></div> -->
+                    <div class="category-header">
+                        <h1>Customization</h1>
+                        <p>Personalized vehicles, boundles creativity</p>
+                    </div>
+                    <img src="img/audi.png" alt="" style="width: 11vh; height: 19vh;">
+                    <div class="bottom-selection-text">
+                        <div class="text-selection">Open <span>Selection</span></div>
+                        <img src="img/arrow-right.svg" alt="">
+                    </div>
+                </div>
+                <div class="category-one" id="fitment">
+                    <!-- <div class="category-blur"></div> -->
+                    <div class="category-header">
+                        <h1>Fitment</h1>
+                        <p>Personalized vehicles, boundles creativity</p>
+                    </div>
+                    <img src="img/wheelfigma.png" alt="" id="wheel">
+                    <div class="bottom-selection-text">
+                        <div class="text-selection">Open <span>Selection</span></div>
+                        <img src="img/arrow-right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        <div class="mid-mechanic-part">
+            <div class="mid-mechanic-top">
+                <img src="img/left-arrow.svg" alt="">
+                <div class="category-name">
+                    Main Menu
+                </div>
+                <div id="top-line" style="display: flex;">
+
+                </div>
+                <div class="left-line" style="display: none;">
+                    <div></div>
+                </div>
+
+                <div class="default-colors" data-id="closeable" style="display: none;">
+                    <div class="color-wheel" data-wheel="secondary"></div>
+                </div>
+                <div class="right-line" style="display: none;">
+                    <div></div>
+                </div>
+                <div class="category-items">
+                    Items
+                </div>
+                <img src="img/poly.png" alt="">
+            </div>
+
+            <div class="color-menu">
+                <div class="wheel">
+                    <img src="img/left-right.png" class="left-d" id="arrow" data-side="left" data-type="main">
+                    <!-- <i class="fa-solid fa-caret-left" id="arrow" data-side="left" data-type="main"></i> -->
+                    <div class="wheel-text">
+                        <span id="main">Primary</span>
+                    </div>
+                    <img src="img/left-right.png" alt="" id="arrow" data-side="right" data-type="main">
+                    <!-- <i class="fa-solid fa-caret-right" id="arrow" data-side="right" data-type="main"></i> -->
+                </div>
+        <!--         <div class="default-colors" data-id="closeable">
+                    <span>Default colors</span>
+                    <div class="color-wheel" data-wheel="main"></div>
+                </div> -->
+        
+                <div id="picker" data-id="closeable"></div>
+        
+                <div class="wheel" data-id="closeable" id="blabla">
+                    <img src="img/left-right.png" class="left-d" id="arrow" data-side="left" data-type="secondary">
+                    <!-- <i class="fa-solid fa-caret-left" id="arrow" data-side="left" data-type="secondary"></i> -->
+                    <div class="wheel-text">
+                        <span id="secondary">Classic</span>
+                    </div>
+                    <img src="img/left-right.png" alt="" id="arrow" data-side="right" data-type="secondary">
+                    <!-- <i class="fa-solid fa-caret-right" id="arrow" data-side="right" data-type="secondary"></i> -->
+                </div>
+                <!-- <div class="default-colors" data-id="closeable">
+                    <span>Default colors</span>
+                    <div class="color-wheel" data-wheel="secondary"></div>
+                </div> -->
+        
+                <div class="wheel" data-id="openable" style="display: none;">
+                    <div class="divider"></div>
+                    <div class="modal">
+                        <img src="img/left-right.png" class="left-d" id="arrow" data-side="left" data-type="chameleon">
+                     
+                        <div class="wheel-text">
+                            <span id="chameleon">Metallic</span>
+                        </div>
+                        <img src="img/left-right.png" alt="" id="arrow" data-side="right" data-type="chameleon">
+
+                    </div>
+                </div>
+        
+                <div id="buyColor" class="buy">
+                    <span id="buyButton">Buy color</span>
+                </div>
+        
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h1>PART <span>#1</span></h1>
+                        <p>LB Sleek</p>
+                    </div>
+                    <div class="menu-item-image-content">
+                        <img src="img/enginetwo.png" alt="">
+                    </div>
+                    <div class="alt-content">
+                        <div class="alt-content-row">
+                            <div class="stock-situation">
+
+                            </div>
+                            <div class="menu-item-price">
+                                <span>$</span>500
+                            </div>
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h1>PART <span>#1</span></h1>
+                        <p>LB Sleek</p>
+                    </div>
+                    <div class="menu-item-image-content">
+                        <img src="img/enginetwo.png" alt="">
+                    </div>
+                    <div class="alt-content">
+                        <div class="alt-content-row">
+                            <div class="stock-situation">
+
+                            </div>
+                            <div class="menu-item-price">
+                                <span>$</span>500
+                            </div>
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h1>PART <span>#1</span></h1>
+                        <p>LB Sleek</p>
+                    </div>
+                    <div class="menu-item-image-content">
+                        <img src="img/enginetwo.png" alt="">
+                    </div>
+                    <div class="alt-content">
+                        <div class="alt-content-row">
+                            <div class="stock-situation">
+
+                            </div>
+                            <div class="menu-item-price">
+                                <span>$</span>500
+                            </div>
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="menu-item" data-active="true">
+                    <div class="menu-item-info">
+                        <h1>PART <span>#1</span></h1>
+                        <p>LB Sleek</p>
+                    </div>
+                    <div class="menu-item-image-content">
+                        <img src="img/enginetwo.png" alt="">
+                    </div>
+                    <div class="alt-content">
+                        <div class="alt-content-row">
+                            <div class="stock-situation">
+                                <span>in</span> STOCK
+                            </div>
+                            <div class="menu-item-price">
+                                <span>$</span>500
+                            </div>
+                        </div>
+                    </div>
+          
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h1>PART <span>#1</span></h1>
+                        <p>LB Sleek</p>
+                    </div>
+                    <div class="menu-item-image-content">
+                        <img src="img/enginetwo.png" alt="">
+                    </div>
+                    <div class="alt-content">
+                        <div class="alt-content-row">
+                            <div class="stock-situation">
+
+                            </div>
+                            <div class="menu-item-price">
+                                <span>$</span>500
+                            </div>
+                        </div>
+                    </div>
+          
+                </div>
+            </div>
+        </div>
+        <div class="right-mechanic-basket-content">
+            <div class="basket-main-content">
+               <div class="empty-basket-text">
+                    <h1>The basket is</h1>
+                    <p>Empty!</p>
+               </div>
+                
+               
+                <!-- <div class="basket-item">
+                    <div class="basket-left-content">
+                        <img src="img/wheel-in-basket.png" alt="">
+                        <div class="basket-item-info">
+                            <h1>Part <span>#5</span></h1>
+                            <p>LB Sleek</p>
+                        </div>
+                    </div>
+                   
+                    <div class="delete-item-on-basket">
+                        <img src="img/delete.svg" alt="">
+                    </div>
+                </div> -->
+            </div>
+            <div class="basket-bottom-border">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="payment-information">
+                <div class="payment-text">
+                    <h1>Payment</h1>
+                    <p>Total price</p>
+                </div>
+                <div class="total-price-info">
+                    <span>$</span><div class="price-is">0</div>
+                </div>
+            </div>
+            <div class="payment-type-selection">
+                <div class="payment-button" id="card">PAY VIA <span>&nbsp;CARD</span></div>
+                <div class="payment-button" id="cash">PAY VIA <span>&nbsp;CASH</span></div>
+            </div>
+        </div>
+        <!-- <div class="mechanic-logo">
+            <img src="img/bennys.png">
+        </div> -->
+        <!-- <div class="menu-items">
+
+            <div class="menu-item" data-id="0" data-active="true">
+                <div class="menu-item-price">
+                    <span>$3000</span>
+                </div>
+                <img src="img/vehicle.png">
+                <span>vehicle customization</span>
+            </div>
+
+        </div> -->
+    </div>
+
+    
+
+    <div class="fitment-menu" style="display: none;">
+        <div class="category-blur"></div>
+        <div class="header-part">
+            <h1>Fitment Menu</h1>
+            <p>Lorem ipsum simply dummy text.</p>
+        </div>
+        <!-- <span>Fitment menu</span> -->
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels width</span>
+            </div>
+            <div class="fitment-modal" data-fitment="wheels-width">
+                <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+                <!-- <div class="dec" id="arrow" data-side="left" data-type="fitment"></div>
+                <!-- <i class="fa-solid fa-caret-left" id="arrow" data-side="left" data-type="fitment"></i> -->
+                <!-- <span id="fitment">1.0</span> -->
+                <!-- <div class="inc" id="arrow" data-side="right" data-type="fitment"></div> -->
+                <!-- <i class="fa-solid fa-caret-right" id="arrow" data-side="right" data-type="fitment"></i> -->
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels Front left</span>
+            </div>
+            <div class="fitment-modal" data-fitment="front-left">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels Front right</span>
+            </div>
+            <div class="fitment-modal" data-fitment="front-right">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels rear left</span>
+            </div>
+            <div class="fitment-modal" data-fitment="rear-left">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels rear right</span>
+            </div>
+            <div class="fitment-modal" data-fitment="rear-right">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+        
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels Front Camber</span>
+            </div>
+            <div class="fitment-modal" data-fitment="front-left-camber">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels Front Camber</span>
+            </div>
+            <div class="fitment-modal" data-fitment="front-right-camber">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels rear Camber</span>
+            </div>
+            <div class="fitment-modal" data-fitment="rear-left-camber">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+        <!-- <div class="divider"></div> -->
+        <div class="fitment">
+            <div class="fitment-title">
+                <span>Wheels rear Camber</span>
+            </div>
+            <div class="fitment-modal" data-fitment="rear-right-camber">
+               <button class="countDown act-btn" id="arrow" data-side="left" data-type="fitment">-</button>
+                <div class="currentCount act-btn" id="fitment">1.0</div>
+                <button class="countUp act-btn" id="arrow" data-side="right" data-type="fitment">+</button>
+            </div>
+        </div>
+
+        <div class="fitment-row">
+            <div id="buyFitment" class="buy">
+                <span>Apply Settings</span>
+            </div>
+        </div>
+ 
+    </div>
+
+    <!-- <div class="invoice">
+        <div class="invoice-logo">
+            <img src="img/bennys.png">
+        </div>
+        <div class="divider-invoice"></div>
+        <div class="basket">
+            <div class="basket-item">
+                <div class="basket-item-img">
+                    <img src="img/front_bumper.png">
+                </div>
+                <div class="basket-item-labels">
+                    <span>Front bumper</span>
+                    <span>Vehicle customization</span>
+                </div>
+                <div class="basket-item-price">
+                    <span>$3000</span>
+                </div>
+            </div>
+        </div>
+        <div class="divider-invoice"></div>
+        <div class="invoice-modals">
+            <div class="total-price">
+                <span>Total price:</span>
+                <span>$1300</span>
+            </div>
+            <div class="modal-buttons">
+                <div class="modal-button" id="buy">
+                    <span>Buy</span>
+                </div>
+                <div class="modal-button" id="bill">
+                    <span>Bill player</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <span>enter player id</span>
+        <input type="number">
+        <div class="modal-button" id="buy">
+            <span>send bill</span>
+        </div>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
