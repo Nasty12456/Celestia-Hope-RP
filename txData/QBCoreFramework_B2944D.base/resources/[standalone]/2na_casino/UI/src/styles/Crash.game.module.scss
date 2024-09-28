@@ -1,0 +1,98 @@
+.container {
+  width: 100%;
+  height: calc(100% - 10vh);
+  display: flex;
+}
+
+.gameFrame {
+  width: 68%;
+  height: 97%;
+  padding: 1vh;
+  margin: 1vh;
+  border-radius: 1vh;
+
+  .gameHistory {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    min-height: 1.7vh;
+
+    .gameHistoryMultiplier {
+      margin: 0 0.5vh;
+      font-size: 1.3vh;
+      padding: 0.1vh 0.4vh;
+      background-color: rgb(70, 56, 155);
+      border-radius: 0.3vh;
+    }
+  }
+
+  .game {
+    height: 87%;
+    width: 100%;
+    margin-top: 2vh;
+    background-color: #1c1d36a2;
+    border-radius: 1vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1vh solid #282942e5;
+
+    @keyframes GameCharAnim {
+      0% {
+        width: 0%;
+        bottom: -55%;
+      }
+      100% {
+        width: 106%;
+        bottom: -40%;
+      }
+    }
+
+    .gameMultiplier {
+      font-size: 8vh;
+      margin-top: -4vh;
+      text-shadow: 0 0 2vh rgba(255, 255, 255, 0.671);
+    }
+
+    .animateGameChart {
+      animation: GameCharAnim 15s forwards;
+      animation-timing-function: linear;
+    }
+
+    .gameChart {
+      position: absolute;
+      z-index: 100;
+      width: 0%;
+      height: 55%;
+      bottom: -55%;
+      left: 0;
+      transform: rotate(-10deg);
+      background-color: rgba(82, 92, 126, 0.226);
+      border-top: 0.1vh solid #3d4577;
+      backdrop-filter: blur(1vh);
+      transform-origin: bottom;
+    }
+  }
+
+  .betToGame {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    input {
+      padding-left: 1.4vh;
+      max-width: 80%;
+    }
+  }
+}
+
+.betsNotAvailable {
+  color: #cccaca;
+  font-size: 1.3vh;
+  text-align: center;
+  margin-top: 10vh;
+}

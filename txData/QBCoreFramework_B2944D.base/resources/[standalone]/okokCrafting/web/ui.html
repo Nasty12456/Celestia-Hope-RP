@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="crafting-body">
+			<div class="row">
+				<div class="col">
+					<div class="card craftingq_card">
+						<div class="card-body craftingq_card-body">
+							<div class="section-title text-center">Crafting Queue</div>
+							<hr>
+							<div class="craftingq_window">
+								<div class="d-flex justify-content-between w-100 queue-item-concluded">
+									<div class="d-flex align-items-center">
+										<img src="icons/compactrifle.png" class="image_components">
+										<div>
+											<div class="queue-itemname">Compact Rifle x1</div>
+											<div class="queue-itemstate">Concluded</div>
+										</div>
+									</div>
+									<div class="d-flex align-items-center queue-item-mr">
+										<span class="queue-claimbutton"><div class="d-flex justify-content-center align-items-center queue-claimbutton-bg"><i class="fas fa-check"></i></div></span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-between w-100 queue-item mt-2">
+									<div class="d-flex align-items-center">
+										<img src="icons/compactrifle.png" class="image_components">
+										<div>
+											<div class="queue-itemname">Compact Rifle x1</div>
+											<div class="queue-itemstate">Time left: 55s</div>
+										</div>
+									</div>
+									<div class="d-flex align-items-center queue-item-mr">
+										<span class="queue-cancelbutton"><div class="d-flex justify-content-center align-items-center queue-cancelbutton-bg"><i class="fas fa-times"></i></div></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="claimall-button-div mt-2">
+							<button type="button" id="claimall-button" class="btn btn-blue" onclick="claimall(this)">CLAIM ALL</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="title-main text-center">
+						<div class="title">
+							<span class="title-name"></span><span class="title-name2">Crafting</span>
+						</div>
+					</div>
+
+					<div class="itemslist">
+						<div class="card itemslist_card">
+							<div class="card-body itemslist_card-body justify-content-start">
+								<div class="itemslist_window" id="craft-table"></div>
+							</div>
+						</div>
+					</div>
+					<div class="text-center" id="categories_box">
+						<div class="btn-group" role="group" id="categories_btns"></div>
+					</div>
+				</div>
+
+				<div class="col xpbar-col">
+					<div class="xpbar">
+						<div id="level-text" class="text-center">Current Level: <span id="currentlevel">28</span></div>
+						<div class="progress">
+							<div class="progress-value d-flex justify-content-center align-items-center"></div>
+						</div>
+					</div>
+
+					<div class="itemrequirements">
+						<div class="card itemr_card mb-2">
+							<div class="card-body itemr_card-body">
+								<span id="time"><i class="fas fa-clock"></i> <span class="craft-tp"><span id="craft-time"></span>s</span></span>
+								<span id="percentage"><i class="fas fa-percentage"></i> <span class="craft-tp"><span id="craft-percentage"></span></span></span>
+								<div class="ywr text-center" id="top_text">You will receive</div>
+								<div class="d-flex align-items-center justify-content-center mx-1" id="side-image">
+									<img src="icons/compactrifle.png" class="image_itemselected">
+									<span class="text_itemselected ms-2"></span>
+								</div>
+								<hr>
+								<div class="section-title text-center mb-2" id="bot_text">Requirements</div>
+								<div class="components_window"></div>
+							</div>
+						</div>
+
+						<div id="craft-buttons-info">
+							<div class="d-flex mb-2">
+								<div class="d-flex mip" id="selector">
+									<button type="button" class="btn btn-blue" id="minus"><i class="fa-solid fa-minus"></i></button>
+									<input type="number" id="quantity" onchange="quantity_change(this)" class="form-control text-center" value="1" min="1" max="9999999999">
+									<button type="button" class="btn btn-blue" id="plus"><i class="fa-solid fa-plus"></i></button>
+								</div>
+								<button type="button" class="btn btn-blue ms-2" id="max">MAX</button>
+							</div>
+							<div id="craft-button-div"></div>
+						</div>
+						<div id="craft-buttons-info-level">
+							<div id="craft-button-div-level"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="timer">
+			<div class="card timer_card">
+				<div class="card-body timer_card-body">
+					<span><i id="cog" class="fas fa-cog fa-spin"></i></span><span id="crafting-text"></span> <span id="item-name"></span> <span id="item-timer"></span>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="scripts.js" type="text/javascript"></script>
+	</body>
+</html>

@@ -1,0 +1,382 @@
+.container {
+  width: 100%;
+  height: calc(100% - 10vh);
+}
+
+.games {
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  display: grid;
+  grid-template-areas: "a a a";
+  padding: 3vh;
+  padding-top: 2vh;
+}
+
+.game {
+  width: 32vh;
+  height: 31vh;
+  margin: 1vh;
+  border-radius: 1vh;
+  backdrop-filter: blur(1vh);
+  border: 0.1vh solid #282942e5;
+  padding: 1vh;
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(rgba(8, 8, 8, 0.205), transparent);
+  border-color: rgba(255, 255, 255, 0.12);
+  transition: all 450ms ease;
+  transform: skew(20deg);
+  position: relative;
+  --cardLeft: 0;
+  --cardBottom: 0;
+  --opacity: 0;
+
+  &:after {
+    height: 100%;
+    width: 100%;
+    left: var(--cardLeft);
+    bottom: var(--cardBottom);
+    border-radius: 1vh;
+    border: 0.1vh solid #282942e5;
+    border-color: rgba(255, 255, 255, 0.12);
+    content: "";
+    position: absolute;
+    transition: all 450ms ease;
+    border-left: none;
+    border-bottom: none;
+    opacity: var(--opacity);
+  }
+
+  &:before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(0deg, rgba(8, 8, 8, 0.805), transparent 60%);
+    z-index: 100;
+    border-radius: 1vh;
+  }
+
+  &:hover {
+    cursor: pointer;
+    --cardLeft: 0.5vh;
+    --cardBottom: 0.5vh;
+    --opacity: 1;
+  }
+
+  .gameWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  > h1 {
+    position: relative;
+    font-family: "roc-grotesk";
+    z-index: 100;
+    font-size: 3vh;
+    margin-bottom: 1vh;
+    font-weight: 300;
+    transition: all 450ms ease;
+    transform: skew(-20deg);
+    text-shadow: 0 0 2vh rgba(255, 255, 255, 0.671);
+    font-weight: bold;
+  }
+}
+
+.graph {
+  width: 130%;
+  height: 20vh;
+  position: absolute;
+  bottom: -5vh;
+  transform: rotate(-10deg);
+  background-color: rgba(82, 92, 126, 0.226);
+  border-top: 0.1vh solid #3d4577;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+
+  h1 {
+    position: absolute;
+    top: -8vh;
+    left: 20vh;
+    text-transform: none;
+    font-size: 4vh;
+    font-weight: normal;
+    text-shadow: 0 0 2vh rgba(255, 255, 255, 0.671);
+    transform: rotate(5deg) skew(-20deg);
+  }
+}
+
+.mines {
+  width: 50vh;
+  height: 30vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform: skew(-20deg);
+  position: absolute;
+  left: -10vh;
+  opacity: 0.8;
+
+  .mine {
+    width: 9.5vh;
+    height: 9.5vh;
+    margin: 0.5vh;
+    border: 0.1vh solid #66666667;
+    background: #1d1d1d67;
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:nth-child(6) {
+      &::before {
+        --glowColor: #db3939;
+      }
+    }
+
+    &:last-child {
+      &::before {
+        --glowColor: #db3939;
+      }
+    }
+
+    &:before {
+      --glowColor: rgba(255, 255, 255, 0.507);
+      content: "";
+      width: 4vh;
+      height: 4vh;
+      position: absolute;
+      left: 30%;
+      top: 30%;
+      background: radial-gradient(
+        circle at center,
+        var(--glowColor),
+        transparent
+      );
+      transform: scale(1.5);
+      filter: blur(0.5vh);
+      animation: ScaleFadeInGlow 0.8s forwards;
+      z-index: -1;
+    }
+
+    svg {
+      height: 3.5vh;
+      width: 3.5vh;
+    }
+  }
+}
+
+.plinko {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+
+  .plinkoRow {
+    display: flex;
+    position: relative;
+
+    .plinkoBarrier {
+      width: 1.5vh;
+      height: 1.5vh;
+      margin: 1.2vh;
+      background: rgba(177, 176, 176, 0.76);
+      border-radius: 50%;
+    }
+  }
+
+  .plinkoBall {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 2vh;
+    left: 3.5vh;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1.5vh;
+      width: 1.5vh;
+      background-color: rgba(255, 255, 255, 0.9);
+      filter: blur(2vh);
+      z-index: -1;
+    }
+  }
+}
+
+.slot {
+  width: 70vh;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skew(-20deg) rotate(45deg);
+  opacity: 0.8;
+
+  .slotCol {
+    width: 9vh;
+    height: 150%;
+    background-color: #1c1d36a2;
+    backdrop-filter: blur(1vh);
+    border-left: 0.1vh solid #282942e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+
+    svg {
+      height: 6vh;
+      width: 6vh;
+      margin: 2.2vh;
+    }
+
+    div[id="slot_meteor"] {
+      --lightColor: rgb(245, 130, 53);
+    }
+
+    div[id="slot_diamond"] {
+      --lightColor: rgb(54, 190, 231);
+    }
+
+    div[id="slot_clef"] {
+      --lightColor: rgb(175, 54, 231);
+    }
+
+    div[id="slot_club"] {
+      --lightColor: rgb(63, 250, 88);
+    }
+
+    div[id="slot_chess"] {
+      --lightColor: rgb(232, 245, 54);
+    }
+
+    div[id="slot_pistols"] {
+      --lightColor: rgb(255, 0, 0);
+    }
+
+    div[id="slot_shield"] {
+      --lightColor: rgb(65, 0, 243);
+    }
+
+    div[id="slot_card"] {
+      --lightColor: rgb(243, 0, 170);
+    }
+
+    div[id="slot_meteor"],
+    div[id="slot_diamond"],
+    div[id="slot_clef"],
+    div[id="slot_club"],
+    div[id="slot_chess"],
+    div[id="slot_pistols"],
+    div[id="slot_shield"],
+    div[id="slot_card"] {
+      position: relative;
+
+      div {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: 3vh;
+        top: 3vh;
+        background: radial-gradient(
+          circle at center,
+          var(--lightColor),
+          transparent
+        );
+        z-index: -1;
+        filter: blur(2vh);
+        opacity: 0.7;
+      }
+    }
+
+    &:last-child {
+      border-right: 0.1vh solid #282942e5;
+    }
+  }
+}
+
+.dices {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+
+  .dice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    --textColor: #5feb5f;
+
+    svg {
+      height: 9vh;
+      width: 9vh;
+      position: absolute;
+      opacity: 0.8;
+    }
+
+    h1 {
+      color: var(--textColor);
+      z-index: 10;
+    }
+  }
+}
+
+.roulette {
+  position: absolute;
+  left: -8vh;
+  top: -8vh;
+  opacity: 0.6;
+  transform: skew(-20deg);
+
+  .rouletteChips {
+    position: absolute;
+
+    img {
+      width: 10vh;
+      height: 10vh;
+      position: absolute;
+      left: 30vh;
+      top: 20vh;
+    }
+  }
+
+  .rouletteBall {
+    width: 1.6vh;
+    height: 1.6vh;
+    background-color: white;
+    position: absolute;
+    left: 22vh;
+    top: 20vh;
+    border-radius: 50%;
+  }
+
+  img {
+    filter: grayscale(00.3vh);
+    height: 30vh;
+  }
+}

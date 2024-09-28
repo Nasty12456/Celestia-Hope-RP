@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+
+<head>
+	<title>Farming Creator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Script CSS -->
+	<link href="index.css" rel="stylesheet" type="text/css" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@700&display=swap" rel="stylesheet"> 	
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	
+	<!-- jQuery, then Bootstrap, then popper -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+	<!-- Datatables -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+
+	<!-- Notifications -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<!-- Theme -->
+	<link rel="stylesheet" href="./assets/css/theme.bundle.css" id="stylesheetLTR">
+</head>
+
+<body style="background-color: transparent !important;">
+
+	<div id="farming-creator" class="container-lg bg-white position-absolute top-50 start-50 translate-middle rounded" style="display: none;">
+        <div id="main-bar" class="d-inline-block col-12 text-center mt-2">
+			<p id="farming-creator-label" class="d-inline script-name">Farming Creator - <span id="farming-creator-version" class="d-inline script-name"></span></p>
+			
+			<button id="close-main-btn" type="button" class="btn-close btn-close-white float-end mt-2"></button>
+		</div>
+
+		<div class="d-flex align-items-start my-2">
+			<div class="nav flex-column nav-pills me-3" role="tablist" aria-orientation="vertical">
+				<button class="nav-link active" data-is-default="1" data-translation-id="menu:seeds" id="seeds-tab" data-bs-toggle="pill" data-bs-target="#seeds" type="button" role="tab"><i class="bi bi-flower1"></i> Seeds</button>
+				<button class="nav-link" data-translation-id="menu:fields" id="fields-tab" data-bs-toggle="pill" data-bs-target="#fields" type="button" role="tab"><i class="bi bi-tree"></i> Fields</button>
+				<button class="nav-link" data-translation-id="menu:farms" id="farms-tab" data-bs-toggle="pill" data-bs-target="#farms" type="button" role="tab"><i class="bi bi-arrow-repeat"></i> Farms</button>
+				<button class="nav-link" data-translation-id="menu:workbenches" id="workbenches-tab" data-bs-toggle="pill" data-bs-target="#workbenches" type="button" role="tab"><i class="bi bi-tools"></i> Workbenches</button>
+				<button class="nav-link" data-translation-id="menu:foundries" id="foundries-tab" data-bs-toggle="pill" data-bs-target="#foundries" type="button" role="tab"><i class="bi bi-fire"></i> Foundries</button>
+				<button class="nav-link" data-translation-id="menu:settings" id="settings-tab" data-bs-toggle="pill" data-bs-target="#settings" type="button" role="tab"><i class="bi bi-gear-fill"></i> Settings</button>
+			</div>
+
+			<div class="tab-content container">
+				<div class="tab-pane fade show active" data-is-default="1" id="seeds" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-seed-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_seed">New seed</button>
+					</div>
+
+					<table id="seeds-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+                                <th scope="col" data-translation-id="menu:stages">Stages</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tab-pane fade" id="fields" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-field-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_field">New field</button>
+					</div>
+
+					<table id="fields-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+                                <th scope="col" data-translation-id="menu:radius">Radius</th>
+                                <th scope="col" data-translation-id="menu:spawned_objects_count">Spawned objects count</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tab-pane fade" id="farms" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-farm-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_farm">New farm</button>
+					</div>
+
+					<table id="farms-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tab-pane fade" id="workbenches" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-workbench-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_workbench">New workbench</button>
+					</div>
+
+					<table id="workbenches-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tab-pane fade" id="foundries" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-foundry-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_foundry">New foundry</button>
+					</div>
+
+					<table id="foundries-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<form class="tab-pane fade needs-validation" id="settings" role="tabpanel" novalidate>
+					<div class="container my-2 scrollbar" style="max-height: 60vh; overflow-y: auto">
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:settings:language">Language</p>
+	
+							<select class="form-select" id="settings-locale" data-select>
+								<option value="en">English</option>
+								<option value="de">Deutsch</option>
+								<option value="es">Español</option>
+								<option value="it">Italiano</option>
+								<option value="fr">Français</option>
+								<option value="pt">Português</option>
+								<option value="cs">Česky</option>
+								<option value="hu">Magyar</option>
+							</select>
+						</div>
+
+						<hr>
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:settings:generic">Generic</p>
+
+							<div class="input-group my-3 fs-4">
+								<span class="input-group-text">ACE permission</span>
+								<input id="settings-ace-permission" type="text" class="form-control" required>
+							</div>
+	
+							<div class="form-check form-switch fs-3 my-3">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings-can-always-carry">
+								<label class="form-check-label" data-translation-id="menu:can_always_carry_items" for="settings-can-always-carry">Can always carry</label>
+							</div>
+	
+							<div class="form-check form-switch fs-3 my-3">
+								<input id="settings-can-receive-multiple-same-item" class="form-check-input"  type="checkbox" role="switch" data-translation-id="menu:used_in_items_list" data-bs-toggle="tooltip" data-bs-placement="top">
+								<label class="form-check-label" data-translation-id="menu:can_receive_multiple_times_the_same_item" for="settings-can-receive-multiple-same-item">Can receive multiple times the same item</label>
+							</div>
+
+							<div class="row align-items-center mt-3">
+								<p class="text-center my-auto" data-translation-id="menu:settings:player_menu_position" style="width:auto">Player menu position</p>
+								
+								<select id="settings_menuPosition" class="form-select w-25" data-select>
+									<option data-translation-id="menu:settings:player_menu_position:bottom_right" value="bottom-right">Bottom right</option>
+									<option data-translation-id="menu:settings:player_menu_position:right" value="right">Center Right</option>
+									<option data-translation-id="menu:settings:player_menu_position:top_right" value="top-right">Top right</option>
+									<option data-translation-id="menu:settings:player_menu_position:bottom_left" value="bottom-left">Bottom left</option>
+									<option data-translation-id="menu:settings:player_menu_position:left" value="left">Center left</option>
+									<option data-translation-id="menu:settings:player_menu_position:top_left" value="top-left">Top left</option>
+								</select>	
+							</div>
+		
+							<div class="row align-items-center mt-2" data-translation-id="menu:probably_requires_script_restart" data-bs-toggle="tooltip" data-bs-placement="top">
+								<p class="text-center fs-4 my-auto" data-translation-id="menu:settings:targeting_script" style="width:auto">Targeting script</p>
+								
+								<select id="settings-targeting-script" class="form-select w-25" data-select>
+									<option data-translation-id="menu:none" value="none">None</option>
+									<option value="ox_target">OX Target</option>
+									<option value="qb_target">QB Target</option>
+								</select>
+							</div>
+								
+							<div class="row align-items-center mt-2">
+								<p class="text-center translatable fs-4 my-auto" data-translation-id="menu:settings:help_notification" style="width:auto">Help notification</p>
+								
+								<select id="settings-help-notification-script" class="form-select w-25" data-select>
+									<option data-translation-id="menu:default" value="none">Default</option>
+									<option value="esx_textui">ESX TextUI</option>
+								</select>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:seeds">Seeds</p>
+
+							<div class="row g-2 align-items-center mt-2">
+								<div class="form-floating text-body col">
+									<input type="number" class="form-control" placeholder="Time (seconds)" id="settings-time-to-burn-plants" min="1" required>
+									<label class="ms-1" data-translation-id="menu:time_to_burn_plants_seconds">Time to burn plants (seconds)</label>
+								</div>
+	
+								<div class="form-floating text-body col">
+									<input type="number" class="form-control" placeholder="Minimum distance between plants" id="settings-minimum-distance-between-plants" min="0" required>
+									<label class="ms-1" data-translation-id="menu:minimum_distance_between_plants">Minimum distance between plants</label>
+								</div>
+
+								<button id="settings-burn-plants-animations-btn" type="button" class="btn btn-secondary mx-1 col-auto" data-translation-id="menu:burn_plants_animations">Burn plants animation</button>
+							</div>
+
+							<p class="text-center fs-4 mt-3" data-translation-id="menu:item_to_burn_plants">Item to burn plants</p>	
+
+							<div class="row g-2 row-cols-auto align-items-center justify-content-center text-body my-2">
+								<div class="form-check fs-5 ms-1 my-auto">
+									<input class="form-check-input" type="checkbox" value="" id="settings-item-to-burn-plants-is-required">
+									<label class="form-check-label" data-translation-id="menu:is_required">Is required</label>
+								</div>
+
+								<div class="form-floating">
+									<input type="text" class="form-control" placeholder="Item name" id="settings-item-to-burn-plants-item-name" required>
+									<label data-translation-id="menu:item_name">Item name</label>
+								</div>
+					
+								<button type="button" class="btn btn-secondary col-auto" id="settings-item-to-burn-plants-choose-item" data-translation-id="menu:choose" data-bs-toggle="tooltip" data-bs-placement="top"><i class="bi bi-list-ul"></i></button>	
+					
+								<div class="form-floating">
+									<input type="number" min=0 class="form-control" placeholder="Minimum quantity" id="settings-item-to-burn-plants-minimum-quantity" required>
+									<label data-translation-id="menu:min_quantity">Minimum quantity</label>
+								</div>
+					
+								<div class="form-check fs-5 ms-1  my-auto">
+									<input class="form-check-input" type="checkbox" value="" id="settings-item-to-burn-plants-lose-on-use">
+									<label class="form-check-label" data-translation-id="menu:lose_on_use">Lose on use</label>
+								</div>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:farms">Farms</p>
+
+							<div class="form-check form-switch fs-3 my-3">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings-allow-afk-farming">
+								<label class="form-check-label" data-translation-id="menu:allow_afk_farming" for="settings-allow-afk-farming">Allow AFK farming</label>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:foundries">foundries</p>
+
+							<div class="form-check form-switch fs-3 my-3">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings-allow-to-save-formulas" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:allow_players_to_learn_formulas_description">
+								<label class="form-check-label" data-translation-id="menu:allow_players_to_learn_formulas" for="settings-allow-to-save-formulas">Allow players to learn/save formulas</label>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:settings:discord">Discord</p>
+
+							<div class="form-check form-switch fs-4 mt-4">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings-areDiscordLogsActive">
+								<label class="form-check-label" data-translation-id="menu:settings:enable_discord_logs" for="settings-areDiscordLogsActive">Enable discord logs</label>
+							</div>
+		
+							<div>
+								<p class="fs-5" data-translation-id="menu:settings:discord_webhooks">Discord webhooks</p>
+		
+								<div class="input-group mt-1 mb-3 fs-5" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:main_webhook_description">
+									<span class="input-group-text col-3" data-translation-id="menu:settings:main_webhook">Main webhook</span>
+									<input id="settings-mainDiscordWebhook" type="text" class="form-control" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+		
+								<p class="fs-5" data-translation-id="menu:settings:separated_webhooks">Separated webhooks</p>
+	
+								<div id="settings-specific-webooks-div">
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:discord_logs:plants">Plants</span>
+										<input type="text" class="form-control" data-log-type="plants" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:discord_logs:fields">Fields</span>
+										<input type="text" class="form-control" data-log-type="fields" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:discord_logs:farms">Farms</span>
+										<input type="text" class="form-control" data-log-type="farms" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:discord_logs:workbenches">Workbenches</span>
+										<input type="text" class="form-control" data-log-type="workbenches" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:discord_logs:foundries">Foundries</span>
+										<input type="text" class="form-control" data-log-type="foundries" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success float-end" data-translation-id="menu:apply_changes">Apply changes</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Foundry modal -->
+	<div id="foundry-modal" class="modal fade" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+			<form id="foundry-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:foundry">Foundry</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="text" class="form-control" id="foundry-label" placeholder="Label" required>
+							<label for="foundry-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="foundry-minimum-police" min="0" placeholder="Minimum police" required>
+							<label for="foundry-minimum-police" data-translation-id="menu:minimum_police">Minimum police</label>
+						</div>
+
+						<div class="form-floating text-body col-2" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:radius_description">
+							<input type="number" class="form-control" id="foundry-radius" min="1" max="50" placeholder="Radius" required>
+							<label for="foundry-radius" data-translation-id="menu:radius">Radius</label>
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-3">
+						<div class="form-check fs-4 ms-2">
+							<input class="form-check-input" type="checkbox" value="" id="foundry-explode-on-failure-checkbox">
+							<label class="form-check-label" for="foundry-explode-on-failure-checkbox" data-translation-id="menu:explode_on_failure">Explode on failure</label>
+						</div>
+
+						<div id="foundry-seconds-before-explosion-div" class="form-floating text-body col-3 ms-2">
+							<input type="number" class="form-control" id="foundry-seconds-before-explosion" min="0" placeholder="Seconds before explosion" required>
+							<label for="foundry-seconds-before-explosion" data-translation-id="menu:seconds_before_explosion">Seconds before explosion</label>
+						</div>
+
+						<div class="form-check fs-4 ms-2">
+							<input class="form-check-input" type="checkbox" value="" id="foundry-alert-police-on-failure-checkbox">
+							<label class="form-check-label" for="foundry-alert-police-on-failure-checkbox" data-translation-id="menu:alert_police_on_failure">Alert police on failure</label>
+						</div>
+
+						<div id="foundry-alert-police-probability-div" class="form-floating text-body col-2 ms-2">
+							<input type="number" class="form-control" id="foundry-alert-police-probability" min="0" max="100" placeholder="Alert probability" required>
+							<label for="foundry-alert-police-probability" data-translation-id="menu:alert_probability">Alert probability</label>
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-3">
+						<button id="foundry-customize-blip-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_blip">Customize blip</button>
+						<button id="foundry-customize-marker-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_marker">Customize marker</button>
+						<button id="foundry-customize-object-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_object">Customize object</button>
+						<button id="foundry-allowed-jobs-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:allowed_jobs">Allowed jobs</button>
+						<button id="foundry-allowed-formulas-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:allowed_formulas">Allowed formulas</button>
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3 mt-3" data-translation-id="menu:coordinates">Coordinates</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="foundry-coords-x" step="0.01" placeholder="X" required>
+							<label for="foundry-coords-x" data-translation-id="menu:x">X</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="foundry-coords-y" step="0.01" placeholder="Y" required>
+							<label for="foundry-coords-y" data-translation-id="menu:y">Y</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="foundry-coords-z" step="0.01" placeholder="Z" required>
+							<label for="foundry-coords-z" data-translation-id="menu:z">Z</label>
+						</div>
+
+						<button id="foundry-current-coords-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:current_coords"><i class="bi bi-arrow-down-square"></i></button>						
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button id="delete-foundry-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-foundry-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Workbench modal -->
+	<div id="workbench-modal" class="modal fade" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+			<form id="workbench-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:workbench">Workbench</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body scrollbar">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="text" class="form-control" id="workbench-label" placeholder="Label" required>
+							<label for="workbench-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="workbench-minimum-police" min="0" placeholder="Minimum police" required>
+							<label for="workbench-minimum-police" data-translation-id="menu:minimum_police">Minimum police</label>
+						</div>
+
+						<div class="form-floating text-body col-2" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:radius_description">
+							<input type="number" class="form-control" id="workbench-radius" min="1" max="50" placeholder="Radius" required>
+							<label for="workbench-radius" data-translation-id="menu:radius">Radius</label>
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-3">
+						<button id="workbench-animations-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:animations">Animations</button>
+						<button id="workbench-customize-blip-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_blip">Customize blip</button>
+						<button id="workbench-customize-marker-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_marker">Customize marker</button>
+						<button id="workbench-customize-object-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_object">Customize object</button>
+						<button id="workbench-allowed-jobs-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:allowed_jobs">Allowed jobs</button>
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3 mt-3" data-translation-id="menu:coordinates">Coordinates</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="workbench-coords-x" step="0.01" placeholder="X" required>
+							<label for="workbench-coords-x" data-translation-id="menu:x">X</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="workbench-coords-y" step="0.01" placeholder="Y" required>
+							<label for="workbench-coords-y" data-translation-id="menu:y">Y</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="workbench-coords-z" step="0.01" placeholder="Z" required>
+							<label for="workbench-coords-z" data-translation-id="menu:z">Z</label>
+						</div>
+
+						<button id="workbench-current-coords-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:current_coords"><i class="bi bi-arrow-down-square"></i></button>						
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3 mt-3" data-translation-id="menu:craftings">Craftings</p>
+
+					<div>
+						<div id="workbench-craftings-list">
+
+						</div>
+
+						<button id="workbench-add-crafting-btn" type="button" class="btn btn-primary mt-3" data-translation-id="menu:add_crafting">Add crafting</button>
+					</div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button id="delete-workbench-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-workbench-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+		</div>
+	</div>	
+
+	<!-- Farm modal -->
+	<div id="farm-modal" class="modal fade" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+			<form id="farm-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:farm">Farm</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body scrollbar">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="text" class="form-control" id="farm-label" placeholder="Label" required>
+							<label for="farm-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="farm-minimum-police" min="0" placeholder="Minimum police" required>
+							<label for="farm-minimum-police" data-translation-id="menu:minimum_police">Minimum police</label>
+						</div>
+
+						<div class="form-floating text-body col-2" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:radius_description">
+							<input type="number" class="form-control" id="farm-radius" min="1" max="50" placeholder="Radius" required>
+							<label for="farm-radius" data-translation-id="menu:radius">Radius</label>
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-3">
+						<button id="farm-animations-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:animations">Animations</button>
+						<button id="farm-customize-blip-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_blip">Customize blip</button>
+						<button id="farm-customize-marker-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_marker">Customize marker</button>
+						<button id="farm-customize-object-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_object">Customize object</button>
+						<button id="farm-allowed-jobs-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:allowed_jobs">Allowed jobs</button>
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3 mt-3" data-translation-id="menu:options">Options</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-3">
+						<div class="form-check me-5 my-auto">
+							<input class="form-check-input" type="checkbox" value="" id="farm-always-active">
+							<label class="form-check-label" for="farm-always-active" data-translation-id="menu:is_always_active">Is always active</label>
+						</div>
+
+						<div class="d-flex gap-3">
+							<label class="my-auto" for="farm-active-start-time" data-translation-id="menu:start_time">Open time</label>
+
+							<input id="farm-active-start-time" type="text" class="form-control" data-flatpickr='{
+								"enableTime": "true",
+								"noCalendar": "true",
+								"dateFormat": "H:i",
+								"time_24hr": "true",
+								"allowInput": "true"
+							}' style="width:auto">
+						</div>
+						
+						<div class="d-flex gap-3">
+							<label class="my-auto" for="farm-active-end-time" data-translation-id="menu:end_time">Open time</label>
+
+							<input id="farm-active-end-time" type="text" class="form-control" data-flatpickr='{
+								"enableTime": "true",
+								"noCalendar": "true",
+								"dateFormat": "H:i",
+								"time_24hr": "true",
+								"allowInput": "true"
+							}' style="width:auto">
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-5">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="farm-requires-to-be-in-vehicle">
+							<label class="form-check-label" for="farm-requires-to-be-in-vehicle" data-translation-id="menu:requires_to_be_in_a_vehicle">Requires to be in a vehicle</label>
+						</div>
+
+						<div class="form-check ms-3">
+							<input class="form-check-input" type="checkbox" value="" id="farm-requires-specific-vehicle">
+							<label class="form-check-label" for="farm-requires-specific-vehicle" data-translation-id="menu:requires_a_specific_vehicle">Requires a specific vehicle</label>
+						</div>
+					</div>
+
+					<div id="farm-allowed-vehicles-div" class="ms-2" style="display: none;">
+						<p class="text-center fs-4" data-translation-id="menu:allowed_vehicles">Allowed vehicles</p>
+
+						<ul id="farm-allowed-vehicles-list" class="list-group">
+
+						</ul>
+
+						<button id="farm-add-farm-allowed-vehicle-btn" type="button" class="btn btn-secondary" data-translation-id="menu:add_vehicle">Add vehicle</button>						
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3 mt-3" data-translation-id="menu:coordinates">Coordinates</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="farm-coords-x" step="0.01" placeholder="X" required>
+							<label for="farm-coords-x" data-translation-id="menu:x">X</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="farm-coords-y" step="0.01" placeholder="Y" required>
+							<label for="farm-coords-y" data-translation-id="menu:y">Y</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="farm-coords-z" step="0.01" placeholder="Z" required>
+							<label for="farm-coords-z" data-translation-id="menu:z">Z</label>
+						</div>
+
+						<button id="farm-current-coords-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:current_coords"><i class="bi bi-arrow-down-square"></i></button>						
+					</div>
+
+					<hr>
+
+					<div class="mt-4">
+						<p class="text-center fs-3" data-translation-id="menu:required_items">Required items</p>
+		
+						<div id="farm-required-items-list">
+		
+						</div>
+		
+						<button id="farm-add-required-item-btn" type="button" class="btn btn-secondary" data-translation-id="menu:add_item">Add item</button>
+					</div>
+		
+					<hr>
+
+					<div class="mt-4">
+						<p class="text-center fs-3" data-translation-id="menu:items_to_give">Items to give</p>
+		
+						<div class="my-4 row g-2 row-cols-auto align-items-center justify-content-center">
+							<p class="text-center fs-4 my-auto me-3" data-translation-id="menu:amount_of_objects_as_reward">Amount of objects as reward</p>
+		
+							<div class="form-floating text-body col-3">
+								<input id="farm-reward-min-objects-amount" type="number" class="form-control" placeholder="Minimum" required>
+								<label data-translation-id="menu:min_quantity">Min quantity</label>
+							</div>
+		
+							<div class="form-floating text-body col-3">
+								<input id="farm-reward-max-objects-amount" type="number" class="form-control" placeholder="Maximum" required>
+								<label data-translation-id="menu:max_quantity">Max quantity</label>
+							</div>
+						</div>
+							
+						<div id="farm-reward-items-list">
+		
+						</div>
+		
+						<button id="farm-add-reward-item-btn" type="button" class="btn btn-secondary" data-translation-id="menu:add_item">Add item</button>
+					</div>		
+				</div>
+
+				<div class="modal-footer">
+					<button id="delete-farm-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-farm-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+		</div>
+	</div>	
+	
+	<!-- Field modal -->
+	<div id="field-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <form id="field-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:field">Field</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body scrollbar">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="text" class="form-control" id="field-label" placeholder="Label" required>
+							<label for="field-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="text" class="form-control" id="field-object-model" placeholder="Object model" required>
+							<label for="field-object-model" data-translation-id="menu:object_model">Object model</label>
+						</div>
+						
+						<a class="btn btn-secondary clickable me-3" target="_blank" onclick='window.invokeNative("openUrl", "https://forge.plebmasters.de/objects/")' data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:open_models_list"><i class="bi bi-images"></i></a>
+
+						<div class="form-floating text-body col-1">
+							<input type="number" class="form-control" id="field-radius" min="1" max="200" placeholder="Radius" required>
+							<label for="field-radius" data-translation-id="menu:radius">Radius</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="field-max-objects" min="1" max="50" placeholder="Max objects" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:max_objects_description">
+							<label for="field-max-objects" data-translation-id="menu:max_objects">Max objects</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="field-minimum-police" min="0" placeholder="Minimum police" required>
+							<label for="field-minimum-police" data-translation-id="menu:minimum_police">Minimum police</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="field-respawn-timer" min="5" placeholder="Respawn timer" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:respawn_timer_description">
+							<label for="field-respawn-timer" data-translation-id="menu:respawn_timer">Respawn timer</label>
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-3">
+						<button id="field-animations-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:animations">Animations</button>
+						<button id="field-customize-blip-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_blip">Customize blip</button>
+						<button id="field-allowed-jobs-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:allowed_jobs">Allowed jobs</button>
+					</div>
+
+					<p class="text-center fs-3 mt-3" data-translation-id="menu:coordinates">Coordinates</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="field-coords-x" step="0.01" placeholder="X" required>
+							<label for="field-coords-x" data-translation-id="menu:x">X</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="field-coords-y" step="0.01" placeholder="Y" required>
+							<label for="field-coords-y" data-translation-id="menu:y">Y</label>
+						</div>
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="field-coords-z" step="0.01" placeholder="Z" required>
+							<label for="field-coords-z" data-translation-id="menu:z">Z</label>
+						</div>
+
+						<button id="field-current-coords-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:current_coords"><i class="bi bi-arrow-down-square"></i></button>						
+					</div>
+
+					<p class="text-center fs-3 mt-4" data-translation-id="menu:spawn_coordinates_type">Spawn coordinates type</p>
+					
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-check form-check-inline fs-4 my-auto">
+							<input class="form-check-input" type="radio" name="field-spawn-coords-type" id="field-spawn-coords-type-automatic" value="automatic">
+							<label class="form-check-label" for="field-spawn-coords-type-automatic">Automatic</label>
+						</div>
+						<div class="form-check form-check-inline fs-4 my-auto">
+							<input class="form-check-input" type="radio" name="field-spawn-coords-type" id="field-spawn-coords-type-manual" value="manual">
+							<label class="form-check-label" for="field-spawn-coords-type-manual">Manual</label>
+						</div>
+
+						<button id="field-choose-allowed-spawn-coordinates-btn" type="button" class="btn btn-secondary ms-5" data-translation-id="menu:choose_allowed_spawn_coordinates">Choose allowed spawn coordinates</button>
+					</div>
+
+					<hr>
+
+					<div class="mt-4">
+						<p class="text-center fs-3" data-translation-id="menu:required_items">Required items</p>
+		
+						<div id="field-required-items-list">
+		
+						</div>
+		
+						<button id="field-add-required-item-btn" type="button" class="btn btn-secondary" data-translation-id="menu:add_item">Add item</button>
+					</div>
+		
+					<hr>
+
+					<div class="mt-4">
+						<p class="text-center fs-3" data-translation-id="menu:items_to_give">Items to give</p>
+		
+						<div class="my-4 row g-2 row-cols-auto align-items-center justify-content-center">
+							<p class="text-center fs-4 my-auto me-3" data-translation-id="menu:amount_of_objects_as_reward">Amount of objects as reward</p>
+		
+							<div class="form-floating text-body col-3">
+								<input id="field-reward-min-objects-amount" type="number" class="form-control" placeholder="Minimum" required>
+								<label data-translation-id="menu:min_quantity">Min quantity</label>
+							</div>
+		
+							<div class="form-floating text-body col-3">
+								<input id="field-reward-max-objects-amount" type="number" class="form-control" placeholder="Maximum" required>
+								<label data-translation-id="menu:max_quantity">Max quantity</label>
+							</div>
+						</div>
+							
+						<div id="field-reward-items-list">
+		
+						</div>
+		
+						<button id="field-add-reward-item-btn" type="button" class="btn btn-secondary" data-translation-id="menu:add_item">Add item</button>
+					</div>		
+				</div>
+
+				<div class="modal-footer">
+                    <button id="delete-field-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-field-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+        </div>
+    </div>
+
+	<!-- Seed modal -->
+	<div id="seed-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <form id="seed-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:seed">Seed</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body scrollbar">
+					<h2 class="text-center" data-translation-id="menu:generic">Generic</h2>
+
+					<div class="d-flex gap-1 align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="text" class="form-control" id="seed-label" placeholder="Label" required>
+							<label for="seed-label" data-translation-id="menu:label">Label</label>
+						</div>
+					
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="seed-maximum-steepness" min="0" max="100" placeholder="Maximum steepness" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:maximum_steepness_description" required>
+							<label for="seed-maximum-steepness" data-translation-id="menu:maximum_steepness">Maximum steepness</label>
+						</div>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" class="form-control" id="seed-minimum-free-space-above" min="0" step="0.1" placeholder="Minimum free space above" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:minimum_free_space_above_description" required>
+							<label for="seed-minimum-free-space-above" data-translation-id="menu:minimum_free_space_above">Minimum free space above</label>
+						</div>
+
+						<button id="materials-options-btn" type="button" class="btn btn-secondary ms-3 me-1" data-translation-id="menu:materials_options">Materials options</button>
+
+						<button id="seed-planting-animation-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:planting_animation">Planting animation</button>
+						<button id="seed-customize-marker-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:customize_marker">Customize marker</button>
+					</div>
+
+					<div class="d-flex gap-1 align-items-center justify-content-center mt-3">
+						<div class="form-floating text-body col-3" data-translation-id="menu:will_probably_require_server_restart" data-bs-toggle="tooltip" data-bs-placement="top">
+							<input type="text" class="form-control" id="seed-item-name" placeholder="Seed item name" required>
+							<label for="seed-item-name" data-translation-id="menu:seed_item_name">Seed item name</label>
+						</div>
+
+						<button type="button" id="choose-seed-item-name-btn" class="btn btn-secondary col-auto choose-item-btn" data-translation-id="menu:choose" data-bs-toggle="tooltip" data-bs-placement="top"><i class="bi bi-list-ul"></i></button>	
+					
+						<div class="form-floating text-body col-3">
+							<input type="number" class="form-control" id="seed-item-minimum-quantity" placeholder="Seed item minimum quantity" required>
+							<label for="seed-item-minimum-quantity" data-translation-id="menu:seed_item_minimum_quantity">Seed item minimum quantity</label>
+						</div>
+
+						<div class="form-check my-auto ms-1">
+							<input class="form-check-input" type="checkbox" value="" id="seed-item-lose-on-use-checkbox">
+							<label class="form-check-label" data-translation-id="menu:lose_on_use">Lose on use</label>
+						</div>
+
+						<div class="form-floating text-body ms-4 col-2" data-translation-id="menu:minimum_police_seed_description" data-bs-toggle="tooltip" data-bs-placement="top">
+							<input type="number" class="form-control" min="0" id="seed-minimum-police" placeholder="Minimum police" required>
+							<label for="seed-minimum-police" data-translation-id="menu:minimum_police">Minimum police</label>
+						</div>
+					</div>
+
+					<h2 class="text-center mt-7" data-translation-id="menu:stages">Stages</h2>
+
+					<div id="seed-stages">
+
+					</div>
+
+					<button id="add-seed-stage-btn" type="button" class="btn btn-info float-end" data-translation-id="menu:add_stage">Add stage</button>
+
+				</div>
+
+				<div class="modal-footer">
+                    <button id="delete-seed-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-seed-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+        </div>
+    </div>
+
+	<!-- Formula modal -->
+	<div id="formula-modal" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" style="z-index: 1071">
+		<div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+			<form id="formula-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:formula">Formula</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+
+				<div class="modal-body">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-2">
+							<input type="text" class="form-control" id="formula-label" placeholder="Label" required>
+							<label for="formula-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<button id="formula-animations-btn" type="button" class="btn btn-secondary mx-1" data-translation-id="menu:animations">Animations</button>
+
+						<div class="form-floating text-body col-2">
+							<input type="number" min="0" max="100" class="form-control" id="formula-probability-of-failure" placeholder="Probability of failure" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:probability_of_failure_description" required>
+							<label for="formula-probability-of-failure" data-translation-id="menu:probability_of_failure">Probability of failure</label>
+						</div>
+
+						<div class="form-check fs-4 ms-3 my-auto">
+							<input class="form-check-input" type="checkbox" value="" id="formula-produces-smoke-checkbox">
+							<label class="form-check-label" for="formula-produces-smoke-checkbox">Produces smoke</label>
+						</div>
+						
+						<input id="formula-smoke-color" type="color" class="form-control form-control-color ms-3" value="#ff0000" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:smoke_color">
+					</div>
+
+					<hr>
+
+					<div class="mt-4">
+						<p class="text-center fs-3" data-translation-id="menu:required_items">Required items</p>
+		
+						<div id="formula-required-items-list">
+		
+						</div>
+		
+						<button id="formula-add-required-item-btn" type="button" class="btn btn-secondary" data-translation-id="menu:add_item">Add item</button>
+					</div>
+		
+					<hr>
+
+					<div class="mt-4">
+						<p class="text-center fs-3" data-translation-id="menu:items_to_give">Items to give</p>
+		
+						<div class="my-4 row g-2 row-cols-auto align-items-center justify-content-center">
+							<p class="text-center fs-4 my-auto me-3" data-translation-id="menu:amount_of_objects_as_reward">Amount of objects as reward</p>
+		
+							<div class="form-floating text-body col-3">
+								<input id="formula-reward-min-objects-amount" type="number" class="form-control" placeholder="Minimum" required>
+								<label data-translation-id="menu:min_quantity">Min quantity</label>
+							</div>
+		
+							<div class="form-floating text-body col-3">
+								<input id="formula-reward-max-objects-amount" type="number" class="form-control" placeholder="Maximum" required>
+								<label data-translation-id="menu:max_quantity">Max quantity</label>
+							</div>
+						</div>
+							
+						<div id="formula-reward-items-list">
+		
+						</div>
+		
+						<button id="formula-add-reward-item-btn" type="button" class="btn btn-secondary" data-translation-id="menu:add_item">Add item</button>
+					</div>	
+				</div>
+
+				<div class="modal-footer">
+					<button id="delete-formula-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-formula-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+		</div>
+	</div>	
+
+	<!-- Formulas dialog -->
+	<div class="modal fade" id="formulas-dialog-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="formulas-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:formulas">Formulas</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				
+				<div class="modal-body">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:formulas:search_formula">Search formula</span>
+						<input id="input-formula-search" type="text" class="form-control">
+					</div>
+
+					<div id="formulas-list" class="mt-2" style="max-height: 60vh; overflow-x:auto">
+
+					</div>
+
+					<button id="new-formula-btn" type="button" class="btn btn-primary mt-5" data-translation-id="menu:create_new_formula"></button>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Animations dialog -->
+	<div class="modal fade" id="animations-dialog-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1072;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="animations-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:animations">Animations</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div id="animations-dialog-animations-list" style="max-height: 60vh; overflow-x:auto" class="pe-2 scrollbar">
+
+					</div>
+
+					<div class="btn-group mt-2">
+						<button id="animations-dialog-add-animation-btn" type="button" class="btn btn-primary" data-translation-id="menu:add_animation">Add animation</button>
+						<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" id="animations-dialog-add-default-planting-animation-btn" href="#" data-translation-id="menu:default_planting">Default planting</a></li>
+							<li><a class="dropdown-item" id="animations-dialog-add-default-interaction-animation-btn" href="#" data-translation-id="menu:default_interaction">Default interaction</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- Ground materials dialog -->
+	<div class="modal fade" id="input-ground-materials-dialog-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="input-ground-materials-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:ground_materials_dialog:title">Ground materials</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body scrollbar" style="max-height: 60vh; overflow-y: auto">
+					<div id="ground-materials-list" class="mt-2">
+
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="input-ground-materials-confirm-btn" type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Input dialog -->
+	<div class="modal fade" id="input-dialog-modal" data-bs-backdrop="static" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="input-dialog-modal-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" id="input-dialog-modal-title">Title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				
+				<div class="modal-body">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="input-dialog-modal-label">Label</span>
+						<input type="text" class="form-control" id="input-dialog-modal-value" required>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Marker customization dialog -->
+	<div class="modal fade" id="marker-customization-dialog-modal"data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="marker-customization-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:marker_customization">Marker customization</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-floating text-body">
+						<input type="number" class="form-control" id="marker-type" placeholder="Marker type" required>
+						<label for="marker-type" data-translation-id="menu:marker_type">Marker type</label>
+					</div>
+
+					<a class="fst-italic text-center" href="https://docs.fivem.net/docs/game-references/markers/" target="_blank"  onclick='window.invokeNative("openUrl", "https://docs.fivem.net/docs/game-references/markers/")'>https://docs.fivem.net/docs/game-references/markers/</a>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_size">Marker size</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-x" placeholder="X" required>
+								<label for="marker-size-x" data-translation-id="menu:x">X</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-y" placeholder="Y" required>
+								<label for="marker-size-y" data-translation-id="menu:y">Y</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-z" placeholder="Z" required>
+								<label for="marker-size-z" data-translation-id="menu:z">Z</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_rotation">Marker rotation</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-x" placeholder="X" required>
+								<label for="marker-rotation-x" data-translation-id="menu:x">X</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-y" placeholder="Y" required>
+								<label for="marker-rotation-y" data-translation-id="menu:y">Y</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-z" placeholder="Z" required>
+								<label for="marker-rotation-z" data-translation-id="menu:z">Z</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_color">Color</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-red" placeholder="Red" required>
+								<label for="marker-color-red" data-translation-id="menu:red">Red</label>
+							</div>
+
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-green" placeholder="Green" required>
+								<label for="marker-color-green" data-translation-id="menu:green">Green</label>
+							</div>
+
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-blue" placeholder="Blue" required>
+								<label for="marker-color-blue" data-translation-id="menu:blue">Blue</label>
+							</div>
+
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-opacity" placeholder="0-255" required>
+								<label for="marker-color-opacity" data-translation-id="menu:opacity">Opacity</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:other">Other</p>
+
+						<div class="row g-2 row-cols-auto">
+                            <div class="form-check form-switch col-4 fs-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-bounce">
+                                <label class="form-check-label" data-translation-id="menu:bounce" for="marker-bounce">Bounce</label>
+                            </div>
+                            <div class="form-check form-switch col-4 fs-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-follow-camera">
+                                <label class="form-check-label" data-translation-id="menu:follow_camera" for="marker-follow-camera">Follow camera</label>
+                            </div>
+                            <div class="form-check form-switch col-4 fs-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-rotate">
+                                <label class="form-check-label" data-translation-id="menu:rotate" for="marker-rotate">Rotate</label>
+                            </div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Object customization dialog -->
+	<div class="modal fade" id="object-customization-dialog-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="object-customization-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:object_customization">Object customization</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-check form-switch fs-4 mb-3">
+						<input class="form-check-input" type="checkbox" role="switch" id="object-enabled">
+						<label class="form-check-label" data-translation-id="menu:object_enabled" for="object-enabled">Object enabled</label>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center mt-4">
+						<div class="form-floating text-body col-9">
+							<input type="text" class="form-control" id="object-model" placeholder="Object model" required>
+							<label for="object-model" data-translation-id="menu:object_model">Object model</label>
+						</div>
+	
+						<a class="btn btn-secondary clickable me-3" target="_blank" onclick='window.invokeNative("openUrl", "https://forge.plebmasters.de/objects/")' data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:open_models_list"><i class="bi bi-images"></i></a>	
+					</div>
+
+					<p class="text-center fs-5 mt-4" data-translation-id="menu:rotation">Rotation</p>
+
+					<div class="row g-2 row-cols-auto mt-1">
+						<div class="form-floating text-body col-4">
+							<input type="number" min="0" max="360" step="0.1" class="form-control" id="object-rotation-x" placeholder="X" required>
+							<label for="object-rotation-x" data-translation-id="menu:x">X</label>
+						</div>
+
+						<div class="form-floating text-body col-4">
+							<input type="number" min="0" max="360" step="0.1" class="form-control" id="object-rotation-y" placeholder="Y" required>
+							<label for="object-rotation-y" data-translation-id="menu:y">Y</label>
+						</div>
+
+						<div class="form-floating text-body col-4">
+							<input type="number" min="0" max="360" step="0.1" class="form-control" id="object-rotation-z" placeholder="Z" required>
+							<label for="object-rotation-z" data-translation-id="menu:z">Z</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Blip customization dialog -->
+	<div class="modal fade" id="blip-customization-dialog-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="blip-customization-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:blip_customization">Blip customization</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-check form-switch fs-4 mb-3">
+						<input class="form-check-input" type="checkbox" role="switch" id="blip-enabled">
+						<label class="form-check-label" data-translation-id="menu:blip_enabled" for="blip-enabled">Blip enabled</label>
+					</div>
+
+					<div class="form-floating text-body">
+						<input type="number" class="form-control" id="blip-sprite" placeholder="Blip sprite" required>
+						<label for="blip-sprite" data-translation-id="menu:blip_sprite">Blip sprite</label>
+					</div>
+
+					<a class="fst-italic text-center" href="https://docs.fivem.net/docs/game-references/blips/" target="_blank"  onclick='window.invokeNative("openUrl", "https://docs.fivem.net/docs/game-references/blips/")'>https://docs.fivem.net/docs/game-references/blips/</a>
+
+					<div class="form-floating text-body mt-4">
+						<input type="text" class="form-control" id="blip-name" placeholder="Blip name" required>
+						<label for="blip-name" data-translation-id="menu:blip_name">Blip name</label>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:other">Other</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-6">
+								<input type="number" step="0.1" class="form-control" id="blip-scale" placeholder="Blip scale" required>
+								<label for="blip-scale" data-translation-id="menu:blip_scale">Blip scale</label>
+							</div>
+
+							<div class="form-floating text-body col-6">
+								<input type="number" class="form-control" id="blip-color" placeholder="Blip color" required>
+								<label for="blip-color" data-translation-id="menu:blip_color">Blip color</label>
+							</div>
+						</div>
+
+						<select id="blip-display" class="form-select col-12 mt-3">
+							<option data-translation-id="menu:blip_minimap_only" value="5" selected>Minimap only</option>
+							<option data-translation-id="menu:blip_mainmap_only" value="3">Main map only</option>
+							<option data-translation-id="menu:blip_main_and_minimap" value="2">Main map + minimap</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>	
+
+	<!-- Single job input dialog -->
+	<div class="modal fade" id="input-single-job-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:jobs_dialog:title">Jobs List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:jobs_dialog:search_job">Search job</span>
+						<input id="input-single-job-search" type="text" class="form-control">
+					</div>
+
+					<ul id="single-jobs-list" class="list-group mt-2" style="overflow: auto; max-height: 70vh">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/js/theme.bundle.js"></script>
+	<script src="index.js"></script>
+	<script src="../utils/dialogs/dialogs.js"></script>
+</body>
+
+</html>

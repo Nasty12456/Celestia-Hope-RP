@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/hover.css">
+	
+</head>
+<body>
+	<img src="./images/crosshairs/1.png" id="type" onError="HideCross()">
+	
+	<div id="wrap" style="display:none">
+		<div id="strain-content">
+			<div id="title">
+				Select Crosshair
+				<div id="title-buttons">
+					<button id="btn-reset"><i class="fal fa-undo"></i></button>
+					<button id="btn-close"><i class="fal fa-times"></i></button>
+				</div>
+			</div>
+			
+			<div id="sidebar">
+				<button class="btn-sidebar sidebar-crosshairs active-sidebar"><i class="far fa-crosshairs"></i></button>
+				<button class="btn-sidebar sidebar-settings"><i class="fas fa-cogs"></i></button>
+			</div>
+			
+			<div id="crosshair-settings" style="display:none;"> 
+				<div class="setting-item crosshair-size" id="crosshair-size">
+					Crosshair Size<br/><input type="range" class="range-size" min="5" max="100" value="50" required><output class="bubble-size"></output>
+				</div>
+				<div class="setting-item crosshair-opacity" id="crosshair-opacity">
+					Crosshair Opacity<br/><input type="range" class="range-opacity" min="5" max="100" value="100" required><output class="bubble-opacity"></output>
+				</div>
+				<div id="custom-crosshair" class="setting-item">
+					Enable Custom Crosshair?<br/>
+					<input type="radio" class="strain-radio" name="showCustom" id="YesCustom" value="YesCustom" required><label for="YesCustom" class="label-green">Yes</label>
+					<input type="radio" class="strain-radio" name="showCustom" id="NoCustom" value="NoCustom"><label for="NoCustom" class="label-red">No</label>
+				</div>
+				<div id="default-crosshair" class="setting-item">
+					Enable GTA Crosshair?<br/>
+					<input type="radio" class="strain-radio" name="showDefault" id="YesDefault" value="YesDefault" required><label for="YesDefault" class="label-green">Yes</label>
+					<input type="radio" class="strain-radio" name="showDefault" id="NoDefault" value="NoDefault"><label for="NoDefault" class="label-red">No</label>
+				</div>
+				<div class="setting-item">
+					Show Crosshair Only While Aiming?<br/>
+					<input type="radio" class="strain-radio" name="showOnlyAiming" id="YesOnlyAim" value="YesOnlyAim" required><label for="YesOnlyAim" class="label-green">Yes</label>
+					<input type="radio" class="strain-radio" name="showOnlyAiming" id="NoOnlyAim" value="NoOnlyAim"><label for="NoOnlyAim" class="label-red">No</label>
+				</div>
+				<div class="setting-item">
+					Show Crosshair While Aiming First Person?<br/>
+					<input type="radio" class="strain-radio" name="showCrossFps" id="YesCrossFps" value="YesCrossFps" required><label for="YesCrossFps" class="label-green">Yes</label>
+					<input type="radio" class="strain-radio" name="showCrossFps" id="NoCrossFps" value="NoCrossFps"><label for="NoCrossFps" class="label-red">No</label>
+				</div>
+			</div>
+			
+			<div id="crosshair-list">
+				<input id="search" onkeyup="cSearch()" type="text" placeholder="Type to search"><br/>
+				<div id="crosshair-scrollable">
+					<button class="crosshair"><img src="./images/crosshairs/1.png"/><span>CROSSHAIR 1</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/2.png"/><span>CROSSHAIR 2</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/3.png"/><span>CROSSHAIR 3</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/4.png"/><span>CROSSHAIR 4</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/5.png"/><span>CROSSHAIR 5</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/6.png"/><span>CROSSHAIR 6</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/7.png"/><span>CROSSHAIR 7</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/8.png"/><span>CROSSHAIR 8</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/9.png"/><span>CROSSHAIR 9</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/10.png"/><span>CROSSHAIR 10</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/11.png"/><span>CROSSHAIR 11</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/12.png"/><span>CROSSHAIR 12</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/13.png"/><span>CROSSHAIR 13</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/14.png"/><span>CROSSHAIR 14</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/15.png"/><span>CROSSHAIR 15</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/16.png"/><span>CROSSHAIR 16</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/17.png"/><span>CROSSHAIR 17</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/18.png"/><span>CROSSHAIR 18</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/19.png"/><span>CROSSHAIR 19</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/20.png"/><span>CROSSHAIR 20</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/21.png"/><span>CROSSHAIR 21</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/22.png"/><span>CROSSHAIR 22</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/23.gif"/><span>CROSSHAIR 23</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/24.png"/><span>CROSSHAIR 24</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/25.png"/><span>CROSSHAIR 25</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/26.png"/><span>CROSSHAIR 26</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/27.png"/><span>CROSSHAIR 27</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/28.png"/><span>CROSSHAIR 28</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/29.png"/><span>CROSSHAIR 29</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/30.png"/><span>CROSSHAIR 30</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/31.png"/><span>CROSSHAIR 31</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/32.png"/><span>CROSSHAIR 32</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/33.png"/><span>CROSSHAIR 33</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/34.png"/><span>CROSSHAIR 34</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/35.gif"/><span>CROSSHAIR 35</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/36.png"/><span>CROSSHAIR 36</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/37.png"/><span>CROSSHAIR 37</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/38.png"/><span>CROSSHAIR 38</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/39.png"/><span>CROSSHAIR 39</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/40.png"/><span>CROSSHAIR 40</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/41.png"/><span>CROSSHAIR 41</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/42.png"/><span>CROSSHAIR 42</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/43.gif"/><span>CROSSHAIR 43</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/44.png"/><span>CROSSHAIR 44</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/45.png"/><span>CROSSHAIR 45</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/46.png"/><span>CROSSHAIR 46</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/47.png"/><span>CROSSHAIR 47</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/48.png"/><span>CROSSHAIR 48</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/49.png"/><span>CROSSHAIR 49</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/50.png"/><span>CROSSHAIR 50</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/51.png"/><span>CROSSHAIR 51</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/52.png"/><span>CROSSHAIR 52</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/53.gif"/><span>CROSSHAIR 53</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/54.png"/><span>CROSSHAIR 54</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/55.png"/><span>CROSSHAIR 55</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/56.png"/><span>CROSSHAIR 56</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/57.png"/><span>CROSSHAIR 57</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/58.png"/><span>CROSSHAIR 58</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/59.png"/><span>CROSSHAIR 59</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/60.png"/><span>CROSSHAIR 60</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/61.png"/><span>CROSSHAIR 61</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/62.gif"/><span>CROSSHAIR 62</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/63.png"/><span>CROSSHAIR 63</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/64.png"/><span>CROSSHAIR 64</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/65.png"/><span>CROSSHAIR 65</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/66.png"/><span>CROSSHAIR 66</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/67.png"/><span>CROSSHAIR 67</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/68.png"/><span>CROSSHAIR 68</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/69.png"/><span>CROSSHAIR 69</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/70.png"/><span>CROSSHAIR 70</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/71.png"/><span>CROSSHAIR 71</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/72.gif"/><span>CROSSHAIR 72</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/73.png"/><span>CROSSHAIR 73</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/74.png"/><span>CROSSHAIR 74</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/75.png"/><span>CROSSHAIR 75</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/76.png"/><span>CROSSHAIR 76</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/77.png"/><span>CROSSHAIR 77</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/78.png"/><span>CROSSHAIR 78</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/79.png"/><span>CROSSHAIR 79</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/80.png"/><span>CROSSHAIR 80</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/81.gif"/><span>CROSSHAIR 81</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/82.png"/><span>CROSSHAIR 82</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/83.png"/><span>CROSSHAIR 83</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/84.png"/><span>CROSSHAIR 84</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/85.png"/><span>CROSSHAIR 85</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/86.png"/><span>CROSSHAIR 86</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/87.png"/><span>CROSSHAIR 87</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/88.png"/><span>CROSSHAIR 88</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/89.png"/><span>CROSSHAIR 89</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/90.png"/><span>CROSSHAIR 90</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/91.png"/><span>CROSSHAIR 91</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/92.png"/><span>CROSSHAIR 92</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/93.png"/><span>CROSSHAIR 93</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/94.png"/><span>CROSSHAIR 94</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/95.png"/><span>CROSSHAIR 95</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/96.png"/><span>CROSSHAIR 96</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/97.png"/><span>CROSSHAIR 97</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/98.png"/><span>CROSSHAIR 98</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/99.png"/><span>CROSSHAIR 99</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/100.png"/><span>CROSSHAIR 100</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/101.png"/><span>CROSSHAIR 101</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/102.png"/><span>CROSSHAIR 102</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/103.png"/><span>CROSSHAIR 103</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/104.png"/><span>CROSSHAIR 104</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/105.png"/><span>CROSSHAIR 105</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/106.png"/><span>CROSSHAIR 106</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/107.png"/><span>CROSSHAIR 107</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/108.png"/><span>CROSSHAIR 108</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/109.png"/><span>CROSSHAIR 109</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/110.png"/><span>CROSSHAIR 110</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/111.png"/><span>CROSSHAIR 111</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/112.png"/><span>CROSSHAIR 112</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/113.png"/><span>CROSSHAIR 113</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/114.png"/><span>CROSSHAIR 114</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/115.png"/><span>CROSSHAIR 115</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/116.png"/><span>CROSSHAIR 116</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/117.png"/><span>CROSSHAIR 117</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/118.png"/><span>CROSSHAIR 118</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/119.png"/><span>CROSSHAIR 119</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/120.png"/><span>CROSSHAIR 120</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/121.png"/><span>CROSSHAIR 121</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/122.png"/><span>CROSSHAIR 122</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/123.png"/><span>CROSSHAIR 123</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/124.png"/><span>CROSSHAIR 124</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/125.png"/><span>CROSSHAIR 125</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/126.png"/><span>CROSSHAIR 126</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/127.png"/><span>CROSSHAIR 127</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/128.png"/><span>CROSSHAIR 128</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/129.png"/><span>CROSSHAIR 129</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/130.png"/><span>CROSSHAIR 130</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/131.png"/><span>CROSSHAIR 131</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/132.png"/><span>CROSSHAIR 132</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/133.png"/><span>CROSSHAIR 133</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/134.png"/><span>CROSSHAIR 134</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/135.png"/><span>CROSSHAIR 135</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/136.png"/><span>CROSSHAIR 136</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/137.png"/><span>CROSSHAIR 137</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/138.png"/><span>CROSSHAIR 138</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/139.png"/><span>CROSSHAIR 139</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/140.png"/><span>CROSSHAIR 140</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/141.png"/><span>CROSSHAIR 141</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/142.png"/><span>CROSSHAIR 142</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/143.png"/><span>CROSSHAIR 143</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/144.png"/><span>CROSSHAIR 144</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/145.png"/><span>CROSSHAIR 145</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/146.png"/><span>CROSSHAIR 146</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/147.png"/><span>CROSSHAIR 147</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/148.png"/><span>CROSSHAIR 148</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/149.png"/><span>CROSSHAIR 149</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/150.png"/><span>CROSSHAIR 150</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/151.png"/><span>CROSSHAIR 151</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/152.png"/><span>CROSSHAIR 152</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/153.png"/><span>CROSSHAIR 153</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/154.png"/><span>CROSSHAIR 154</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/155.png"/><span>CROSSHAIR 155</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/156.png"/><span>CROSSHAIR 156</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/157.png"/><span>CROSSHAIR 157</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/158.png"/><span>CROSSHAIR 158</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/159.png"/><span>CROSSHAIR 159</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/160.png"/><span>CROSSHAIR 160</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/161.png"/><span>CROSSHAIR 161</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/162.png"/><span>CROSSHAIR 162</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/163.png"/><span>CROSSHAIR 163</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/164.png"/><span>CROSSHAIR 164</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/165.png"/><span>CROSSHAIR 165</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/166.png"/><span>CROSSHAIR 166</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/167.png"/><span>CROSSHAIR 167</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/168.png"/><span>CROSSHAIR 168</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/169.png"/><span>CROSSHAIR 169</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/170.png"/><span>CROSSHAIR 170</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/171.png"/><span>CROSSHAIR 171</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/172.png"/><span>CROSSHAIR 172</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/173.png"/><span>CROSSHAIR 173</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/174.png"/><span>CROSSHAIR 174</span></button>
+					<button class="crosshair"><img src="./images/crosshairs/175.png"/><span>CROSSHAIR 175</span></button>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  height: calc(100% - 10vh);
+  display: flex;
+}
+
+@keyframes WheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.game {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.wheel {
+  width: 100%;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 30%;
+    height: 100%;
+    background: radial-gradient(
+      circle at center,
+      rgba(90, 89, 89, 0.301),
+      transparent
+    );
+    filter: blur(10vh);
+    position: absolute;
+    opacity: 0.4;
+    display: none;
+  }
+
+  .wheelBallPath {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ball {
+      height: 1.5vh;
+      width: 1.5vh;
+      border-radius: 50%;
+      background-color: white;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  img {
+    // animation: WheelSpin 8s infinite;
+    // animation-timing-function: linear;
+    width: 35vh;
+    border: 0.1vh solid #1e1e3d;
+    border-radius: 50%;
+  }
+}
+
+.rouletteBoard {
+  margin-top: 3vh;
+}

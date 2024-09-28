@@ -1,0 +1,37 @@
+{
+    "server": {
+        "canAlwaysCarryItem": false,
+        "acePermission": "farming_creator",
+        "areDiscordLogsActive": false,
+        "specificWebhooks": [],
+        "mainDiscordWebhook": "",
+        "canReceiveMultipleTimesTheSameItem": true,
+        "itemToBurnPlants": {
+            "isRequired": false,
+            "name": "lighter",
+            "minQuantity": 1,
+            "loseOnUse": false
+        }
+    },
+
+    "shared": {
+        "locale": "en",
+        "timeToBurnPlants": 5,
+        "allowToSaveFormulas": true
+    },
+
+    "client": {
+        "burnPlantsAnimations": [
+            {
+                "type": "scenario",
+                "scenarioName": "PROP_HUMAN_BUM_BIN",
+                "duration": 5
+            }
+        ],
+        "minimumDistanceBetweenPlants": 2.0,
+        "allowAfkFarming": true,
+        "menuPosition": "bottom-right",
+        "targetingScript": "none",
+        "helpNotification": "none"
+    }
+}

@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+
+<head>
+	<title>Shops Creator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Script CSS -->
+	<link href="index.css" rel="stylesheet" type="text/css" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@700&display=swap" rel="stylesheet"> 	
+
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+	<!-- Datatables -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+
+	<!-- UI -->
+	<link href="https://fonts.cdnfonts.com/css/akrobat" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <script src="scripts/functions.js" defer></script>
+
+	<!-- Notifications -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<!-- Theme -->
+	<link rel="stylesheet" href="./assets/css/theme.bundle.css" id="stylesheetLTR">
+</head>
+
+<body style="background-color: transparent !important;">
+
+	<div id="shops-creator" class="container-lg bg-white position-absolute top-50 start-50 translate-middle rounded" style="display: none;">
+        <div id="main-bar" class="d-inline-block col-12 text-center mt-2">
+			<p id="shops-creator-label" class="d-inline script-name">Shops Creator - <span id="shops-creator-version" class="d-inline script-name"></span></p>
+			
+			<button id="close-main-btn" type="button" class="btn-close btn-close-white float-end mt-2"></button>
+		</div>
+
+		<div class="d-flex align-items-start my-2">
+			<div class="nav flex-column nav-pills me-3" role="tablist">
+				<button class="nav-link active" data-is-default="1" data-translation-id="menu:admin_shops" id="admin-shops-tab" data-bs-toggle="pill" data-bs-target="#admin-shops" type="button" role="tab"><i class="bi bi-shop"></i> Admin shops</button>
+				<button class="nav-link" data-translation-id="menu:players_shops" id="players-shops-tab" data-bs-toggle="pill" data-bs-target="#players-shops" type="button" role="tab"><i class="bi bi-cart4"></i> Players shops</button>
+				<button class="nav-link" data-translation-id="menu:settings" id="settings-tab" data-bs-toggle="pill" data-bs-target="#settings" type="button" role="tab"><i class="bi bi-gear-fill"></i> Settings</button>
+			</div>
+
+			<div class="tab-content container">
+				<div class="tab-pane fade needs-validation show active" data-is-default="1" id="admin-shops" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-admin-shop-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_shop">New shop</button>
+					</div>
+
+					<table id="admin-shops-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div class="tab-pane fade needs-validation" id="players-shops" role="tabpanel">
+					<div class="d-inline-block col-12 my-2">
+						<button id="new-players-shop-btn" type="button" class="btn btn-success float-end" data-translation-id="menu:new_shop">New shop</button>
+					</div>
+
+					<table id="players-shops-container" class="table table-hover fs-4 mb-2">
+						<thead>
+							<tr>
+                                <th scope="col" data-translation-id="menu:id">ID</th>
+                                <th scope="col" data-translation-id="menu:label">Label</th>
+                                <th scope="col" data-translation-id="menu:stored_money">Stored money</th>
+							</tr>
+						</thead>
+
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+
+				<form class="tab-pane fade needs-validation" id="settings" role="tabpanel" novalidate>
+					<div class="container my-2 scrollbar" style="max-height: 60vh; overflow-y: auto">
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:settings:language">Language</p>
+	
+							<select class="form-select" id="settings-locale" data-select>
+								<option value="en">English</option>
+								<option value="de">Deutsch</option>
+								<option value="es">Español</option>
+								<option value="it">Italiano</option>
+								<option value="nl">Nederlandse</option>
+								<option value="fr">Français</option>
+								<option value="pl">Polski</option>
+							</select>
+						</div>
+
+						<hr>
+						
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:settings:generic">Generic</p>
+
+							<div class="input-group my-3 fs-4">
+								<span class="input-group-text">ACE permission</span>
+								<input id="settings-ace-permission" type="text" class="form-control" required>
+							</div>
+	
+							<div class="form-check form-switch fs-3 my-3">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings-can-always-carry">
+								<label class="form-check-label" data-translation-id="menu:can_always_carry_items" for="settings-can-always-carry">Can always carry</label>
+							</div>
+
+							<hr/>
+
+							<div class="row align-items-center mt-2" data-translation-id="menu:probably_requires_script_restart" data-bs-toggle="tooltip" data-bs-placement="top">
+								<p class="text-center fs-4 my-auto" data-translation-id="menu:settings:targeting_script" style="width:auto">Targeting script</p>
+								
+								<select id="settings-targeting-script" class="form-select w-25" data-select>
+									<option data-translation-id="menu:none" value="none">None</option>
+									<option value="ox_target">OX Target</option>
+									<option value="qb_target">QB Target</option>
+								</select>
+							</div>
+	
+							<hr>
+							
+							<div class="row align-items-center mt-2">
+								<p class="text-center translatable fs-4 my-auto" data-translation-id="menu:settings:help_notification" style="width:auto">Help notification</p>
+								
+								<select id="settings-help-notification-script" class="form-select w-25" data-select>
+									<option data-translation-id="menu:default" value="none">Default</option>
+									<option value="esx_textui">ESX TextUI</option>
+								</select>
+							</div>
+	
+							<hr>
+						</div>
+
+						<hr>
+
+						<p class="text-center fs-3" data-translation-id="menu:settings:shop_robbery">Shop robbery</p>
+
+						<div class="row row-cols-auto align-items-center justify-content-center my-4 fs-4" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" data-translation-id="menu:reward_description">
+							<p data-translation-id="menu:reward_type" class="my-auto me-2">Reward type</p>
+							<div class="form-check form-check-inline my-auto">
+								<input class="form-check-input" type="radio" name="settings-robbery-reward-type" value="percentage">
+								<label class="form-check-label" data-translation-id="menu:percentage">Percentage</label>
+							</div>
+							<div class="form-check form-check-inline my-auto">
+								<input class="form-check-input" type="radio" name="settings-robbery-reward-type" value="fixed">
+								<label class="form-check-label" data-translation-id="menu:fixed_value">Fixed value</label>
+							</div>
+						</div>
+
+						<div class="d-flex gap-3 align-items-center justify-content-center my-4">
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" class="form-control" id="settings-robbery-min-value" placeholder="Min value" required>
+								<label for="settings-robbery-min-value" data-translation-id="menu:min_value">Min value</label>
+							</div>
+	
+							<div class="form-floating text-body col-3">
+								<input type="number" class="form-control" id="settings-robbery-max-value" placeholder="Max value" required>
+								<label for="settings-robbery-max-value" data-translation-id="menu:max_value">Max value</label>
+							</div>
+							
+							<div class="form-floating text-body col-3">
+								<input type="text" class="form-control" id="settings-robbery-account" placeholder="Account" required>
+								<label for="settings-robbery-account" data-translation-id="menu:account">Account</label>
+							</div>
+
+							<div class="form-floating text-body col-3">
+								<input type="number" class="form-control" id="settings-robbery-cooldown" placeholder="Cooldown" required>
+								<label for="settings-robbery-cooldown" data-translation-id="menu:cooldown">Cooldown</label>
+							</div>
+						</div>
+
+						<hr>
+
+						<div>
+							<p class="text-center fs-3" data-translation-id="menu:settings:discord">Discord</p>
+
+							<div class="form-check form-switch fs-4 mt-4">
+								<input class="form-check-input" type="checkbox" role="switch" id="settings-areDiscordLogsActive">
+								<label class="form-check-label" data-translation-id="menu:settings:enable_discord_logs" for="settings-areDiscordLogsActive">Enable discord logs</label>
+							</div>
+		
+							<div>
+								<p class="fs-5" data-translation-id="menu:settings:discord_webhooks">Discord webhooks</p>
+		
+								<div class="input-group mt-1 mb-3 fs-5" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:main_webhook_description">
+									<span class="input-group-text col-3" data-translation-id="menu:settings:main_webhook">Main webhook</span>
+									<input id="settings-mainDiscordWebhook" type="text" class="form-control" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+								</div>
+		
+								<p class="fs-5" data-translation-id="menu:settings:separated_webhooks">Separated webhooks</p>
+	
+								<div id="settings-specific-webooks-div">
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:robbed_store">Robbed store</span>
+										<input type="text" class="form-control" data-log-type="robbed_store" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:bought_from_admin_shop">Bought from admin shop</span>
+										<input type="text" class="form-control" data-log-type="bought_from_admin_shop" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:sold_to_admin_shop">Sold to admin shop</span>
+										<input type="text" class="form-control" data-log-type="sold_to_admin_shop" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:bought_player_shop">Bought a player shop</span>
+										<input type="text" class="form-control" data-log-type="bought_player_shop" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:sold_player_shop">Sold a player shop</span>
+										<input type="text" class="form-control" data-log-type="sold_player_shop" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:added_on_sale">Added on sale</span>
+										<input type="text" class="form-control" data-log-type="added_on_sale" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:removed_from_sale">Removed from sale</span>
+										<input type="text" class="form-control" data-log-type="removed_from_sale" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:added_in_to_buy_list">Added in to buy list</span>
+										<input type="text" class="form-control" data-log-type="added_in_to_buy_list" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:removed_from_to_buy_list">Removed from to buy list</span>
+										<input type="text" class="form-control" data-log-type="removed_from_to_buy_list" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:deposited_in_storage">Deposited in storage</span>
+										<input type="text" class="form-control" data-log-type="deposited_in_storage" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:withdrew_from_storage">Withdrew from storage</span>
+										<input type="text" class="form-control" data-log-type="withdrew_from_storage" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:added_stocks">Added stocks</span>
+										<input type="text" class="form-control" data-log-type="added_stocks" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:updated_wanted_quantity">Updated wanted quantity</span>
+										<input type="text" class="form-control" data-log-type="updated_wanted_quantity" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:updated_price">Updated price</span>
+										<input type="text" class="form-control" data-log-type="updated_price" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:deposited_money">Deposited money</span>
+										<input type="text" class="form-control" data-log-type="deposited_money" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:withdrew_money">Withdrew money</span>
+										<input type="text" class="form-control" data-log-type="withdrew_money" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:updated_label">Updated label</span>
+										<input type="text" class="form-control" data-log-type="updated_label" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:hired_employee">Hired employee</span>
+										<input type="text" class="form-control" data-log-type="hired_employee" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:fired_employee">Fired employee</span>
+										<input type="text" class="form-control" data-log-type="fired_employee" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+									<div class="input-group my-1 fs-5">
+										<span class="input-group-text col-3" data-translation-id="menu:updated_permissions">Updated employee permissions</span>
+										<input type="text" class="form-control" data-log-type="updated_permissions" placeholder="https://discord.com/api/webhooks/USE_YOUR_WEBHOOK/YOUR_WEBHOOK">
+									</div>
+								</div>
+							</div>	
+						</div>
+
+					</div>
+
+					<button type="submit" class="btn btn-success float-end" data-translation-id="menu:apply_changes">Apply changes</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Admin Shop modal -->
+	<div id="admin-shop-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+            <form id="admin-shop-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:admin_shop">Admin shop</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-3">
+							<input type="text" class="form-control" id="admin-shop-label" placeholder="Label" required>
+							<label for="admin-shop-label" data-translation-id="menu:label">Label</label>
+						</div>
+	
+						<button id="admin-shop-customize-blip-btn" type="button" class="btn btn-secondary mx-3" data-translation-id="menu:customize_blip">Customize blip</button>
+						<button id="admin-shop-customize-marker-btn" type="button" class="btn btn-secondary mx-3" data-translation-id="menu:customize_marker">Customize marker</button>
+					
+
+						<div class="ms-5">
+							<p class="text-center fs-4" data-translation-id="menu:players_can">Players can</p>
+
+							<div class="form-check form-check-inline fs-5">
+								<input class="form-check-input" type="radio" name="adminShopType" value="buy">
+								<label class="form-check-label" data-translation-id="menu:buy_items">Buy items</label>
+							</div>
+
+							<div class="form-check form-check-inline fs-5">
+								<input class="form-check-input" type="radio" name="adminShopType" value="sell">
+								<label class="form-check-label" data-translation-id="menu:sell_items">Sell items</label>
+							</div>
+						</div>
+
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3" data-translation-id="menu:coords">Coords</p>
+
+					<div id="admin-shop-coords-list">
+
+					</div>
+
+					<div class="col-12 d-inline-block">
+						<button id="admin-shop-add-coordinates-btn" type="button" class="btn btn-secondary float-end" data-translation-id="menu:add_coordinates">Add coordinates</button>
+					</div>
+
+					<hr>
+
+					<div>
+						<p class="text-center fs-3" data-translation-id="menu:ped">Ped</p>
+
+						<div class="row g-2 row-cols-auto align-items-center justify-content-center my-3">
+							<div class="form-check me-3 fs-3 my-auto">
+								<input class="form-check-input" type="checkbox" value="" id="admin-shop-ped-is-enabled">
+								<label class="form-check-label" for="admin-shop-ped-is-enabled" data-translation-id="menu:is_enabled">Is enabled</label>
+							</div>
+	
+							<div class="form-floating">
+								<input id="admin-shop-ped-model" type="text" class="form-control" placeholder="Model" disabled>
+								<label data-translation-id="menu:model">Model</label>
+							</div>
+
+							<a class="btn btn-secondary clickable me-3" target="_blank" onclick='window.invokeNative("openUrl", "https://docs.fivem.net/docs/game-references/ped-models/")' data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:open_models_list"><i class="bi bi-images"></i></a>
+						</div>	
+					</div>
+					
+					<hr>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-3">
+						<p class="text-center my-auto me-5" data-translation-id="menu:restrictions">Restrictions</p>
+
+						<button id="admin-shop-choose-jobs-btn" type="button" class="btn btn-secondary col-auto" data-translation-id="menu:choose_jobs">Choose jobs</button>	
+						<button id="admin-shop-choose-required-license-btn" type="button" class="btn btn-secondary col-auto ms-4" data-translation-id="menu:no_license_required">No license required</button>	
+						<button id="admin-shop-choose-players-shops-btn" type="button" class="btn btn-secondary col-auto ms-4" data-translation-id="menu:allowed_players_shops">Allowed players shops</button>	
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3" data-translation-id="menu:options">Options</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-3">
+
+						<div class="form-check me-5 my-auto">
+							<input class="form-check-input" type="checkbox" value="" id="admin-shop-always-open">
+							<label class="form-check-label" for="admin-shop-always-open" data-translation-id="menu:is_always_open">Is always open</label>
+						</div>
+
+						<div class="d-flex gap-3">
+							<label for="admin-shop-open-time" class="my-auto" data-translation-id="menu:open_time">Open time</label>
+
+							<input id="admin-shop-open-time" type="text" class="form-control" data-flatpickr='{
+								"enableTime": "true",
+								"noCalendar": "true",
+								"dateFormat": "H:i",
+								"time_24hr": "true",
+								"allowInput": "true"
+							}' style="width:auto">
+						</div>
+
+						<div class="d-flex gap-3">
+							<label for="admin-shop-open-time" class="my-auto" data-translation-id="menu:close_time">Open time</label>
+
+							<input id="admin-shop-close-time" type="text" class="form-control" data-flatpickr='{
+								"enableTime": "true",
+								"noCalendar": "true",
+								"dateFormat": "H:i",
+								"time_24hr": "true",
+								"allowInput": "true"
+							}' style="width:auto">
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-3">
+						<div class="col-4">
+							<div class="input-group">
+								<span class="input-group-text" data-translation-id="menu:minutes_before_prices_update">Minutes before prices update</span>
+								<input type="number" id="admin-shop-minutes-before-prices-update" class="form-control" placeholder="120" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:minutes_before_prices_update_description" required>
+							</div>									
+						</div>
+
+						<div class="col-8" id="admin-shop-societies-to-send-money-to-div">
+							<div class="input-group">
+								<span class="input-group-text" data-translation-id="menu:societies_to_send_money_to">Societies to send money to</span>
+								<input type="text" class="form-control" id="admin-shop-societies-to-send-money-to" placeholder="None" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:societies_to_send_money_to_description" disabled>
+								<button type="button" class="btn btn-secondary" id="admin-shop-societies-to-send-money-to-btn" data-translation-id="menu:choose">Choose</button>
+							</div>									
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-3" id="admin-shop-paying-society-div">
+						<div class="form-check my-auto me-5">
+							<input class="form-check-input" type="checkbox" value="" id="admin-shop-pay-with-society-money">
+							<label class="form-check-label" for="admin-shop-pay-with-society-money" data-translation-id="menu:players_pay_with_society_money">Players pay with money of society</label>
+						</div>
+
+						<div class="col-5">
+							<div class="input-group">
+								<span class="input-group-text" data-translation-id="menu:society_which_will_pay">Society which will pay</span>
+								<input type="text" class="form-control" id="admin-shop-paying-society" placeholder="None" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:society_which_will_pay_description" disabled>
+								<button type="button" class="btn btn-secondary" id="admin-shop-choose-paying-society-btn" data-translation-id="menu:choose">Choose</button>
+							</div>									
+						</div>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-3" id="admin-shop-get-money-from-society-div">
+						<div class="form-check me-5">
+							<input class="form-check-input" type="checkbox" value="" id="admin-shop-get-money-from-society">
+							<label class="form-check-label" for="admin-shop-get-money-from-society" data-translation-id="menu:get_money_from_society">Get money from society</label>
+						</div>
+
+						<div class="col-5">
+							<div class="input-group">
+								<span class="input-group-text" data-translation-id="menu:society_to_get_money_from">Society which will pay</span>
+								<input type="text" class="form-control" id="admin-shop-society-to-get-money-from" placeholder="None" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:society_to_get_money_from_description" disabled>
+								<button type="button" class="btn btn-secondary" id="admin-shop-choose-society-to-get-money-from-btn" data-translation-id="menu:choose">Choose</button>
+							</div>									
+						</div>
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3" id="admin-shop-objects-list-label" data-translation-id="menu:objects_on_sale">Objects on sale</p>
+
+					<div id="admin-shop-objects-on-sale">
+
+					</div>
+
+					<button id="admin-shop-add-object-btn" type="button" class="btn btn-success" data-translation-id="menu:add_object">Add object</button>
+
+				</div>
+				<div class="modal-footer">
+                    <button id="delete-admin-shop-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete" data-bs-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-admin-shop-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+        </div>
+    </div>
+
+	<!-- Players Shop modal -->
+	<div id="players-shop-modal" class="modal fade" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+			<form id="players-shop-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:players_shop">Players shop</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar">
+					<p class="text-center fs-3" data-translation-id="menu:generic">Generic</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col-3">
+							<input type="text" class="form-control" id="players-shop-label" placeholder="Label" required>
+							<label for="players-shop-label" data-translation-id="menu:label">Label</label>
+						</div>
+
+						<div class="form-check fs-5 ms-3">
+							<input class="form-check-input" type="checkbox" value="" id="players-shop-can-shop-owner-rename-the-shop">
+							<label class="form-check-label" for="players-shop-can-shop-owner-rename-the-shop" data-translation-id="menu:can_shop_owner_rename">Can the shop owner rename the shop</label>
+						</div>
+
+						<div class="form-check fs-5 ms-3">
+							<input class="form-check-input" type="checkbox" value="" id="players-shop-can-be-robbed">
+							<label class="form-check-label" for="players-shop-can-be-robbed" data-translation-id="menu:can_be_robbed">Can be robbed</label>
+						</div>
+
+						<button id="players-shop-choose-doors-btn" type="button" class="btn btn-secondary ms-3" data-translation-id="menu:choose_doors">Choose doors</button>
+					</div>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-3">
+						<div class="form-floating text-body col-3">
+							<input type="number" min="0" class="form-control" id="players-shop-price" placeholder="Price" required>
+							<label for="players-shop-price" data-translation-id="menu:price">Price</label>
+						</div>
+
+						<div class="form-floating text-body col-3">
+							<input type="number" min="0" max="100" class="form-control" id="players-shop-resell-percentage" placeholder="Resell percentage" required data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:resell_percentage_description">
+							<label for="players-shop-resell-percentage" data-translation-id="menu:resell_percentage">Resell percentage</label>
+						</div>
+
+						<button id="players-shop-customize-blip-btn" type="button" class="btn btn-secondary mx-3" data-translation-id="menu:customize_blip">Customize blip</button>
+						<button id="players-shop-customize-marker-btn" type="button" class="btn btn-secondary mx-3" data-translation-id="menu:customize_marker">Customize marker</button>
+					</div>
+
+					<div class="col-8 mt-3 mx-auto" id="admin-shop-societies-to-send-money-to-div">
+						<div class="input-group">
+							<span class="input-group-text" data-translation-id="menu:societies_to_send_money_to">Societies to send money to</span>
+							<input type="text" class="form-control" id="players-shop-societies-to-send-money-to" placeholder="None" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:societies_to_send_money_to_description" disabled>
+							<button type="button" class="btn btn-secondary" id="players-shop-societies-to-send-money-to-btn" data-translation-id="menu:choose">Choose</button>
+						</div>				
+					</div>					
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mt-5">
+						<div>
+							<p class="text-center fs-4" data-translation-id="menu:shop_is_allowed_to">Shop is allowed to</p>
+
+							<div class="form-check form-check-inline fs-5">
+								<input class="form-check-input" type="radio" name="playersShopType" value="buy">
+								<label class="form-check-label" data-translation-id="menu:buy">Buy</label>
+							</div>
+
+							<div class="form-check form-check-inline fs-5">
+								<input class="form-check-input" type="radio" name="playersShopType" value="sell">
+								<label class="form-check-label" data-translation-id="menu:sell">Sell</label>
+							</div>
+
+							<div class="form-check form-check-inline fs-5">
+								<input class="form-check-input" type="radio" name="playersShopType" value="both">
+								<label class="form-check-label" data-translation-id="menu:sell_and_buy">Sell & Buy</label>
+							</div>
+						</div>
+					</div>
+
+					<hr>
+
+					<p class="text-center fs-3" data-translation-id="menu:coords">Coords</p>
+
+					<p class="text-center fs-5" data-translation-id="menu:shop_coords">Shop coords</p>
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center mb-5">
+						<div class="form-floating text-body col">
+							<input type="number" step="0.01" class="form-control" id="players-shop-coords-x" placeholder="X" required>
+							<label for="players-shop-coords-x" data-translation-id="menu:x">X</label>
+						</div>
+
+						<div class="form-floating text-body col">
+							<input type="number" step="0.01" class="form-control" id="players-shop-coords-y" placeholder="Y" required>
+							<label for="players-shop-coords-y" data-translation-id="menu:y">Y</label>
+						</div>
+
+						<div class="form-floating text-body col">
+							<input type="number" step="0.01" class="form-control" id="players-shop-coords-z" placeholder="Z" required>
+							<label for="players-shop-coords-z" data-translation-id="menu:z">Z</label>
+						</div>
+
+						<button id="players-shop-current-coords-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:current_coords"><i class="bi bi-arrow-down-square"></i></button>	
+					</div>
+
+					<p class="text-center fs-5" data-translation-id="menu:management_coords">Management coords</p>
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center">
+						<div class="form-floating text-body col">
+							<input type="number" step="0.01" class="form-control" id="players-shop-management-coords-x" placeholder="X" required>
+							<label for="players-shop-management-coords-x" data-translation-id="menu:x">X</label>
+						</div>
+
+						<div class="form-floating text-body col">
+							<input type="number" step="0.01" class="form-control" id="players-shop-management-coords-y" placeholder="Y" required>
+							<label for="players-shop-management-coords-y" data-translation-id="menu:y">Y</label>
+						</div>
+
+						<div class="form-floating text-body col">
+							<input type="number" step="0.01" class="form-control" id="players-shop-management-coords-z" placeholder="Z" required>
+							<label for="players-shop-management-coords-z" data-translation-id="menu:z">Z</label>
+						</div>
+
+						<button id="players-shop-current-management-coords-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:current_coords"><i class="bi bi-arrow-down-square"></i></button>	
+					</div>
+
+					<hr>
+
+					<div>
+						<p class="text-center fs-3" data-translation-id="menu:ped">Ped</p>
+
+						<div class="row g-2 row-cols-auto align-items-center justify-content-center my-3">
+							<div class="form-check me-3 fs-3 my-auto">
+								<input class="form-check-input" type="checkbox" value="" id="players-shop-ped-is-enabled">
+								<label class="form-check-label" for="players-shop-ped-is-enabled" data-translation-id="menu:is_enabled">Is enabled</label>
+							</div>
+	
+							<div class="form-floating">
+								<input id="players-shop-ped-model" type="text" class="form-control" placeholder="Model" disabled>
+								<label data-translation-id="menu:model">Model</label>
+							</div>
+
+							<a class="btn btn-secondary clickable me-3" target="_blank" onclick='window.invokeNative("openUrl", "https://docs.fivem.net/docs/game-references/ped-models/")' data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:open_models_list"><i class="bi bi-images"></i></a>
+
+							<div class="form-floating">
+								<input id="players-shop-ped-heading" min="0" max="360" step="0.01" type="number" class="form-control" placeholder="Heading" disabled>
+								<label data-translation-id="menu:heading">Heading</label>
+							</div>
+
+							<button id="players-shop-ped-choose-heading-btn" type="button" class="btn btn-secondary col-auto" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:choose_heading"><i class="bi bi-arrow-down-square"></i></button>	
+						</div>	
+					</div>
+
+					<hr>
+
+					<p class="text-center my-auto fs-3" data-translation-id="menu:restrictions">Restrictions</p>
+
+					<div class="row g-2 row-cols-auto align-items-center justify-content-center fs-3 my-3">
+						<div class="me-5">
+							<p class="text-center fs-4" data-translation-id="menu:shop_is_allowed_to">Shop is allowed to</p>
+
+							<div class="form-check fs-5 ms-3">
+								<input class="form-check-input" type="checkbox" value="" id="allowed-objects-items">
+								<label class="form-check-label" for="allowed-objects-items" data-translation-id="menu:manage_items">Manage items</label>
+							</div>
+							
+							<div class="form-check fs-5 ms-3">
+								<input class="form-check-input" type="checkbox" value="" id="allowed-objects-weapons">
+								<label class="form-check-label" for="allowed-objects-weapons" data-translation-id="menu:manage_weapons">Manage weapons</label>
+							</div>	
+						</div>
+
+						<div class="ms-5">
+							<p class="text-center fs-4">Limit objects</p>
+							
+							<div class="fs-5">
+								<div class="form-check form-check-inline" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:whitelist_description">
+									<input class="form-check-input" type="radio" name="playersShopsLimitObjectsType" value="whitelist">
+									<label class="form-check-label" data-translation-id="menu:whitelist">Whitelist</label>
+								</div>
+								<div class="form-check form-check-inline" data-bs-toggle="tooltip" data-bs-placement="top" data-translation-id="menu:blacklist_description">
+									<input class="form-check-input" type="radio" name="playersShopsLimitObjectsType" value="blacklist">
+									<label class="form-check-label" data-translation-id="menu:blacklist">Blacklist</label>
+								</div>
+							</div>
+
+							<button id="players-shop-choose-limited-objects-btn" type="button" class="btn btn-secondary col-auto d-flex mx-auto mt-2" data-translation-id="menu:choose_objects">Choose objects</button>	
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button id="delete-players-shop-btn" type="button" class="btn btn-danger me-auto" data-translation-id="menu:delete" data-bs-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="save-players-shop-btn" type="submit" class="btn btn-success" data-translation-id="menu:create">Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="shop-ui" class="container-lg bg-white position-absolute top-50 start-50 translate-middle rounded" style="display: none; max-height:60vh; overflow-y:scroll">
+		<div class="d-inline-block col-12 text-center mt-2">
+			<p id="shop-ui-label" class="fs-1 text-center d-inline" style="font-family: 'Bebas Neue', cursive;">Shop label</p>
+			
+			<button id="close-shop-ui-btn" type="button" class="btn-close btn-close-white float-end mt-1"></button>
+		</div>
+
+		<div id="shop-ui-items" class="row">
+
+		</div>
+
+		<div id="shop-ui-settings" style="display: none;" class="mx-auto row col-4">
+			<p id="shop-ui-money" class="fs-3 text-center d-inline" style="font-family: 'Bebas Neue', cursive; color: #4cd137; display: none;">$</p>
+
+			<button type="button" data-permission-name="canToggleShopStatus" id="players-shop-toggle-status">Toggle shop status</button>
+			<button type="button" id="players-shop-your-inventory-btn">Your inventory</button>
+			<button type="button" id="players-shop-objects-on-sale-btn">Objects on sale</button>
+			<button type="button" data-permission-name="withdrawStoredObjects" id="players-shop-storage-btn">Shop storage</button>
+			<button type="button" data-permission-name="depositMoney" id="players-shop-deposit-money-btn">Deposit money</button>
+			<button type="button" data-permission-name="withdrawMoney" id="players-shop-withdraw-money-btn">Withdraw money</button>
+			<button type="button" data-permission-name="manager" id="players-shop-update-label-btn">Update shop label</button>
+			<button type="button" data-permission-name="manager" id="players-shop-employees-management-btn">Employees management</button>
+		</div>
+
+		<div id="shop-ui-employees-management" style="display: none;">
+			<button type="button" id="hire-employee-btn">Hire employee</button>
+			<button type="button" id="manage-employees-btn" style="display: none;">Manage employees</button>
+
+			<div id="shop-ui-employees-list">
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Shop permissions dialog -->
+	<div class="modal fade" id="player-shop-permissions-dialog-modal" data-bs-backdrop="static" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="player-shop-permissions-dialog-modal-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" id="player-shop-permissions-dialog-modal-title">Manage permissions</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				
+				<div class="modal-body">
+					<li class="list-group">
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="manager">
+							Manager (all permissions)
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="addObjectToSale">
+							Add objects to sale
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="removeObjectFromSale">
+							Remove objects from sale
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="updateObjectPrice">
+							Update objects price
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="addObjectStocks">
+							Add objects stocks
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="addObjectToBuyList">
+							Add objects to buy list
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="updateObjectQuantity">
+							Update objects wanted quantity
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="removeObjectFromToBuyList">
+							Remove object from to buy list
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="depositMoney">
+							Deposit money
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="withdrawMoney">
+							Withdraw money
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="withdrawStoredObjects">
+							Withdraw stored objects
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="depositStoredObjects">
+							Deposit objects in storage
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="canToggleShopStatus">
+							Toggle shop status
+						</li>
+						<li class="list-group-item">
+							<input class="form-check-input me-1 permission" type="checkbox" data-permission-name="toggleDoors">
+							Lock shop doors
+						</li>
+					</li>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Input dialog -->
+	<div class="modal fade" id="input-dialog-modal" data-bs-backdrop="static" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="input-dialog-modal-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" id="input-dialog-modal-title">Title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				
+				<div class="modal-body">
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="input-dialog-modal-label">Label</span>
+						<input type="text" class="form-control" id="input-dialog-modal-value" required>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Objects blacklist/whitelist dialog -->
+	<div class="modal fade" id="limited-objects-dialog-modal" data-bs-backdrop="static" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="limited-objects-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:limited_objects">Limited objects</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				
+				<div class="modal-body">
+					<div id="limited-objects-list" class="scrollbar" style="max-height: 50vh; overflow-y:auto; overflow-x:hidden">
+
+					</div>
+
+					<button id="limited-objects-list-add-object-btn" type="button" class="btn btn-success" data-translation-id="menu:add_object">Add object</button>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Marker customization dialog -->
+	<div class="modal fade" id="marker-customization-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="marker-customization-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:marker_customization">Marker customization</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-floating text-body">
+						<input type="number" class="form-control" id="marker-type" placeholder="Marker type" required>
+						<label for="marker-type" data-translation-id="menu:marker_type">Marker type</label>
+					</div>
+
+					<a class="fst-italic text-center" href="https://docs.fivem.net/docs/game-references/markers/" target="_blank"  onclick='window.invokeNative("openUrl", "https://docs.fivem.net/docs/game-references/markers/")'>https://docs.fivem.net/docs/game-references/markers/</a>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_size">Marker size</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-x" placeholder="X" required>
+								<label for="marker-size-x" data-translation-id="menu:x">X</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-y" placeholder="Y" required>
+								<label for="marker-size-y" data-translation-id="menu:y">Y</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-size-z" placeholder="Z" required>
+								<label for="marker-size-z" data-translation-id="menu:z">Z</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_rotation">Marker rotation</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-x" placeholder="X" required>
+								<label for="marker-rotation-x" data-translation-id="menu:x">X</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-y" placeholder="Y" required>
+								<label for="marker-rotation-y" data-translation-id="menu:y">Y</label>
+							</div>
+
+							<div class="form-floating text-body col-4">
+								<input type="number" step="0.1" class="form-control" id="marker-rotation-z" placeholder="Z" required>
+								<label for="marker-rotation-z" data-translation-id="menu:z">Z</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:marker_color">Color</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-red" placeholder="Red" required>
+								<label for="marker-color-red" data-translation-id="menu:red">Red</label>
+							</div>
+
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-green" placeholder="Green" required>
+								<label for="marker-color-green" data-translation-id="menu:green">Green</label>
+							</div>
+
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-blue" placeholder="Blue" required>
+								<label for="marker-color-blue" data-translation-id="menu:blue">Blue</label>
+							</div>
+
+							<div class="form-floating text-body col-3">
+								<input type="number" min="0" max="255" class="form-control" id="marker-color-opacity" placeholder="0-255" required>
+								<label for="marker-color-opacity" data-translation-id="menu:opacity">Opacity</label>
+							</div>		
+						</div>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:other">Other</p>
+
+						<div class="row g-2 row-cols-auto">
+                            <div class="form-check form-switch col-4 fs-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-bounce">
+                                <label class="form-check-label" data-translation-id="menu:bounce" for="marker-bounce">Bounce</label>
+                            </div>
+                            <div class="form-check form-switch col-4 fs-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-follow-camera">
+                                <label class="form-check-label" data-translation-id="menu:follow_camera" for="marker-follow-camera">Follow camera</label>
+                            </div>
+                            <div class="form-check form-switch col-4 fs-4">
+                                <input class="form-check-input" type="checkbox" role="switch" id="marker-rotate">
+                                <label class="form-check-label" data-translation-id="menu:rotate" for="marker-rotate">Rotate</label>
+                            </div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>
+
+	<!-- Blip customization dialog -->
+	<div class="modal fade" id="blip-customization-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<form id="blip-customization-form" class="modal-content needs-validation" novalidate>
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:blip_customization">Blip customization</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-check form-switch fs-4 mb-3">
+						<input class="form-check-input" type="checkbox" role="switch" id="blip-enabled">
+						<label class="form-check-label" data-translation-id="menu:blip_enabled" for="blip-enabled">Blip enabled</label>
+					</div>
+
+					<div class="form-floating text-body">
+						<input type="number" class="form-control" id="blip-sprite" placeholder="Blip sprite" required>
+						<label for="blip-sprite" data-translation-id="menu:blip_sprite">Blip sprite</label>
+					</div>
+
+					<a class="fst-italic text-center" href="https://docs.fivem.net/docs/game-references/blips/" target="_blank"  onclick='window.invokeNative("openUrl", "https://docs.fivem.net/docs/game-references/blips/")'>https://docs.fivem.net/docs/game-references/blips/</a>
+
+					<div class="form-floating text-body mt-4">
+						<input type="text" class="form-control" id="blip-name" placeholder="Blip name" required>
+						<label for="blip-name" data-translation-id="menu:blip_name">Blip name</label>
+					</div>
+
+					<div class="mt-3">
+						<p class="text-center fs-4" data-translation-id="menu:other">Other</p>
+
+						<div class="row g-2 row-cols-auto align-items-center">
+							<div class="form-floating text-body col-6">
+								<input type="number" step="0.1" class="form-control" id="blip-scale" placeholder="Blip scale" required>
+								<label for="blip-scale" data-translation-id="menu:blip_scale">Blip scale</label>
+							</div>
+
+							<div class="form-floating text-body col-6">
+								<input type="number" step="0.1" class="form-control" id="blip-color" placeholder="Blip color" required>
+								<label for="blip-color" data-translation-id="menu:blip_color">Blip color</label>
+							</div>
+						</div>
+
+						<select id="blip-display" class="form-select col-12 mt-3">
+							<option data-translation-id="menu:blip_minimap_only" value="5" selected>Minimap only</option>
+							<option data-translation-id="menu:blip_mainmap_only" value="3">Main map only</option>
+							<option data-translation-id="menu:blip_main_and_minimap" value="2">Main map + minimap</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</form>
+		</div>
+	</div>	
+
+	<!-- Single job input dialog -->
+	<div class="modal fade" id="input-single-job-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:jobs_dialog:title">Jobs List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:jobs_dialog:search_job">Search job</span>
+						<input id="input-single-job-search" type="text" class="form-control">
+					</div>
+
+					<ul id="single-jobs-list" class="list-group mt-2" style="overflow: auto; max-height: 70vh">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Societies input dialog -->
+	<div class="modal fade" id="input-societies-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:societies_dialog:title">Societies List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar" style="max-height: 60vh; overflow-y: auto">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:societies_dialog:search_society">Search society</span>
+						<input id="input-society-search" type="text" class="form-control">
+					</div>
+
+					<div id="societies-list" class="mt-2">
+
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="input-societies-confirm-btn" type="button" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</div>
+		</div>
+	</div>
+
+	<!-- Progress Bar -->
+	<div id="progressbar-div" class="progress col-4 offset-4 fixed-bottom mb-5 border border-2 border-dark" style="height: 34px; display: none;">
+		<div id="progressbar" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width:0%; height: 34px;"></div>
+
+		<p id="progressbar-text" class="justify-content-center d-flex position-absolute top-50 start-50 translate-middle fw-bold fs-5"></p>
+	</div>
+	
+	<!-- Doors input dialog -->
+	<div class="modal fade" id="input-doors-dialog-modal" tabindex="-1" role="dialog" style="z-index: 1070;">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" data-translation-id="menu:doors_dialog:title">Doors List</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body scrollbar" style="max-height: 60vh; overflow-y: auto">
+					<div class="input-group">
+						<span class="input-group-text" data-translation-id="menu:doors_dialog:search_door">Search door</span>
+						<input id="input-door-search" type="text" class="form-control">
+					</div>
+
+					<div id="doors-list" class="mt-2">
+
+					</div>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-translation-id="menu:close" data-bs-dismiss="modal">Close</button>
+					<button id="input-doors-confirm-btn" type="button" class="btn btn-success" data-translation-id="menu:confirm">Confirm</button>
+				</div>    
+			</div>
+		</div>
+	</div>
+
+	<!-- UI -->
+	<div class="main-container" style="display:none"></div>
+	
+	<script src="./assets/js/theme.bundle.js"></script>
+	<script src="index.js"></script>
+	<script src="../utils/dialogs/dialogs.js"></script>
+</body>
+
+</html>

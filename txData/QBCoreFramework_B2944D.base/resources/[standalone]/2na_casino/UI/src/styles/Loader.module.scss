@@ -1,0 +1,23 @@
+@keyframes Load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  --size: 3vh;
+  height: var(--size);
+  width: var(--size);
+  border: calc(var(--size) / 7) solid #adadad;
+  border-radius: 50%;
+  border-top-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: Load 1s infinite;
+  animation-timing-function: linear;
+}

@@ -1,0 +1,61 @@
+.container {
+  border: 0.1vh solid var(--inputBorderColor);
+  background: var(--inputBackground);
+  color: var(--inputText);
+  backdrop-filter: blur(1vh);
+  border-radius: 0.5vh;
+  margin: 1vh 0;
+  padding: 0.5vh;
+  padding-left: 1vh;
+  outline: none;
+  height: 4vh;
+  font-size: 1.4vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: "$";
+    font-weight: normal;
+    color: #a3bda3;
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    padding-left: 1vh;
+  }
+}
+
+.buttons {
+  width: 30%;
+  height: 100%;
+  display: flex;
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 0.2vh;
+    border-radius: 0.4vh;
+    font-size: 1.3vh;
+    cursor: pointer;
+    background-color: #0a0a1bc4;
+    border: 0.1vh solid transparent;
+    border-bottom-color: #52525e;
+    color: white;
+    transition: border-color 200ms ease;
+
+    &:hover {
+      border-color: #52525e;
+    }
+  }
+}

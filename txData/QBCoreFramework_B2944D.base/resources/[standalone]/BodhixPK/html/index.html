@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+</head>
+<body>
+    <audio id="audioPlayer" src="" type="audio/mp3"></audio>
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        // Set initial volume to 20%
+        audioPlayer.volume = 1;
+
+        // Listen for incoming NUI messages
+        window.addEventListener('message', (event) => {
+            const data = event.data;
+
+            if (data.transactionType === 'playSound') {
+                //console.log('Playing sound:', data.transactionFile);
+                audioPlayer.src = data.transactionFile;
+                audioPlayer.play();
+            } else if (data.transactionType === 'stopSound') {
+                //console.log('Stopping sound');
+                audioPlayer.pause();
+                audioPlayer.currentTime = 0;
+            } else if (data.transactionType === 'setVolume') {
+                //console.log('Setting volume to:', data.volume);
+                audioPlayer.volume = data.volume;
+            }
+        });
+    </script>
+</body>
+</html>

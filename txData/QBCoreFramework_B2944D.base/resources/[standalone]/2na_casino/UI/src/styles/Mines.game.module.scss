@@ -1,0 +1,45 @@
+.container {
+  width: 100%;
+  height: calc(100% - 10vh);
+  display: flex;
+}
+
+.betContainer {
+  height: 95% !important;
+  width: 25% !important;
+  margin: auto 3vh !important;
+  margin-top: 0.5vh !important;
+}
+
+.betContainerTitle {
+  width: 94%;
+  height: 4vh;
+  font-size: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 1vh;
+  background: #0f101f8f;
+  background: transparent;
+  border: 0.1vh solid #1d1e3a;
+  border: none;
+  border-bottom: 0.1vh solid rgba(255, 255, 255, 0.295);
+  background: linear-gradient(0deg, transparent, #000000b7);
+  border-radius: 0.7vh;
+  margin: 1vh;
+  font-family: "AnisetteMedium";
+}
+
+.game {
+  width: 72%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10vh 12vh;
+  padding-top: 1vh;
+  position: relative;
+  z-index: 100000;
+}

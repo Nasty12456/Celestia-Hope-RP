@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<!-- Login page -->
+<div class="loginPage" style="display: none">
+    <!-- Login page -->
+    <div class="loginSide" style="display: none">
+        <div class="loginTitleBox">
+            <h2 class="loginTitle" translation-id="UI_TEXT_HEAD_TITLE"></h2>
+            <div class="loginSubTitle" translation-id="UI_TEXT_HEAD_SUBTITLE"></div>
+        </div>
+        <h2 class="loginDescription">
+            <div translation-id="UI_TEXT_LOGIN_TITLE"></div>
+            <p translation-id="UI_TEXT_LOGIN_SUBTITLE"></p>
+        </h2>
+        <div class="loginBottomBox">
+            <div class="accountList">
+                <div class="accountType" id="loginuseraccount">
+                    <div class="accountTypeIcon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h2 class="accountTypeTitle">
+                        <div translation-id="UI_TEXT_USER_ACCOUNT"></div>
+                        <p translation-id="UI_TEXT_CONNECT_TO_ACCOUNT"></p>
+                    </h2>
+                    <i class="fa-solid fa-caret-right" id="accountArrow"></i>
+                </div>
+                <div class="accountType" id="loginsocietyaccount">
+                    <div class="accountTypeIcon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h2 class="accountTypeTitle">
+                        <div translation-id="UI_TEXT_SOCIETY_ACCOUNT"></div>
+                        <p translation-id="UI_TEXT_CONNECT_TO_ACCOUNT"></p>
+                    </h2>
+                    <i class="fa-solid fa-caret-right" id="accountArrow"></i>
+                </div>
+                <div class="accountType" id="loginsharedaccount">
+                    <div class="accountTypeIcon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h2 class="accountTypeTitle">
+                        <div translation-id="UI_TEXT_SHARED_ACCOUNT"></div>
+                        <p translation-id="UI_TEXT_CONNECT_TO_ACCOUNT"></p>
+                    </h2>
+                    <i class="fa-solid fa-caret-right" id="accountArrow"></i>
+                </div>
+            </div>
+            <div class="orLine">
+                <div></div>
+                <span translation-id="UI_TEXT_OR_CHOICE"></span>
+                <div></div>
+            </div>
+            <div class="loginPageButton" id="openregisterscreen" translation-id="UI_TEXT_REGISTER_BUTTON"></div>
+        </div>
+    </div>
+    <!-- Register screen -->
+    <div class="registerSide" style="display: none">
+        <div class="loginTitleBox">
+            <h2 class="loginTitle" translation-id="UI_TEXT_HEAD_TITLE"></h2>
+            <div class="loginSubTitle" translation-id="UI_TEXT_HEAD_SUBTITLE"></div>
+        </div>
+        <h2 class="loginDescription">
+            <div translation-id="UI_TEXT_REGISTER_TITLE"></div>
+            <p translation-id="UI_TEXT_REGISTER_SUBTITLE"></p>
+        </h2>
+        <div class="loginBottomBox">
+            <div class="accountList">
+                <div
+                        class="accountType"
+                        style="background: rgba(125, 255, 162, 0.11)"
+                        id="registeruseraccount"
+                >
+                    <div class="accountTypeIcon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h2 class="accountTypeTitle">
+                        <div translation-id="UI_TEXT_USER_ACCOUNT"></div>
+                        <p translation-id="UI_TEXT_CREATE_ACCOUNT"></p>
+                    </h2>
+                    <i class="fa-solid fa-caret-right" id="accountArrow"></i>
+                </div>
+                <div
+                        class="accountType"
+                        style="background: rgba(125, 255, 162, 0.11)"
+                        id="registersocietyaccount"
+                >
+                    <div class="accountTypeIcon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h2 class="accountTypeTitle">
+                        <div translation-id="UI_TEXT_SOCIETY_ACCOUNT"></div>
+                        <p translation-id="UI_TEXT_CREATE_ACCOUNT"></p>
+                    </h2>
+                    <i class="fa-solid fa-caret-right" id="accountArrow"></i>
+                </div>
+                <div
+                        class="accountType"
+                        style="background: rgba(125, 255, 162, 0.11)"
+                        id="registersharedaccount"
+                >
+                    <div class="accountTypeIcon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h2 class="accountTypeTitle">
+                        <div translation-id="UI_TEXT_SHARED_ACCOUNT"></div>
+                        <p translation-id="UI_TEXT_CREATE_ACCOUNT"></p>
+                    </h2>
+                    <i class="fa-solid fa-caret-right" id="accountArrow"></i>
+                </div>
+            </div>
+            <div class="orLine">
+                <div></div>
+                <span translation-id="UI_TEXT_OR_CHOICE"></span>
+                <div></div>
+            </div>
+            <div class="loginPageButton" id="openloginscreen" translation-id="UI_TEXT_LOGIN_BUTTON"></div>
+        </div>
+    </div>
+    <!-- Create shared -->
+    <div class="createSide" style="display: none">
+        <div class="loginTitleBox">
+            <h2 class="loginTitle" translation-id="UI_TEXT_HEAD_TITLE"></h2>
+            <div class="loginSubTitle" translation-id="UI_TEXT_HEAD_SUBTITLE"></div>
+        </div>
+        <h2 class="loginDescription">
+            <div translation-id="UI_TEXT_CREATE_SHARED_ACCOUNT_TITLE"></div>
+            <p translation-id="UI_TEXT_CREATE_SHARED_ACCOUNT_SUBTITLE"></p>
+        </h2>
+        <div class="orLine">
+            <div></div>
+            <span translation-id="UI_TEXT_DETAILS"></span>
+            <div></div>
+        </div>
+        <div class="createBottomBox">
+            <div class="createinput-container">
+                <input
+                        type="text"
+                        class="createmodern-input"
+                        placeholder-translation-id="UI_PLACEHOLDER_ACCOUNT_NAME"
+                        id="sharedaccountname"
+                />
+            </div>
+            <div class="createBottom">
+                <h2 class="createTitle">
+                    <div translation-id="UI_TEXT_INVITE_TO_SHARED_ACCOUNT"></div>
+                    <p translation-id="UI_TEXT_SELECT_PLAYER"></p>
+                </h2>
+                <div class="createPlayerList">
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                    <div class="settingsInvite">
+                        <div class="settingsPlayerBoxs">
+                            <img
+                                    src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                    alt=""
+                                    class="profileImg"
+                            />
+                            Alex Young
+                        </div>
+                        <div class="inviteButton transferButton">Invite</div>
+                    </div>
+                </div>
+                <div class="createButton" translation-id="UI_TEXT_CREATE_BUTTON"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Face scan -->
+    <div class="scanSide" style="display: none">
+        <div class="loginTitleBox">
+            <h2 class="loginTitle" translation-id="UI_TEXT_HEAD_TITLE"></h2>
+            <div class="loginSubTitle" translation-id="UI_TEXT_HEAD_SUBTITLE"></div>
+        </div>
+        <div class="accountType">
+            <div class="accountTypeIcon">
+                <i id="facescanicon" class="fa-solid fa-user"></i>
+            </div>
+            <h2 class="accountTypeTitle">
+                <span id="scanaccounttype" translation-id="UI_TEXT_USER_ACCOUNT"></span>
+            </h2>
+            <i class="fa-solid fa-caret-down facescanarrow" id="accountArrow"></i>
+        </div>
+        <div class="scanBox">
+            <h2 class="scanTitle">
+                <div translation-id="UI_TEXT_SCANNING_FACE_IN_PROGRESS"></div>
+                <p translation-id="UI_TEXT_FACEID"></p>
+            </h2>
+            <div class="scanGif">
+                <img src="img/loginface.gif" alt="" class="faceid"/>
+            </div>
+        </div>
+    </div>
+    <div class="pop-upExit" id="firstscreenclose"><i class="fa-solid fa-xmark"></i></div>
+</div>
+
+
+<!-- Main screen -->
+<div class="General" style="display: none">
+    <!-- Header -->
+    <header style="display: flex">
+        <div class="titleBox">
+            <img src="img/titlepng.png" alt="" class="titlePng"/>
+            <h2 class="title">
+                <div translation-id="UI_TEXT_HEAD_TITLE"></div>
+                <div class="titlespan" translation-id="UI_TEXT_HEAD_SUBTITLE"></div>
+            </h2>
+        </div>
+        <div class="headerLine"></div>
+        <div class="categoryBox Personal">
+            <span id="headername1"></span>
+            <div class="categoryList">
+                <div class="category" id="openhistorypage">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <div translation-id="UI_TEXT_HISTORY"></div>
+                </div>
+                <div class="category categorySelect" id="openhomepage">
+                    <i class="fa-solid fa-house"></i>
+                    <div translation-id="UI_TEXT_HOME"></div>
+                </div>
+                <div class="category" id="opencreditpage">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div translation-id="UI_TEXT_CREDITS"></div>
+                </div>
+            </div>
+        </div>
+        <div class="headerLine"></div>
+        <div class="categoryBox Personal">
+            <span id="headername2"></span>
+            <div class="categoryList">
+                <div class="category" id="opensettingspage">
+                    <i class="fa-solid fa-gear"></i>
+                    <div translation-id="UI_TEXT_SETTINGS"></div>
+                </div>
+                <div class="exitButton">
+                    <i class="fa-solid fa-door-open"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pop-up -->
+    <div class="pop-upBox" style="display: none">
+        <div class="modalAmISure pop-upStyle" id="shared_account_exit" style="display: none">
+            <h2 class="popupTitle" translation-id="UI_TEXT_SHARED_ACCOUNT_MODAL_TITLE"
+                style="text-align: center; color: #24dd7a"></h2>
+            <div class="popupLine" style="width: 20.7396vw"></div>
+            <p class="modalText" translation-id="UI_TEXT_SHARED_ACCOUNT_MODAL_DESCRIPTION"></p>
+            <div class="modalButtons">
+                <div class="modalCancelButton" id="shared_account_exit_cancel" translation-id="UI_TEXT_CANCEL"></div>
+                <div class="modalAcceptButton" id="shared_account_exit_confirm" translation-id="UI_TEXT_CONFIRM"></div>
+            </div>
+        </div>
+
+        <div class="pop-up depositPop-up" style="display: none" id="moneydepositpopup">
+            <h2 class="pop-upTitle">
+                <span translation-id="UI_TEXT_DEPOSIT_BUTTON"></span>
+                <p translation-id="UI_TEXT_DEPOSIT_SUBTITLE"></p>
+            </h2>
+            <div class="pop-upinput-container">
+                <input
+                        type="text"
+                        class="pop-upmodern-input"
+                        placeholder="$5"
+                        id="depositinput"
+                />
+            </div>
+            <div class="pop-upButton depositButton" id="depositaccept">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <span translation-id="UI_TEXT_DEPOSIT_BUTTON"></span>
+            </div>
+            <div class="pop-upExit closepopup">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="pop-up withdrawPop-up" style="display: none" id="moneywithdrawpopup">
+            <h2 class="pop-upTitle">
+                <span translation-id="UI_TEXT_WITHDRAW_BUTTON"></span>
+                <p translation-id="UI_TEXT_WITHDRAW_SUBTITLE"></p>
+            </h2>
+            <div class="pop-upinput-container">
+                <input
+                        type="text"
+                        class="pop-upmodern-input"
+                        placeholder="$5"
+                        id="withdrawinput"
+                />
+            </div>
+            <div class="pop-upButton withdrawButton" id="withdrawaccept">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <span translation-id="UI_TEXT_WITHDRAW_BUTTON"></span>
+            </div>
+            <div class="pop-upExit closepopup">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="pop-up transferPop-up" style="display: none" id="moneytransferpopup">
+            <h2 class="pop-upTitle">
+                <span translation-id="UI_TEXT_TRANSFER_BUTTON"></span>
+                <p translation-id="UI_TEXT_TRANSFER_SUBTITLE"></p>
+            </h2>
+            <div class="pop-upinput-container">
+                <input
+                        id="transferamount"
+                        type="text"
+                        class="pop-upmodern-input"
+                        placeholder="$5"
+                />
+            </div>
+            <div class="pop-upinput-container">
+                <input
+                        id="transferid"
+                        type="text"
+                        class="pop-upmodern-input"
+                        placeholder-translation-id="UI_TEXT_IBAN"
+                        style="color: white"
+                />
+            </div>
+            <div class="pop-upButton transferButton" id="transfermoneyconfirm">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <span translation-id="UI_TEXT_TRANSFER_BUTTON"></span>
+            </div>
+            <div class="pop-upExit closepopup">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home page -->
+    <section class="homePage" style="display: flex">
+        <div class="leftSide">
+            <div class="menuBox myinfo">
+                <div class="menuTitle">
+                    <i class="fa-solid fa-user"></i>
+                    <div translation-id="UI_TEXT_MY_INFORMATION"></div>
+                </div>
+                <div class="cardBox">
+                    <div class="cardTitle">
+                        <div translation-id="UI_TEXT_HEAD_SUBTITLE"></div>
+                        <p translation-id="UI_TEXT_CARD"></p>
+                    </div>
+                    <div class="cardBottom">
+                        <h2 class="cardNumber">4562 6705 8913 9267</h2>
+                        <div class="cardDate">
+                            <h2>
+                                VALID
+                                <p>THRU</p>
+                            </h2>
+                            01/28
+                        </div>
+                    </div>
+                    <img src="img/bankcard.png" alt="" class="cardImg"/>
+                </div>
+                <div class="infoBoxs">
+                    <div class="infoBox">
+                        <div class="infoTitle">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <div translation-id="UI_TEXT_IBAN"></div>
+                        </div>
+                        <span id="accountiban"></span>
+                    </div>
+                    <div
+                            class="infoBox"
+                            style="
+                  color: #0f6;
+                  background: linear-gradient(
+                      0deg,
+                      rgba(0, 255, 102, 0.04) 0%,
+                      rgba(0, 255, 102, 0.04) 100%
+                    ),
+                    rgba(255, 255, 255, 0.03);
+                "
+                    >
+                        <div class="infoTitle" style="color: rgba(0, 255, 102, 0.75)">
+                            <i
+                                    class="fa-solid fa-credit-card"
+                                    style="color: rgba(0, 255, 102, 0.75)"
+                            ></i
+                            >
+                            <div translation-id="UI_TEXT_BALANCE"></div>
+                        </div>
+                        <span id="accountbalance"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="menuBox actions">
+                <div class="menuTitle">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div translation-id="UI_TEXT_ACTIONS"></div>
+                </div>
+                <div class="buttonBox">
+                    <div class="button depositButton" id="depositmoney">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <div translation-id="UI_TEXT_DEPOSIT_BUTTON"></div>
+                    </div>
+                    <div class="button withdrawButton" id="withdrawmoney">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                        <div translation-id="UI_TEXT_WITHDRAW_BUTTON"></div>
+                    </div>
+                    <div class="button transferButton" id="transfermoney">
+                        <i class="fa-solid fa-right-left"></i>
+                        <div translation-id="UI_TEXT_TRANSFER_BUTTON"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectionLine"></div>
+        <div class="rightSide">
+            <div class="menuBox statics">
+                <div class="menuTitle">
+                    <i class="fa-solid fa-signal"></i>
+                    <div translation-id="UI_TEXT_STATISTICS"></div>
+                </div>
+                <div class="staticsBox">
+                    <div class="chart-container">
+                        <canvas id="myChart" class="chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="menuBox transactions">
+                <div class="menuTitle">
+                    <i class="fa-solid fa-right-left"></i>
+                    <span translation-id="UI_TEXT_LAST_TRANSACTIONS"></span>
+                </div>
+                <div class="transactionsList" id="lasttransactions">
+                </div>
+            </div>
+        </div>
+        <div class="exitBox"><i class="fa-solid fa-xmark"></i></div>
+    </section>
+    <!-- Credit page -->
+    <section class="creditPage" style="display: none">
+        <div class="creditLeftSide">
+            <div class="menuBox creditRules">
+                <div class="menuTitle">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span translation-id="UI_TEXT_CREDIT_RULES"></span>
+                </div>
+                <div class="creditRulesBox">
+                    <h2 class="creditRulesTitle">
+                        <span translation-id="UI_TEXT_CREDIT_RULES"></span>
+                        <p translation-id="UI_TEXT_CREDIT_POLICY"></p>
+                    </h2>
+                    <div class="creditRulesList">
+                        <div class="creditRulesBoxs">
+                            <h2 class="creditRulesText">
+                                Contract Rule #1
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Nunc cum massa
+                                    nulla eleifend. Cum sed viverra turpis quis tincidunt
+                                    maecenas
+                                </p>
+                            </h2>
+                            <div class="creditRulesIcon">
+                                <i class="fa-solid fa-clipboard-check"></i>rules are
+                                considered read
+                            </div>
+                        </div>
+                        <div class="creditRulesBoxs">
+                            <h2 class="creditRulesText">
+                                Contract Rule #1
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </h2>
+                            <div class="creditRulesIcon">
+                                <i class="fa-solid fa-clipboard-check"></i>rules are
+                                considered read
+                            </div>
+                        </div>
+                        <div class="creditRulesBoxs">
+                            <h2 class="creditRulesText">
+                                Contract Rule #1
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Nunc cum massa
+                                    nulla eleifend.
+                                </p>
+                            </h2>
+                            <div class="creditRulesIcon">
+                                <i class="fa-solid fa-clipboard-check"></i>rules are
+                                considered read
+                            </div>
+                        </div>
+                        <div class="creditRulesBoxs">
+                            <h2 class="creditRulesText">
+                                Contract Rule #1
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Nunc cum massa
+                                    nulla eleifend.
+                                </p>
+                            </h2>
+                            <div class="creditRulesIcon">
+                                <i class="fa-solid fa-clipboard-check"></i>rules are
+                                considered read
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectionLine"></div>
+        <div class="creditRightSide">
+            <div class="menuTitle">
+                <i class="fa-solid fa-credit-card"></i>
+                <span translation-id="UI_TEXT_CREDIT_RULES"></span>
+            </div>
+            <div class="creditRightBottom">
+                <div class="creditInfo">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span translation-id="UI_TEXT_SELECT_OR_ENTER_AMOUNT"></span>
+                </div>
+                <div class="creditAmountBox">
+                    <div class="creditAmountSelectList">
+                    </div>
+                    <div class="creditAmountCustom">
+                        <div class="input-container">
+                            <input
+                                    type="text"
+                                    class="modern-input"
+                                    placeholder="$55"
+                                    id="creditamountinput"
+                            />
+                        </div>
+                        <div class="creditAmountLine"></div>
+                        <h2 class="creditAmountText">
+                            <span translation-id="UI_TEXT_CREDIT"></span>
+                            <p translation-id="UI_TEXT_DURATION"></p>
+                        </h2>
+                        <div class="select-container">
+                            <select class="modern-select" id="creditduration">
+                            </select>
+                            <div class="select-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="creditRequestTotalBox">
+                    <div class="creditTotalBox">
+                        <div class="creditTotal">
+                            <div class="creditTotalIcon creditReceive">
+                                <i class="fa-solid fa-money-bill"></i>
+                            </div>
+                            <h2 class="creditTotalText">
+                                the amount you want to receive
+                                <p id="creditwant">$500.000</p>
+                            </h2>
+                        </div>
+                        <div class="creditTotalAmount">
+                            <h2>
+                                total amount to your bank
+                                <p id="credittobank">$500.000</p>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="creditTotalBox">
+                        <div class="creditTotal">
+                            <div class="creditTotalIcon creditAmount">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <h2 class="creditTotalText">
+                                security deposit
+                                <p style="color: white" id="creditsecurity">$500.000</p>
+                            </h2>
+                        </div>
+                        <div class="creditTotalAmount">
+                            <h2>
+                                <span id="creditamounteach">amount payable each month</span>
+                                <p style="color: #a7ffd0; font-weight: 600" id="crediteachmonth">
+                                    $500.000<span style="font-weight: 700">*15</span>
+                                </p>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="creditLine">
+                        <div></div>
+                    </div>
+                    <div class="creditTotalBox" style="align-items: flex-end">
+                        <div class="creditTotal">
+                            <div class="creditTotalIcon creditRepaid">
+                                <i class="fa-solid fa-money-bill"></i>
+                            </div>
+                            <h2 class="creditTotalText">
+                                total amount to be repaid
+                                <p style="color: white" id="creditrepaid">$500.000</p>
+                            </h2>
+                        </div>
+                        <div class="signContractButton">
+                            <i class="fa-solid fa-file-circle-check"></i>Sign Contract
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exitBox"><i class="fa-solid fa-xmark"></i></div>
+    </section>
+    <!-- Settings page -->
+    <section class="settingsPage" style="display: none">
+        <div class="settingsInvitePop-up" style="display: none">
+            <div class="settingsInviteBox">
+                <h2 class="settingsSharedTitle">
+                    <div translation-id="UI_TEXT_SHARED_ACCOUNT"></div>
+                    <p translation-id="UI_TEXT_NEAREST_PLAYERS"></p>
+                </h2>
+                <div class="settingsInviteList">
+                </div>
+                <div class="pop-upExit" id="closeinvitemenu">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        <div class="settingsLeftSide">
+            <div class="menuTitle">
+                <i class="fa-solid fa-gear"></i>
+                <span translation-id="UI_TEXT_SETTINGS"></span>
+            </div>
+            <div class="settingsBox changeIban">
+                <h2 class="settingsBoxTitle">
+                    <span translation-id="UI_TEXT_CHANGE_IBAN"></span>
+                    <p translation-id="UI_TEXT_ENTER_IBAN"></p>
+                </h2>
+                <div class="settingsBottomBox">
+                    <div class="settingsinput-container">
+                        <input
+                                type="text"
+                                class="settingsmodern-input"
+                                placeholder-translation-id="UI_PLACEHOLDER_MAXIMUM_10_CHARACTERS"
+                                id="changeibaninput"
+                        />
+                    </div>
+                    <div class="settingsButton depositButton" id="confirmchangeiban"
+                         translation-id="UI_TEXT_SUBMIT_CHANGE_IBAN"></div>
+                </div>
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div class="settingsBox inviteAccount">
+                <h2 class="settingsBoxTitle">
+                    <span translation-id="UI_TEXT_INVITE_TO_SHARED_ACCOUNT"></span>
+                    <p translation-id="UI_TEXT_SELECT_PLAYER"></p>
+                </h2>
+                <p class="settingsDescription" translation-id="UI_TEXT_SHARED_ACCOUNT_INVITE_DESCRIPTION"></p>
+                <div class="settingsBottomBox">
+                    <div class="settingsButton transferButton" id="openinvitemenu"
+                         translation-id="UI_TEXT_INVITE_BUTTON"></div>
+                </div>
+
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+        </div>
+        <div class="sectionLine" id="settingsline"></div>
+        <div class="settingsRightSide">
+            <h2 class="settingsSharedTitle">
+                <div translation-id="UI_TEXT_SHARED_ACCOUNT"></div>
+                <p translation-id="UI_TEXT_MEMBER_LIST"></p>
+            </h2>
+            <div class="settingsPlayerList" id="sharedaccountmembers">
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+                <div class="settingsPlayer">
+                    <div class="settingsPlayerBoxs">
+                        <img
+                                src="https://cdn.discordapp.com/attachments/1070104464498905098/1145318491042357369/Rectangle_131.png"
+                                alt=""
+                                class="profileImg"
+                        />
+                        Alex Young
+                    </div>
+                    <div class="kickButton">Kick</div>
+                </div>
+            </div>
+        </div>
+        <div class="exitBox"><i class="fa-solid fa-xmark"></i></div>
+    </section>
+    <!-- History page -->
+    <section class="historyPage" style="display: none">
+        <div class="menuTitle">
+            <i class="fa-solid fa-history"></i>
+            <span translation-id="UI_TEXT_HISTORY"></span>
+        </div>
+        <div class="historyBottom">
+            <div class="historyCategoryBoxs">
+                <div class="historyCategoryBox">
+                    <div class="historyCategory" id="historycredit" translation-id="UI_TEXT_CREDITS"></div>
+                    <div class="historyCategory" id="historydeposit" translation-id="UI_TEXT_DEPOSITS"></div>
+                    <div class="historyCategory" id="historywithdraw" translation-id="UI_TEXT_WITHDRAWALS"></div>
+                    <div class="historyCategory" id="historytransfer" translation-id="UI_TEXT_TRANSFERS"></div>
+                </div>
+                <div class="historyselect-container">
+                    <select class="historymodern-select">
+                        <option value="" disabled selected translation-id="UI_TEXT_FILTER"></option>
+                        <option value="mostrecent" translation-id="UI_TEXT_MOST_RECENT"></option>
+                        <option value="mostolder" translation-id="UI_TEXT_OLDEST"></option>
+                    </select>
+                    <div class="historyselect-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="historyList" id="historylist">
+                <div class="historyBox transferHistory">
+                    <div class="historyLeftBox">
+                        <div class="historyIconBox transferHistoryIconBox">
+                            <div class="historyIcon transferIcon">
+                                <i class="fa-solid fa-right-left"></i>
+                            </div>
+                            <h2>Transfer</h2>
+                        </div>
+                        <h2 class="historyDescription">
+                            to bank sent reason;
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="historyPrice transferPrice">+10.000$</h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox withdrawHistory">
+                    <div class="historyLeftBox">
+                        <div class="historyIconBox withdrawHistoryIconBox">
+                            <div class="historyIcon withdrawIcon">
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+                            </div>
+                            <h2>Withdraw</h2>
+                        </div>
+                        <h2 class="historyDescription">
+                            to bank sent reason;
+                            <p>Lorem ipsum dolor sit amet consectetur</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="historyPrice withdrawPrice">-10.000$</h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+                <div class="historyBox creditHistory">
+                    <div class="historyCreditLeftBox">
+                        <div class="historyIconBox creditHistoryIconBox">
+                            <div class="historyIcon creditIcon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <h2>Credit</h2>
+                        </div>
+                        <h2 class="historyCreditLeftTime">
+                            Time Left;
+                            <p>8<span>/10 Months</span></p>
+                        </h2>
+                        <h2 class="historyCreditAmountPaid">
+                            Amount Paid
+                            <p>-$5000</p>
+                        </h2>
+                    </div>
+                    <div class="historyRightBox">
+                        <h2 class="creditPrice">
+                            <p>$250.000</p>
+                            / 750.000$
+                        </h2>
+                        <div class="historyDate">02.01.1923 <span>02:45</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exitBox"><i class="fa-solid fa-xmark"></i></div>
+    </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>w_pi_kyrosglockbeams_mag5</modelName>
+			<txdName>w_pi_kyrosglockbeams_mag5</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_pi_kyrosglockbeams_mag4</modelName>
+			<txdName>w_pi_kyrosglockbeams_mag4</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_pi_kyrosglockbeams_mag3</modelName>
+			<txdName>w_pi_kyrosglockbeams_mag3</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_pi_kyrosglockbeams_mag2</modelName>
+			<txdName>w_pi_kyrosglockbeams_mag2</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_pi_kyrosglockbeams_mag1</modelName>
+			<txdName>w_pi_kyrosglockbeams_mag1</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="300"/>
+		</Item>
+		<Item>
+			<modelName>w_pi_kyrosglockbeams</modelName>
+			<txdName>w_pi_kyrosglockbeams</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="500"/>
+		</Item>
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

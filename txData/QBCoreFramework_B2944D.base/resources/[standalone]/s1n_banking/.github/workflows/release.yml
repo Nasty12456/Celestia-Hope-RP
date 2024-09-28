@@ -1,0 +1,115 @@
+name: Automate Release
+
+on:
+  push:
+    paths:
+      - '**/fxmanifest.lua'
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      VERSION: ${{ steps.get_version_and_branch.outputs.VERSION }}
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Get version and branch name
+        id: get_version_and_branch
+        run: |
+          VERSION=$(grep "^version '" fxmanifest.lua | cut -d"'" -f2)
+          BRANCH_NAME=${GITHUB_REF##refs/heads/}
+          ESCROW_BRANCH="escrow-${BRANCH_NAME}"
+          echo "Found version: $VERSION"
+          echo "Branch name: $BRANCH_NAME"
+          echo "Escrow branch: $ESCROW_BRANCH"
+          echo "::set-output name=VERSION::$VERSION"
+          echo "::set-output name=BRANCH_NAME::$BRANCH_NAME"
+          echo "::set-output name=ESCROW_BRANCH::$ESCROW_BRANCH"
+        shell: bash
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.get_version_and_branch.outputs.VERSION }}-${{ steps.get_version_and_branch.outputs.BRANCH_NAME }}
+          release_name: v${{ steps.get_version_and_branch.outputs.VERSION }}-${{ steps.get_version_and_branch.outputs.BRANCH_NAME }}
+          body: 'Generated release from fxmanifest.lua.'
+          draft: false
+          prerelease: false
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Delete escrow branch if it exists
+        run: |
+          ESCROW_BRANCH_EXISTS=$(git ls-remote --heads origin ${{ steps.get_version_and_branch.outputs.ESCROW_BRANCH }} | wc -l)
+          if [ $ESCROW_BRANCH_EXISTS -ne 0 ]; then
+            git push origin --delete ${{ steps.get_version_and_branch.outputs.ESCROW_BRANCH }}
+          fi
+
+      - name: Create escrow branch
+        run: |
+          git checkout -b ${{ steps.get_version_and_branch.outputs.ESCROW_BRANCH }}
+
+      - name: Update fxmanifest for escrow
+        run: |
+          ESCROW_CONTENT=$(cat .escrow_ignore | tr -d '\n' | sed 's/,$//')
+          sed -i "/escrow_ignore {/,/}/c\escrow_ignore {\n$ESCROW_CONTENT\n}" fxmanifest.lua
+          git add fxmanifest.lua
+          git commit -m "Update escrow_ignore for escrowed release"
+
+      - name: Push changes to escrow branch
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.get_version_and_branch.outputs.ESCROW_BRANCH }}
+          force: true
+
+      - name: Create tag for escrow release
+        run: |
+          git tag v${{ steps.get_version_and_branch.outputs.VERSION }}-${{ steps.get_version_and_branch.outputs.BRANCH_NAME }}-escrowed
+          git push origin v${{ steps.get_version_and_branch.outputs.VERSION }}-${{ steps.get_version_and_branch.outputs.BRANCH_NAME }}-escrowed
+
+      - name: Create Escrowed GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.get_version_and_branch.outputs.VERSION }}-${{ steps.get_version_and_branch.outputs.BRANCH_NAME }}-escrowed
+          release_name: v${{ steps.get_version_and_branch.outputs.VERSION }}-${{ steps.get_version_and_branch.outputs.BRANCH_NAME }}-escrowed
+          body: 'Generated escrowed release from fxmanifest.lua.'
+          draft: false
+          prerelease: false
+
+  update-version:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout other repository
+        uses: actions/checkout@v2
+        with:
+          repository: 'S1nScripts/versions'
+          token: ${{ secrets.ACTION_TOKEN_ALL_REPO }}
+          path: 'versions'
+
+      - name: Update version file
+        run: |
+          REPO_NAME="${GITHUB_REPOSITORY##*/}"
+          echo "${{ needs.release.outputs.VERSION }}" > "${GITHUB_WORKSPACE}/versions/${REPO_NAME}"
+        shell: bash
+
+      - name: Push changes
+        run: |
+          cd versions
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add "${GITHUB_REPOSITORY##*/}"
+          git commit -m "Update version to ${{ needs.release.outputs.VERSION }}"
+          git push
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN_ALL_REPO }}

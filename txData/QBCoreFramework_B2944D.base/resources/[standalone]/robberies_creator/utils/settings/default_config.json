@@ -1,0 +1,61 @@
+{
+    "server": {
+        "canAlwaysCarryItem": false,
+        "acePermission": "robberies_creator",
+        "svNpcMugging": {
+            "robbableObjects": [],
+            "minimumPolice": 0,
+            "probabilityPoliceAlert": 20,
+            "minimumObjectsAmount": 0,
+            "maximumObjectsAmount": 0,
+            "minutesAfterAutomaticallyRunAway": 15,
+            "maxNPCsFollowing": 5
+        },
+        "gasMask": {
+            "name": "gas_mask",
+            "loseOnUse": true,
+            "duration": 120
+        },
+        "drill": {
+            "requiredForCargoRobbery": true,
+            "name": "drill",
+            "loseOnUse": true
+        },
+        "cargoRobbery": {
+            "minutesBeforeDeleteAfterRobbed": 10,
+            "minutesBeforeDeleteAfterArrived": 10,
+            "maxMinutesDifferenceFromDefinedDate": 10,
+            "probabilityPoliceAlert": 100
+        },
+        "canReceiveMultipleTimesTheSameItem": true,
+        "maxMinutesDifferenceForCargoRobberies": 10,
+        
+        "areDiscordLogsActive": false,
+        "specificWebhooks": [],
+        "mainDiscordWebhook": "",
+        "globalMinutesTimeout": 0
+    },
+
+    "shared": {
+        "locale": "en",
+        "isNpcMuggingEnabled": true,
+        "secondsToMug": 5
+    },
+
+    "client": {
+        "clNpcMugging": {
+            "canMakeFollow": true,
+            "cooldownOnMugging": 15
+        },
+
+        "npcMuggingKeys": {
+            "keyToMug": 47,
+            "keyToFollow": 74,
+            "keyToGoAway": 20
+        },
+
+        "gasMaskClothId": 38,
+        "targetingScript": "none",
+        "helpNotification": "none"
+    }
+}

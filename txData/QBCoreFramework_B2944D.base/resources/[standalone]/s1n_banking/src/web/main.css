@@ -1,0 +1,2461 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+    font-family: Credit Card;
+    src: url(font/CREDC___.ttf);
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.General {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    gap: 0.625vw;
+    width: 54.4792vw;
+}
+
+@keyframes generalAnimate {
+    0% {
+        opacity: 0;
+        transform: translateY(500%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes generalAnimate1 {
+    0% {
+        opacity: 0;
+        transform: translateY(200%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+header {
+    animation: generalAnimate 1s ease-in-out;
+    padding: 0vw 1.3021vw;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 5.6771vw;
+    border-radius: 1.1458vw 1.1458vw 0.4167vw 0.4167vw;
+    background: radial-gradient(
+            55.43% 48.61% at 0.83% 108.15%,
+            rgba(84, 255, 163, 0.05) 0%,
+            rgba(15, 27, 24, 0) 100%
+    ),
+    radial-gradient(
+            49.91% 28.07% at 100% 56.25%,
+            rgba(0, 164, 255, 0.1) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            50.11% 49.31% at 1.34% -0%,
+            rgba(175, 255, 212, 0.28) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            71.4% 75.28% at 50% 50%,
+            rgba(14, 20, 19, 0) 63.15%,
+            #0e1413 88.74%
+    ),
+    radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(15, 27, 24, 0.92) 0%,
+            rgba(14, 20, 19, 0.95) 100%
+    );
+}
+
+.titleBox {
+    display: flex;
+    align-items: center;
+    gap: 0.6771vw;
+}
+
+.titlePng {
+    width: 3.5276vw;
+    height: 3.5276vw;
+    object-fit: cover;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1563vw;
+    color: #54ffa3;
+    font-family: Barlow;
+    font-size: 1.1628vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.titlespan {
+    padding: 0 0.2604vw;
+    display: flex;
+    align-items: center;
+    width: 6.8105vw;
+    height: 1.0193vw;
+    border-radius: 0.1272vw;
+    background: linear-gradient(
+            90deg,
+            rgba(84, 255, 163, 0.26) 0%,
+            rgba(84, 255, 163, 0) 100%,
+            rgba(84, 255, 163, 0) 100%
+    );
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.7268vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.headerLine {
+    width: 0.0521vw;
+    height: 1.9792vw;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.categoryBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4688vw;
+    color: rgba(255, 255, 255, 0.49);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.categoryList {
+    display: flex;
+    gap: 0.8333vw;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4167vw;
+    padding: 0 1.4583vw;
+    border-radius: 0.4688vw;
+    background: rgba(255, 255, 255, 0.04);
+    height: 1.6667vw;
+    transition: 250ms ease-in;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.category:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.category i {
+    color: #ffffff8c;
+    font-size: 0.7vw;
+    transition: 250ms ease-in;
+}
+
+.category:hover i {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.categorySelect {
+    background: #54ffa3 !important;
+    color: black !important;
+}
+
+.categorySelect i {
+    color: black !important;
+}
+
+.exitButton {
+    width: 1.6667vw;
+    height: 1.6667vw;
+    padding: 0.3646vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4688vw;
+    background: rgba(210, 78, 78, 0.26);
+    transition: 250ms ease-in;
+}
+
+.exitButton i {
+    transition: 250ms ease-in;
+    font-size: 0.6vw;
+    color: #c64444;
+}
+
+.exitButton:hover {
+    cursor: pointer;
+    background: #c64444;
+    box-shadow: 0px 0.2083vw 1.4063vw 0px rgba(255, 36, 36, 0.51);
+}
+
+.exitButton:hover i {
+    color: black;
+}
+
+/*
+*   Pop-up shared account
+*/
+
+.modalAmISure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6667vw;
+    width: 33.1771vw;
+    gap: 1.0417vw;
+}
+
+.pop-upStyle {
+    position: relative;
+    border-radius: 0.7292vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+    background: radial-gradient(
+            10.61% 11.03% at 100% 1.24%,
+            rgba(217, 52, 52, 0.28) 0%,
+            rgba(217, 52, 52, 0) 100%
+    ),
+    radial-gradient(
+            55.43% 48.61% at 0.83% 108.15%,
+            rgba(84, 255, 163, 0.05) 0%,
+            rgba(15, 27, 24, 0) 100%
+    ),
+    radial-gradient(
+            49.91% 28.07% at 100% 56.25%,
+            rgba(0, 164, 255, 0.1) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            50.11% 49.31% at 1.34% -0%,
+            rgba(175, 255, 212, 0.28) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            71.4% 75.28% at 50% 50%,
+            rgba(14, 20, 19, 0) 63.15%,
+            #0e1413 88.74%
+    ),
+    radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(15, 27, 24, 0.92) 0%,
+            rgba(14, 20, 19, 0.95) 100%
+    );
+}
+
+.popupTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3646vw;
+    color: #fff;
+    font-size: 1.3636vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%;
+    font-family: Barlow;
+}
+
+.popupLine {
+    width: 16.3021vw;
+    height: 0.0521vw;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.modalText {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.83);
+    text-align: center;
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130.5%;
+    font-family: Barlow;
+}
+
+.modalButtons {
+    width: 100%;
+    gap: 1.0938vw;
+    display: flex;
+}
+
+.modalCancelButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14.0625vw;
+    height: 2.9167vw;
+    color: #ff6868;
+    font-size: 1.0417vw;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Barlow;
+    line-height: 130.5%;
+    border-radius: 0.4688vw;
+    border: 0.1042vw solid #da3f3f;
+    background: rgba(218, 63, 63, 0.2);
+    transition: 300ms;
+}
+
+.modalCancelButton:hover {
+    cursor: pointer;
+    color: black;
+    background: #e03232;
+}
+
+.modalAcceptButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14.0625vw;
+    height: 2.9167vw;
+    color: #6cffa7;
+    font-size: 1.0417vw;
+    font-style: normal;
+    font-family: Barlow;
+    font-weight: 500;
+    line-height: 130.5%;
+    border-radius: 0.4688vw;
+    border: 0.1042vw solid #35fa84;
+    background: rgba(53, 250, 132, 0.2);
+    transition: 300ms;
+}
+
+.modalAcceptButton:hover {
+    cursor: pointer;
+    color: black;
+    background: #35fa84;
+}
+
+/*
+*   End of Pop-up shared account
+*/
+
+section {
+    animation: generalAnimate1 1.1s ease-in-out;
+    align-items: center;
+    position: relative;
+    padding: 2.0833vw;
+    padding-top: 1.5625vw !important;
+    display: flex;
+    width: 100%;
+    height: 29.5313vw;
+    justify-content: space-between;
+    border-radius: 0.4167vw 0.4167vw 1.1458vw 1.1458vw;
+    background: radial-gradient(
+            10.61% 11.03% at 100% 1.24%,
+            rgba(217, 52, 52, 0.28) 0%,
+            rgba(217, 52, 52, 0) 100%
+    ),
+    radial-gradient(
+            55.43% 48.61% at 0.83% 108.15%,
+            rgba(84, 255, 163, 0.05) 0%,
+            rgba(15, 27, 24, 0) 100%
+    ),
+    radial-gradient(
+            49.91% 28.07% at 100% 56.25%,
+            rgba(0, 164, 255, 0.1) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            50.11% 49.31% at 1.34% -0%,
+            rgba(175, 255, 212, 0.28) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            71.4% 75.28% at 50% 50%,
+            rgba(14, 20, 19, 0) 63.15%,
+            #0e1413 88.74%
+    ),
+    radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(15, 27, 24, 0.92) 0%,
+            rgba(14, 20, 19, 0.95) 100%
+    );
+}
+
+.leftSide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menuBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7292vw;
+}
+
+.menuTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.4083vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 1.0417vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 18px */
+}
+
+.menuTitle i {
+    font-size: 0.9vw;
+    color: white;
+}
+
+.cardBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.8854vw;
+    position: relative;
+    width: 15.7813vw;
+    height: 9.0625vw;
+    border-radius: 0.8333vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.05);
+    background: radial-gradient(
+            126.23% 126.23% at 50% 50%,
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(0.2604vw);
+}
+
+.cardImg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardTitle {
+    display: flex;
+    flex-direction: column;
+    color: #24dd7a;
+    font-family: Barlow;
+    font-size: 0.8125vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%; /* 14.04px */
+}
+
+.cardTitle p {
+    color: #fff;
+    font-family: Barlow;
+    font-size: 1.2384vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 21.4px */
+}
+
+.cardBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6771vw;
+}
+
+.cardNumber {
+    color: rgba(255, 255, 255, 0.28);
+    font-family: Credit Card;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 12.6px */
+}
+
+.cardDate {
+    display: flex;
+    gap: 0.1563vw;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.824vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 14.238px */
+}
+
+.cardDate h2 {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.59);
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.4494vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 7.766px */
+}
+
+.infoBoxs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoBox {
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+    width: 7.5521vw;
+    height: 4.4792vw;
+    display: flex;
+    align-items: center;
+    gap: 0.625vw;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 1.0417vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 18px */
+}
+
+.infoTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.3125vw;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: Barlow;
+    font-size: 0.784vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 13.547px */
+}
+
+.infoTitle i {
+    font-size: 0.8vw;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.buttonBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125vw;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4688vw;
+    width: 15.625vw;
+    height: 2.1875vw;
+    border-radius: 0.4167vw;
+    transition: 250ms ease-in;
+}
+
+.button i {
+    transition: 250ms ease-in;
+}
+
+.depositButton {
+    border: 0.0521vw solid #35fa84;
+    background: rgba(53, 250, 132, 0.2);
+    color: #79ffaf;
+    font-family: Barlow;
+    font-size: 0.8854vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 15.3px */
+    transition: 250ms ease-in;
+}
+
+.depositButton i {
+    color: #79ffaf;
+    font-size: 0.9vw;
+    transition: 250ms ease-in;
+}
+
+.depositButton:hover {
+    cursor: pointer;
+    background: #35fa84;
+    color: black;
+}
+
+.depositButton:hover i {
+    color: black;
+}
+
+.withdrawButton {
+    border: 0.0521vw solid #ff8e8e;
+    background: rgba(255, 142, 142, 0.2);
+    color: #ff8e8e;
+    font-family: Barlow;
+    font-size: 0.8854vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 15.3px */
+}
+
+.withdrawButton i {
+    color: #ff8e8e;
+    font-size: 0.9vw;
+}
+
+.withdrawButton:hover {
+    cursor: pointer;
+    background: #ff8e8e;
+    color: black;
+}
+
+.withdrawButton:hover i {
+    color: black;
+}
+
+.transferButton {
+    border: 0.0521vw solid #359bfa;
+    background: rgba(53, 155, 250, 0.2);
+    color: #359bfa;
+    font-family: Barlow;
+    font-size: 0.8854vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 15.3px */
+    transition: 250ms ease-in;
+}
+
+.transferButton i {
+    color: #359bfa;
+    font-size: 0.9vw;
+}
+
+.transferButton:hover {
+    cursor: pointer;
+    background: #359bfa;
+    color: black;
+}
+
+.transferButton:hover i {
+    color: black;
+}
+
+.rightSide {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sectionLine {
+    width: 0.1042vw;
+    height: 23.8542vw;
+    border-radius: 1.1979vw;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.transactionsList {
+    width: 31.4063vw;
+    height: 9.6354vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125vw;
+    scroll-behavior: smooth;
+}
+
+.transaction {
+    position: relative;
+    padding: 0 0.3125vw;
+    display: flex;
+    align-items: center;
+    width: 31.4063vw;
+    min-height: 2.0313vw;
+    border-radius: 0.3646vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.transactionIcon {
+    display: flex;
+    align-items: center;
+    width: 1.3542vw;
+    height: 1.3542vw;
+    border-radius: 0.2355vw;
+    justify-content: center;
+}
+
+.depositIcon {
+    border: 0.0589vw solid rgba(53, 250, 132, 0.2);
+    background: rgba(53, 250, 132, 0.1);
+}
+
+.depositIcon i {
+    font-size: 0.5vw;
+    color: #79ffaf !important;
+}
+
+.transactionLeft {
+    display: flex;
+    gap: 0.5208vw;
+    height: 100%;
+    align-items: center;
+}
+
+.transactionLeft h2 {
+    width: 4.8958vw;
+    color: #79ffaf;
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 12.6px */
+}
+
+.transactionRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.transactionInfo {
+    color: rgba(255, 255, 255, 0.64);
+    font-family: Barlow;
+    font-size: 0.5208vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 9px */
+    display: flex;
+    flex-direction: column;
+    gap: 0.1563vw;
+}
+
+.transactionInfo p {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: Barlow;
+    font-size: 0.5208vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 9px */
+}
+
+.transactionPrice {
+    position: absolute;
+    right: 0.5729vw;
+    color: #2df57e;
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 14.4px */
+}
+
+.transferIcon {
+    border: 0.0589vw solid rgba(132, 196, 255, 0.2);
+    background: rgba(132, 196, 255, 0.1);
+}
+
+.transferIcon i {
+    color: #84c4ff;
+    font-size: 0.5vw;
+}
+
+.withdrawIcon {
+    border: 0.0589vw solid rgba(245, 96, 96, 0.2);
+    background: rgba(245, 96, 96, 0.1);
+}
+
+.creditIcon {
+    border: 0.0589vw solid rgba(0, 255, 224, 0.2);
+    background: rgba(0, 255, 224, 0.1);
+}
+
+.transactionIcon i {
+    color: #84c4ff;
+    font-size: 0.5vw;
+}
+
+.withdrawIcon i {
+    color: #f56060;
+    font-size: 0.5vw;
+}
+
+.creditIcon i {
+    color: #00ffe0;
+    font-size: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0.00001vw;
+    background: transparent;
+}
+
+.staticsBox {
+    padding: 0.5vw;
+    padding-top: 0.8vw;
+    width: 31.4063vw;
+    height: 11.8229vw;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.chart {
+    width: 100%;
+    height: 15.625vw;
+}
+
+.creditLeftSide {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.creditRules {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.creditRulesBox {
+    padding-top: 0.9896vw !important;
+    padding: 1.1458vw;
+    display: flex;
+    flex-direction: column;
+    width: 16.4583vw;
+    height: 23.8542vw;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+    justify-content: space-between;
+}
+
+.creditRulesTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 16.2px */
+}
+
+.creditRulesTitle p {
+    color: rgba(255, 255, 255, 0.51);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 12.6px */
+}
+
+.creditRulesList {
+    height: 19vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5208vw;
+}
+
+.creditRulesBoxs {
+    width: 100%;
+    padding: 0.7292vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.4167vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.12);
+    gap: 0.4167vw;
+}
+
+.creditRulesText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4167vw;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 12.6px */
+}
+
+.creditRulesText p {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Barlow;
+    font-size: 0.625vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%; /* 13.68px */
+}
+
+.creditRulesIcon {
+    display: flex;
+    align-items: center;
+    gap: 0.3125vw;
+    color: rgba(114, 255, 170, 0.56);
+    font-family: Barlow;
+    font-size: 0.625vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114%; /* 13.68px */
+}
+
+.creditRulesIcon i {
+    color: rgba(114, 255, 170, 0.56);
+    font-size: 0.7vw;
+}
+
+.creditRightSide {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
+}
+
+.creditRightBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1979vw;
+}
+
+.creditInfo {
+    display: flex;
+    gap: 0.3125vw;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.46);
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 14.4px */
+}
+
+.creditInfo i {
+    color: rgba(255, 255, 255, 0.46);
+    font-size: 0.8vw;
+}
+
+.creditAmountBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7292vw;
+}
+
+.creditAmountSelectList {
+    width: 30.8433vw;
+    overflow-y: scroll;
+    height: 7.2vw;
+    overflow-x: hidden;
+    display: flex;
+    gap: 0.625vw;
+    row-gap: 0.625vw;
+    flex-wrap: wrap;
+}
+
+.creditAmountSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.2396vw;
+    height: 1.9792vw;
+    border-radius: 0.4167vw;
+    border: 0.0521vw solid rgba(53, 250, 132, 0.2);
+    background: rgba(53, 250, 132, 0.1);
+    color: #24dd7a;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 14.4px */
+    transition: 250ms ease-in;
+}
+
+.creditAmountSelect:hover {
+    cursor: pointer;
+    background: #24dd7a;
+    color: black;
+}
+
+.creditAmountSelect.selected {
+    background: #24dd7a;
+    color: black;
+}
+
+.creditAmountCustom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-container {
+    position: relative;
+    width: 13.75vw;
+    height: 2.3438vw;
+}
+
+.modern-input {
+    width: 100%;
+    padding: 0 0.5208vw;
+    height: 100%;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.05);
+    color: #24dd7a;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.modern-input::placeholder {
+    color: #999999a1;
+}
+
+.modern-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+.creditAmountLine {
+    width: 0.0521vw;
+    height: 2.3438vw;
+    border-radius: 0.1563vw;
+    background: rgba(255, 255, 255, 0.17);
+}
+
+.creditAmountText {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Barlow;
+    font-size: 0.985vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.creditAmountText p {
+    color: rgba(255, 255, 255, 0.57);
+    font-family: Barlow;
+    font-size: 0.985vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.select-container {
+    position: relative;
+    width: 11.1979vw;
+    height: 2.3438vw;
+}
+
+.modern-select {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 0vw 0.5208vw;
+    border-radius: 0.4167vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.37);
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    font-style: normal;
+    font-weight: 500;
+    outline: none;
+    appearance: none;
+}
+
+.select-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.select-icon i {
+    color: #999;
+}
+
+.creditRequestTotalBox {
+    display: flex;
+    gap: 1.0938vw;
+    flex-direction: column;
+}
+
+.creditTotalBox {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.creditTotal {
+    display: flex;
+    align-items: center;
+    gap: 0.4688vw;
+}
+
+.creditTotalIcon {
+    width: 1.8229vw;
+    height: 1.8229vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3125vw;
+    border: 1px solid rgba(132, 196, 255, 0.2);
+    background: rgba(132, 196, 255, 0.1);
+}
+
+.creditTotalIcon {
+    font-size: 0.8vw;
+}
+
+.creditReceive {
+    color: #84c4ff;
+}
+
+.creditTotalText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.625vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 10.8px */
+}
+
+.creditTotalText p {
+    color: #84c4ff;
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 14.4px */
+}
+
+.creditTotalAmount {
+    display: flex;
+}
+
+.creditTotalAmount h2 {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3646vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.721vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 12.458px */
+}
+
+.creditTotalAmount h2 p {
+    text-align: right;
+    color: #24dd7a;
+    font-family: Barlow;
+    font-size: 1.0815vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%; /* 18.688px */
+}
+
+.creditAmount {
+    border-radius: 0.3125vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.creditAmount i {
+    color: white;
+}
+
+.creditLine {
+    display: flex;
+    gap: 0.3125vw;
+    align-items: center;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 14.4px */
+}
+
+.creditLine div {
+    width: 9.5833vw;
+    height: 0.0521vw;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.creditRepaid {
+    border-radius: 0.3125vw;
+    border: 0.0521vw solid rgba(53, 250, 132, 0.2);
+    background: rgba(53, 250, 132, 0.1);
+}
+
+.creditRepaid i {
+    color: #35fa84;
+}
+
+.signContractButton {
+    width: 11.4583vw;
+    height: 2.1875vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+    justify-content: center;
+    border-radius: 0.5729vw;
+    border: 0.0521vw solid #359bfa;
+    background: rgba(53, 155, 250, 0.2);
+    color: #71bbff;
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 14.4px */
+    transition: 250ms ease-in;
+}
+
+.signContractButton i {
+    color: #71bbff;
+    font-size: 0.8vw;
+    transition: 250ms ease-in;
+}
+
+.signContractButton:hover {
+    cursor: pointer;
+    background: #359bfa;
+    color: black;
+}
+
+.signContractButton:hover i {
+    color: black;
+}
+
+.exitBox {
+    position: absolute;
+    top: 1.0417vw;
+    right: 1.0417vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3125vw;
+    background: #d93434;
+    width: 1.0938vw;
+    height: 1.0938vw;
+    transition: 250ms ease-in;
+}
+
+.exitBox i {
+    color: white;
+    font-size: 0.63vw;
+}
+
+.exitBox:hover {
+    cursor: pointer;
+    box-shadow: 0px 0.2083vw 1.4063vw 0px rgba(255, 36, 36, 0.51);
+}
+
+.pop-upBox {
+    z-index: 55;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-up {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.0417vw;
+    width: 16.1979vw;
+    gap: 0.7292vw;
+    border-radius: 0.8333vw;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: radial-gradient(
+            55.43% 48.61% at 0.83% 108.15%,
+            rgba(84, 255, 163, 0.05) 0%,
+            rgba(15, 27, 24, 0) 100%
+    ),
+    radial-gradient(
+            49.91% 28.07% at 100% 56.25%,
+            rgba(0, 164, 255, 0.1) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            50.11% 49.31% at 1.34% -0%,
+            rgba(175, 255, 212, 0.28) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            71.4% 75.28% at 50% 50%,
+            rgba(14, 20, 19, 0) 63.15%,
+            #0e1413 88.74%
+    ),
+    radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(15, 27, 24, 0.92) 0%,
+            rgba(14, 20, 19, 0.95) 100%
+    );
+}
+
+.pop-upTitle {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 0.2604vw;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 16.2px */
+}
+
+.pop-upTitle p {
+    color: rgba(255, 255, 255, 0.54);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 12.6px */
+}
+
+.pop-upinput-container {
+    position: relative;
+    width: 100%;
+    height: 2.1875vw;
+}
+
+.pop-upmodern-input {
+    width: 100%;
+    padding: 0 0.5208vw;
+    height: 100%;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.05);
+    color: #24dd7a;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.pop-upmodern-input::placeholder {
+    color: #999999a1;
+}
+
+.pop-upmodern-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+.pop-upButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.4479vw;
+    border-radius: 0.3125vw;
+    gap: 0.4688vw;
+}
+
+.pop-upExit {
+    width: 0.9375vw;
+    height: 0.9375vw;
+    position: absolute;
+    top: 0.9375vw;
+    right: 0.9375vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2679vw;
+    background: #d93434;
+}
+
+.pop-upExit i {
+    color: white;
+    font-size: 0.5vw;
+}
+
+.pop-upExit:hover {
+    cursor: pointer;
+}
+
+.settingsLeftSide {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.settingsBox {
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0.9375vw;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.changeIban {
+    width: 19.375vw;
+    height: 10.4688vw;
+}
+
+.settingsBoxTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 16.2px */
+}
+
+.settingsBoxTitle p {
+    color: rgba(255, 255, 255, 0.54);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 12.6px */
+}
+
+.settingsBottomBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.625vw;
+}
+
+.settingsinput-container {
+    position: relative;
+    width: 100%;
+    height: 2.5vw;
+}
+
+.settingsmodern-input {
+    width: 100%;
+    padding: 0 0.5208vw;
+    height: 100%;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.settingsmodern-input::placeholder {
+    color: #999999a1;
+}
+
+.settingsmodern-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+.settingsButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.6042vw;
+    border-radius: 0.4688vw;
+}
+
+.settingsBox i {
+    position: absolute;
+    color: #ffffff42;
+    font-size: 1vw;
+    top: 0.9375vw;
+    right: 0.9375vw;
+}
+
+.inviteAccount {
+    width: 19.375vw;
+    height: 12.0313vw;
+}
+
+.settingsDescription {
+    color: rgba(255, 255, 255, 0.42);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 121%; /* 16.94px */
+}
+
+.settingsRightSide {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 0.755vw;
+    height: 100%;
+}
+
+.settingsSharedTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2604vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 16.2px */
+}
+
+.settingsSharedTitle p {
+    color: rgba(255, 255, 255, 0.54);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 12.6px */
+}
+
+.settingsPlayerList {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 21.0938vw;
+    gap: 0.2604vw;
+}
+
+.settingsPlayer {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0vw 0.4167vw;
+    width: 27.9688vw;
+    min-height: 1.7708vw;
+    border-radius: 0.3125vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.settingsPlayerBoxs {
+    display: flex;
+    align-items: center;
+    gap: 0.4167vw;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Barlow;
+    font-size: 0.625vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 10.8px */
+}
+
+.profileImg {
+    width: 1.0417vw;
+    height: 1.0417vw;
+    border-radius: 2.2135vw;
+    object-fit: cover;
+}
+
+.kickButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.7083vw;
+    height: 0.9375vw;
+    border-radius: 0.2083vw;
+    border: 0.0521vw solid #d73f3f;
+    background: rgba(231, 60, 60, 0.2);
+    color: #ff6262;
+    font-family: Barlow;
+    font-size: 0.4688vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 8.1px */
+    transition: 250ms ease-in;
+}
+
+.kickButton:hover {
+    cursor: pointer;
+    background: #ff6262;
+    color: black;
+}
+
+.settingsInvitePop-up {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settingsInviteBox {
+    position: relative;
+    gap: 0.6771vw;
+    z-index: 66;
+    display: flex;
+    flex-direction: column;
+    padding: 1.0417vw;
+    width: 16.1979vw;
+    border-radius: 0.8333vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.12);
+    background: radial-gradient(
+            55.43% 48.61% at 0.83% 108.15%,
+            rgba(84, 255, 163, 0.05) 0%,
+            rgba(15, 27, 24, 0) 100%
+    ),
+    radial-gradient(
+            49.91% 28.07% at 100% 56.25%,
+            rgba(0, 164, 255, 0.1) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            50.11% 49.31% at 1.34% -0%,
+            rgba(175, 255, 212, 0.28) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            71.4% 75.28% at 50% 50%,
+            rgba(14, 20, 19, 0) 63.15%,
+            #0e1413 88.74%
+    ),
+    radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(15, 27, 24, 0.92) 0%,
+            rgba(14, 20, 19, 0.95) 100%
+    );
+}
+
+.settingsInviteList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3646vw;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 12.8125vw;
+}
+
+.settingsInvite {
+    justify-content: space-between;
+    display: flex;
+    padding: 0 0.4688vw;
+    align-items: center;
+    width: 100%;
+    min-height: 1.9271vw;
+    border-radius: 0.2083vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.inviteButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.1563vw;
+    width: 3.5417vw;
+    height: 0.9896vw;
+    color: #359bfa;
+    font-family: Barlow;
+    font-size: 0.4688vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 8.1px */
+}
+
+.historyPage {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.historyBottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.9896vw;
+}
+
+.historyCategoryBoxs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.historyCategoryBox {
+    display: flex;
+    gap: 0.4688vw;
+}
+
+.historyCategory {
+    width: 5.2083vw;
+    height: 1.6667vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3125vw;
+    background: rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.36);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: 250ms ease-in;
+}
+
+.historyCategory.selected {
+    background: #54ffa3;
+    color: black
+}
+
+.historyCategory:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.historyselect-container {
+    position: relative;
+    width: 6.9792vw;
+    height: 1.6667vw;
+}
+
+.historymodern-select {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 0vw 0.5208vw;
+    border-radius: 0.4167vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.35);
+    font-family: Barlow;
+    font-size: 0.625vw;
+    font-style: normal;
+    font-weight: 500;
+    outline: none;
+    appearance: none;
+}
+
+option {
+    color: black;
+}
+
+.historyselect-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.5208vw;
+    transform: translateY(-50%);
+}
+
+.historyselect-icon i {
+    color: #999;
+    font-size: 0.5vw;
+}
+
+.historyList {
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 21.3021vw;
+    flex-direction: column;
+    gap: 0.3125vw;
+}
+
+.historyBox {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    min-height: 1.9792vw;
+    padding-left: 0.3125vw;
+    padding-right: 0.625vw;
+    border-radius: 0.3125vw;
+    border: 0.0521vw solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.historyLeftBox {
+    gap: 4.2708vw;
+    display: flex;
+    align-items: center;
+}
+
+.historyIconBox {
+    gap: 0.5208vw;
+    display: flex;
+    align-items: center;
+}
+
+.historyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3542vw;
+    height: 1.3542vw;
+    border-radius: 0.2355vw;
+}
+
+.depositHistoryIconBox h2 {
+    width: 4.8958vw;
+    color: rgba(121, 255, 175, 0.62);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.withdrawHistoryIconBox h2 {
+    width: 4.8958vw;
+    color: rgba(245, 96, 96, 0.62);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.transferHistoryIconBox h2 {
+    width: 4.8958vw;
+    color: rgba(132, 196, 255, 0.62);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.creditHistoryIconBox h2 {
+    width: 4.8958vw;
+    color: rgba(0, 255, 224, 0.62);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.historyDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1563vw;
+    color: rgba(255, 255, 255, 0.64);
+    font-family: Barlow;
+    font-size: 0.5208vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 9px */
+}
+
+.historyDescription p {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: Barlow;
+    font-size: 0.5208vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 9px */
+}
+
+.historyRightBox {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.historyPrice {
+    width: 6.0938vw;
+    text-align: right;
+    font-family: Barlow;
+    font-size: 0.7813vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.depositPrice {
+    color: #79ffaf;
+}
+
+.withdrawPrice {
+    color: #f56060;
+}
+
+.transferPrice {
+    color: #84c4ff;
+}
+
+.historyDate {
+    width: 4.5833vw;
+    height: 1.0417vw;
+    border-radius: 0.2604vw;
+    gap: 0.2vw;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.37);
+    font-family: Barlow;
+    font-size: 0.5208vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 9px */
+}
+
+.historyDate span {
+    color: rgba(255, 255, 255, 0.37);
+    font-family: Barlow;
+    font-size: 0.5208vw;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90%;
+}
+
+.historyCreditLeftBox {
+    gap: 0.8333vw;
+    display: flex;
+    align-items: center;
+}
+
+.historyCreditLeftTime {
+    display: flex;
+    gap: 0.3646vw;
+    color: rgba(255, 255, 255, 0.29);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 12.6px */
+}
+
+.historyCreditLeftTime p {
+    display: flex;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 12.6px */
+}
+
+.historyCreditLeftTime p span {
+    color: rgba(255, 255, 255, 0.68);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+}
+
+.historyCreditAmountPaid {
+    display: flex;
+    gap: 0.5208vw;
+    color: rgba(229, 107, 107, 0.49);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 12.6px */
+}
+
+.historyCreditAmountPaid p {
+    color: #e56b6b;
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 12.6px */
+}
+
+.creditPrice {
+    width: 8.4167vw !important;
+    display: flex;
+    gap: 0.2vw;
+    justify-content: flex-end;
+    color: #79ffaf;
+    text-align: right;
+    font-family: Barlow;
+    font-size: 0.7813vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.creditPrice p {
+    color: #00ff67;
+    text-align: right;
+    font-family: Barlow;
+    font-size: 0.7813vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.loginPage {
+    position: relative;
+    width: 20.8333vw;
+    border-radius: 1.0417vw;
+    padding: 1.9271vw;
+    padding-top: 1.3021vw !important;
+    background: radial-gradient(
+            10.61% 11.03% at 100% 1.24%,
+            rgba(217, 52, 52, 0.28) 0%,
+            rgba(217, 52, 52, 0) 100%
+    ),
+    radial-gradient(
+            55.43% 48.61% at 0.83% 108.15%,
+            rgba(84, 255, 163, 0.05) 0%,
+            rgba(15, 27, 24, 0) 100%
+    ),
+    radial-gradient(
+            49.91% 28.07% at 100% 56.25%,
+            rgba(0, 164, 255, 0.1) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            50.11% 49.31% at 1.34% -0%,
+            rgba(175, 255, 212, 0.28) 0%,
+            rgba(0, 0, 0, 0) 100%
+    ),
+    radial-gradient(
+            71.4% 75.28% at 50% 50%,
+            rgba(14, 20, 19, 0) 63.15%,
+            #0e1413 88.74%
+    ),
+    radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(15, 27, 24, 0.92) 0%,
+            rgba(14, 20, 19, 0.95) 100%
+    );
+}
+
+.loginTitleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2344vw;
+}
+
+.loginTitle {
+    color: #54ffa3;
+    font-family: Barlow;
+    font-size: 1.5914vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.loginSubTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.6394vw;
+    padding: 0 0.4281vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.9946vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 0.1741vw;
+    background: linear-gradient(
+            180deg,
+            rgba(84, 255, 163, 0.26) 0%,
+            rgba(84, 255, 163, 0) 100%,
+            rgba(84, 255, 163, 0) 100%
+    );
+}
+
+.loginDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1563vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.8333vw;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.loginDescription p {
+    color: rgba(255, 255, 255, 0.67);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.loginBottomBox {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8854vw;
+}
+
+.accountList {
+    scroll-behavior: smooth;
+    height: 10.6771vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8854vw;
+}
+
+.accountType {
+    padding: 0vw 0.7292vw;
+    gap: 0.8333vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.07);
+    min-height: 2.9688vw;
+    transition: 250ms ease-in;
+}
+
+.accountType:hover {
+    cursor: pointer;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.accountType:hover #accountArrow {
+    transform: translateX(0.2208vw);
+}
+
+.accountTypeIcon i {
+    color: white;
+    font-size: 1.1vw;
+}
+
+.accountTypeTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.042vw;
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.accountTypeTitle p {
+    color: rgba(255, 255, 255, 0.67);
+    font-family: Barlow;
+    font-size: 0.625vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#accountArrow {
+    position: absolute;
+    right: 0.8813vw;
+    color: #ffffff63;
+    font-size: 0.9vw;
+    transition: 250ms ease-in-out;
+}
+
+.accountTypeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5625vw;
+    height: 1.5625vw;
+}
+
+.orLine {
+    display: flex;
+    align-items: center;
+    gap: 0.5208vw;
+    color: rgba(255, 255, 255, 0.44);
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.orLine div {
+    width: 3.3333vw;
+    height: 0.0521vw;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.loginPageButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1.7708vw;
+    border-radius: 0.4167vw;
+    background: #24dd7a;
+    color: #000;
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: 250ms ease-in;
+}
+
+.loginPageButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 0.4167vw 2.2396vw 0px rgba(36, 221, 122, 0.37);
+}
+
+.loginSide,
+.registerSide,
+.createSide,
+.scanSide {
+    width: 100%;
+    height: 100%;
+    gap: 0.8333vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createBottomBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7813vw;
+}
+
+.createinput-container {
+    position: relative;
+    width: 100%;
+    height: 2.9167vw;
+}
+
+.createmodern-input {
+    width: 100%;
+    padding: 0 0.5208vw;
+    height: 100%;
+    border-radius: 0.4167vw;
+    border: 0.1042vw solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.createmodern-input::placeholder {
+    color: #999999a1;
+}
+
+.createmodern-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+.createBottom {
+    width: 100%;
+    display: flex;
+    gap: 0.5729vw;
+    flex-direction: column;
+}
+
+.createTitle {
+    color: #fff;
+    font-family: Barlow;
+    font-size: 0.8464vw;
+    font-style: normal;
+    font-weight: 600;
+    gap: 0.2083vw;
+    display: flex;
+    flex-direction: column;
+    line-height: 90%; /* 14.626px */
+}
+
+.createTitle p {
+    color: rgba(255, 255, 255, 0.54);
+    font-family: Barlow;
+    font-size: 0.6583vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 11.376px */
+}
+
+.createPlayerList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 0.2604vw;
+    height: 7.2396vw;
+    scroll-behavior: smooth;
+}
+
+.createPlayer {
+    display: flex;
+}
+
+.createButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.6042vw;
+    border-radius: 0.4167vw;
+    background: #24dd7a;
+    color: #000;
+    font-family: Barlow;
+    font-size: 0.9375vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: 250ms ease-in;
+}
+
+.createButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 0.4167vw 2.2396vw 0px rgba(36, 221, 122, 0.37);
+}
+
+.scanBox {
+    flex-direction: column;
+    padding: 0.6771vw;
+    gap: 1.5792vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 14.5833vw;
+    border-radius: 0.4167vw;
+    border: 3px solid rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.scanTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1042vw;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.63);
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+
+.scanTitle p {
+    color: #fff;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 0.7292vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+
+.scanGif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.8125vw;
+    height: 7.8125vw;
+}
+
+.faceid {
+    width: 6.5708vw;
+    height: 6.5708vw;
+    object-fit: cover;
+}

@@ -1,0 +1,922 @@
+.main-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("../assets/png/background.png");
+    background-size: cover;
+    overflow: hidden !important
+}
+
+.main-container .shop-page {
+    position: relative;
+    width: 128.4vh;
+    height: 74.2vh;
+    background: rgba(26, 26, 26, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vh
+}
+
+.main-container .shop-page .head {
+    position: absolute;
+    width: 120vh;
+    height: 11.6vh;
+    top: 4.2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main-container .shop-page .head .left-side {
+    position: relative;
+    width: 85vh;
+    height: 11.6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../assets/png/rec.png);
+    background-size: cover
+}
+
+.main-container .shop-page .head .left-side .user-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.5vh;
+    margin: 2.5vh
+}
+
+.main-container .shop-page .head .left-side .user-info div {
+    display: flex;
+    align-items: center
+}
+
+.main-container .shop-page .head .left-side .user-info div span {
+    font-weight: 500;
+    font-size: 1.6vh;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .25)
+}
+
+.main-container .shop-page .head .left-side .user-info div p {
+    font-weight: 500;
+    font-size: 1.8vh;
+    color: #fff
+}
+
+.main-container .shop-page .head .left-side .user-info div .head-icon {
+    width: 2.2vh;
+    height: 2.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bdff69;
+    box-shadow: 0 0 2.4vh -0.7vh #bdff69, inset 0 0 3.3vh #a3ed45;
+    border-radius: 1vh;
+    margin-right: .75vh;
+    border: .5vh solid rgba(0, 0, 0, .25);
+    transform: rotate(45deg)
+}
+
+.main-container .shop-page .head .left-side .user-info div .head-icon img {
+    width: 1.2vh;
+    height: 1.2vh;
+    transform: rotate(-45deg)
+}
+
+.main-container .shop-page .head .left-side .shop-title {
+    margin: 2.5vh;
+    font-weight: 800;
+    font-size: 3vh;
+    line-height: 3.7vh;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    text-transform: uppercase
+}
+
+.main-container .shop-page .head .right-side {
+    position: relative;
+    width: 32.5vh;
+    height: 11.6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main-container .shop-page .head .right-side a {
+    width: 15vh;
+    height: 11.6vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0114) 0%, rgba(255, 255, 255, 0.02) 100%, rgba(255, 255, 255, 0.02) 100%);
+    border: .1vh solid rgba(255, 255, 255, .05);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.main-container .shop-page .head .right-side a img {
+    position: absolute;
+    width: 10vh;
+    height: 10vh
+}
+
+.main-container .shop-page .head .right-side a p {
+    font-weight: 500;
+    font-size: 1.6vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .25)
+}
+
+.main-container .shop-page .head .right-side a:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0214) 0%, rgba(255, 255, 255, 0.03) 100%, rgba(255, 255, 255, 0.03) 100%)
+}
+
+.main-container .shop-page .items-list {
+    position: absolute;
+    width: 120vh;
+    top: 20vh;
+    max-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: scroll;
+    gap: 2.25vh
+}
+
+.main-container .shop-page .items-list .item-element {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 15vh;
+    height: 15vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.00594059) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: .1vh solid rgba(255, 255, 255, .05)
+}
+
+.main-container .shop-page .items-list .item-element .border-img {
+    position: absolute;
+    width: 13vh;
+    height: 13vh
+}
+
+.main-container .shop-page .items-list .item-element .inner-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 13vh;
+    height: 13vh;
+    background: url(../assets/svg/rec.svg);
+    background-size: cover
+}
+
+.main-container .shop-page .items-list .item-element .inner-item .item-count {
+    position: absolute;
+    top: 1vh;
+    font-weight: 500;
+    font-size: 1.2vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .5)
+}
+
+.main-container .shop-page .items-list .item-element .inner-item .item-img {
+    position: relative;
+    top: -0.75vh;
+    max-width: 40%;
+    min-width: 35%
+}
+
+.main-container .shop-page .items-list .item-element .inner-item .item-info {
+    position: absolute;
+    bottom: 1vh;
+    font-weight: 500;
+    font-size: 1.4vh;
+    text-align: center;
+    color: #fff
+}
+
+.main-container .shop-page .items-list .item-element .inner-item .item-info .item-price {
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text
+}
+
+.main-container .shop-page .items-list .item-element:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.00594059) 0%, rgba(255, 255, 255, 0.065) 100%)
+}
+
+.main-container .buy-shop {
+    position: absolute;
+    width: 93.4vh;
+    height: 74.2vh;
+    background: rgba(26, 26, 26, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.main-container .buy-shop .head {
+    position: absolute;
+    width: 85vh;
+    height: 11.6vh;
+    top: 4.2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main-container .buy-shop .head .left-side {
+    position: relative;
+    width: 85vh;
+    height: 11.6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../assets/png/rec.png);
+    background-size: cover
+}
+
+.main-container .buy-shop .head .left-side .user-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.5vh;
+    margin-right: 8.5vh
+}
+
+.main-container .buy-shop .head .left-side .user-info div {
+    display: flex;
+    align-items: center
+}
+
+.main-container .buy-shop .head .left-side .user-info div span {
+    font-weight: 500;
+    font-size: 1.6vh;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .25)
+}
+
+.main-container .buy-shop .head .left-side .user-info div p {
+    font-weight: 500;
+    font-size: 1.8vh;
+    color: #fff
+}
+
+.main-container .buy-shop .head .left-side .user-info div .head-icon {
+    width: 2.2vh;
+    height: 2.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bdff69;
+    box-shadow: 0 0 2.4vh -0.7vh #bdff69, inset 0 0 3.3vh #a3ed45;
+    border-radius: 1vh;
+    margin-right: .75vh;
+    border: .5vh solid rgba(0, 0, 0, .25);
+    transform: rotate(45deg)
+}
+
+.main-container .buy-shop .head .left-side .user-info div .head-icon img {
+    width: 1.2vh;
+    height: 1.2vh;
+    transform: rotate(-45deg)
+}
+
+.main-container .buy-shop .head .shop-title {
+    margin: 2.5vh;
+    font-weight: 800;
+    font-size: 3vh;
+    line-height: 3.7vh;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    text-transform: uppercase
+}
+
+.main-container .buy-shop .preview-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 5.8vh 4.2vh;
+    width: 46.8vh;
+    height: 46.8vh;
+    border: .2vh solid rgba(255, 255, 255, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.main-container .buy-shop .preview-image .shop-image {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.main-container .buy-shop .preview-image .adress-text {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 2.5vh;
+    text-align: right;
+    color: #fff
+}
+
+.main-container .buy-shop .preview-image .adress-text h2 {
+    font-weight: 700;
+    font-size: 3vh
+}
+
+.main-container .buy-shop .preview-image .adress-text p {
+    font-weight: 500;
+    font-size: 2vh
+}
+
+.main-container .buy-shop .right-side {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 34vh;
+    height: 46.8vh;
+    bottom: 0;
+    right: 0;
+    margin: 5.8vh 4.2vh
+}
+
+.main-container .buy-shop .right-side .info-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.5vh
+}
+
+.main-container .buy-shop .right-side .info-box span {
+    font-weight: 500;
+    font-size: 2vh;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .2)
+}
+
+.main-container .buy-shop .right-side .info-box p {
+    font-weight: 500;
+    font-size: 1.65vh;
+    color: rgba(255, 255, 255, .65)
+}
+
+.main-container .buy-shop .right-side .buttons {
+    position: relative;
+    width: 100%;
+    height: 19.3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5vh
+}
+
+.main-container .buy-shop .right-side .buttons a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8.9vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: .2vh solid rgba(255, 255, 255, .05)
+}
+
+.main-container .buy-shop .right-side .buttons a p {
+    font-weight: 500;
+    font-size: 2vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .25)
+}
+
+.main-container .buy-shop .right-side .buttons a:not(.purchase-btn):hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0385) 0%, rgba(255, 255, 255, 0.085) 100%)
+}
+
+.main-container .buy-shop .right-side .buttons .purchase-btn {
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    transition: transform 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045)
+}
+
+.main-container .buy-shop .right-side .buttons .purchase-btn p {
+    color: #232a43 !important;
+    font-weight: 500
+}
+
+.main-container .buy-shop .right-side .buttons .purchase-btn:hover {
+    transform: translateY(0.5vh)
+}
+
+.main-container .options-menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128.4vh;
+    justify-content: space-between;
+    height: auto;
+    gap: 2vh
+}
+
+.main-container .options-menu a, .main-container .options-menu input, .main-container .options-menu .submit-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 9vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: .2vh solid rgba(255, 255, 255, .05);
+    outline: none;
+    font-size: 1.85vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .45)
+}
+
+.main-container .options-menu a:not(.selected-btn):hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.065) 100%)
+}
+
+.main-container .options-menu .submit-btn, .main-container .options-menu .selected-btn {
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    color: #232a43;
+    font-weight: 500
+}
+
+.main-container .filter-page {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .45);
+}
+
+.main-container .filter-page .filter-buttons {
+    position: relative;
+    width: 25%;
+    top: .5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vh
+}
+
+.main-container .filter-page .filter-buttons a {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 6vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: .2vh solid rgba(255, 255, 255, .05);
+    outline: none;
+    font-size: 1.85vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .45)
+}
+
+.main-container .filter-page .filter-buttons a:hover {
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    color: #232a43;
+    font-weight: 500
+}
+
+.main-container .filter-page .filter-description {
+    font-size: 2vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .25);
+    text-transform: uppercase;
+    letter-spacing: .25vh;
+    margin-bottom: 1vh
+}
+
+.main-container .filter-page ul {
+    position: relative;
+    width: 25%;
+    max-height: 58.75%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: .5vh
+}
+
+.main-container .filter-page ul li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 9vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: .2vh solid rgba(255, 255, 255, .05);
+    outline: none;
+    font-size: 1.85vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .45)
+}
+
+.main-container .filter-page ul li:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.065) 100%)
+}
+
+.main-container .shop-settings {
+    position: absolute;
+    width: 78.4vh;
+    height: 65.4vh;
+    background: rgba(26, 26, 26, .8);
+    border: .1vh solid rgba(255, 255, 255, .05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.main-container .shop-settings .titlebox {
+    position: absolute;
+    height: 11.6vh;
+    margin: 4vh;
+    width: 70.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(../assets/png/rec_vert.png);
+    background-size: cover;
+    top: 0
+}
+
+.main-container .shop-settings .titlebox h2 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 3vh;
+    text-align: center;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.main-container .shop-settings .left-settings {
+    position: absolute;
+    width: 34vh;
+    height: 39.8vh;
+    overflow-y: scroll !important;
+    left: 0;
+    bottom: 0;
+    margin: 4vh;
+    display: block
+}
+
+.main-container .shop-settings .left-settings li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 99.5%;
+    height: 5.6vh;
+    margin-bottom: 1vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0214) 0%, rgba(255, 255, 255, 0.03) 100%, rgba(255, 255, 255, 0.03) 100%);
+    border: .1vh solid rgba(255, 255, 255, .05);
+    font-weight: 500;
+    font-size: 1.65vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .25)
+}
+
+.main-container .shop-settings .left-settings li:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%)
+}
+
+.main-container .shop-settings .right-options {
+    position: absolute;
+    width: 34vh;
+    height: 39.5vh;
+    right: 0;
+    bottom: 0;
+    margin: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: .25vh
+}
+
+.main-container .shop-settings .right-options .seperator {
+    width: 100%;
+    height: .6vh
+}
+
+.main-container .shop-settings .right-options li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 5.8vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0214) 0%, rgba(255, 255, 255, 0.03) 100%, rgba(255, 255, 255, 0.03) 100%);
+    border: .1vh solid rgba(255, 255, 255, .05);
+    font-weight: 500;
+    font-size: 1.65vh;
+    text-align: center;
+    color: rgba(255, 255, 255, .25)
+}
+
+.main-container .shop-settings .right-options li:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%)
+}
+
+.main-container .shop-settings .right-options .stored-money {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 34vh;
+    height: 12.6vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0171) 0%, rgba(255, 255, 255, 0.03) 100%);
+    border: .1vh solid rgba(255, 255, 255, .05)
+}
+
+.main-container .shop-settings .right-options .stored-money .stored-money-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 2vh;
+    font-weight: 500;
+    font-size: 2.2vh;
+    text-transform: uppercase;
+    color: #fff
+}
+
+.main-container .shop-settings .right-options .stored-money .stored-money-amount {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 2vh;
+    font-weight: 700;
+    font-size: 4.65vh;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    text-fill-color: rgba(0, 0, 0, 0)
+}
+
+.main-container .shop-settings .right-options .stored-money .money-icon {
+    position: absolute;
+    right: 3vh;
+    width: 4vh;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bdff69;
+    box-shadow: 0 0 2.4vh -0.7vh #bdff69, inset 0 0 3.3vh #a3ed45;
+    border-radius: 1vh;
+    margin-right: .75vh;
+    border: .5vh solid rgba(0, 0, 0, .25);
+    transform: rotate(45deg)
+}
+
+.main-container .shop-settings .right-options .stored-money .money-icon img {
+    width: 2.4vh;
+    height: 2.4vh;
+    transform: rotate(-45deg)
+}
+
+.main-container .shop-settings .right-options .cancel-btn {
+    position: relative;
+    width: 100%;
+    height: 8.9vh;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.main-container .shop-settings .right-options .cancel-btn p {
+    font-weight: 600;
+    color: #232a43;
+    font-size: 1.85vh
+}
+
+.main-container .inputMenu {
+    position: absolute;
+    width: 31.7vh;
+    height: 29.6vh;
+    background: rgba(26, 26, 26, .8);
+    border: .1vh solid rgba(255, 255, 255, .05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.main-container .inputMenu .titlebox {
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2.75vh
+}
+
+.main-container .inputMenu .titlebox h2 {
+    font-weight: 600;
+    font-size: 2.5vh;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .25vh
+}
+
+.main-container .inputMenu .titlebox p {
+    font-weight: 500;
+    font-size: 1.25vh;
+    color: #d9d9d9
+}
+
+.main-container .inputMenu .buttons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    bottom: 0;
+    margin: 2.75vh;
+    gap: .75vh
+}
+
+.main-container .inputMenu .buttons input, .main-container .inputMenu .buttons .cancel-btn, .main-container .inputMenu .buttons .submit-btn {
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    background: rgba(255, 255, 255, .05);
+    border: .1vh solid rgba(255, 255, 255, .05);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, .45);
+    font-size: 1.65vh;
+    font-weight: 500
+}
+
+.main-container .inputMenu .buttons .submit-btn {
+    color: #232a43;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%)
+}
+
+.main-container .shop-permissions {
+    position: absolute;
+    width: 45.5vh;
+    height: 65.4vh;
+    background: rgba(26, 26, 26, .8);
+    border: .1vh solid rgba(255, 255, 255, .05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.main-container .shop-permissions .titlebox {
+    position: absolute;
+    height: 11.6vh;
+    margin: 4vh;
+    width: 37.85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(../assets/png/rec_vert2.png);
+    background-size: cover;
+    top: 0
+}
+
+.main-container .shop-permissions .titlebox h2 {
+    font-weight: 800;
+    font-size: 3vh;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    background-clip: text;
+    text-transform: uppercase
+}
+
+.main-container .shop-permissions .submit-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 2.4vh 3.75vh;
+    width: 37.75vh;
+    height: 8.9vh;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #bdff69 0%, #8fff00 100%)
+}
+
+.main-container .shop-permissions .submit-btn p {
+    font-weight: 500;
+    font-size: 2vh;
+    text-align: center;
+    color: #232a43;
+    text-align: center
+}
+
+.main-container .shop-permissions .permissions-list {
+    position: absolute;
+    top: 17.5vh;
+    width: 38.5vh;
+    max-height: 35vh;
+    overflow-y: scroll;
+    display: grid
+}
+
+.main-container .shop-permissions .permissions-list .permission-element {
+    margin-bottom: 1vh;
+    position: relative;
+    left: .25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 37.5vh;
+    height: 5.8vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: .2vh solid rgba(255, 255, 255, .05)
+}
+
+.main-container .shop-permissions .permissions-list .permission-element p {
+    margin-left: 2vh;
+    font-weight: 400;
+    font-size: 1.8vh;
+    color: rgba(255, 255, 255, .45)
+}
+
+.main-container .shop-permissions .permissions-list .permission-element .switch {
+    position: absolute;
+    right: 0;
+    margin-right: 2vh;
+    width: 6.5vh;
+    height: 2.8vh;
+    background: rgba(217, 217, 217, .05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main-container .shop-permissions .permissions-list .permission-element .switch .switch-off,
+.main-container .shop-permissions .permissions-list .permission-element .switch .switch-on {
+    position: relative;
+    margin: .4vh;
+    width: 2vh;
+    height: 2vh;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.0285) 0%, rgba(255, 255, 255, 0.05) 100%)
+}
+
+.main-container .shop-permissions .permissions-list .permission-element .switch .seperator {
+    width: .1vh;
+    height: .6vh;
+    background: rgba(217, 217, 217, .05)
+}
+
+.main-container .shop-permissions .permissions-list .permission-element #true .switch-on {
+    background: radial-gradient(50% 50% at 50% 50%, #BFFF36 0%, rgba(188, 255, 46, 0.6) 100%)
+}
+
+.main-container .shop-permissions .permissions-list .permission-element #false .switch-off {
+    background: radial-gradient(50% 50% at 50% 50%, #FF3636 0%, rgba(255, 46, 46, 0.6) 100%)
+}
