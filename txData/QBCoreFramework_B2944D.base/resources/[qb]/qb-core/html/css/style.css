@@ -1,0 +1,91 @@
+html::-webkit-scrollbar {
+    display: none;
+}
+
+@media (width: 3840px) and (height: 2160px) {
+    .success {
+        background-color: #181818;
+        border-radius: 0.4vh;
+        /* border: solid 3px rgb(15, 158, 115); */
+        box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+        font-size: 1.2vh;
+        height: 50px;
+    }
+
+    .primary {
+        background-color: #181818;
+         border-radius: 0.4vh;
+        /* border: solid 3px rgb(158, 108, 15); */
+        box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+        font-size: 1.2vh;
+        height: 50px;
+    }
+
+    .error {
+        background-color: #181818;
+         border-radius: 0.4vh;
+        /* border: solid 3px rgb(158, 15, 15); */
+        box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+        font-size: 1.2vh;
+        height: 50px;
+    }
+
+    .police {
+        background-color: #181818;
+         border-radius: 0.4vh;
+        border: solid 3px rgb(15, 25, 158);
+        box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+        font-size: 1.2vh;
+        height: 50px;
+    }
+
+    .ambulance {
+        background-color: #181818;
+         border-radius: 0.4vh;
+        border: solid 3px rgb(158, 15, 15);
+        box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+        font-size: 1.2vh;
+        height: 50px;
+    }
+
+}
+
+.success {
+    background-color: #181818;
+    border-radius: 0.4vh;
+    /* border: solid 3px rgb(15, 158, 115); */
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+    height: 50px;
+}
+
+.primary {
+    background-color: #181818;
+    border-radius: 0.4vh;
+    /* border: solid 3px rgb(158, 108, 15); */
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+    height: 50px;
+}
+
+.error {
+    background-color: #181818;
+    border-radius: 0.4vh;
+    /* border: solid 3px rgb(158, 15, 15); */
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+    height: 50px;
+}
+
+.police {
+    background-color: #181818;
+    border-radius: 0.4vh;
+    border: solid 3px rgb(15, 25, 158);
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+    height: 50px;
+}
+
+.ambulance {
+    background-color: #181818;
+    border-radius: 0.4vh;
+    border: solid 3px rgb(158, 15, 15);
+    box-shadow: 0rem 0rem 0.1rem 0.05rem #181818;
+    height: 50px;
+}

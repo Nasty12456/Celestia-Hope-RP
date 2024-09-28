@@ -1,0 +1,65 @@
+Lan["fr"] = {
+    error = {
+        ["spawn_block"] = "Désolé, vous ne pouvez pas faire apparaître un véhicule ici car la zone est bloquée.",
+        ["not_rented"] = "Oops! Il semble que vous n'avez pas encore loué de véhicule.",
+        ["rental_not_nearby"] = "Désolé, votre véhicule de location n'est pas dans les environs.",
+        ["taxi_block"] = "Veuillez patienter quelques instants et réessayer plus tard.",
+        ["already_req"] = "Vous avez déjà demandé un taxi. Veuillez descendre pour le prendre !",
+        ["not_inside"] = "Vous n'êtes actuellement pas à l'intérieur du taxi.",
+        ["cancel_taxi"] = "Pour louer un véhicule, vous devez d'abord annuler votre taxi en attente en bas.",
+        ["ride_not_started"] = "La course en taxi n'a pas encore commencé."
+    },
+    success = {
+        ["rented_veh"] = "Félicitations ! Vous avez loué un véhicule avec succès.",
+        ["returned_rental"] = "Votre véhicule de location a été restitué et votre caution a été remboursée.",
+        ["reached_dropoff"] = "Vous êtes arrivé à destination.",
+        ["taxi_arrived"] = "Votre taxi est arrivé et vous attend en bas.",
+        ["dropoff_updated"] = "La destination a été mise à jour avec succès.",
+    },
+    menu = {
+        ["close"] = "Appuyez sur ESC ou cliquez pour fermer.",
+        ["return"] = "Retourner au menu précédent.",
+        ["taxi_header"] = "Bienvenue chez Downtown Cab Co.",
+        ["end_ride"]  = "Annuler votre course en taxi.",
+        ["end_ride_confirm_header"]  = "Êtes-vous sûr de vouloir annuler votre course en taxi ?",
+        ["end_ride_yes"] = "Oui, annuler la course",
+        ["choose_drop"]  = "Sélectionnez une destination.",
+        ["dropoff_header"] = "Destinations disponibles :",
+        ["ped_taxi"] = "Demander un taxi.",
+        ["ped_rental"] = "Louer un véhicule.",
+        ["rental_head"] = "Véhicules disponibles à la location :",
+        ["rental_return"] = "Retourner votre véhicule de location.",
+        ["pedMenu_head"] = "Comment puis-je vous aider ?",
+        ["choose_taxi"] = "Sélectionnez le taxi que vous voulez prendre.",
+        ["taxi_price"] = "Louez ce taxi pour $",
+        ["rent_price"] = "Louez ce véhicule pour $",
+        ["TaxiFare"] = "Le tarif de ce taxi pour cet endroit sera de $",
+        ["skip_ride"] = "Passer votre course en taxi actuelle", 
+        ["skip_confirm_header"] = "Êtes-vous sûr de vouloir passer votre course en taxi ?",
+        ["skip_confirm_yes"] = "Oui, passer la course",
+    },
+    target = {
+        ["lsia_ped"] = "Avez-vous besoin d'aide ?",
+        ["return_rental"] = "Retournez votre véhicule de location à l'aéroport."
+    },
+    text = {
+        ["taxi_menu"] = "[E] Ouvrir le menu taxi",
+    },
+    mail = {
+        ["sender"] = "Downtown Cab Co.",
+        ["subject"] = "Détails du taxi demandé",
+        ["greet"] = "Bonjour",
+        ["model"] = "Le taxi que vous avez demandé est un",
+        ["plate"] = "Son numéro d'immatriculation est",
+        ["location"] = "Votre taxi vous attend en bas, sous le terminal d'arrivée.",
+    },
+    icon = {
+        ["close"] = "fas fa-times-circle",
+        ["check"] = "fas fa-check-circle",
+        ["taxi"] = "fas fa-taxi",
+        ["gps"] = "fas fa-map-marker-alt",
+        ["left_arrow"] = "fas fa-arrow-left",
+        ["lsia_ped"] = "fas fa-info-circle",
+        ["skip"] = "fas fa-forward",
+    }
+}

@@ -1,0 +1,441 @@
+ <html>
+
+<head>
+    <title>S5 Market</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+    <script src="main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+<div id="qb-applewatch">
+<img id="watch-one" src="images/general/watch.png">
+    <div id="watch-led">
+        <div id="apps">
+            <div id="app1">
+                <div onclick="selectApp('message-side')" class="app-a">
+                    <img src="images/apps/message.png">
+                </div>
+                <div onclick="selectApp('calcutorArea')" style="margin-top:-10%" class="app-a">
+                    <img src="images/apps/calculator.png">
+                </div>
+                <div onclick="selectApp('call-keyboard')" class="app-a">
+                    <img src="images/apps/call.png">
+                </div>
+            </div>
+            <div id="app2">
+                <div onclick="selectApp('settings-all')" class="app">
+                    <img src="images/apps/settings.png">
+                </div>
+                <div onclick="selectApp('clock')" class="app">
+                    <img src="images/apps/clock.png">
+                </div>
+                <div onclick="selectApp('musicApp')" class="app">
+                    <img src="images/apps/music.png">
+                </div>
+            </div>
+            <div id="app3">
+                <div onclick="selectApp('health-all')" class="app-a">
+                    <img src="images/apps/health.png">
+                </div>
+                <div onclick="selectApp('contacts-all')" style="margin-top:10%" class="app-a">
+                    <img src="images/apps/contacts.png">
+                </div>
+                <div onclick="selectApp('gameArea')" class="app-a">
+                    <img src="images/apps/game.png">
+                </div>
+            </div>
+        </div>
+        <div class="app-pages" id="calcutorArea">
+            <div id="calcutor-valueSide">
+                <p id="calcutor-value">0</p>
+            </div>
+            <img src="images/general/calcutor.png">
+            <div id="calcutor-keyboard">
+                <div id="row1">
+                    <div onclick="calculatorvalue('AC')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('+/-')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('%')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('/')" class="calcutor-button"></div>
+                </div>
+                <div id="row2">
+                    <div onclick="calculatorvalue('7')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('8')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('9')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('*')" class="calcutor-button"></div>
+                </div>
+                <div id="row3">
+                    <div onclick="calculatorvalue('4')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('5')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('6')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('-')" class="calcutor-button"></div>
+                </div>
+                <div id="row4">
+                    <div onclick="calculatorvalue('1')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('2')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('3')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('+')" class="calcutor-button"></div>
+                </div>
+                <div id="row5">
+                    <div onclick="calculatorvalue('0')" style="width: 40%" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('point')" class="calcutor-button"></div>
+                    <div onclick="calculatorvalue('=')"class="calcutor-button"></div>
+                </div>
+            </div>
+        </div>
+        <div class="app-pages" id="musicApp">
+            <iframe id="test" sandbox="allow-same-origin allow-scripts allow-forms" src="http://mysound.ge/index.php"></iframe>
+        </div>
+        <div id="watchBackground" class="arkaplan">
+            <img width="100%" height="100%" src="images/general/background.png">
+        </div>
+        <div class="app-pages" id="gameArea"></div>
+        
+        <div class="app-pages" id="health-all">
+            <i id="health-logo" class="fa-brands fa-apple"></i>
+            <div id="health-one">
+                <p id="healt-kalp">Health</p>
+                <p id="healt-can">98</p>
+                <p id="healt-can2">/200</p>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div id="health-one2">
+                <i class="fa-solid fa-pizza-slice"></i>
+                <p id="hunger">Hungry</p>
+                <p id="hunher2">78</p>
+                <p id="hunher3">/100</p>
+            </div>
+            <div id="health-one3">
+                <i class="fa-solid fa-droplet"></i>
+                <p id="thirste">Thirst</p>
+                <p id="thirste2">89</p>
+                <p id="thirste3">/100</p>
+            </div>
+        </div>
+
+
+        <div class="app-pages" id="contacts-all">
+            <div id="contacts-general">
+                <i id="contacts-logo" class="fa-brands fa-apple"></i>
+                <div id="users-select">
+                    <i id="logo-contacts-side" onclick="changePage('contacts-side')" style="color:rgb(31, 161, 221)" class="fa-solid fa-clock-rotate-left contacts-logos"></i>
+                    <i id="logo-contacts-friend" onclick="changePage('contacts-friend')" class="fa-solid fa-circle-user contacts-logos"></i>
+                    <i id="logo-contacts-add" onclick="changePage('contacts-add')" class="fa-solid fa-user-plus contacts-logos"></i>
+                </div>
+            </div>
+            <div id="contacts-side" class="contacts-pages">
+                <!-- <div class="users">
+                    <div class="users-green"></div>
+                    <i class="fa-solid fa-phone users-phone"></i>
+                    <p class="users-name">Samy</p>
+                    <p class="users-time">16:52</p>
+                </div>
+                <div class="users">
+                    <div class="users-red"></div>
+                    <i class="fa-solid fa-phone users-phone"></i>
+                    <p class="users-name">Gener4l</p>
+                    <p class="users-time">11:42</p>
+                </div>
+                <div class="users">
+                    <div class="users-green"></div>
+                    <i class="fa-solid fa-phone users-phone"></i>
+                    <p class="users-name">Rollo</p>
+                    <p class="users-time">17:22</p>
+                </div>
+                <div class="users">
+                    <div class="users-green"></div>
+                    <i class="fa-solid fa-phone users-phone"></i>
+                    <p class="users-name">Samy</p>
+                    <p class="users-time">16:52</p>
+                </div>
+                <div class="users">
+                    <div class="users-green"></div>
+                    <i class="fa-solid fa-phone users-phone"></i>
+                    <p class="users-name">Gener4l</p>
+                    <p class="users-time">11:42</p>
+                </div>
+                <div class="users">
+                    <div class="users-green"></div>
+                    <i class="fa-solid fa-phone users-phone"></i>
+                    <p class="users-name">Rollo</p>
+                    <p class="users-time">17:22</p>
+                </div> -->
+            </div>
+
+            <div id="contacts-friend" style="display: none" class="contacts-pages">
+                <input id="searchInput" type="text" class="inputs" placeholder="Search">
+                <div id="contact-friend-side">
+                    <!-- <div class="contact-friends">
+                        <div class="contact-friends-user">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <p class="contact-friends-name">Samy</p>
+                        <i class="fa-solid fa-comment-sms contact-friends-friendLogos"></i>
+                        <i class="fa-solid fa-trash contact-friends-friendLogos"></i>
+                    </div>
+                    <div class="contact-friends">
+                        <div class="contact-friends-user">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <p class="contact-friends-name">Gener4l</p>
+                        <i class="fa-solid fa-comment-sms contact-friends-friendLogos"></i>
+                        <i class="fa-solid fa-trash contact-friends-friendLogos"></i>
+                    </div>
+                    <div class="contact-friends">
+                        <div class="contact-friends-user">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <p class="contact-friends-name">Rollo</p>
+                        <i class="fa-solid fa-comment-sms contact-friends-friendLogos"></i>
+                        <i class="fa-solid fa-trash contact-friends-friendLogos"></i>
+                    </div>
+                    <div class="contact-friends">
+                        <div class="contact-friends-user">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <p class="contact-friends-name">Samy</p>
+                        <i class="fa-solid fa-comment-sms contact-friends-friendLogos"></i>
+                        <i class="fa-solid fa-trash contact-friends-friendLogos"></i>
+                    </div>
+                    <div class="contact-friends">
+                        <div class="contact-friends-user">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <p class="contact-friends-name">Gener4l</p>
+                        <i class="fa-solid fa-comment-sms contact-friends-friendLogos"></i>
+                        <i class="fa-solid fa-trash contact-friends-friendLogos"></i>
+                    </div>
+                    <div class="contact-friends">
+                        <div class="contact-friends-user">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <p class="contact-friends-name">Rollo</p>
+                        <i class="fa-solid fa-comment-sms contact-friends-friendLogos"></i>
+                        <i class="fa-solid fa-trash contact-friends-friendLogos"></i>
+                    </div> -->
+                </div>
+            </div>
+            <div id="contacts-add" class="contacts-pages">
+                <div id="conteact-add-area">
+                    <input id="name" type="text" class="inputs" placeholder="Name">
+                    <input id="lastname" type="text" class="inputs" placeholder="Lastname">
+                    <input id="number" type="text" class="inputs" placeholder="Number">
+                </div>
+                <div onclick="addFriend()" id="conteact-add-verify">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-pages" id="message-side">
+            <div id="messageSend-area">
+                <div id="block-message-profile">
+                    <i id="people-samy" class="fa-solid fa-circle-user"></i>
+                    <p id="name-up-icon">Samy></p>
+                </div>
+                <div id="message-text-add">
+                    <!-- <div class="message-you">
+                        he man, we on for hoops this aftermoon?
+                    </div>
+                    <div class="message-target">
+                        you know it!
+                    </div>
+                    <div class="message-you">
+                        Good, cuz we're talking you boys down.
+                    </div>
+                    <div class="message-target">
+                        Not a chance.
+                    </div> -->
+                </div>
+                <div id="message-send-type">
+                    <i onclick="sendMessage()" class="fa-solid fa-circle-up"></i>
+                    <input id="messageInput" type="text" class="inputs" placeholder="Category name here...">
+                </div>
+            </div>
+
+            <div id="messageList-area">
+                <i id="message-logo" class="fa-brands fa-apple"></i>
+                    <div id="message-all">
+                    <!-- <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Samy</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">oruspu</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div>
+                    <div class="message-1">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <p class="message-name">Hemo</p>
+                        <p class="messsage-hello">How are you?</p>
+                        <p class="message-time">14:05</p>
+                    </div> -->
+            </div>
+            </div>
+        </div>
+        
+        <div id="call-screen">
+            <i id="call-logo" class="fa-brands fa-apple"></i>
+            <div id="call-textArea">
+                <p id="call-name">Samy Paul</p>
+                <p id="call-text">Coming Call</p>
+            </div>
+            <div id="call-icons">
+                <div onclick="openCall()" id="call-open">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div onclick="closeCall()" id="call-close">
+                    <i class="fa-solid fa-phone-flip"></i>
+                </div>
+            </div>
+            <div id="oncall-icons">
+                <div onclick="closeCall()" id="call-onopen">
+                    <i class="fa-solid fa-phone-flip"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-pages" id="settings-all">
+            <div id="one-st">
+                <i class="fa-solid fa-signal"></i>
+            </div>
+            <div id="settings-area">
+                <div onclick="setSettings('Notify')" class="settings-app">
+                    <i id="Notify" class="fa-solid fa-bell"></i>
+                </div>
+                <div onclick="setSettings('Fly')" class="settings-app">
+                    <i id="Fly" class="fa-solid fa-plane"></i>
+                </div>
+                <div onclick="setSettings('Wifi')" class="settings-app">
+                    <i id="Wifi" class="fa-solid fa-wifi"></i>
+                </div>
+                <div onclick="setSettings('Wifi')" class="settings-app">
+                    <i id="settings-phone" class="fa-solid fa-phone">
+                        <p id="settings-value">521426</p>
+                    </i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="app-pages" id="call-keyboard">
+            <div id="call-keyboard-number">
+                <p id="call-keyboard-value">621252</p>
+            </div>
+            <div id="call-keyboard-side">
+                <div onclick="phoneAdd('1')" class="call-keyboard-number">
+                    <p class="number">1</p>
+                </div>
+                <div onclick="phoneAdd('2')" class="call-keyboard-number">
+                    <p class="number">2</p>
+                </div>
+                <div onclick="phoneAdd('3')" class="call-keyboard-number">
+                    <p class="number">3</p>
+                </div>
+                <div onclick="phoneAdd('4')" class="call-keyboard-number">
+                    <p class="number">4</p>
+                </div>
+                <div onclick="phoneAdd('5')" class="call-keyboard-number">
+                    <p class="number">5</p>
+                </div>
+                <div onclick="phoneAdd('6')" class="call-keyboard-number">
+                    <p class="number">6</p>
+                </div>
+                <div onclick="phoneAdd('7')" class="call-keyboard-number">
+                    <p class="number">7</p>
+                </div>
+                <div onclick="phoneAdd('8')" class="call-keyboard-number">
+                    <p class="number">8</p>
+                </div>
+                <div onclick="phoneAdd('9')" class="call-keyboard-number">
+                    <p class="number">9</p>
+                </div>
+                <div onclick="phoneAdd('0')" class="call-keyboard-number">
+                    <p class="number">0</p>
+                </div>
+                <div onclick="sendCall()" id="call-keyboard-call">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div onclick="clearPhone()" id="call-keyboard-delete">
+                    <i class="fa-solid fa-delete-left"></i>
+                </div>
+        </div>
+        </div>
+
+        <div id="clock-side" class="saat">
+            <img class="second" id="second" style="transform: rotate(180deg)" src="images/clock/saniye.png">
+            <img class="minute" id="minute" style="transform: rotate(180deg)" src="images/clock/dakika3.png">
+            <img class="hour" id="hour" style="transform: rotate(180deg)" src="images/clock/saat3.png">
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

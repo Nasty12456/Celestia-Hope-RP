@@ -1,0 +1,4 @@
+ALTER TABLE
+    `players`
+ADD
+    IF NOT EXISTS `inside` VARCHAR(50) NULL DEFAULT '';

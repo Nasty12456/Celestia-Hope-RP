@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMapParentTxds>
+ <txdRelationships>
+  <Item>
+   <parent>nteam_tunnel1</parent>
+   <child>nteam_tunnel</child>
+  </Item>
+ </txdRelationships>
+</CMapParentTxds>

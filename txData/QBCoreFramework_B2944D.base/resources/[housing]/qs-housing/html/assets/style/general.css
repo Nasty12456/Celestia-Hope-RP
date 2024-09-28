@@ -1,0 +1,19 @@
+/* Style with general rules */
+
+/* General styles */
+body {
+    user-select: none;
+    overflow: hidden;
+
+    margin: 0;
+
+    background: transparent;
+
+    font-family: 'Source Sans Pro';
+}
+
+/* No drag and drop */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}

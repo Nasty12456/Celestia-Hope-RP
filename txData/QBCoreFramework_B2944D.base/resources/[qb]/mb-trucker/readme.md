@@ -1,0 +1,10 @@
+DEPENDANCYS:
+
+- PS-UI
+- PS-BUFFS
+- RENEWED-PHONE
+- LATEST QBCore
+
+
+DISCORD:
+https://discord.gg/gCQx499JYY

@@ -1,0 +1,13 @@
+<svg width="78" height="27" viewBox="0 0 78 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_953_1525" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="78" height="27">
+<path d="M0 13.5C0 6.04416 6.04416 0 13.5 0H73C75.7614 0 78 2.23858 78 5V22C78 24.7614 75.7614 27 73 27H13.5C6.04416 27 0 20.9558 0 13.5Z" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_953_1525)">
+<path d="M0 13.5C0 6.04416 6.04416 0 13.5 0H73C75.7614 0 78 2.23858 78 5V22C78 24.7614 75.7614 27 73 27H13.5C6.04416 27 0 20.9558 0 13.5Z" fill="#BEDCFF" fill-opacity="0.12"/>
+<path d="M0.5 13.5C0.5 6.3203 6.3203 0.5 13.5 0.5H73C75.4853 0.5 77.5 2.51472 77.5 5V22C77.5 24.4853 75.4853 26.5 73 26.5H13.5C6.3203 26.5 0.5 20.6797 0.5 13.5Z" stroke="#BEDCFF" stroke-opacity="0.15"/>
+<rect opacity="0.3" x="30.3623" y="-30" width="13.8983" height="92.6256" transform="rotate(40.6684 30.3623 -30)" fill="#BEDCFF" fill-opacity="0.12"/>
+<rect opacity="0.3" x="53.3623" y="-23" width="13.8983" height="92.6256" transform="rotate(40.6684 53.3623 -23)" fill="#BEDCFF" fill-opacity="0.12"/>
+<rect opacity="0.3" x="76.3623" y="-16" width="13.8983" height="92.6256" transform="rotate(40.6684 76.3623 -16)" fill="#BEDCFF" fill-opacity="0.12"/>
+<rect opacity="0.3" x="99.3623" y="-9" width="13.8983" height="92.6256" transform="rotate(40.6684 99.3623 -9)" fill="#BEDCFF" fill-opacity="0.12"/>
+</g>
+</svg>

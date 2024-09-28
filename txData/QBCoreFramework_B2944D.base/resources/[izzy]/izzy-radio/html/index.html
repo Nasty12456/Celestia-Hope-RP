@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stg.tebex.io</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu-container active">
+        <div onclick="memberListSmall()" class="close-menu-icon">
+            <div class="line"></div>
+        </div>
+
+        <div class="member-list-box">
+            <img class="menu-user-icon" src="public/menu-user-icon.svg">
+            <p class="member-list-text">Active Radio Member List</p>
+            <p class="member-list-num">25</p>
+        </div>
+        <div class="member-items-container"></div>
+    </div>
+
+    <div class="telsiz-main-container">
+        <div class="izzy-radio">
+            <div onclick="volume(true)" class="volume-up"></div>
+            <div onclick="volume(false)" class="volume-down"></div>
+            <div class="telsiz-wrapper">
+                <div class="top-clock">16:54</div>
+                <div class="top-buttons-container">
+                    <div onclick="changePage('channels')" class="channel-button buttons button-channels">
+                        <svg class="channel-icon" width="13" height="14" viewBox="0 0 13 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="channel-icon"
+                                d="M2.03109 4.19931C1.9246 4.19931 1.81916 4.22029 1.72078 4.26104C1.6224 4.30179 1.53301 4.36152 1.45771 4.43681C1.38242 4.51211 1.32269 4.6015 1.28194 4.69988C1.24119 4.79826 1.22021 4.9037 1.22021 5.01019C1.22021 5.11667 1.24119 5.22212 1.28194 5.3205C1.32269 5.41888 1.38242 5.50827 1.45771 5.58356C1.53301 5.65886 1.6224 5.71859 1.72078 5.75934C1.81916 5.80009 1.9246 5.82106 2.03109 5.82106C2.24615 5.82106 2.4524 5.73563 2.60447 5.58356C2.75653 5.43149 2.84196 5.22525 2.84196 5.01019C2.84196 4.79513 2.75653 4.58888 2.60447 4.43681C2.4524 4.28474 2.24615 4.19931 2.03109 4.19931ZM2.03109 3.38681C1.94171 3.38735 1.85369 3.3944 1.76703 3.40794C1.91704 3.02938 2.17736 2.70465 2.51421 2.47588C2.85106 2.24711 3.2489 2.12486 3.65609 2.125H9.34359C9.88231 2.125 10.399 2.33901 10.7799 2.71994C11.1608 3.10087 11.3748 3.61753 11.3748 4.15625V9.84375C11.3748 10.3825 11.1608 10.8991 10.7799 11.2801C10.399 11.661 9.88231 11.875 9.34359 11.875H3.65609C3.11737 11.875 2.60071 11.661 2.21978 11.2801C1.83885 10.8991 1.62484 10.3825 1.62484 9.84375V6.58319C1.86487 6.64457 2.11575 6.65031 2.35834 6.59997C2.60093 6.54963 2.82881 6.44454 3.0246 6.29272C3.22039 6.1409 3.37892 5.94636 3.48808 5.72395C3.59723 5.50154 3.65415 5.25713 3.65447 5.00938C3.65382 4.5791 3.48255 4.16665 3.17823 3.86248C2.8739 3.5583 2.46136 3.38724 2.03109 3.38681ZM4.46859 5.78125C4.46859 5.88899 4.51139 5.99233 4.58758 6.06851C4.66376 6.1447 4.7671 6.1875 4.87484 6.1875H8.12484C8.23258 6.1875 8.33592 6.1447 8.4121 6.06851C8.48829 5.99233 8.53109 5.88899 8.53109 5.78125C8.53109 5.67351 8.48829 5.57017 8.4121 5.49399C8.33592 5.4178 8.23258 5.375 8.12484 5.375H4.87484C4.7671 5.375 4.66376 5.4178 4.58758 5.49399C4.51139 5.57017 4.46859 5.67351 4.46859 5.78125ZM4.46859 8.21875C4.46859 8.32649 4.51139 8.42983 4.58758 8.50601C4.66376 8.5822 4.7671 8.625 4.87484 8.625H6.99872C7.10646 8.625 7.20979 8.5822 7.28598 8.50601C7.36216 8.42983 7.40497 8.32649 7.40497 8.21875C7.40497 8.11101 7.36216 8.00767 7.28598 7.93149C7.20979 7.8553 7.10646 7.8125 6.99872 7.8125H4.87484C4.7671 7.8125 4.66376 7.8553 4.58758 7.93149C4.51139 8.00767 4.46859 8.11101 4.46859 8.21875Z"
+                                fill="#BEDCFF" />
+                        </svg>
+                        <p class="channel-text">Channels</p>
+                    </div>
+                    <div onclick="changePage('main')" class="member-button buttons button-main active">
+                        <svg class="members-icon" width="14" height="15" viewBox="0 0 14 15" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="members-icon"
+                                d="M0.583496 12.1668V10.5335C0.583496 10.203 0.668663 9.89923 0.838996 9.62234C1.00933 9.34546 1.23527 9.1339 1.51683 8.98768C2.11961 8.68629 2.73211 8.46034 3.35433 8.30984C3.97655 8.15934 4.6085 8.0839 5.25016 8.08351C5.89183 8.08312 6.52377 8.15857 7.146 8.30984C7.76822 8.46112 8.38072 8.68707 8.9835 8.98768C9.26544 9.13351 9.49158 9.34507 9.66191 9.62234C9.83225 9.89962 9.91722 10.2033 9.91683 10.5335V12.1668H0.583496ZM11.0835 12.1668V10.4168C11.0835 9.98907 10.9645 9.57821 10.7265 9.18426C10.4885 8.79032 10.1506 8.45257 9.71266 8.17101C10.2085 8.22934 10.6752 8.32909 11.1127 8.47026C11.5502 8.61143 11.9585 8.7839 12.3377 8.98768C12.6877 9.18212 12.955 9.39834 13.1397 9.63634C13.3245 9.87434 13.4168 10.1345 13.4168 10.4168V12.1668H11.0835ZM5.25016 7.50018C4.6085 7.50018 4.05919 7.27171 3.60225 6.81476C3.1453 6.35782 2.91683 5.80851 2.91683 5.16684C2.91683 4.52518 3.1453 3.97587 3.60225 3.51893C4.05919 3.06198 4.6085 2.83351 5.25016 2.83351C5.89183 2.83351 6.44113 3.06198 6.89808 3.51893C7.35502 3.97587 7.5835 4.52518 7.5835 5.16684C7.5835 5.80851 7.35502 6.35782 6.89808 6.81476C6.44113 7.27171 5.89183 7.50018 5.25016 7.50018ZM11.0835 5.16684C11.0835 5.80851 10.855 6.35782 10.3981 6.81476C9.94114 7.27171 9.39183 7.50018 8.75016 7.50018C8.64322 7.50018 8.50711 7.48812 8.34183 7.46401C8.17655 7.4399 8.04044 7.41307 7.9335 7.38351C8.196 7.0724 8.39783 6.72726 8.539 6.34809C8.68016 5.96893 8.75055 5.57518 8.75016 5.16684C8.74977 4.75851 8.67938 4.36476 8.539 3.98559C8.39861 3.60643 8.19677 3.26129 7.9335 2.95018C8.06961 2.90157 8.20572 2.86987 8.34183 2.85509C8.47794 2.84032 8.61405 2.83312 8.75016 2.83351C9.39183 2.83351 9.94114 3.06198 10.3981 3.51893C10.855 3.97587 11.0835 4.52518 11.0835 5.16684Z"
+                                fill="black" />
+                        </svg>
+                        <p class="members-text">Members</p>
+
+                    </div>
+                </div>
+                <div class="radio-content-container pages page-main">
+                    <div onclick="back()" class="bluetooth-icon"></div>
+                    <img src="public/icon-wifi.svg" class="wifi-icon">
+                    <div onclick="favorite()" class="star-icon"></div>
+                    <div class="kablo-icon"></div>
+                    <p class="radio-channel-text">Radio Channel;</p>
+                    <div class="radio-channel-input-box">
+                        <input id="radio-input" type="text" class="radio-input" placeholder="00.0" value="00.0">
+                        <p class="frequency">Frequency</p>
+                    </div>
+                    <div onclick="connect()" class="connect-btn">Connect</div>
+                    <div onclick="disconnect()" class="disconnect-btn">Disconnected</div>
+                </div>
+                <div class="mic-user-container pages page-main">
+                    <div class="text-mhz">00.0Mhz</div>
+                    <div class="member-list-text-2">Member List</div>
+                    <div class="mic-items-container"></div>
+                </div>
+                <div class="page-channels pages">
+                    <div class="channels-items-container channels-item">
+                        <div class="channel-items-top-content">
+                            <div class="item-channels-title">Channels</div>
+                            <div class="item-channels-text">Channel List</div>
+                            <div onclick="createPage()" class="create-channel-btn">Create Channel</div>
+                            <div class="channel-list-item-container"></div>
+                            <div class="create-channel">
+                                <div class="radio-channel-input-box-2">
+                                    <input type="text" class="radio-input-2" placeholder="00.0" value="00.0">
+                                    <p class="frequency-2">Frequency</p>
+                                </div>
+                                <div class="channel-password-text">Channel Password</div>
+                                <input type="text" class="channel-password-inp" placeholder="Password...">
+                                <div onclick="createChannel()" class="big-create-channel-btn">Create Channel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+CREATE TABLE `izzy_radio` (
+	`id` INT(255) NOT NULL AUTO_INCREMENT,
+	`player` VARCHAR(255) NOT NULL DEFAULT '0' COLLATE 'utf8_general_ci',
+	`data` LONGTEXT NOT NULL DEFAULT '[]' COLLATE 'utf8_general_ci',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=3
+;

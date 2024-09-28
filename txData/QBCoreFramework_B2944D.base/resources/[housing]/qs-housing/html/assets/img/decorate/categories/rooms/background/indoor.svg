@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg class="indoor" viewBox="0 0 530 220" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="0,220 285,66 530,200 530,220" fill="#fff3eb"></polygon>
+
+    <linearGradient id="wallGradient" gradientTransform="rotate(45)">&gt;
+        <stop offset="0" stop-color="#bebebe"></stop>
+        <stop offset="1" stop-color="#bebebe40"></stop>
+    </linearGradient>
+    <polygon points="0,0 0,220 285,66 285,0" fill="#fff3eb85"></polygon>
+    <polygon points="285,0 285,66 530,200 530,0" fill="#fff3eb50"></polygon>
+</svg>

@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="main.css" />
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="General">
+            <div class="notify successnotify" id="notifysuccess" style="display: none">
+                <div class="notifyText" style="color: #60ffa9"><i class="fa-solid fa-circle-check" style="color: #60ffa9"></i>Succesfuly</div>
+                <p class="notifyDescription" id="notifyDescriptionSuccess"></p>
+            </div>
+            <div class="notify warningnotify" id="notifyerror" style="display: none">
+                <div class="notifyText"><i class="fa-solid fa-triangle-exclamation"></i>Warning</div>
+                <p class="notifyDescription" id="notifyDescriptionError"></p>
+            </div>
+            <div class="jobTasks pop-up" id="jobTasks" style="display: none">
+                <div class="jobTaskTopSide">
+                    <h2 class="pop-upTitle">
+                        GARBAGE
+                        <p>JOB TASKS</p>
+                    </h2>
+                    <div class="jobTaskLine"></div>
+                    <h3 class="pop-upDescription">
+                        GARBAGE TRUCKS
+                        <p id="earningInformation"></p>
+                    </h3>
+                    <div class="jobTaskLine"></div>
+                    <h3 class="taskCompleteText">
+                        Completed Task
+                        <p id="taskcount">10 Task</p>
+                    </h3>
+                </div>
+                <div class="jobTasksSide" id="jobTasksSide">
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p></p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p>Lorem ipsum dolor sit amet consect. In magnis vehicula quis orci diam</p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p>Lorem ipsum dolor sit amet consect. In magnis vehicula quis orci diam</p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p>Lorem ipsum dolor sit amet consect. In magnis vehicula quis orci diam</p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p>Lorem ipsum dolor sit amet consect. In magnis vehicula quis orci diam</p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p>Lorem ipsum dolor sit amet consect. In magnis vehicula quis orci diam</p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p>Lorem ipsum dolor sit amet consect. In magnis vehicula quis orci diam</p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                    <div class="jobTaskBox">
+                        <div class="jobTaskBoxTopSide">
+                            <h2 class="jobTaskBoxTitle">
+                                JOB TASK #1
+                                <p>Lorem ipsum dolor sit amet consect. In magnis vehicula quis orci diam</p>
+                            </h2>
+                            <div class="single-chart" style="width: 5vw">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path
+                                        class="circle-bg"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path
+                                        class="circle"
+                                        stroke-dasharray="75, 100"
+                                        d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="18.85" class="percentage">10</text>
+                                    <text x="18" y="25.65" class="percentage2">/20</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="jobTaskBoxBottomSide">
+                            <div class="taskPriceBox">PRICE : $2500</div>
+                            <div class="taskExpBox">1500 Exp</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exitBox" id="ExitTasks" style="position: absolute; right: 1.5625vw; top: 1.5625vw">
+                    <div class="exitIcon"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+            </div>
+            <div class="earningsMenu pop-up" id="earningsMenu" style="display: none">
+                <div class="earningsTopSide">
+                    <h2 class="earningsTitle">
+                        GARBAGE
+                        <p>JOB EARNINGS</p>
+                    </h2>
+                    <div class="earningLine"></div>
+                    <h3 class="earningsDescription">
+                        GARBAGE TRUCKS
+                        <p id="earningsDescription">Lorem ipsum dolor sit amet cons Nibh dictumst</p>
+                    </h3>
+                </div>
+                <div class="earningsPriceBox" id="earningsPriceBox">
+                    <!-- <div class="earningPrice" id="Earning">
+            <h2>
+              Earnings
+              <p>$56.670</p>
+            </h2>
+          </div>
+          <div class="earningPrice" id="Earning">
+            <h2>
+              Daily Earnings Limit
+              <p style="color: #dc5353">$80.579</p>
+            </h2>
+          </div> -->
+                </div>
+                <h2 class="earningInformation">
+                    Earning Information
+                    <p>Lorem ipsum dolor sit amet consectetur. Ac suspendisse malesuada accumsan sit sit eget.</p>
+                </h2>
+                <div class="earningsCollectBox">
+                    <input type="text" placeholder="Amount..." class="modern-input" id="ParaDeger" />
+                    <div id="collectButton" class="collectButton">Collect Earnings</div>
+                </div>
+                <div class="exitBox" id="exitBoxEarning" style="position: absolute; right: 1.5625vw; top: 1.5625vw">
+                    <div class="exitIcon"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+            </div>
+            <div class="jobRouteMenu pop-up" id="jobRouteMenu" style="display: none">
+                <!-- <h2 class="jobRouteTitle">JOB ROUTE #1</h2>
+        <div class="jobRouteSide">
+          <div
+            class="jobRouteImg"
+            style="background-image: url(./img/asd.png)"
+          ></div>
+          <div class="jobRouteRightSide">
+            <div class="jobRouteLocationInfo">
+              <div class="routeLocation startLocation">
+                <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+              </div>
+              <div class="routeLocation finishLocation">
+                <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+              </div>
+            </div>
+            <div class="routeDistanceBox">
+              <div class="routeDistance">
+                <progress class="cubuk1" max="100" value="100"></progress>
+                <progress class="cubuk2" max="100" value="100"></progress>
+                <progress class="cubuk3" max="100" value="40"></progress>
+                <progress class="cubuk4" max="100" value="0"></progress>
+              </div>
+              12KM
+            </div>
+            <h2 class="jobRoutePrice">
+              PRICE:
+              <p>$25.000</p>
+            </h2>
+          </div>
+        </div>
+        <div class="jobRouteButtonBox">
+          <div class="jobRouteButton jobRouteCancelButton">Cancel</div>
+          <div class="jobRouteButton jobRouteStartButton">Start Job</div>
+        </div>
+        <div
+          class="exitBox"
+          style="position: absolute; right: 1.5625vw; top: 1.5625vw"
+        >
+          <div class="exitIcon"><i class="fa-solid fa-xmark"></i></div>
+        </div> -->
+            </div>
+            <div class="menu" id="menu" style="display: flex">
+                <header class="topSide">
+                    <div class="topLeftSide">
+                        <div class="titleBox">
+                            <img src="./img/titleimg.png" alt="" class="titleImg" />
+                            <h2 class="Title">
+                                GARBAGE
+                                <p>JOB ( TRUCKS )</p>
+                            </h2>
+                        </div>
+                        <div class="topLine"></div>
+                        <h3 class="descriptionText">
+                            GARBAGE TRUCKS
+                            <p id="descriptionText">Lorem ipsum dolor sit amet consectetur. Nibh dictumst massa et ullamcorper proin.</p>
+                        </h3>
+                    </div>
+                    <div class="exitBox" id="exitBoxButton">
+                        <div class="exitIcon"><i class="fa-solid fa-xmark"></i></div>
+                        Exit
+                    </div>
+                </header>
+                <section>
+                    <div class="leftSide">
+                        <div class="leftTopSide">
+                            <div class="menuTitle">Job Routes</div>
+                            <div class="menuLine"></div>
+                            <div class="menuCategory">
+                                <!-- EKLENECEK -->
+                                <div id="jobroutesprice" class="Category">Price</div>
+                                <div id="jobroutesroute" class="Category">Route</div>
+                                <div id="jobroutesrandom" class="Category">Random</div>
+                            </div>
+                        </div>
+                        <div class="routesList" id="routesList">
+                            <!-- <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div>
+              <div class="routeBox">
+                <div class="routeBoxLeft">
+                  <div
+                    class="routeImg"
+                    style="background-image: url(./img/routeimg.png)"
+                  ></div>
+                  <div class="routeTitleBox">
+                    <h3 class="routeTitle">
+                      JOB ROUTE #1
+                      <p>Garbage Job</p>
+                    </h3>
+                    <div class="routeDistanceBox">
+                      <div class="routeDistance">
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance distanceSelect"></div>
+                        <div class="Distance"></div>
+                      </div>
+                      12KM
+                    </div>
+                  </div>
+                </div>
+                <div class="routeLocationBox">
+                  <div class="routeLocation startLocation">
+                    <i class="fa-solid fa-location-dot"></i>Los Santos Worldlive
+                  </div>
+                  <div class="routeLocation finishLocation">
+                    <i class="fa-solid fa-location-crosshairs"></i>Los Soutside
+                  </div>
+                </div>
+                <div class="routeButtonBox">
+                  <h3 class="routePriceText">
+                    PRICE:
+                    <p>$25.000</p>
+                  </h3>
+                  <div class="routeButton startButton">
+                    <i class="fa-solid fa-backward-step"></i>Start Job
+                  </div>
+                </div>
+              </div> -->
+                        </div>
+                    </div>
+                    <div class="rightSide">
+                        <div class="profileBox">
+                            <div class="profileImg" id="profileImg" style="background-image: url(./img/pp.png)"></div>
+                            <div class="profileInfoBox" id="profileInfoBox">
+                                <!-- Brenden Randall
+                <div class="moneyBox">
+                  <div class="moneyIcon">
+                    <i class="fa-solid fa-money-bill"></i>
+                  </div>
+                  <div class="moneyText">$50,250</div>
+                </div> -->
+                            </div>
+                        </div>
+                        <div class="profileDescription">
+                            <h2>
+                                INFORMATION
+                                <p id="profileDescription">Lorem ipsum dolor sit amet consecte. Montes</p>
+                            </h2>
+                        </div>
+                        <div class="levelBox" id="levelBox">
+                            <!-- <div class="single-chart">
+                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                  <path
+                    class="circle-bg"
+                    d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <path
+                    class="circle"
+                    stroke-dasharray="75, 100"
+                    d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <text x="18" y="18.85" class="percentage">05</text>
+                  <text x="18" y="25.65" class="percentage2">LvL</text>
+                </svg>
+              </div>
+              <div class="levelText">
+                <h2>
+                  Level
+                  <p>05</p>
+                </h2>
+                <div class="levelProgress">
+                  <h2>
+                    420
+                    <p>/1500exp</p>
+                  </h2>
+                  <div class="progressSay"></div>
+                </div>
+              </div> -->
+                        </div>
+                        <div class="profileButtonBox">
+                            <!-- <div class="jobClothesButton profileButton" id="jobClothesButton"><i class="fa-solid fa-vest"></i>Wear Job Clothes</div> -->
+                            <div class="earningsButton profileButton" id="earningsButton"><i class="fa-solid fa-sack-dollar"></i>Earnings</div>
+                            <div class="taskButton profileButton" id="tasks"><i class="fa-solid fa-list-check"></i>Tasks</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <div class="createSide-wrapper">
+        <div class="createSide" style="display: flex">
+          <div class="createMenu">
+            <div class="giveawayTitleCreate">Create Giveaway</div>
+            <h2 class="createTitle">
+              Create Giveaway
+              <p>Please fill in the following information to create a raffle</p>
+            </h2>
+            <div class="createBottomSide">
+              <div class="custom-select">
+                <select>
+                  <option value="1">Item</option>
+                  <option value="2">Car</option>
+                  <option value="3">Money</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="input-wrapper">
+                <input type="text" id="modern-input" placeholder="Item Code (weapon_pistol)" />
+              </div>
+              <div class="input-wrapper">
+                <input type="text" id="itemLabel" placeholder="Raffle Title " />
+              </div>
+              <div class="input-wrapper">
+                <input type="number" id="itemAmount" placeholder="Amouny" />
+              </div>
+              <div class="input-wrapper">
+                <input type="number" id="winnerAmount" placeholder="Winner Amount" />
+              </div>
+              <div class="inputMenu2">
+                <div class="numberPlayerInput">
+                  Number of Participants
+                  <div class="numberPlayer">
+                    <div class="numberPlayerArrow" id="joinMinus">
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <input id="numPlayers" value="1">
+                    <div class="numberPlayerArrow" id="joinUp">
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="numberPlayerInput">
+                  Raffle duration
+                  <div
+                    class="numberPlayer"
+                    style="
+                      color: rgba(67, 211, 242, 0.63);
+                      border: 0.0521vw solid rgba(67, 211, 242, 0.11);
+                      background: rgba(67, 211, 242, 0.12);
+                    "
+                  >
+                    <div class="numberPlayerArrow" id="timeMinus">
+                      <i class="fa-solid fa-minus"></i>
+                    </div>
+                    <input id="numTime" value="1">
+                    <div class="numberPlayerArrow" id="timeUp">
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="price-input">
+                <input type="number" id="price-modern" placeholder="Enter Price..." />
+              </div>
+            </div>
+            <div class="createButton">
+              <i class="fa-solid fa-pen-nib"></i>Start Raffle
+            </div>
+            <img src="./img/chracter.png" alt="" class="createBg" />
+            <div class="exitBox"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="continueMenu-wrapper">
+        <div class="giveawayMenu continueMenu" style="display: flex">
+          <div class="leftSide">
+            <div class="giftTitle">
+              <h2>TOYOTA COROLLA</h2>
+              <h3>Giveaway</h3>
+            </div>
+            <div class="giftInfoBox">
+              <div class="playerBox">
+                <div></div>
+                <h2 class="playerText">
+                  <span>0</span>
+                  <p class="maxPlayers">/ 500</p>
+                </h2>
+              </div>
+              <div class="timeBox">
+                <i class="fa-solid fa-clock"></i>
+                <p class="timeP">00:00</p>
+                <div class="timeLine"></div>
+              </div>
+              <div class="focusBox">
+                <img src="./img/mouse.png" alt="" class="focusImg" />/Focus
+              </div>
+            </div>
+          </div>
+          <div class="joinButton">
+            <svg
+              width="1.4583vw"
+              height="1.4583vw"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="icon-park-solid:click">
+                <g id="Mask group">
+                  <mask
+                    id="mask0_90_57"
+                    style="mask-type: luminance"
+                    maskUnits="userSpaceOnUse"
+                    x="1"
+                    y="1"
+                    width="25"
+                    height="25"
+                  >
+                    <g id="Group">
+                      <g id="Group_2">
+                        <path
+                          id="Vector"
+                          d="M14 2.33334V7.00001"
+                          stroke="white"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          id="Vector_2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12.8335 12.8333L24.5002 15.1667L21.0002 17.5L24.5002 21L21.0002 24.5L17.5002 21L15.1668 24.5L12.8335 12.8333Z"
+                          fill="white"
+                          stroke="white"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          id="Vector_3"
+                          d="M22.2497 5.75052L18.9497 9.05044M5.75066 22.2495L9.05058 18.9496M2.3335 14H7.00016M5.75066 5.75052L9.05058 9.05044"
+                          stroke="white"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </g>
+                  </mask>
+                  <g mask="url(#mask0_90_57)">
+                    <path id="Vector_4" d="M0 0H28V28H0V0Z" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+            ENTER
+            <h2 class="joinCoss">$2500</h2>
+          </div>
+          <div class="giveawayTitle">
+            GIVEAWAY
+            <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
+          </div>
+          <img src="./img/gift.png" alt="" class="menuGift" />
+        </div>
+      </div>
+      <div class="Menu-wrapper">
+        <div class="giveawayMenu Menu">
+          <div class="leftSide">
+            <h2 class="winnerTitle">
+              Winner,
+              <p>IZZY MARKHAM</p>
+            </h2>
+            <h2 class="winnerSubTitle">
+              Congratulations!
+              <p>HONDA CBR 1000RR</p>
+            </h2>
+          </div>
+          <img src="./img/gift.png" alt="" class="menuGift" />
+        </div>
+      </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

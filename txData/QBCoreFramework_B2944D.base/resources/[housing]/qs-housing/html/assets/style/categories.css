@@ -1,0 +1,359 @@
+/* Style for decorate subelement categories */
+/* Custom css for stash because its a very big element */
+@import url('./stash.css');
+
+
+/* Container */
+.categories {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+
+    width: 30vw;
+    height: 14vw;
+}
+
+/* Sidebar */
+.categories .sidebar img {
+    width: 2vw;
+    object-fit: contain;
+}
+
+.categories .sidebar {
+    position: absolute;
+    z-index: 999;
+
+    display: grid;
+
+    border-right: 0.01vw #0000000a solid;
+    width: 3.5vw;
+    height: 100%;
+
+    background: white;
+}
+
+.categories .sidebar a {
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+	z-index: 999;
+    display: inline-grid;
+    transform: translate(-50%, -50%);
+
+    width: fit-content;
+    height: fit-content;
+
+    cursor: pointer;
+    fill: #2fb2d9;
+}
+
+/* Sidebar arrow */
+.categories .sidebar a::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 130%;
+
+    display: block;
+    opacity: 0;
+    transform: translateY(-50%) rotate(180deg);
+
+    transition: opacity 0.1s ease-in-out;
+
+    margin-right: 0;
+    border: 1vw solid white;
+    border-color: transparent white transparent transparent;
+}
+
+.categories .sidebar a.active::before {
+    opacity: 1;
+}
+
+/* Sidebar tooltip */
+.categories .sidebar a::after {
+    content: attr(help-text);
+
+    position: absolute;
+    left: 50%;
+
+    opacity: 0;
+
+    transition: opacity 0.1s ease-in-out;
+
+    margin-left: 2.8vw;
+    box-shadow: 0 0 1vw #00000033;
+    border: 0.001vw #0000000a solid;
+    border-top: 0.001vw #0000001c solid;
+    border-radius: 1vw;
+    width: 24.5vw;
+    height: 2.5vw;
+    padding-top: 0.7vw;
+    pointer-events: none;
+
+    background: #ffffffe8;
+
+    font-size: 1.4vw;
+    font-family: 'Source Sans Pro';
+    text-align: center;
+    color: #002b53;
+}
+
+.categories .sidebar #dynamic_objects::after {
+    top: 9vw;
+}
+
+.categories .sidebar #objects::after {
+    top: 4.3vw;
+}
+
+.categories .sidebar #stash::after {
+    top: -0.6vw;
+}
+
+.categories .sidebar a:hover::after {
+    opacity: 1;
+}
+
+/* Topbar */
+.categories .topbar {
+    position: absolute;
+    left: 3.5vw;
+
+    display: flex;
+    gap: 0.2vw;
+
+    width: 26.5vw;
+    height: 3vw;
+
+    background: #ffffffd4;
+
+    justify-content: center;
+}
+
+/* Topbar Dynamic Objects */
+.categories .topbar .room-selector {
+    position: relative;
+    top: 0.5vw;
+
+    transition: filter 0.2s ease-in-out;
+
+    width: min(100%, 5vw);
+    height: calc(100% - 1vw);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    cursor: pointer;
+}
+
+.categories .topbar .room-selector:not(.active):not(:hover) {
+    filter: grayscale(100%);
+}
+
+/* Toopbar Room Selector Tooltip */
+.categories .topbar .room-selector::before {
+    position: relative;
+
+    z-index: 9;
+
+    bottom: 2vw;
+    left: 50%;
+
+    display: block;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.1s ease-in-out;
+
+    box-shadow: 0 0 1vw #00000033;
+
+    border-radius: 1vw;
+
+    width: fit-content;
+    padding: 0.2vw 0.7vw;
+
+    background: #ffffff;
+
+    font-size: 1vw;
+    font-family: 'Source Sans Pro';
+    text-align: center;
+    text-transform: uppercase;
+    color: #002b53;
+
+    pointer-events: none;
+    content: attr(help-text);
+}
+
+.categories .topbar .room-selector::after {
+    position: relative;
+
+    z-index: 10;
+
+    left: 50%;
+
+    display: block;
+    opacity: 0;
+
+    transform: translateX(-50%) rotate(270deg);
+    transition: opacity 0.1s ease-in-out;
+
+    border: 0.5vw solid white;
+    border-color: transparent white transparent transparent;
+
+    content: "";
+}
+
+.categories .topbar .room-selector:hover::after,
+.categories .topbar .room-selector:hover::before {
+    opacity: 1;
+}
+
+/* Topbar Objects */
+.categories .topbar .searchbar {
+    position: absolute;
+
+    left: 0;
+    height: 100%;
+}
+
+.categories .topbar .searchbar input {
+    position: absolute;
+    top: 50%;
+    left: 1vw;
+
+    transform: translateY(-50%);
+
+    border: 0.01vw #002b5380 solid;
+    border-radius: 1vw;
+    outline: none;
+    width: 18vw;
+    padding: 0vw 0.5vw;
+
+    font-size: 1vw;
+    color: #002b53;
+}
+
+.categories .topbar .searchbar svg {
+    position: absolute;
+    top: 50%;
+    left: 21vw;
+    
+    transform: translateY(-50%);
+    filter: grayscale(50%);
+
+    width: 1vw;
+    height: 1vw;
+    
+    cursor: pointer;
+    fill: #002b53;
+
+    font-size: 1vw;
+}
+
+.categories .topbar .alphabetic div {
+    position: absolute;
+    top: 50%;
+    right: 2vw;
+
+    opacity: 0;
+    transform: translateY(-50%);
+
+    transition: opacity 0.2s ease-in-out;
+
+    width: 1vw;
+    height: 1vw;
+
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.categories .topbar .alphabetic div.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Content */
+.categories .content {
+    position: absolute;
+    bottom: 0;
+    left: 3.5vw;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: left;
+
+    overflow-y: scroll;
+    
+    height: 10.5vw;
+    width: 26vw;
+    padding: 0.25vw;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.categories .content::-webkit-scrollbar {
+    width: 0.3vw;
+    display: block;
+}
+  
+.categories .content::-webkit-scrollbar-track {
+    background: #ffffff0e;
+}
+
+.categories .content::-webkit-scrollbar-thumb {
+    background: white; 
+    height: 1vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 1vw #00000048;
+}
+
+/* Content Dynamic Objects */
+.categories .content .room-category {
+    position: absolute;
+
+    transition: filter 0.2s ease-in-out;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    cursor: pointer;
+}
+
+.categories .content .room-category:not(.active):not(:hover) {
+    filter: grayscale(100%);
+}
+
+/* Content Objects */
+.categories .content .category {
+    margin: 0.15vw;
+    border-radius: 0.5vw;
+
+    height: 4.9vw;
+
+    background: white;
+    cursor: pointer;
+    border: 0.2vw transparent solid;
+}
+
+.categories .content .category.active {
+    border-color: #002b53;
+}
+
+.categories .content .category img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    max-width: 4.8vw;
+    height: 100%;
+    max-height: 3.9vw;
+    object-fit: contain;
+}

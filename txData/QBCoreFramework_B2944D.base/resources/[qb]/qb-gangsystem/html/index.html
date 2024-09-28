@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+	<script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<title>qb-gangsystem NEW</title>
+</head>
+
+<body>
+	<audio id="buttonsound" src="buttonsound.mp3"></audio>
+	<div class="container">
+		<img src="./phone-case.png" class="phone-frame">
+		<div class="watch-screen-2">
+			<div class="titulemap2">CRIME MAP</div> <!-- MAPA DELICTIVO -->
+			<div class="boxwhite-map"></div>
+		</div>
+		<div class="container-map">
+
+			<div id="map-container">
+				<img src="./pxfuel.jpg" alt="Mapa de GTA V" width="800" height="600" id="map-image">
+				<!-- Ejemplo de icono -->
+				<div class="map-icon" onclick="mapiconmision1()" style="top: 20px; left: 20px;" id="icon-color-1">
+					<div class="desc icon-1" id="icon1">Unallocated</div>
+				</div>
+
+				<div class="map-icon-2" style="top: 45px; left: 20px;" id="icon-color-2">
+					<div class="desc icon-2" id="icon2">Unallocated</div>
+				</div>
+
+				<div class="map-icon-3" style="top: 70px; left: 20px;" id="icon-color-3">
+					<div class="desc icon-3" id="icon3">Unallocated</div>
+				</div>
+
+				<div class="map-icon-4" style="top: 95px; left: 20px;" id="icon-color-4">
+					<div class="desc icon-4" id="icon4">Unallocated</div>
+				</div>
+
+				<div class="map-icon-5" style="top: 120px; left: 20px;" id="icon-color-5">
+					<div class="desc icon-5" id="icon5">Unallocated</div>
+				</div>
+
+			</div>
+
+			<!-- Elemento interactivo -->
+			<div id="interactive-element"></div>
+			<!-- FIN Elemento interactivo -->
+			<div class="pedir-misiones-cocaina">
+
+				<div class="cod-pmc-1">Sales Meeting</div>
+				<div class="cod-pmc-1-desc">¿Attend the meeting to sell your merchandise?</div>
+				<div class="cod-pmc-1-accept" onclick="codpmc1accept()">
+					<i id="icono-accept" class="fa-solid fa-check-double"
+						style="position:absolute; margin-left: -5px; margin-top: 1px; font-size: 10px; color: #fff;"></i>
+				</div>
+				<div class="cod-pmc-1-dennied" onclick="codpmc1dennied()">
+					<i id="icono-dennied" class="fa-solid fa-xmark"
+						style="position:absolute; margin-left: -3px; margin-top: 1px; font-size: 10px; color: #fff;"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="watch-screen">
+
+			<div class="titule">ORGANIZATION</div>
+			<!-- top BAR menu -->
+
+			<div class="boxwhite"></div>
+			<div class="boxblack"></div>
+			<div class="titulointermedio">DATA ORGANIZATION</div>
+
+
+			<div class="titulo-banda">Your Gang</div>
+			<div id="descbandaba" class="descbandaba">
+				<b style="font-size:5px; color: #fff;">22:13</b>
+			</div>
+
+			<div class="titulo-puntos">Points Gang</div>
+			<div id="descpuntosba" class="descpuntosba">
+				<b style="font-size:5px; color: #fff;">22:13</b>
+			</div>
+
+
+		</div>
+
+
+
+		<div class="misiones">
+
+			<div class="titulemisiones">MISSIONS</div>
+			<!-- top BAR menu -->
+
+			<div class="boxwhitemision"></div>
+			<div class="boxblackmision">
+				<div id="test1" class="test1">
+					<b style="font-size:5px; color: #fff;">22:13</b>
+				</div>
+
+				<div class="box-progress-wrapper">
+					<p class="box-progress-header">Progress</p>
+					<p class="titulo-progress-tiendas">STORE ROBBERY</p>
+					<div class="desc2 progresss" id="progresss">Steals to increase</div>
+					<div class="box-progress-bar">
+
+						<span class="box-progress" id="progress-bar" style="background-color: #5F72DC"></span>
+					</div>
+					<p id="progress-percentage"></p>
+				</div>
+
+
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+		<nav class="nav">
+			<a href="#" class="nav-item is-active" onclick="home()" active-color="#30888780"><i id="icon2"
+					class="fa-solid fa-house-fire" style="font-size: 20px;"></i></a>
+			<a href="#" class="nav-item" onclick="misiones()" active-color="#5F72DC80"><i id="icon3"
+					class="fa-solid fa-route" style="font-size: 20px;"></i></a>
+			<a href="#" class="nav-item" onclick="mapa()" active-color="#D85FDC80"><i id="icon1"
+					class="fa-solid fa-earth-americas" style="font-size: 20px;"></i></a>
+			<span class="nav-indicator"></span>
+		</nav>
+	</div>
+
+	<script src="app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</body>
+
+</html>

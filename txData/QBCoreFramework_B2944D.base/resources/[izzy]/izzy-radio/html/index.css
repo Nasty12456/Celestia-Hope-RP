@@ -1,0 +1,945 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+    font-family: RadioCanada-Bold;
+    src: url(fonts/RadioCanada-Bold.ttf);
+}
+
+@font-face {
+    font-family: RadioCanada-Medium;
+    src: url(fonts/RadioCanada-Medium.ttf);
+}
+
+@font-face {
+    font-family: RadioCanada-Regular;
+    src: url(fonts/RadioCanada-Regular.ttf);
+}
+
+@font-face {
+    font-family: RadioCanada-SemiBold;
+    src: url(fonts/RadioCanada-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botok {
+    position: absolute;
+    bottom: -1.7vw;
+    left: 4.2vw;
+    font-family: oswald;
+    font-weight: bold;
+    color: #ffffff20;
+    font-size: 1vw;
+}
+
+.menu-container {
+    position: absolute;
+    right: 1vw;
+    top: 1.5vw;
+    width: 15.9vw;
+    height: 3.5vw;
+    border-radius: 0.8vw;
+    background-image: linear-gradient(#1A1E2365, #1A1E2300);
+    display: none;
+    cursor: move;
+}
+
+.close-menu-icon {
+    position: absolute;
+    top: -0.6vw;
+    left: 0.75vw;
+    width: 1.55vw;
+    height: 1vw;
+    background: #1A1E23;
+    border-radius: 0.25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.line {
+    width: 0.6vw;
+    height: 0.1vw;
+    background: #FFFFFF50;
+    border-radius: 0.2vw;
+}
+
+
+
+.member-list-box {
+    position: absolute;
+    left: 1vw;
+    top: 0.88vw;
+    width: 14.1vw;
+    height: 1.7vw;
+    background: #1A1E23;
+    border-radius: 0.2vw;
+}
+
+
+
+.menu-user-icon {
+    position: absolute;
+    top: 0.35vw;
+    left: 0.4vw;
+    width: 1vw;
+    height: 1vw;
+    z-index: 5;
+}
+
+.member-list-text {
+    position: absolute;
+    left: 1.8vw;
+    top: 0.5vw;
+    color: #BEDCFF73;
+    font-family: RadioCanada-Regular;
+    font-size: 0.57vw;
+}
+
+.member-list-num {
+    position: absolute;
+    left: 12.52vw;
+    top: 0.45vw;
+    color: #86FF84;
+    font-family: RadioCanada-semibold;
+    font-size: 0.75vw;
+}
+
+.member-items-container {
+    position: absolute;
+    left: 1vw;
+    top: 3.12vw;
+    width: 14.09vw;
+    height: 12.8vw;
+    background-color: transparent;
+    border-radius: 0.1vw;
+    overflow: scroll;
+    display: none;
+}
+
+.member-items-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.member-item:nth-child(1) {
+    border-radius: 0.1vw 0.1vw 0 0;
+}
+
+.member-item:nth-child(odd) {
+    background: #1A1E2380;
+}
+
+.member-item:nth-child(even) {
+    background: #1A1E2360;
+}
+
+.member-item:nth-last-of-type(1) {
+    border-radius: 0 0 0.1vw 0.1vw;
+}
+
+.member-item {
+    position: relative;
+    display: block;
+    width: 14.09vw;
+    height: 1.4vw;
+    background: red;
+}
+
+.menu-anten-icon {
+    position: absolute;
+    left: 0.3vw;
+    top: 0.4vw;
+    width: 0.7vw;
+    height: 0.7vw;
+}
+
+.member-item-text {
+    position: absolute;
+    top: 0.35vw;
+    left: 1.4vw;
+    color: #FFFFFF75;
+    font-family: RadioCanada-Regular;
+    font-size: 0.57vw;
+}
+
+.menu-mic-icon {
+    position: absolute;
+    width: 0.8vw;
+    height: 0.8vw;
+    top: 0.3vw;
+    left: 13vw;
+}
+
+.member-item.active {
+    background-image: linear-gradient(to right, transparent 70%, #4DFF7E45);
+
+}
+
+.member-item.active .menu-mic-icon {
+    fill: #4DFF7E;
+}
+
+.menu-container.active .member-items-container {
+    display: block;
+
+}
+
+.menu-container.active {
+    height: 18.5vw;
+}
+
+.telsiz-main-container {
+    position: absolute;
+    right: -17vw;
+    bottom: 0;
+    background: url(public/radio.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40vw;
+    height: 40vw;
+    /* transform: scale(1.1); */
+    transition: 0.5s;
+    display: none;
+}
+
+.telsiz-wrapper {
+    position: absolute;
+    top: 13.3vw;
+    left: 6.2vw;
+    width: 11.3vw;
+    height: 22vw;
+    background: transparent;
+}
+
+/* ! TELSİZ CONTENT  GİRİŞ */
+/* ! TELSİZ CONTENT GİRİŞ */
+/* ! TELSİZ CONTENT GİRİŞ*/
+
+.top-clock {
+    position: absolute;
+    top: 0.3vw;
+    left: 0.5vw;
+    color: #fff;
+    font-family: Gilroy;
+    font-size: 0.53vw;
+}
+
+.top-buttons-container {
+    position: absolute;
+    width: 9.3vw;
+    height: 2.25vw;
+    left: 0.93vw;
+    top: 2.22vw;
+    background: #D6EBFF11;
+
+    border-radius: 1vw;
+    border: 0.1vw solid #FFFFFF10;
+}
+
+.channel-button {
+    position: absolute;
+    left: 0.4vw;
+    top: 0.45vw;
+    background: url(public/channels-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4vw;
+    height: 1.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.channel-button.active {
+    background: url(public/channel-btn-hover.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.channel-button.active .channel-icon {
+    fill: #00000090;
+
+}
+
+.channel-button.active .channel-text {
+    color: #00000090;
+}
+
+.channel-button:hover {
+    background: url(public/channel-btn-hover.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.channel-button:hover .channel-icon {
+    fill: #00000090;
+}
+
+.channel-button:hover .channel-text {
+    color: #00000090;
+}
+
+.channel-icon {
+    width: 0.7vw;
+    height: 0.7vw;
+    margin-left: 0.2vw;
+    margin-top: 0.03vw;
+    transition: 0.2s ease all;
+
+}
+
+.channel-text {
+    color: #BEDCFF;
+    font-family: RadioCanada-Medium;
+    font-size: 0.48vw;
+    margin-left: 0.1vw;
+    transition: 0.2s ease all;
+
+}
+
+.member-button {
+    position: absolute;
+    left: 4.85vw;
+    top: 0.45vw;
+    background: url(public/member-button-active.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4vw;
+    height: 1.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.member-button:hover {
+    background: url(public/members-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.member-button.active {
+    background: url(public/members-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.members-icon {
+    fill: #BEDCFF;
+    width: 0.7vw;
+    height: 0.7vw;
+    margin-top: 0.03vw;
+    transition: 0.2s ease all;
+
+}
+
+.members-text {
+    color: #BEDCFF;
+    font-family: RadioCanada-Medium;
+    font-size: 0.48vw;
+    margin-left: 0.1vw;
+    transition: 0.1s ease all;
+}
+
+.member-button.active .members-icon {
+    fill: #00000090;
+
+}
+
+.member-button.active .members-text {
+    color: #00000090;
+
+}
+
+.member-button:hover .members-icon {
+    fill: #00000090;
+}
+
+.member-button:hover .members-text {
+    color: #00000090;
+}
+
+.radio-content-container {
+    position: absolute;
+    top: 5.16vw;
+    left: 0.96vw;
+    width: 9.4vw;
+    height: 7.45vw;
+    background: linear-gradient(#D6EBFF11, #808D9911);
+    border-radius: 0.3vw;
+    border: 0.1vw solid #ffffff05;
+}
+
+.bluetooth-icon {
+    background: url(public/icon-back.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0.55vw;
+    top: 0.52vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    transition: 0.2s ease all;
+    cursor: not-allowed;
+}
+
+.bluetooth-icon.active {
+    background: url(public/icon-back-hover.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.wifi-icon {
+    position: absolute;
+    left: 2.21vw;
+    top: 0.52vw;
+    width: 1.45vw;
+    height: 1.45vw;
+}
+
+.star-icon {
+    background: url(public/icon-star.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 5.5vw;
+    top: 0.52vw;
+    width: 1.45vw;
+    height: 1.45vw;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+
+.star-icon:hover {
+    background: url(public/icon-star-hover.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.star-icon.active {
+    background: url(public/icon-star-hover.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.kablo-icon {
+    background: url(public/icon-kablo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 7.2vw;
+    top: 0.52vw;
+    width: 1.45vw;
+    height: 1.45vw;
+    cursor: pointer;
+    transition: 0.2s ease all;
+
+}
+
+.kablo-icon:hover {
+    background: url(public/icon-kablo-hover.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.kablo-icon.active {
+    background: url(public/icon-kablo-hover.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.radio-channel-text {
+    position: absolute;
+    left: 0.55vw;
+    top: 2.4vw;
+    font-family: gilroy;
+    color: #ffffff;
+    font-size: 0.52vw;
+}
+
+.radio-channel-input-box {
+    position: absolute;
+    top: 3.28vw;
+    left: 0.6vw;
+    background: url(public/radio-channel-bg.png);
+    width: 8.1vw;
+    height: 5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+.radio-channel-input-box.active{
+    position: absolute;
+    top: 3.28vw;
+    left: 0.6vw;
+    background: url(public/radio-password-box-bg.png);
+    width: 8.1vw;
+    height: 5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+.radio-input {
+    position: absolute;
+    width: 6vw;
+    height: 1.1vw;
+    top: 0.3vw;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #BEDCFF;
+    font-size: 0.9vw;
+    font-family: RadioCanada-semibold;
+    /* direction: rtl; */
+}
+
+.frequency {
+    position: absolute;
+    color: #BEDCFF50;
+    font-family: RadioCanada-regular;
+    font-size: 0.35vw;
+    top: 1.5vw;
+}
+
+.connect-btn {
+    position: absolute;
+    top: 5.6vw;
+    left: 0.55vw;
+    width: 8.1vw;
+    height: 1.14vw;
+    background: linear-gradient(to right, #53FF79, #329955);
+    border-radius: 0.1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.48vw;
+    color: #fff;
+    font-family: RadioCanada-regular;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.connect-btn:hover {
+    background: linear-gradient(to right, #08BA44, #08BA44);
+}
+
+.mic-user-container {
+    position: absolute;
+    top: 13.22vw;
+    left: 0.9vw;
+    width: 9.35vw;
+    height: 7.85vw;
+    background-color: transparent;
+    border-radius: 0.4vw;
+    border: 0.1vw solid #FFFFFF08;
+}
+
+.text-mhz {
+    position: absolute;
+    left: 0.4vw;
+    top: 0.3vw;
+    color: #BEDCFF;
+    font-family: RadioCanada-medium;
+    font-size: 0.5vw;
+}
+
+.member-list-text-2 {
+    position: absolute;
+    top: 0.3vw;
+    left: 3.05vw;
+    color: #BEDCFF55;
+    font-family: RadioCanada-medium;
+    font-size: 0.5vw;
+}
+
+.mic-items-container {
+    position: absolute;
+    left: 0.55vw;
+    top: 1.85vw;
+    background-color: transparent;
+    width: 8.4vw;
+    height: 6.2vw;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3vw;
+}
+
+.mic-items-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.mic-item {
+    position: relative;
+    width: 8vw;
+    height: 1.15vw;
+    background-color: #D6EBFF03;
+    border: 0.1vw solid #D6EBFF10;
+    border-radius: 0.2vw;
+}
+
+.mic-item-name {
+    position: absolute;
+    left: 0.3vw;
+    top: 0.3vw;
+    color: #ffffff;
+    font-family: RadioCanada-regular;
+    font-size: 0.48vw;
+}
+
+.green-mic-item {
+    position: absolute;
+    top: -0.08vw;
+    right: -0.1vw;
+    width: 1.3vw;
+    height: 1.3vw;
+    z-index: 3;
+    fill-opacity: 0.07
+}
+
+.mic-item.active {
+    background-color: #D6EBFF13;
+}
+
+.mic-item.active .green-mic-item {
+    fill: #B2FFB0;
+    fill-opacity: 0.21
+}
+
+.green-mic-item-path-2 {
+    fill: #B2FFB068;
+    fill-opacity: 0.41
+}
+
+.mic-item.active .green-mic-item-path-2 {
+    fill: #B2FFB068;
+    fill-opacity: 1
+}
+
+
+.disconnect-btn {
+    position: absolute;
+    top: 5.6vw;
+    left: 0.55vw;
+    width: 8.1vw;
+    height: 1.14vw;
+    background: linear-gradient(to right, #FF5353, #993232);
+    border-radius: 0.1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.48vw;
+    color: #fff;
+    font-family: RadioCanada-regular;
+    transition: 0.2s ease all;
+    cursor: pointer;
+    display: none;
+}
+
+.disconnect-btn:hover {
+    background: linear-gradient(to right, #F81515, #D71A1A);
+}
+
+/* page2 */
+/* page3 */
+/* page3 */
+/* page3 */
+.channels-items-container {
+    position: absolute;
+    top: 5.1vw;
+    left: 0.9vw;
+    width: 9.4vw;
+    height: 16vw;
+    background-color: transparent;
+    border: 0.1vw solid #FFFFFF08;
+    overflow: hidden;
+    border-radius: 0.4vw;
+}
+
+.page-channels{
+    display: none;
+}
+
+.create-channel{
+    display: none;
+}
+
+.channel-items-top-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10vw;
+    height: 1.75vw;
+    background: linear-gradient(#D6EBFF05, #808D9905);
+
+    border-radius: 0.4vw 0.4vw 0 0;
+}
+
+.item-channels-title {
+    position: absolute;
+    left: 0.58vw;
+    top: 0.2vw;
+    font-size: 0.55vw;
+    color: #ffffff;
+    font-family: RadioCanada-medium;
+}
+
+.item-channels-text {
+    position: absolute;
+    left: 0.58vw;
+    top: 0.9vw;
+    font-size: 0.43vw;
+    color: #ffffff53;
+    font-family: RadioCanada-regular;
+}
+
+.create-channel-btn {
+    position: absolute;
+    left: 5.05vw;
+    top: 0.35vw;
+    width: 3.95vw;
+    height: 1vw;
+    background: #8AFF8825;
+    border-radius: 0.2vw;
+    color: #8AFF88;
+    font-family: RadioCanada-medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.41vw;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+.create-channel-btn:hover {
+    background: #8AFF8874;
+    color: #ffffff;
+
+}
+.create-channel-btn.active {
+    background: #8AFF8874;
+    color: #ffffff;
+
+}
+.channel-list-item-container {
+    position: absolute;
+    top: 2.42vw;
+    left: 0.57vw;
+    width: 8.4vw;
+    height: 12vw;
+    background-color: transparent;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35vw;
+}
+.channel-list-item-container::-webkit-scrollbar {
+    width: 0;
+}
+.channel-list-item {
+    position: relative;
+    width: 8vw;
+    height: 1.12vw;
+    background: #D6EBFF03;
+    border: 0.1vw solid #D6EBFF08;
+    border-radius: 0.18vw
+}
+.mhz-text {
+    position: absolute;
+    top: 0.3vw;
+    left: 0.3vw;
+    color: #FFFFFF;
+    font-family: RadioCanada-regular;
+    font-size: 0.46vw;
+}
+.channel-kablo-icon {
+    position: absolute;
+    right: -0.1vw;
+    top: -0.1vw;
+    transition: 0.2s ease all;
+    cursor: pointer;
+    width: 1.3vw;
+    height: 1.3vw;
+    fill-opacity: 0.18;
+}
+
+.channel-kablo-icon:hover {
+    fill-opacity: 0.69;
+}
+
+.star-channel-icon {
+    position: absolute;
+    top: -0.1vw;
+    left: 5.51vw;
+    cursor: pointer;
+    width: 1.3vw;
+    height: 1.3vw;
+    fill-opacity: 1;
+}
+.channel-kablo-icon:hover  .channel-kablo-icon-path {
+    fill:  #ffffff;
+    transition: 0.2s ease all;
+
+}
+/* page3 */
+/* page3 */
+/* page3 */
+
+
+.radio-channel-input-box-2 {
+    position: absolute;
+    top: 2.4vw;
+    left: 0.6vw;
+    background: url(public/channel-input-box-bg.png);
+    width: 8.1vw;
+    height: 5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+.radio-input-2 {
+    position: absolute;
+    width: 6vw;
+    height: 1.1vw;
+    top: 0.3vw;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #BEDCFF;
+    font-size: 0.9vw;
+    font-family: RadioCanada-semibold;
+
+}
+
+.frequency-2 {
+    position: absolute;
+    color: #BEDCFF50;
+    font-family: RadioCanada-regular;
+    font-size: 0.35vw;
+    top: 1.5vw;
+}
+
+.channel-password-text {
+    position: absolute;
+    top: 4.78vw;
+    left: 0.6vw;
+
+    color: #BEDCFF;
+    font-family: RadioCanada-regular;
+    font-size: 0.42vw;
+}
+.channel-password-inp {
+    position: absolute;
+    top: 5.44vw;
+    left: 0.6vw;
+    width: 7.85vw;
+    height: 1.15vw;
+    background: #BEDCFF05;
+    border-radius: 0.2vw;
+    outline: none;
+    border: 0.1vw solid #BEDCFF07;
+    font-size: 0.45vw;
+    text-align: center;
+    color: #FFFFFF30;
+    font-family: RadioCanada-regular;
+
+}
+.channel-password-inp::placeholder {
+    color: #FFFFFF30;
+}
+.big-create-channel-btn {
+    position: absolute;
+    top: 14.22vw;
+    left: 0.62vw;
+    width: 8.08vw;
+    height: 1.1vw;
+    border-radius: 0.2vw;
+    background: linear-gradient(to right, #8AFF88, #357534);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF78;
+    font-family: RadioCanada-regular;
+    font-size: 0.45vw;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+.big-create-channel-btn:hover {
+    background: linear-gradient(to right, #4AFB47, #329330);
+
+}
+.radio-channel-input-box-3 {
+    position: absolute;
+    top: 3.28vw;
+    left: 0.6vw;
+    background: url(public/radio-password-box-bg.png);
+    width: 8.1vw;
+    height: 5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+*:not(input):not(textarea) {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.volume-up{
+    position: absolute;
+    width: 3vh;
+    height: 3.1vh;
+    top: 42vh;
+    left: 2.7vh;
+    cursor: pointer;
+}
+
+.volume-down{
+    position: absolute;
+    width: 3vh;
+    height: 3.1vh;
+    top: 45.5vh;
+    left: 2.7vh;
+    cursor: pointer;
+}

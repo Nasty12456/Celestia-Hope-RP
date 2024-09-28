@@ -1,0 +1,124 @@
+/* Style for decorate subelement itemlist */
+:root {
+    --decorate-box-width: 4.5vw;
+}
+
+/* Containers */
+.decorate .itemlist {
+    position: absolute;
+    bottom: 0;
+    left: 30vw;
+
+    overflow: visible;
+
+    border-left: 0.1vw #00000014 solid;
+    width: calc(100% - 30vw);
+    height: 14vw;
+    padding-left: 0.45vw;
+
+    background: #7777779c;
+}
+
+.decorate .itemlist .itemcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3vw;
+
+    align-items: flex-start;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    width: calc(100% - 0.5vw);
+    height: calc(100% - 0.9vw);
+
+    padding: 0.45vw 0;
+}
+
+/* Container Scrollbar */
+.decorate .itemlist .itemcontainer::-webkit-scrollbar {
+    display: block;
+
+    width: 0.45vw;
+}
+  
+.decorate .itemlist .itemcontainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.226);
+}
+
+.decorate .itemlist .itemcontainer::-webkit-scrollbar-thumb {
+    box-shadow: 0 0 1vw #00000048;
+    border-radius: 1vw;
+    height: 1vw;
+
+    background: white; 
+}
+  
+.decorate .itemlist .itemcontainer::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+/* Item Boxes */
+.decorate .itemlist .itemcontainer .box {
+    border: 0.2vw transparent solid;
+    border-radius: 0.5vw;
+    width: var(--decorate-box-width);
+    height: 4.5vw;
+    padding: 0.765vw;
+    
+    background: white;
+    cursor: pointer;
+}
+
+.decorate .itemlist .itemcontainer .box.selected {
+    border-color: #002b53;
+}
+
+/* Item Boxes Images */
+.decorate .itemlist .itemcontainer .box img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 5vw;
+    height: 5vw;
+
+    pointer-events: none;
+}
+
+/* Item Boxes Details */
+.box-details {
+    display: flex;
+    z-index: 1;
+    
+    position: relative;
+    flex-direction: row-reverse;
+
+    width: 5.95vw;
+    height: 1.5vw;
+
+    margin-top: -2vw;
+    margin-left: -0.95vw;
+
+    padding: 0.25vw;
+    gap: 0.25vw;
+}
+
+.box-details svg {
+    background: #ABCBF6;
+    fill: white;
+    width: 0.75vw;
+    height: 0.75vw;
+    padding: 0.25vw;
+    border-radius: 1vw;
+}
+
+.box-details-gardrobe {
+    background-color: #F4BFFF!important;
+}
+
+.box-details-stash {
+    background-color: #ABF6AB!important;
+}
