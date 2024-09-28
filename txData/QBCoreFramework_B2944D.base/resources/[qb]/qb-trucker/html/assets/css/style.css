@@ -1,0 +1,279 @@
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 34%;
+}
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url("assets/images/011.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center; /* Resmi ortala */
+  background-color: transparent;
+  height: 100%;
+  margin: 0;
+  padding-bottom: 0px;
+}
+
+/*background-image: url("assets/images/011.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center; /* Resmi ortala */
+/*height: 100%; /* Ekran yüksekliği kadar genişlet */
+/*margin: 0; /* Sayfa kenar boşluklarını kaldır */
+/*padding: 0; /* Sayfa içeriği kenar boşluklarını kaldır */
+
+a {
+  text-decoration: none !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul {
+  margin-bottom: 0px;
+}
+p {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ffb700;
+}
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.btnright{
+  padding-left:44%;
+}
+
+
+.truckUI {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .mobile-top-fix {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .mobile-bottom-fix {
+    margin-bottom: 30px;
+  }
+  .mobile-bottom-fix-big {
+    margin-bottom: 60px;
+  }
+}
+.section-heading {
+  position: relative;
+  z-index: 2;
+}
+.section-heading h4 em {
+  font-style: normal;
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.border-button a {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  color: #ffffff !important;
+  text-transform: capitalize;
+  font-size: 15px;
+  display: inline-block;
+  background-color: #ce4b05;
+  border-radius: 23px;
+  font-weight: 500 !important;
+  letter-spacing: 0.3px !important;
+  transition: all .5s;
+}
+
+
+.border-button a:hover {
+  background: #a63500;
+  color: #fff !important;
+}
+
+
+.pricing-tables {
+  padding-top: 35px;
+}
+
+.pricing-tables  .section-heading {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pricing-tables  .section-heading p {
+  margin-top: 10px;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+.pricing-item-regular {
+  margin-top: 30px;
+  box-shadow: 0px 0px 1px 1px rgb(220, 108, 2);
+  border-radius: 50px;
+  padding: 90px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pricing-item-regular:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/regular-table-top.png);
+  z-index: 0;
+  content: '';
+  width: 274px;
+  height: 221px;
+}
+
+.pricing-item-regular:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url(../images/regular-table-bottom.png);
+  z-index: 0;
+  content: '';
+  width: 370px;
+  height: 171px;
+}
+
+.pricing-item-regular span.price {
+  font-size: 40px;
+  color: #fff;
+  position: absolute;
+  font-weight: 700;
+  z-index: 1;
+  left: 30px;
+  top: 30px;
+}
+
+.pricing-item-regular h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.pricing-item-regular .icon img {
+  width: 180px;
+  height: 106px;
+  margin-bottom: 30px;
+}
+
+.pricing-item-regular ul li {
+  color: #ff7700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.pricing-item-regular ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.pricing-item-regular ul li.non-function {
+  color: #e00000;
+  text-decoration: line-through;
+}
+
+.pricing-item-regular .border-button {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+.pricing-item-pro {
+  box-shadow: 0px 0px 9px 1px rgb(220, 108, 2);
+  border-radius: 50px;
+  padding: 120px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.pricing-item-pro:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/pro-table-top.png);
+  z-index: 0;
+  content: '';
+  width: 281px;
+  height: 251px;
+}
+
+.pricing-item-pro:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url(../images/pro-table-bottom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  content: '';
+  width: 100%;
+  height: 201px;
+}
+
+.pricing-item-pro h4 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.pricing-item-pro .icon img {
+  width: 180px;
+  height: 106px;
+  margin-bottom: 30px;
+}
+
+.pricing-item-pro ul li {
+  color: #ff7700;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.pricing-item-pro ul li:last-child {
+  margin-bottom: 30px;
+}
+
+.pricing-item-pro ul li.non-function {
+  color: #ed0000;
+  text-decoration: line-through;
+}
+
+.pricing-item-pro .border-button {
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+.tp{
+  color: #ce4b05;
+}
+

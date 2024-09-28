@@ -1,0 +1,2019 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-family: "Barlow";
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-style: normal;
+  z-index: 99999;
+}
+
+
+
+.inekkontaynir {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 56.25vw;
+}
+.inekkontaynir .header {
+  width: 20.0208vw;
+  height: 8.4375vw;
+  top: 2.4479vw;
+  left: 2.6563vw;
+  z-index: 1;
+  position: absolute;
+}
+.inekkontaynir .header h1 {
+  width: 19.5833vw;
+  height: 3.3333vw;
+  position: absolute;
+  font-size: 2.261vw;
+  font-family: Oswald;
+  font-weight: 700;
+  top: -0.3vw;
+  left: 0;
+  background: linear-gradient(108.23deg, #FFA800 20.89%, #FFDA58 86.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.inekkontaynir .header h2 {
+  width: 10.6042vw;
+  height: 4vw;
+  left: 4.5vw;
+  top: 1.5vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 1.3566vw;
+  font-family: Oswald;
+  font-weight: 500;
+}
+
+.inekkontaynir .header span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 107.7%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0.5vw;
+}
+.inekkontaynir .clotinghbir {
+  width: 19.0625vw;
+  height: 3.9583vw;
+  position: absolute;
+  top: 11.8229vw;
+  left: 2.6563vw;
+  z-index: 1;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  transition: all .3s;
+  place-content: center;
+  background: linear-gradient(0deg, rgba(189, 255, 0, 0.07), rgba(189, 255, 0, 0.07)), radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.inekkontaynir > .clotinghbir:hover, .inekkontaynir > .clotinghbir:focus {
+  background-color: #91919141;
+  color: #fff;
+}
+.inekkontaynir .clotinghbir img {
+  top: 1.1458vw;
+  left: 0.7813vw;
+  width: 2.0833vw;
+  height: 1.6667vw;
+  position: absolute;
+}
+.inekkontaynir .clotinghbir .line {
+  width: 0.0521vw;
+  height: 1.5625vw;
+  background: rgba(255, 255, 255, 0.14);
+  left: 3.8542vw;
+  top: 1.1458vw;
+  position: absolute;
+}
+.inekkontaynir .clotinghbir .textone {
+  width: 8.4583vw;
+  height: 1.1458vw;
+  top: 0.9vw;
+  left: 4.1667vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8854vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+.inekkontaynir .clotinghbir .texttwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.6771vw;
+  font-weight: 400;
+  font-family: Barlow;
+  line-height: 126.7%;
+  width: 10.0208vw;
+  height: 0.8333vw;
+  top: 2.0354vw;
+  left: 4.4vw;
+  position: absolute;
+}
+.inekkontaynir .clotinghbir .solbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  top: 1.3542vw;
+  right: 4.6875vw;
+  position: absolute;
+  z-index: 1;
+}
+.inekkontaynir .clotinghbir .solbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.inekkontaynir .clotinghbir .sagbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  top: 1.3542vw;
+  right: 0.8854vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  position: absolute;
+}
+.inekkontaynir .clotinghbir .sagbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.inekkontaynir .clotinghbir .customInput {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0.1042vw;
+  border: none;
+  z-index: 999999999999999;
+  text-align: center;
+  top: 1.5104vw;
+  left: 14.8438vw;
+  width: 1.6146vw;
+  height: 0.9375vw;
+}
+.inekkontaynir .linetwo {
+  width: 13.8542vw;
+  height: 0.1042vw;
+  background: rgba(255, 255, 255, 0.12);
+  top: 16.8229vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.inekkontaynir .itemsbar {
+  position: absolute;
+  overflow-y: scroll;
+  display: block;
+  width: 18.9vw;
+  height: 33.1771vw;
+  top: 17.9688vw;
+  left: 2.6563vw;
+  z-index: 1;
+}
+
+.inekkontaynir .itemsbar::-webkit-scrollbar {
+  display: flex;
+  width: 0.1563vw;
+  height: 0;
+  border-radius: 1.1979vw;
+  background: rgba(255, 255, 255, 0.09);
+}
+.inekkontaynir .itemsbar::-webkit-scrollbar-thumb {
+  border-radius: 1.1979vw;
+  background: #FFB501;
+}
+.inekkontaynir .itemsbar .kutucukbar {
+  float: left;
+  z-index: 1;
+  width: 8.8542vw;
+  height: 8.0729vw;
+  top: 0;
+  left: 0;
+  margin-right: 0.3646vw;
+  margin-top: 0.4167vw;
+  position: relative;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  transition: all .3s;
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.inekkontaynir > .itemsbar > .kutucukbar:hover, .inekkontaynir > .itemsbar > .kutucukbar:focus {
+  background-color: #91919141;
+  color: #fff;
+}
+
+.inekkontaynir .itemsbar .kutucukbar #titleone {
+  top: 0.7292vw;
+  left: 0.7292vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8333vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 126.7%;
+}
+.inekkontaynir .itemsbar .kutucukbar #titletwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.625vw;
+  font-family: Barlow;
+  line-height: 126.7%;
+  top: 1.9271vw;
+  left: 0.65vw;
+  position: absolute;
+  width: 6.0938vw;
+  height: 1.5625vw;
+}
+.inekkontaynir .itemsbar .kutucukbar #itempng {
+  top: 3.9583vw;
+  left: 0.7813vw;
+  position: absolute;
+  width: 3.3854vw;
+  height: 3.3854vw;
+}
+.inekkontaynir .itemsbar .kutucukbar #gereksizpng {
+  width: 0.4884vw;
+  height: 0.7658vw;
+  position: absolute;
+  top: 6.2656vw;
+  right: 1.0417vw;
+}
+.inekkontaynir .solaltmaouse {
+  width: 8.4896vw;
+  height: 1.5625vw;
+  bottom: 2.1875vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.inekkontaynir .solaltmaouse img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5625vw;
+  height: 1.5625vw;
+}
+.inekkontaynir .solaltmaouse .line {
+  width: 0.0521vw;
+  height: 0.8333vw;
+  position: absolute;
+  left: 1.9271vw;
+  background: rgba(255, 255, 255, 0.49);
+}
+.inekkontaynir .solaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+  width: 5.9896vw;
+  height: 0.8854vw;
+}
+.inekkontaynir .sagaltmaouse {
+  width: 9.8438vw;
+  height: 0.9375vw;
+  bottom: 2.6214vw;
+  left: 13.3854vw;
+  position: absolute;
+  z-index: 1;
+}
+.inekkontaynir .sagaltmaouse .btn {
+  width: 2.8646vw;
+  height: 0.9375vw;
+  border-radius: 0.1042vw;
+  background: #F3A50D;
+  left: 0;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.64);
+  font-size: 0.5257vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+.inekkontaynir .sagaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+}
+.inekkontaynir #cowust {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.inekkontaynir #cowalt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.inekkontaynir #coworta {
+  position: absolute;
+  bottom: 5.9167vw;
+  left: 0;
+  z-index: 1;
+}
+.inekkontaynir .bgcolor1 {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 31.26%, rgba(0, 0, 0, 0.46) 100%);
+}
+
+.karpuzkontaynir {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 56.25vw;
+}
+.karpuzkontaynir .header {
+  width: 20.0208vw;
+  height: 8.4375vw;
+  top: 2.4479vw;
+  left: 2.6563vw;
+  z-index: 1;
+  position: absolute;
+}
+.karpuzkontaynir .header h1 {
+  width: 19.5833vw;
+  height: 3.3333vw;
+  position: absolute;
+  font-size: 2.261vw;
+  font-family: Oswald;
+  font-weight: 700;
+  top: -0.3vw;
+  left: 0;
+  background: linear-gradient(108.23deg, #FFA800 20.89%, #FFDA58 86.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.karpuzkontaynir .header h2 {
+  width: 10.6042vw;
+  height: 4vw;
+  left: 4.5vw;
+  top: 1.5vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 1.3566vw;
+  font-family: Oswald;
+  font-weight: 500;
+}
+
+.karpuzkontaynir .header span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 107.7%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0.5vw;
+}
+.karpuzkontaynir .clotinghbir {
+  width: 19.0625vw;
+  height: 3.9583vw;
+  position: absolute;
+  top: 11.8229vw;
+  left: 2.6563vw;
+  z-index: 1;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  transition: all .3s;
+  place-content: center;
+  background: linear-gradient(0deg, rgba(189, 255, 0, 0.07), rgba(189, 255, 0, 0.07)), radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.karpuzkontaynir > .clotinghbir:hover, .karpuzkontaynir > .clotinghbir:focus {
+  background-color: #9be91e41;
+  color: #fff;
+}
+.karpuzkontaynir .clotinghbir img {
+  top: 1.1458vw;
+  left: 0.7813vw;
+  width: 2.0833vw;
+  height: 1.6667vw;
+  position: absolute;
+}
+.karpuzkontaynir .clotinghbir .line {
+  width: 0.0521vw;
+  height: 1.5625vw;
+  background: rgba(255, 255, 255, 0.14);
+  left: 3.8542vw;
+  top: 1.1458vw;
+  position: absolute;
+}
+.karpuzkontaynir .clotinghbir .textone {
+  width: 8.4583vw;
+  height: 1.1458vw;
+  top: 0.9vw;
+  left: 4.1667vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8854vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+.karpuzkontaynir .clotinghbir .texttwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.6771vw;
+  font-weight: 400;
+  font-family: Barlow;
+  line-height: 126.7%;
+  width: 10.0208vw;
+  height: 0.8333vw;
+  top: 2.0354vw;
+  left: 4.4vw;
+  position: absolute;
+}
+.karpuzkontaynir .clotinghbir .solbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  top: 1.3542vw;
+  right: 4.6875vw;
+  position: absolute;
+  z-index: 1;
+}
+.karpuzkontaynir .clotinghbir .solbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.karpuzkontaynir .clotinghbir .sagbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  top: 1.3542vw;
+  right: 0.8854vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  position: absolute;
+}
+.karpuzkontaynir .clotinghbir .sagbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.karpuzkontaynir .clotinghbir .customInput {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0.1042vw;
+  border: none;
+  z-index: 999999999999999;
+  text-align: center;
+  top: 1.5104vw;
+  left: 14.8438vw;
+  width: 1.6146vw;
+  height: 0.9375vw;
+}
+.karpuzkontaynir .linetwo {
+  width: 13.8542vw;
+  height: 0.1042vw;
+  background: rgba(255, 255, 255, 0.12);
+  top: 16.8229vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.karpuzkontaynir .itemsbar {
+  position: absolute;
+  overflow-y: scroll;
+  display: block;
+
+  width: 18.9vw;
+  height: 33.1771vw;
+  top: 17.9688vw;
+  left: 2.6563vw;
+  z-index: 1;
+}
+.karpuzkontaynir .itemsbar::-webkit-scrollbar {
+  display: flex;
+  width: 0.1563vw;
+  height: 0;
+  border-radius: 1.1979vw;
+  background: rgba(255, 255, 255, 0.09);
+}
+.karpuzkontaynir .itemsbar::-webkit-scrollbar-thumb {
+  border-radius: 1.1979vw;
+  background: #FFB501;
+}
+.karpuzkontaynir .itemsbar .kutucukbar {
+  float: left;
+  z-index: 1;
+  width: 8.8542vw;
+  height: 8.0729vw;
+  top: 0;
+  left: 0;
+  margin-right: 0.3646vw;
+  margin-top: 0.4167vw;
+  position: relative;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: all .3s;
+}
+.karpuzkontaynir > .itemsbar > .kutucukbar:hover, .karpuzkontaynir > .itemsbar > .kutucukbar:focus {
+  background-color: #58e91e23;
+  color: #fff;
+}
+.karpuzkontaynir .itemsbar .kutucukbar #titleone {
+  top: 0.7292vw;
+  left: 0.7292vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8333vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 126.7%;
+}
+.karpuzkontaynir .itemsbar .kutucukbar #titletwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.625vw;
+  font-family: Barlow;
+  line-height: 126.7%;
+  top: 1.9271vw;
+  left: 0.65vw;
+  position: absolute;
+  width: 6.0938vw;
+  height: 1.5625vw;
+}
+.karpuzkontaynir .itemsbar .kutucukbar #itempng {
+  top: 3.9583vw;
+  left: 0.7813vw;
+  position: absolute;
+  width: 3.3854vw;
+  height: 3.3854vw;
+}
+.karpuzkontaynir .itemsbar .kutucukbar #gereksizpng {
+  width: 0.4884vw;
+  height: 0.7658vw;
+  position: absolute;
+  top: 6.2656vw;
+  right: 1.0417vw;
+}
+.karpuzkontaynir .solaltmaouse {
+  width: 8.4896vw;
+  height: 1.5625vw;
+  bottom: 2.1875vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.karpuzkontaynir .solaltmaouse img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5625vw;
+  height: 1.5625vw;
+}
+.karpuzkontaynir .solaltmaouse .line {
+  width: 0.0521vw;
+  height: 0.8333vw;
+  position: absolute;
+  left: 1.9271vw;
+  background: rgba(255, 255, 255, 0.49);
+}
+.karpuzkontaynir .solaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+  width: 5.9896vw;
+  height: 0.8854vw;
+}
+.karpuzkontaynir .sagaltmaouse {
+  width: 9.8438vw;
+  height: 0.9375vw;
+  bottom: 2.6214vw;
+  left: 13.3854vw;
+  position: absolute;
+  z-index: 1;
+}
+
+.karpuzkontaynir .sagaltmaouse .btn {
+  width: 2.8646vw;
+  height: 0.9375vw;
+  border-radius: 0.1042vw;
+  background: #F3A50D;
+  left: 0;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.64);
+  font-size: 0.5257vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+
+.karpuzkontaynir .sagaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+}
+
+.karpuzkontaynir #cowust {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.karpuzkontaynir #cowalt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.karpuzkontaynir #coworta {
+  position: absolute;
+  bottom: 5.9167vw;
+  left: 0;
+  z-index: 1;
+}
+
+.karpuzkontaynir .bgcolor1 {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 31.26%, rgba(0, 0, 0, 0.46) 100%);
+}
+
+.budaykontaynir {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 56.25vw;
+}
+
+.budaykontaynir .header {
+  width: 20.0208vw;
+  height: 8.4375vw;
+  top: 2.4479vw;
+  left: 2.6563vw;
+  z-index: 1;
+  position: absolute;
+}
+
+.budaykontaynir .header h1 {
+  width: 19.5833vw;
+  height: 3.3333vw;
+  position: absolute;
+  font-size: 2.261vw;
+  font-family: Oswald;
+  font-weight: 700;
+  top: -0.3vw;
+  left: 0;
+  background: linear-gradient(108.23deg, #FFA800 20.89%, #FFDA58 86.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.budaykontaynir .header h2 {
+  width: 10.6042vw;
+  height: 4vw;
+  left: 4.5vw;
+  top: 1.5vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 1.3566vw;
+  font-family: Oswald;
+  font-weight: 500;
+}
+
+.budaykontaynir .header span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 107.7%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0.5vw;
+}
+
+.budaykontaynir .clotinghbir {
+  width: 19.0625vw;
+  height: 3.9583vw;
+  position: absolute;
+  top: 11.8229vw;
+  left: 2.6563vw;
+  z-index: 1;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  transition: all .3s;
+  place-content: center;
+  background: linear-gradient(0deg, rgba(189, 255, 0, 0.07), rgba(189, 255, 0, 0.07)), radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.budaykontaynir > .clotinghbir:hover, .budaykontaynir > .clotinghbir:focus {
+  background-color: #e6e91e41;
+  color: #fff;
+}
+
+.budaykontaynir .clotinghbir img {
+  top: 1.1458vw;
+  left: 0.7813vw;
+  width: 2.0833vw;
+  height: 1.6667vw;
+  position: absolute;
+}
+.budaykontaynir .clotinghbir .line {
+  width: 0.0521vw;
+  height: 1.5625vw;
+  background: rgba(255, 255, 255, 0.14);
+  left: 3.8542vw;
+  top: 1.1458vw;
+  position: absolute;
+}
+.budaykontaynir .clotinghbir .textone {
+  width: 8.4583vw;
+  height: 1.1458vw;
+  top: 0.9vw;
+  left: 4.1667vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8854vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+.budaykontaynir .clotinghbir .texttwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.6771vw;
+  font-weight: 400;
+  font-family: Barlow;
+  line-height: 126.7%;
+  width: 10.0208vw;
+  height: 0.8333vw;
+  top: 2.0354vw;
+  left: 4.4vw;
+  position: absolute;
+}
+.budaykontaynir .clotinghbir .solbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  top: 1.3542vw;
+  right: 4.6875vw;
+  position: absolute;
+  z-index: 1;
+}
+.budaykontaynir .clotinghbir .solbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.budaykontaynir .clotinghbir .sagbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  top: 1.3542vw;
+  right: 0.8854vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  position: absolute;
+}
+.budaykontaynir .clotinghbir .sagbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.budaykontaynir .clotinghbir .customInput {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0.1042vw;
+  border: none;
+  z-index: 999999999999999;
+  text-align: center;
+  top: 1.5104vw;
+  left: 14.8438vw;
+  width: 1.6146vw;
+  height: 0.9375vw;
+}
+.budaykontaynir .linetwo {
+  width: 13.8542vw;
+  height: 0.1042vw;
+  background: rgba(255, 255, 255, 0.12);
+  top: 16.8229vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.budaykontaynir .itemsbar {
+  position: absolute;
+  overflow-y: scroll;
+  display: block;
+  width: 18.9vw;
+  height: 33.1771vw;
+  top: 17.9688vw;
+  left: 2.6563vw;
+  z-index: 1;
+}
+.budaykontaynir .itemsbar::-webkit-scrollbar {
+  display: flex;
+  width: 0.1563vw;
+  height: 0;
+  border-radius: 1.1979vw;
+  background: rgba(255, 255, 255, 0.09);
+}
+.budaykontaynir .itemsbar::-webkit-scrollbar-thumb {
+  border-radius: 1.1979vw;
+  background: #FFB501;
+}
+.budaykontaynir .itemsbar .kutucukbar {
+  float: left;
+  z-index: 9999;
+  width: 8.8542vw;
+  height: 8.0729vw;
+  top: 0;
+  left: 0;
+  margin-right: 0.3646vw;
+  margin-top: 0.4167vw;
+  position: relative;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: all .3s;
+}
+.budaykontaynir > .itemsbar > .kutucukbar:hover, .budaykontaynir > .itemsbar > .kutucukbar:focus {
+  background-color: #e6e91e41;
+  color: #fff;
+}
+.budaykontaynir .itemsbar .kutucukbar #titleone {
+  top: 0.7292vw;
+  left: 0.7292vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8333vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 126.7%;
+}
+.budaykontaynir .itemsbar .kutucukbar #titletwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.625vw;
+  font-family: Barlow;
+  line-height: 126.7%;
+  top: 1.9271vw;
+  left: 0.65vw;
+  position: absolute;
+  width: 6.0938vw;
+  height: 1.5625vw;
+}
+.budaykontaynir .itemsbar .kutucukbar #itempng {
+  top: 3.9583vw;
+  left: 0.7813vw;
+  position: absolute;
+  width: 3.3854vw;
+  height: 3.3854vw;
+}
+.budaykontaynir .itemsbar .kutucukbar #gereksizpng {
+  width: 0.4884vw;
+  height: 0.7658vw;
+  position: absolute;
+  top: 6.2656vw;
+  right: 1.0417vw;
+}
+.budaykontaynir .solaltmaouse {
+  width: 8.4896vw;
+  height: 1.5625vw;
+  bottom: 2.1875vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.budaykontaynir .solaltmaouse img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5625vw;
+  height: 1.5625vw;
+}
+.budaykontaynir .solaltmaouse .line {
+  width: 0.0521vw;
+  height: 0.8333vw;
+  position: absolute;
+  left: 1.9271vw;
+  background: rgba(255, 255, 255, 0.49);
+}
+.budaykontaynir .solaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+  width: 5.9896vw;
+  height: 0.8854vw;
+}
+.budaykontaynir .sagaltmaouse {
+  width: 9.8438vw;
+  height: 0.9375vw;
+  bottom: 2.6214vw;
+  left: 13.3854vw;
+  position: absolute;
+  z-index: 1;
+}
+.budaykontaynir .sagaltmaouse .btn {
+  width: 2.8646vw;
+  height: 0.9375vw;
+  border-radius: 0.1042vw;
+  background: #F3A50D;
+  left: 0;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.64);
+  font-size: 0.5257vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+.budaykontaynir .sagaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+}
+.budaykontaynir #cowust {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.budaykontaynir #cowalt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.budaykontaynir #coworta {
+  position: absolute;
+  bottom: 5.9167vw;
+  left: 0;
+  z-index: 1;
+}
+.budaykontaynir .bgcolor1 {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 31.26%, rgba(0, 0, 0, 0.46) 100%);
+}
+
+.diskontaynir {
+  display: none;
+  position: absolute;
+  width: 69.2708vw;
+  height: 38.4896vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.9896vw;
+  background: radial-gradient(15.57% 29.82% at 77.14% 0%, rgba(254, 54, 54, 0.16) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(16.55% 31.68% at 58.57% 0%, rgba(106, 255, 91, 0.106) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(11.92% 21.83% at 100% 0%, rgba(225, 44, 44, 0.33) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(39.98% 45.45% at 2.48% -1.38%, rgba(255, 171, 5, 0.27) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(50% 50% at 50% 50%, rgba(15, 12, 5, 0.95) 0%, rgba(15, 12, 5, 0.98) 100%);
+}
+.diskontaynir .header .lineyellow {
+  position: absolute;
+  width: 0.1823vw;
+  height: 3.512vw;
+  top: 2.146vw;
+  left: 0vw;
+  background: #FFDA58;
+}
+.diskontaynir .header .headerlefttext {
+  position: absolute;
+  width: 18.3958vw;
+  height: 4.2458vw;
+  left: 2.326vw;
+  display: block;
+  top: 1.6146vw;
+}
+.diskontaynir .header .headerlefttext #farmingshop {
+  font-family: "TT Lakes Neue Trl Ext", sans-serif;
+  font-style: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 800;
+  font-size: 1.9801vw;
+  line-height: 2.9167vw;
+  background: linear-gradient(108.23deg, #FFA800 20.89%, #FFDA58 86.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.diskontaynir .header .headerlefttext #lowertext {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.1881vw;
+  line-height: 1.7708vw;
+  color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  bottom: -0.2vw;
+  text-fill-color: transparent;
+}
+.diskontaynir .line {
+  background: rgba(255, 255, 255, 0.07);
+  width: 0.1042vw;
+  height: 2.8646vw;
+  position: absolute;
+  top: 0;
+  left: 22.1333vw;
+  top: 2vw;
+}
+.diskontaynir .aciklamabody {
+  position: absolute;
+  width: 13.2813vw;
+  height: 2.9688vw;
+  left: 24.4792vw;
+  top: 1.9146vw;
+}
+.diskontaynir .aciklamabody .aciklatitle {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8333vw;
+  line-height: 0.9896vw;
+  position: absolute;
+  top: 0;
+  left: 1.5vw;
+  color: #FFFFFF;
+}
+.diskontaynir .aciklamabody .acikllamaaciklama {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.6333vw;
+  line-height: 0.9375vw;
+  text-align: center;
+  position: absolute;
+  left: -2.75vw;
+  bottom: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.52);
+}
+.diskontaynir .farmingbuy {
+  position: absolute;
+  width: 12.5vw;
+  height: 4.7245vw;
+  top: 1.1vw;
+  right: 22vw;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.diskontaynir .farmingbuy:hover {
+  transform:scale(1.03);
+}
+.diskontaynir .farmingbuy #title {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.8333vw;
+  position: absolute;
+  top: 1.3vw;
+  right: 1.9vw;
+  line-height: 126.7%;
+  color: #6AFF5B;
+}
+.diskontaynir .farmingbuy #lowertext {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6771vw;
+  line-height: 126.7%;
+  position: absolute;
+  bottom: 1.5vw;
+  right: 3vw;
+  color: rgba(255, 255, 255, 0.6);
+}
+.diskontaynir .farmingbuy img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.diskontaynir .farmingsell {
+  position: absolute;
+  width: 12.5vw;
+  height: 3.9vw;
+  top: 1.7vw;
+  right: 8.9vw;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.diskontaynir .farmingsell:hover {
+  transform:scale(1.03);
+}
+
+.diskontaynir .farmingsell #title {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.8333vw;
+  position: absolute;
+  top: 0.7vw;
+  right: 1.9vw;
+  line-height: 126.7%;
+  color: #FE3636;
+}
+.diskontaynir .farmingsell #lowertext {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6771vw;
+  line-height: 126.7%;
+  position: absolute;
+  bottom: 1.25vw;
+  left: 5.2vw;
+  color: rgba(255, 255, 255, 0.6);
+}
+.diskontaynir .farmingsell img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.diskontaynir .closediv {
+  position: absolute;
+  top: 1.5625vw;
+  right: 1.5625vw;
+}
+.diskontaynir .closediv img {
+  top: 1.5625vw;
+  right: 1.5625vw;
+  width: 1.3542vw;
+  height: 1.3542vw;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.diskontaynir .closediv img:hover {
+  transform: scale(1.085);
+}
+
+.diskontaynir .closediv #closetext1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  position: absolute;
+  right: 1.5vw;
+  width: 4.4271vw;
+  height: 2vw;
+  top: -0.6vw;
+}
+.diskontaynir .closediv #closetext2 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.5208vw;
+  font-family: Barlow;
+  position: absolute;
+  top: 0.8vw;
+  right: 1.5vw;
+}
+.diskontaynir #middletextbuy {
+  color: #FFF;
+  font-size: 0.8333vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 126.7%;
+  position: absolute;
+  top: 7.7083vw;
+  left: 2.3438vw;
+  display: block;
+}
+.diskontaynir .buykonusulist {
+  position: absolute;
+  top: 9.4271vw;
+  left: 2.1438vw;
+  width: 45.99vw;
+  height: 27.6vw;
+  overflow-y: scroll;
+  display: block;
+}
+.diskontaynir .buykonusulist .buykonusulist .bukonusubar:hover {
+  color: #000;
+  background: linear-gradient(178deg, #FF3C3C 0%, #AC2B2B 100%);
+}
+.diskontaynir .buykonusulist .bukonusubar {
+  width: 8.5938vw;
+  height: 8.5938vw;
+  position: relative;
+  left: 0;
+  top: 0;
+  float: left;
+  margin-right: 0.5729vw;
+  margin-top: 0.4688vw;
+  border-radius: 0.2604vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.diskontaynir .buykonusulist .bukonusubar #textone {
+  position: absolute;
+  top: 0.7292vw;
+  left: 0.7813vw;
+  color: #FFF;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+}
+.diskontaynir .buykonusulist .bukonusubar #texttwo {
+  position: absolute;
+  top: 1.4583vw;
+  left: 0.7813vw;
+  color: rgba(255, 255, 255, 0.53);
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+}
+.diskontaynir .buykonusulist .bukonusubar img {
+  position: absolute;
+  top: 2.0313vw;
+  left: 2.5vw;
+  max-width: 3.75vw;
+  max-height: 3.75vw;
+}
+.diskontaynir .buykonusulist .bukonusubar #moneytext {
+  position: absolute;
+  left: 0.7813vw;
+  bottom: 2.2396vw;
+  color: #0F6;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 126.7%;
+}
+.diskontaynir .buykonusulist .bukonusubar .sellbuton {
+  width: 7.1354vw;
+  height: 1.1979vw;
+  border-radius: 0.3125vw;
+  position: absolute;
+  bottom: 0.7292vw;
+  left: 0.7292vw;
+  background: rgba(255, 255, 255, 0.13);
+  color: rgba(255, 255, 255, 0.32);
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 126.7%;
+  cursor: pointer;
+  transition: all .3s;
+}
+.diskontaynir .buykonusulist .bukonusubar .sellbuton:hover {
+  background: rgba(35, 255, 101, 0.55);
+  transform: scale(1.02);
+  color: #000;
+}
+.diskontaynir #shopingbasketlist {
+  position: absolute;
+  top: 7.7083vw;
+  right: 12.7vw;
+  color: #FFF;
+  font-size: 0.8333vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 126.7%;
+  display: block;
+}
+.diskontaynir .shopingcart {
+  display: block;
+  position: absolute;
+  width: 18.2813vw;
+  height: 26.7188vw;
+  border-radius: 0.2604vw;
+  right: 2.25vw;
+  top: 9.4271vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.08);
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.diskontaynir .shopingcart .totalmoney {
+  width: 15.7813vw;
+  height: 2.8646vw;
+  border-radius: 0.2604vw;
+  background: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  bottom: 1vw;
+  left: 1.25vw
+}
+.diskontaynir .shopingcart .totalmoney .cashdiv {
+  top: 0.625vw;
+  left: 0.625vw;
+  position: absolute;
+  width: 3.3333vw;
+  height: 1.6146vw;
+  color: #ffffffa4;
+  text-align: center;
+  font-size: 0.625vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 90%;
+  cursor: pointer;
+  border-radius: 0.2083vw;
+  filter: brightness(1);
+  background: #6363633d;
+  transition: .35s all;
+}
+.diskontaynir .shopingcart .totalmoney .cashdiv:hover {
+  background: #549b04cc;
+  color: rgb(255, 255, 255);
+  transform: scale(1.035);
+}
+
+.diskontaynir .shopingcart .totalmoney .bankdiv {
+  top: 0.625vw;
+  left: 4.4792vw;
+  position: absolute;
+  width: 3.3333vw;
+  height: 1.6146vw;
+  color: #ffffffa4;
+  text-align: center;
+  font-size: 0.625vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 90%;
+  border-radius: 0.2083vw;
+  background: #6363633d;
+  transition: .35s all;
+  cursor: pointer;
+}
+
+.diskontaynir .shopingcart .totalmoney .bankdiv:hover {
+  background: #549b04cc;
+  color: rgb(255, 255, 255);
+  transform: scale(1.035);
+}
+.diskontaynir .shopingcart .totalmoney .totalmoneytext {
+  top: 1.0417vw;
+  right: 0.7292vw;
+  color: #0F6;
+  text-align: center;
+  font-size: 0.9375vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+  width: 3.125vw;
+  height: 0.8333vw;
+  position: absolute;
+}
+.diskontaynir .shopingcart .shopingbarlist {
+  top: 1.25vw;
+  left: 1.3021vw;
+  width: 16.35vw;
+  height: 21vw;
+  position: absolute;
+  display: block;
+  overflow-y: scroll;
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar {
+  margin-bottom: 0.3646vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 15.7813vw;
+  height: 2.8125vw;
+  border-radius: 0.3125vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.06);
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar img {
+  position: absolute;
+  width: 1.5104vw;
+  height: 1.5104vw;
+  left: 1.2vw;
+  top: 0.625vw;
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar #textone {
+  color: #FFF;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+  position: absolute;
+  top: 0.7292vw;
+  left: 3.2813vw;
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar #texttwo {
+  color: rgba(255, 255, 255, 0.53);
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+  position: absolute;
+  top: 1.4583vw;
+  left: 3.2813vw;
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar #moneytext {
+  position: absolute;
+  top: 1.0938vw;
+  right: 5.1563vw;
+  color: #0F6;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar #moneytext span {
+  color: #0F6;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+}
+
+.diskontaynir .shopingcart .shopingbarlist .shopingbar #copkutu {
+  font-size: 0.6vw;
+  color:rgb(211, 0, 0);
+  width: 1vw;
+  height: 1vw;
+  position: absolute;
+  top: 0.9115vw;
+  display: flex;
+  left: 0.25vw;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.diskontaynir .shopingcart .shopingbarlist .shopingbar #copkutu:hover {
+  color:red;
+  text-shadow: 0 0 .5vw red;
+  transform: scale(1.015);
+}
+
+.diskontaynir .shopingcart .shopingbarlist .shopingbar .eksibtn {
+  width: 0.7292vw;
+  height: 0.7292vw;
+  border-radius: 1.4219vw;
+  background: rgba(255, 255, 255, 0.18);
+  right: 2.8125vw;
+  top: 0.9896vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.diskontaynir .shopingcart .shopingbarlist .shopingbar .btnyazisi {
+  color: #FFF;
+  text-align: center;
+  font-size: 0.6771vw;
+  width: 0.7292vw;
+  height: 0.625vw;
+  right: 1.7708vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+  top: 1.0417vw;
+  position: absolute;
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar .btnyazisi span {
+  color: #FFF;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+}
+.diskontaynir .shopingcart .shopingbarlist .shopingbar .artıbtn {
+  width: 0.7292vw;
+  height: 0.7292vw;
+  border-radius: 1.4219vw;
+  background: rgba(255, 255, 255, 0.18);
+  right: 0.8333vw;
+  top: 0.9896vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.4771vw;
+  font-family: Barlow;
+  font-weight: 400;
+  cursor: pointer;
+}
+.diskontaynir #middletext {
+  color: #FFF;
+  font-size: 0.8333vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 126.7%;
+  position: absolute;
+  top: 7.7083vw;
+  left: 2.3438vw;
+  display: none;
+}
+.diskontaynir .middlebar {
+  position: absolute;
+  top: 9.4271vw;
+  left: 2.15vw;
+  width: 64.9vw;
+  height: 27.5vw;
+  overflow-y: scroll;
+  display: none;
+}
+.diskontaynir .middlebar .middlebar_bar .sellbuton:hover {
+  color: #000;
+  transform: scale(1.02);
+  background: #AC2B2B;
+}
+.diskontaynir .middlebar .middlebar_bar {
+  width: 8.5938vw;
+  height: 8.5938vw;
+  position: relative;
+  left: 0;
+  top: 0;
+  float: left;
+  margin-right: 0.5729vw;
+  margin-top: 0.4688vw;
+  border-radius: 0.2604vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.diskontaynir .middlebar .middlebar_bar #textone {
+  position: absolute;
+  top: 0.7292vw;
+  left: 0.7813vw;
+  color: #FFF;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+}
+.diskontaynir .middlebar .middlebar_bar #texttwo {
+  position: absolute;
+  top: 1.4583vw;
+  left: 0.7813vw;
+  color: rgba(255, 255, 255, 0.53);
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 90%;
+}
+.diskontaynir .middlebar .middlebar_bar img {
+  position: absolute;
+  top: 2.0313vw;
+  left: 2.5vw;
+  max-width: 3.75vw;
+  max-height: 3.75vw;
+}
+.diskontaynir .middlebar .middlebar_bar #moneytext {
+  position: absolute;
+  left: 0.7813vw;
+  bottom: 2.2396vw;
+  color: #D34D4D;
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 126.7%;
+}
+.diskontaynir .middlebar .middlebar_bar .sellbuton {
+  width: 7.1354vw;
+  height: 1.1979vw;
+  border-radius: 0.3125vw;
+  position: absolute;
+  bottom: 0.7292vw;
+  left: 0.7292vw;
+  background: rgba(255, 255, 255, 0.13);
+  color: rgba(255, 255, 255, 0.32);
+  text-align: center;
+  font-size: 0.6771vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 126.7%;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+::-webkit-scrollbar {
+  display: flex;
+  width: 0.1563vw;
+  height: 0;
+  border-radius: 1.1979vw;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1.1979vw;
+  background: #515151;
+}/*# sourceMappingURL=style.css.map */
+
+.pumpkontaynir {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 56.25vw;
+}
+
+.pumpkontaynir .header {
+  width: 20.0208vw;
+  height: 8.4375vw;
+  top: 2.4479vw;
+  left: 2.6563vw;
+  z-index: 1;
+  position: absolute;
+}
+
+.pumpkontaynir .header h1 {
+  width: 19.5833vw;
+  height: 3.3333vw;
+  position: absolute;
+  font-size: 2.261vw;
+  font-family: Oswald;
+  font-weight: 700;
+  top: -0.3vw;
+  left: 0;
+  background: linear-gradient(108.23deg, #FFA800 20.89%, #FFDA58 86.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pumpkontaynir .header h2 {
+  width: 10.6042vw;
+  height: 4vw;
+  left: 4.5vw;
+  top: 1.5vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 1.3566vw;
+  font-family: Oswald;
+  font-weight: 500;
+}
+
+.pumpkontaynir .header span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75vw;
+  font-family: Barlow;
+  font-weight: 500;
+  line-height: 107.7%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0.5vw;
+}
+
+.pumpkontaynir .clotinghbir {
+  width: 19.0625vw;
+  height: 3.9583vw;
+  position: absolute;
+  top: 11.8229vw;
+  left: 2.6563vw;
+  z-index: 1;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  transition: all .3s;
+  place-content: center;
+  background: linear-gradient(0deg, rgba(189, 255, 0, 0.07), rgba(189, 255, 0, 0.07)), radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.pumpkontaynir > .clotinghbir:hover, .pumpkontaynir > .clotinghbir:focus {
+  background-color: #ee761441;
+  color: #fff;
+}
+
+.pumpkontaynir .clotinghbir img {
+  top: 1.1458vw;
+  left: 0.7813vw;
+  width: 2.0833vw;
+  height: 1.6667vw;
+  position: absolute;
+}
+.pumpkontaynir .clotinghbir .line {
+  width: 0.0521vw;
+  height: 1.5625vw;
+  background: rgba(255, 255, 255, 0.14);
+  left: 3.8542vw;
+  top: 1.1458vw;
+  position: absolute;
+}
+.pumpkontaynir .clotinghbir .textone {
+  width: 8.4583vw;
+  height: 1.1458vw;
+  top: 0.9vw;
+  left: 4.1667vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8854vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+.pumpkontaynir .clotinghbir .texttwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.6771vw;
+  font-weight: 400;
+  font-family: Barlow;
+  line-height: 126.7%;
+  width: 10.0208vw;
+  height: 0.8333vw;
+  top: 2.0354vw;
+  left: 4.4vw;
+  position: absolute;
+}
+.pumpkontaynir .clotinghbir .solbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  top: 1.3542vw;
+  right: 4.6875vw;
+  position: absolute;
+  z-index: 1;
+}
+.pumpkontaynir .clotinghbir .solbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pumpkontaynir .clotinghbir .sagbtn {
+  width: 1.25vw;
+  height: 1.25vw;
+  top: 1.3542vw;
+  right: 0.8854vw;
+  border-radius: 0.1563vw;
+  background: radial-gradient(93.18% 93.18% at 50% 50%, rgba(255, 184, 0, 0.53) 0%, rgba(255, 184, 0, 0) 100%);
+  border: 0.0521vw solid #FFB500;
+  position: absolute;
+}
+.pumpkontaynir .clotinghbir .sagbtn img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.pumpkontaynir .clotinghbir .customInput {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0.1042vw;
+  border: none;
+  z-index: 999999999999999;
+  text-align: center;
+  top: 1.5104vw;
+  left: 14.8438vw;
+  width: 1.6146vw;
+  height: 0.9375vw;
+}
+.pumpkontaynir .linetwo {
+  width: 13.8542vw;
+  height: 0.1042vw;
+  background: rgba(255, 255, 255, 0.12);
+  top: 16.8229vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.pumpkontaynir .itemsbar {
+  position: absolute;
+  overflow-y: scroll;
+  display: block;
+  width: 18.9vw;
+  height: 33.1771vw;
+  top: 17.9688vw;
+  left: 2.6563vw;
+  z-index: 1;
+}
+.pumpkontaynir .itemsbar::-webkit-scrollbar {
+  display: flex;
+  width: 0.1563vw;
+  height: 0;
+  border-radius: 1.1979vw;
+  background: rgba(255, 255, 255, 0.09);
+}
+.pumpkontaynir .itemsbar::-webkit-scrollbar-thumb {
+  border-radius: 1.1979vw;
+  background: #FFB501;
+}
+.pumpkontaynir .itemsbar .kutucukbar {
+  float: left;
+  z-index: 9999;
+  width: 8.8542vw;
+  height: 8.0729vw;
+  top: 0;
+  left: 0;
+  margin-right: 0.3646vw;
+  margin-top: 0.4167vw;
+  position: relative;
+  border-radius: 0.1563vw;
+  border: 0.1042vw solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(135.96% 135.96% at 50% 50%, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: all .3s;
+}
+.pumpkontaynir > .itemsbar > .kutucukbar:hover, .pumpkontaynir > .itemsbar > .kutucukbar:focus {
+  background-color: #ee761441;
+  color: #fff;
+}
+.pumpkontaynir .itemsbar .kutucukbar #titleone {
+  top: 0.7292vw;
+  left: 0.7292vw;
+  position: absolute;
+  color: #FFF;
+  font-size: 0.8333vw;
+  font-family: Barlow;
+  font-weight: 600;
+  line-height: 126.7%;
+}
+.pumpkontaynir .itemsbar .kutucukbar #titletwo {
+  color: rgba(255, 255, 255, 0.71);
+  font-size: 0.625vw;
+  font-family: Barlow;
+  line-height: 126.7%;
+  top: 1.9271vw;
+  left: 0.65vw;
+  position: absolute;
+  width: 6.0938vw;
+  height: 1.5625vw;
+}
+.pumpkontaynir .itemsbar .kutucukbar #itempng {
+  top: 3.9583vw;
+  left: 0.7813vw;
+  position: absolute;
+  width: 3.3854vw;
+  height: 3.3854vw;
+}
+.pumpkontaynir .itemsbar .kutucukbar #gereksizpng {
+  width: 0.4884vw;
+  height: 0.7658vw;
+  position: absolute;
+  top: 6.2656vw;
+  right: 1.0417vw;
+}
+.pumpkontaynir .solaltmaouse {
+  width: 8.4896vw;
+  height: 1.5625vw;
+  bottom: 2.1875vw;
+  left: 2.6563vw;
+  position: absolute;
+  z-index: 1;
+}
+.pumpkontaynir .solaltmaouse img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5625vw;
+  height: 1.5625vw;
+}
+.pumpkontaynir .solaltmaouse .line {
+  width: 0.0521vw;
+  height: 0.8333vw;
+  position: absolute;
+  left: 1.9271vw;
+  background: rgba(255, 255, 255, 0.49);
+}
+.pumpkontaynir .solaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+  width: 5.9896vw;
+  height: 0.8854vw;
+}
+.pumpkontaynir .sagaltmaouse {
+  width: 9.8438vw;
+  height: 0.9375vw;
+  bottom: 2.6214vw;
+  left: 13.3854vw;
+  position: absolute;
+  z-index: 1;
+}
+.pumpkontaynir .sagaltmaouse .btn {
+  width: 2.8646vw;
+  height: 0.9375vw;
+  border-radius: 0.1042vw;
+  background: #F3A50D;
+  left: 0;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.64);
+  font-size: 0.5257vw;
+  font-family: Barlow;
+  font-weight: 600;
+}
+.pumpkontaynir .sagaltmaouse #text {
+  position: absolute;
+  right: 0;
+  color: #FFF;
+  font-size: 0.7292vw;
+  font-family: Barlow;
+  font-weight: 500;
+}
+.pumpkontaynir #cowust {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.pumpkontaynir #cowalt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.pumpkontaynir #coworta {
+  position: absolute;
+  bottom: 5.9167vw;
+  left: 0;
+  z-index: 1;
+}
+.pumpkontaynir .bgcolor1 {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 0;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 31.26%, rgba(0, 0, 0, 0.46) 100%);
+}

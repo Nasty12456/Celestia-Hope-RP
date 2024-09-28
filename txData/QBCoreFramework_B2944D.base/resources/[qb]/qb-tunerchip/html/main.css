@@ -1,0 +1,617 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url(./img/deletebg.png); */
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 56.25vw;
+}
+
+.General {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 54.2vw;
+  height: 35.9vw;
+  background-image: url(./img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.TopArea {
+  padding: 0vw 3.2vw;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 6.7vw;
+}
+
+.Title {
+  width: 17.6vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 118%;
+  font-size: 1.7vw;
+  color: #0085ff;
+}
+
+.Title span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 118%;
+  color: #ffffff;
+}
+
+.TitleLine {
+  width: 0.0521vw;
+  height: 2.2vw;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 0.5208vw;
+}
+
+.categoryArea {
+  display: flex;
+  gap: 1vw;
+  margin-left: 4.7vw;
+  width: 23.4vw;
+  height: 1.7vw;
+}
+
+.categoryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.1vw;
+  height: 100%;
+  background: radial-gradient(
+    298.91% 335.29% at 50.36% -235.29%,
+    #0085ff 0%,
+    rgba(0, 133, 255, 0) 100%
+  );
+  border-radius: 0.1042vw;
+
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6944vw;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.81);
+}
+
+.BottomArea,
+.CustomBottomArea,
+.lightBottomArea {
+  display: flex;
+  flex-direction: column;
+  padding: 0vw 3.2vw;
+  width: 100%;
+  height: 29.2vw;
+}
+
+.customSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0.7813vw;
+  width: 100%;
+  height: 6.1vw;
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(255, 255, 255, 0.13) 35.94%,
+    rgba(255, 255, 255, 0) 96.8%
+  );
+  transition: 0.2s;
+}
+
+.customSide:hover {
+  cursor: pointer;
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    rgba(255, 255, 255, 0.28) 35.94%,
+    rgba(255, 255, 255, 0) 96.8%
+  );
+}
+
+.customImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/custombg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.customTitle {
+  width: 20vw;
+  z-index: 1;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7vw;
+  line-height: 80%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.customTitle span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 80%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.customInfo {
+  z-index: 1;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.5208vw;
+  line-height: 0.625vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.customInfo span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.625vw;
+  line-height: 0.7292vw;
+  text-align: center;
+  color: #ffffff;
+}
+
+.modeSide {
+  gap: 3.38vw;
+  display: flex;
+  width: 100%;
+  height: 22.2vw;
+}
+
+.modeBox,
+.modeBox1,
+.modeBox2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 13.6vw;
+  height: 100%;
+  background: radial-gradient(
+    98.26% 98.26% at 50% 100%,
+    rgba(0, 148, 255, 0.15) 0%,
+    rgba(0, 148, 255, 0) 100%
+  );
+  background-repeat: repeat-x;
+  transition: all 300ms ease-in-out;
+}
+
+.modeBox1 {
+  background: radial-gradient(
+    98.26% 98.26% at 50% 100%,
+    rgba(255, 214, 0, 0.15) 0%,
+    rgba(255, 214, 0, 0) 100%
+  );
+}
+
+.modeBox2 {
+  background: radial-gradient(
+    98.26% 98.26% at 50% 100%,
+    rgba(255, 65, 65, 0.15) 0%,
+    rgba(255, 65, 65, 0) 100%
+  );
+}
+
+.modeBox:hover {
+  cursor: pointer;
+  background: radial-gradient(
+    98.26% 98.26% at 50% 100%,
+    rgba(0, 148, 255, 0.37) 0%,
+    rgba(0, 148, 255, 0) 100%
+  );
+}
+
+.modeBox1:hover {
+  cursor: pointer;
+  background: radial-gradient(
+    98.26% 98.26% at 50% 100%,
+    rgba(255, 214, 0, 0.37) 0%,
+    rgba(255, 214, 0, 0) 100%
+  );
+}
+
+.modeBox2:hover {
+  cursor: pointer;
+  background: radial-gradient(
+    98.26% 98.26% at 50% 100%,
+    rgba(255, 65, 65, 0.37) 0%,
+    rgba(255, 65, 65, 0) 100%
+  );
+}
+
+.modeImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/conford.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modeLine {
+  position: absolute;
+  bottom: 0;
+  width: 4.4vw;
+  height: 0.3vw;
+  background: #0094ff;
+  box-shadow: 0px 0px 3.3vw 0.3646vw #0094ff;
+}
+
+.modeTitle {
+  margin-top: 4vw;
+  z-index: 1;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7vw;
+  line-height: 80%;
+  text-align: center;
+  color: #0094ff;
+}
+
+.modeTitle span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1vw;
+  text-align: center;
+  line-height: 80%;
+  color: #ffffff;
+}
+
+.modeInfo {
+  z-index: 1;
+  margin-top: 12vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.5208vw;
+  text-align: center;
+  line-height: 110%;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.modeInfo span {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.625vw;
+  line-height: 110%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.ExitButton {
+  display: flex;
+  width: 1vw;
+  height: 1vw;
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  transition: 0.2s;
+}
+
+.ExitButton:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.CustomSettingBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 4vw;
+}
+
+.CustomSettingTopArea {
+  gap: 1.4vw;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.CustomSettingLine {
+  width: 37.3vw;
+  height: 0.0521vw;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.CustomSettingTopArea h1 {
+  width: 5.9vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1vw;
+  line-height: 90%;
+  color: #0085ff;
+}
+
+.CustomSettingTopArea span {
+  font-family: "Barlow";
+  width: 3.8vw;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 90%;
+  text-align: right;
+  color: #ffffff;
+}
+
+.CustomSettingBottomArea {
+  gap: 1.3vw;
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 3.2vw;
+}
+
+.customButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5vw;
+  height: 1.25vw;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 0.1563vw;
+
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.5208vw;
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.51);
+}
+
+.lightSetingBox {
+  width: 100%;
+  height: 5vw;
+}
+
+.lightSettingBottomArea {
+  align-items: end;
+  gap: 1.4vw;
+  display: flex;
+  width: 100%;
+  height: 4.1vw;
+  padding: 0.3646vw 0.3646vw;
+}
+
+.lightColor,
+.lightColorSelect {
+  position: relative;
+  width: 1.25vw;
+  height: 1.25vw;
+  background: #ff4b4b;
+  border: 0.1042vw solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.1042vw;
+}
+
+.lightColorSelect::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  top: -0.25vw;
+  left: -0.25vw;
+  right: -0.25vw;
+  bottom: -0.25vw;
+  border: 0.0521vw solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.2604vw;
+}
+
+.lightColorSelect::after {
+  content: "";
+  position: absolute;
+  top: -0.4646vw;
+  left: -0.4646vw;
+  right: -0.4646vw;
+  bottom: -0.4646vw;
+  border: 0.0521vw solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.4688vw;
+}
+
+.lightline {
+  width: 0.0521vw;
+  height: 1.3542vw;
+
+  background: #d9d9d9;
+}
+
+.lightline1 {
+  width: 0.0521vw;
+  height: 10vw;
+
+  background: #d9d9d9;
+}
+
+.lightColorPalette {
+  width: 3.125vw;
+  height: 1.25vw;
+  background: linear-gradient(
+    90deg,
+    #ff1e1e 0%,
+    #ff8a1e 13.02%,
+    #ffc01e 25.52%,
+    #c4ff1e 38.54%,
+    #30ff1e 52.08%,
+    #1efff1 65.1%,
+    #1eaeff 78.12%,
+    #581eff 87.5%,
+    #df1eff 100%
+  );
+  border: 0.1042vw solid rgba(0, 0, 0, 0.22);
+  border-radius: 0.1042vw;
+}
+
+.lightRgbColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.8vw;
+  height: 1.25vw;
+
+  background: linear-gradient(
+    90deg,
+    #ff1e1e 0%,
+    #ff8a1e 13.02%,
+    #ffc01e 25.52%,
+    #c4ff1e 38.54%,
+    #30ff1e 52.08%,
+    #1efff1 65.1%,
+    #1eaeff 78.12%,
+    #581eff 87.5%,
+    #df1eff 100%
+  );
+  border: 0.1042vw solid rgba(0, 0, 0, 0.22);
+  border-radius: 0.1042vw;
+
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.5941vw;
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.53);
+}
+
+input {
+  width: 3.125vw;
+  height: 1.25vw;
+  background: linear-gradient(
+    90deg,
+    #ff1e1e 0%,
+    #ff8a1e 13.02%,
+    #ffc01e 25.52%,
+    #c4ff1e 38.54%,
+    #30ff1e 52.08%,
+    #1efff1 65.1%,
+    #1eaeff 78.12%,
+    #581eff 87.5%,
+    #df1eff 100%
+  );
+  border: 0.1042vw solid rgba(0, 0, 0, 0.22);
+  border-radius: 0.1042vw;
+}
+
+.neonName {
+  width: 2.8646vw;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9336vw;
+  /* identical to box height */
+
+  color: rgba(255, 255, 255, 0.76);
+}
+
+#customCheckbox,
+#customCheckbox1,
+#customCheckbox2,
+#customCheckbox3 {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+label {
+  position: relative;
+
+  width: 3.125vw;
+  height: 1.3542vw;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  transition: background 0.3s linear;
+  cursor: pointer;
+}
+label:after {
+  margin-top: 0.2vw;
+  content: "";
+  position: absolute;
+  left: 0.2083vw;
+  top: 0.0521vw;
+  width: 0.9375vw;
+  height: 0.9375vw;
+  border-radius: 0.1042vw;
+  background: rgba(255, 255, 255, 0.15);
+  transition: left 0.3s ease-out;
+}
+
+#customCheckbox:checked ~ label,
+#customCheckbox1:checked ~ label,
+#customCheckbox2:checked ~ label,
+#customCheckbox3:checked ~ label {
+  background: rgba(255, 255, 255, 0.1);
+}
+#customCheckbox:checked ~ label:after,
+#customCheckbox1:checked ~ label:after,
+#customCheckbox2:checked ~ label:after,
+#customCheckbox3:checked ~ label:after {
+  background: #0094ff;
+  left: 1.9792vw;
+}
+
+.ColorBoxs {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 1.4vw;
+  row-gap: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 15vw;
+  height: 100%;
+}
+
+.lightSettingBottomArea1 {
+  margin-top: 1.8vw;
+  align-items: center;
+  gap: 4vw;
+  display: flex;
+  width: 100%;
+  height: 15vw;
+  padding: 0.3646vw 0.3646vw;
+}
+
+.neonceheckbox {
+  display: flex;
+  width: 8vw;
+}
+
+.check-boxs {
+  gap: 2.85vw;
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+  height: 100%;
+}

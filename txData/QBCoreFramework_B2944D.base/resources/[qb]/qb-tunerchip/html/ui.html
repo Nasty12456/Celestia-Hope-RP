@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="General">
+      <div class="TopArea">
+        <h1 class="Title">QBCore#4011<br /><span>TUNERCHIP</span></h1>
+        <div class="TitleLine"></div>
+        <div class="categoryArea">
+          <div
+            class="categoryButton"
+            id="carmode"
+            onclick="OpenMenu('CarMode')"
+            style="background: #0085ff"
+          >
+            Car Mode
+          </div>
+          <div
+            onclick="OpenMenu('Details')"
+            class="categoryButton"
+            id="details"
+            style="color: rgba(255, 255, 255, 0.49)"
+          >
+            Details
+          </div>
+          <div
+            class="categoryButton"
+            onclick="OpenMenu('Light')"
+            id="light"
+            style="color: rgba(255, 255, 255, 0.49)"
+          >
+            Lights
+          </div>
+          <div
+            class="categoryButton"
+            onclick="OpenMenu('Restart')"
+            id="Restart"
+            style="
+              background: radial-gradient(
+                298.91% 335.29% at 50.36% -235.29%,
+                #c31f3d 0%,
+                rgba(0, 0, 0, 0.341) 100%
+              );
+              color: rgba(255, 255, 255, 0.49);
+            "
+          >
+            Reset Setting
+          </div>
+        </div>
+      </div>
+      <div class="BottomArea" style="display: flex">
+        <div onclick="OpenMenu('Details')" class="customSide">
+          <div class="customImg"></div>
+          <div class="customInfo">
+            Information<br /><span>You can make detailed settings here</span>
+          </div>
+          <div class="customTitle">DETAILS<br /><span>SETTINGS</span></div>
+          <div class="customInfo">
+            Information<br /><span>You can make detailed settings here</span>
+          </div>
+        </div>
+        <div class="modeSide">
+          <div onclick="OpenMenu('Comfort')" class="modeBox">
+            <div class="modeImg"></div>
+            <div class="modeLine"></div>
+            <div class="modeTitle">COMFORT<br /><span>MODE</span></div>
+            <div class="modeInfo">
+              Information<br /><span>Increases Fuel Consumption!</span>
+            </div>
+          </div>
+          <div onclick="OpenMenu('Drift')" class="modeBox1">
+            <div
+              class="modeImg"
+              style="background-image: url(./img/drift.png)"
+            ></div>
+            <div
+              class="modeLine"
+              style="
+                background: #ffd600;
+                box-shadow: 0px 0px 3.3vw 0.3646vw #ffd600;
+              "
+            ></div>
+            <div class="modeTitle" style="color: #ffd600">
+              DRIFT<br /><span>MODE</span>
+            </div>
+            <div class="modeInfo">
+              Information<br /><span>Increases Fuel Consumption!</span>
+            </div>
+          </div>
+          <div onclick="OpenMenu('Sport')" class="modeBox2">
+            <div
+              class="modeImg"
+              style="background-image: url(./img/sport.png)"
+            ></div>
+            <div
+              class="modeLine"
+              style="
+                background: #ff4141;
+                box-shadow: 0px 0px 3.3vw 0.3646vw #ff4141;
+              "
+            ></div>
+            <div class="modeTitle" style="color: #ff4141">
+              SPORT<br /><span>MODE</span>
+            </div>
+            <div class="modeInfo">
+              Information<br /><span>Increases Fuel Consumption!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="CustomBottomArea"
+        style="display: none; margin-top: 0.8vw; gap: 1.5vw"
+      >
+        <div class="CustomSettingBox">
+          <div class="CustomSettingTopArea">
+            <h1>Boost</h1>
+            <div class="CustomSettingLine"></div>
+            <span>CUSTOM</span>
+          </div>
+          <div class="CustomSettingBottomArea">
+            <div
+              class="customButton boost"
+              id="boost-l"
+              onclick="DetailSettings('boost-l')"
+            >
+              Low
+            </div>
+            <div
+              class="customButton boost"
+              onclick="DetailSettings('boost-m')"
+              id="boost-m"
+            >
+              Medium
+            </div>
+            <div
+              class="customButton boost"
+              onclick="DetailSettings('boost-h')"
+              id="boost-h"
+            >
+              High
+            </div>
+            <div
+              class="customButton boost"
+              onclick="DetailSettings('boost-v')"
+              id="boost-v"
+            >
+              Very High
+            </div>
+            <div
+              class="customButton boost"
+              onclick="DetailSettings('boost-e')"
+              id="boost-e"
+            >
+              Extremely High
+            </div>
+          </div>
+        </div>
+        <div class="CustomSettingBox">
+          <div class="CustomSettingTopArea">
+            <h1>Acceleration</h1>
+            <div class="CustomSettingLine"></div>
+            <span>CUSTOM</span>
+          </div>
+          <div class="CustomSettingBottomArea">
+            <div
+              class="customButton acceleration"
+              id="acceleration-l"
+              onclick="DetailSettings('acceleration-l')"
+            >
+              Low
+            </div>
+            <div
+              class="customButton acceleration"
+              onclick="DetailSettings('acceleration-m')"
+              id="acceleration-m"
+            >
+              Medium
+            </div>
+            <div
+              class="customButton acceleration"
+              onclick="DetailSettings('acceleration-h')"
+              id="acceleration-h"
+            >
+              High
+            </div>
+            <div
+              class="customButton acceleration"
+              onclick="DetailSettings('acceleration-v')"
+              id="acceleration-v"
+            >
+              Very High
+            </div>
+            <div
+              class="customButton acceleration"
+              onclick="DetailSettings('acceleration-e')"
+              id="acceleration-e"
+            >
+              Extremely High
+            </div>
+          </div>
+        </div>
+        <div class="CustomSettingBox">
+          <div class="CustomSettingTopArea">
+            <h1>Gear Change</h1>
+            <div class="CustomSettingLine"></div>
+            <span>CUSTOM</span>
+          </div>
+          <div class="CustomSettingBottomArea">
+            <div
+              class="customButton gear"
+              id="gear-l"
+              onclick="DetailSettings('gear-l')"
+            >
+              Low
+            </div>
+            <div
+              class="customButton gear"
+              onclick="DetailSettings('gear-m')"
+              id="gear-m"
+            >
+              Medium
+            </div>
+            <div
+              class="customButton gear"
+              onclick="DetailSettings('gear-h')"
+              id="gear-h"
+            >
+              High
+            </div>
+            <div
+              class="customButton gear"
+              onclick="DetailSettings('gear-v')"
+              id="gear-v"
+            >
+              Very High
+            </div>
+            <div
+              class="customButton gear"
+              onclick="DetailSettings('gear-e')"
+              id="gear-e"
+            >
+              Extremely High
+            </div>
+          </div>
+        </div>
+        <div class="CustomSettingBox">
+          <div class="CustomSettingTopArea">
+            <h1>Breaking</h1>
+            <div class="CustomSettingLine"></div>
+            <span>CUSTOM</span>
+          </div>
+          <div class="CustomSettingBottomArea">
+            <div
+              class="customButton breaking"
+              id="breaking-l"
+              onclick="DetailSettings('breaking-l')"
+            >
+              Low
+            </div>
+            <div
+              class="customButton breaking"
+              onclick="DetailSettings('breaking-m')"
+              id="breaking-m"
+            >
+              Medium
+            </div>
+            <div
+              class="customButton breaking"
+              onclick="DetailSettings('breaking-h')"
+              id="breaking-h"
+            >
+              High
+            </div>
+            <div
+              class="customButton breaking"
+              onclick="DetailSettings('breaking-v')"
+              id="breaking-v"
+            >
+              Very High
+            </div>
+            <div
+              class="customButton breaking"
+              onclick="DetailSettings('breaking-e')"
+              id="breaking-e"
+            >
+              Extremely High
+            </div>
+          </div>
+        </div>
+        <div class="CustomSettingBox">
+          <div class="CustomSettingTopArea">
+            <h1>Drivetrain</h1>
+            <div class="CustomSettingLine"></div>
+            <span>CUSTOM</span>
+          </div>
+          <div class="CustomSettingBottomArea">
+            <div
+              class="customButton drivetrain"
+              id="drivetrain-l"
+              onclick="DetailSettings('drivetrain-l')"
+            >
+              Low
+            </div>
+            <div
+              class="customButton drivetrain"
+              onclick="DetailSettings('drivetrain-m')"
+              id="drivetrain-m"
+            >
+              Medium
+            </div>
+            <div
+              class="customButton drivetrain"
+              onclick="DetailSettings('drivetrain-h')"
+              id="drivetrain-h"
+            >
+              High
+            </div>
+            <div
+              class="customButton drivetrain"
+              onclick="DetailSettings('drivetrain-v')"
+              id="drivetrain-v"
+            >
+              Very High
+            </div>
+            <div
+              class="customButton drivetrain"
+              onclick="DetailSettings('drivetrain-e')"
+              id="drivetrain-e"
+            >
+              Extremely High
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="lightBottomArea"
+        style="margin-top: 1vw; display: none; gap: 3vw"
+      >
+        <div class="lightSetingBox">
+          <div class="CustomSettingTopArea">
+            <h1>HEADLIGHTS</h1>
+            <div class="CustomSettingLine"></div>
+            <span>COLOR</span>
+          </div>
+          <div class="lightSettingBottomArea">
+            <!--  -->
+            <div
+              class="lightColor"
+              onclick="ChangeColor('HeadLights','Yellow')"
+              style="background: #ffd74b"
+            ></div>
+            <div
+              class="lightColor"
+              onclick="ChangeColor('HeadLights','Green')"
+              style="background: #4bffa9"
+            ></div>
+            <div
+              class="lightColor"
+              onclick="ChangeColor('HeadLights','LightBlue')"
+              style="background: #4bbeff"
+            ></div>
+            <div
+              class="lightColor"
+              onclick="ChangeColor('HeadLights','Blue')"
+              style="background: #1e34ff"
+            ></div>
+            <div
+              class="lightColor"
+              onclick="ChangeColor('HeadLights','Purple')"
+              style="background: #6418df"
+            ></div>
+            <div
+              class="lightColor"
+              onclick="ChangeColor('HeadLights','Pink')"
+              style="background: #df1eff"
+            ></div>
+            <!-- <input type="color" /> -->
+            <div class="lightline"></div>
+            <div
+              class="lightRgbColor"
+              onclick="ChangeColor('HeadLights','Rainbow')"
+            >
+              RainBow
+            </div>
+            <div
+              class="lightRgbColor"
+              onclick="ChangeColor('HeadLights','Default')"
+              style="background: white"
+            >
+              Default
+            </div>
+          </div>
+        </div>
+        <div class="lightSetingBox" style="height: 15.9vw">
+          <div class="CustomSettingTopArea">
+            <h1>NEONS</h1>
+            <div class="CustomSettingLine"></div>
+            <span>COLOR</span>
+          </div>
+          <div class="lightSettingBottomArea1">
+            <div class="ColorBoxs">
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(255, 215, 75)')"
+                style="background: rgb(255, 215, 75)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(111, 255, 75)')"
+                style="background: rgb(111, 255, 75)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(75, 255, 169)')"
+                style="background: rgb(75, 255, 169)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(75, 190, 255)')"
+                style="background: rgb(75, 190, 255)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(30, 52, 255)')"
+                style="background: rgb(30, 52, 255)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(223, 30, 255)')"
+                style="background: rgb(223, 30, 255)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(227, 188, 45)')"
+                style="background: rgb(227, 188, 45)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(94, 237, 58)')"
+                style="background: rgb(94, 237, 58)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(38, 196, 119)')"
+                style="background: rgb(38, 196, 119)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(44, 154, 218)')"
+                style="background: rgb(44, 154, 218)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(17, 38, 231)')"
+                style="background: rgb(17, 38, 231)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(200, 24, 231)')"
+                style="background: rgb(200, 24, 231)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(194, 158, 30)')"
+                style="background: rgb(194, 158, 30)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(63, 170, 36)')"
+                style="background: rgb(63, 170, 36)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(30, 159, 97)')"
+                style="background: rgb(30, 159, 97)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(48, 150, 210)')"
+                style="background: rgb(48, 150, 210)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(21, 34, 154)')"
+                style="background: rgb(21, 34, 154)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(51, 140, 29)')"
+                style="background: rgb(51, 140, 29)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(51, 140, 29)')"
+                style="background: rgb(51, 140, 29)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(51, 140, 29)')"
+                style="background: rgb(51, 140, 29)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(37, 126, 83)')"
+                style="background: rgb(37, 126, 83)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(22, 75, 106)')"
+                style="background: rgb(22, 75, 106)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(16, 26, 119)')"
+                style="background: rgb(16, 26, 119)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(84, 12, 96)')"
+                style="background: rgb(84, 12, 96)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(14, 54, 77)')"
+                style="background: rgb(14, 54, 77)"
+              ></div>
+              <div
+                class="lightColor"
+                onclick="ChangeLightColor('Neon', 'rgb(11, 48, 69)')"
+                style="background: rgb(11, 48, 69)"
+              ></div>
+              <input type="color" id="renkSecici" onclick="renkSecildi()" />
+              <div
+                class="lightRgbColor"
+                onclick="ChangeColor('Neon','Rainbow')"
+              >
+                RainBow
+              </div>
+            </div>
+            <div class="lightline1"></div>
+            <div class="check-boxs">
+              <div class="neonceheckbox">
+                <div class="neonName">LEFT</div>
+                <input
+                  type="checkbox"
+                  onclick="ChangeColor('Neon','neon1')"
+                  id="customCheckbox"
+                />
+                <label for="customCheckbox"></label>
+              </div>
+              <div class="neonceheckbox">
+                <div class="neonName">RIGHT</div>
+                <input
+                  type="checkbox"
+                  onclick="ChangeColor('Neon','neon2')"
+                  id="customCheckbox1"
+                />
+                <label for="customCheckbox1"></label>
+              </div>
+              <div class="neonceheckbox">
+                <div class="neonName">FRONT</div>
+                <input
+                  type="checkbox"
+                  onclick="ChangeColor('Neon','neon3')"
+                  id="customCheckbox2"
+                />
+                <label for="customCheckbox2"></label>
+              </div>
+              <div class="neonceheckbox">
+                <div class="neonName">BACK</div>
+                <input
+                  type="checkbox"
+                  onclick="ChangeColor('Neon','neon4')"
+                  id="customCheckbox3"
+                />
+                <label for="customCheckbox3"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        onclick="OpenMenu('Close')"
+        style="background-color: #000000"
+        class="ExitButton"
+      >
+        <svg
+          width="1vw"
+          height="1vw"
+          viewBox="0 0 21 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.5"
+            y="0.5"
+            width="20"
+            height="20"
+            rx="1.5"
+            fill="#E83636"
+            stroke="#FF0000"
+          />
+          <path
+            d="M11.6227 10.5L14.7651 7.35758C14.9142 7.2087 14.9981 7.00668 14.9983 6.79595C14.9985 6.58523 14.915 6.38305 14.7661 6.23392C14.6172 6.08478 14.4152 6.00089 14.2045 6.0007C13.9937 6.00052 13.7916 6.08405 13.6424 6.23292L10.5 9.37534L7.35758 6.23292C7.20844 6.08379 7.00617 6 6.79525 6C6.58434 6 6.38206 6.08379 6.23292 6.23292C6.08379 6.38206 6 6.58434 6 6.79525C6 7.00617 6.08379 7.20844 6.23292 7.35758L9.37534 10.5L6.23292 13.6424C6.08379 13.7916 6 13.9938 6 14.2047C6 14.4157 6.08379 14.6179 6.23292 14.7671C6.38206 14.9162 6.58434 15 6.79525 15C7.00617 15 7.20844 14.9162 7.35758 14.7671L10.5 11.6247L13.6424 14.7671C13.7916 14.9162 13.9938 15 14.2047 15C14.4157 15 14.6179 14.9162 14.7671 14.7671C14.9162 14.6179 15 14.4157 15 14.2047C15 13.9938 14.9162 13.7916 14.7671 13.6424L11.6227 10.5Z"
+            fill="black"
+            fill-opacity="0.55"
+          />
+        </svg>
+      </div>
+    </div>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="js.js"></script>
+  </body>
+</html>

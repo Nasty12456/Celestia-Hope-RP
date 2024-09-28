@@ -1,0 +1,343 @@
+* {
+    font-family: "Titillium Web", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+html {
+    overflow: hidden;
+}
+
+p {
+    margin: 0px !important;
+}
+
+::-webkit-scrollbar {
+    margin-left: 8px;
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.219);
+    border-radius: 10px;
+    margin-left: 8px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #181818;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #181818; 
+}
+
+.background {
+    background: linear-gradient(90deg, #181818, transparent 38%, transparent 68%, #181818);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.main-screen {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0px;
+    z-index: 100;
+}
+
+/* VEHICLE-SHOP HEADER */
+
+.vehicleshop-header {
+    position: absolute;
+    display: flex;
+    left: 45px;
+    top: 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.vehicleshop-logo {
+    font-size: 25px;
+}
+
+.vehicleshop-logo > .vehicleshop-icon > i {
+    margin-right: 5px;
+}
+
+.vehicleshop-name {
+    font-weight: 700;
+}
+
+.searchBar {
+	display: flex;
+	background: #181818;
+    margin-block: auto;
+    border-radius: 7px;
+    width: 18vw;
+	height: 2vw;
+	margin-bottom: 10px;
+    margin-inline: 80px;
+    align-items: center;
+    margin-block: auto;
+}
+
+.search-bar {
+	background: transparent;
+    border: transparent;
+    font-family: 'Kanit', sans-serif;
+    font-weight: medium;
+    color: white;
+    outline: none;
+	margin-left: 5px;
+	padding-inline: 5px;
+    width: -webkit-fill-available;
+}
+
+.searchBar > .fa-magnifying-glass {
+	color: white;
+	padding: 11px;
+}
+
+.vehicleshop-categories {
+    display: flex;
+}
+
+.category {
+    position: relative;
+    display: inline-block;
+    height: 2vw;
+    width: 2vw;
+	background: #181818;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    margin-inline-end: 8px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.category:hover {
+    scale: 1.085;
+}
+
+.category > img {
+    filter: invert(0.55);
+    width: 80%;
+    height: 100%;
+    padding-inline: 10%;
+}
+
+.category:hover > img {
+    filter: invert(0.85);
+}
+
+.category .tooltiptext {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    visibility: hidden;
+    width: 120px;
+	background-color: #181818;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.category .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.category .tooltiptext {
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.category .tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.category:hover .tooltiptext {
+    opacity: 1;
+}
+
+.category:hover .tooltiptext {
+    visibility: visible;
+}
+
+.selected-category {
+    scale: 1.085;
+}
+
+.selected-category > img {
+    filter: invert(0.85);
+}
+
+/*  */
+
+.vehicle-list {
+    position: absolute;
+    left: 45px;
+    width: 340px;
+    top: 100px;
+    padding: 10px;
+    overflow-y: scroll;
+    max-height: 86%;
+}
+
+.vehicle {
+    border-radius: 6px;
+    background: #181818;
+    margin-block-end: 8px;
+    border: 1px solid transparent;
+}
+
+.vehicle:hover {
+    background: #63636342;
+}
+
+.vehicle > div {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.vehicle-info {
+    width: -webkit-fill-available;
+}
+
+.vehicle-brand {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+}
+
+.vehicle-name {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+}
+
+.vehicle-price > p > .dollar-icon {
+    margin-left: 5px;
+}
+
+.selected-vehicle {
+    background: #8b8b8b7e;
+    border-color: #81818196;
+}
+
+/* */
+
+
+.right-bar {
+    display: none;
+    position: absolute;
+    right: 45px;
+    bottom: 45px;
+}
+
+/* COLORS */
+
+.color-text {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+
+.color-table {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.color-selector {
+    rotate: 45deg;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    margin-inline: 10px;
+    margin-block: 8px;
+    transition: 0.25s;
+    border: 1px solid transparent;
+}
+
+.color-selector:hover {
+    scale: 1.095;
+    border-color: gray;
+}
+
+/*  */
+
+.test-button {
+    margin-inline: auto;
+    text-align: center;
+    background: #58585866;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 8px #80808029;
+    margin-block: 12px;
+    padding: 12px 0px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.test-button:hover {
+    background: #7c7c7c7e;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+/* PRICES INFOS */
+
+.prices-infos {
+    margin-top: 40px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0px 0px 6px rgba(5, 5, 5, 0.285);
+}
+
+.dollar-icon {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #0cca55;
+}
+
+.price-text {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+
+#price {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    padding-block: 9px;
+}
+
+.buy-button {
+    width: 255px;
+    background: #0cca55;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.buy-button:hover {
+    box-shadow: 0px 0px 12px #0b8f3da2;
+}
+
+/*  */
