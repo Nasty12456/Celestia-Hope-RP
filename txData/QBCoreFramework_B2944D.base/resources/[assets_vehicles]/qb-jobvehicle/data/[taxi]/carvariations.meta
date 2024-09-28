@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IVPack vehicle colors informations -->
+<!-- DO NOT DISTRIBUTE WITHOUT PERMISSION OF THE CREATORS! -->
+<CVehicleModelInfoVariation>
+  <variationData>
+    <Item>
+      <modelName>taxi2</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            88
+            64
+            8
+            156
+          </indices>
+          <liveries/>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="152" />
+      <sirenSettings value="0" />
+    </Item>
+    <Item>
+      <modelName>taxi3</modelName>
+      <colors>
+        <Item>
+          <indices content="char_array">
+            88
+            64
+            8
+            156
+          </indices>
+          <liveries/>
+        </Item>
+      </colors>
+      <kits>
+        <Item>0_default_modkit</Item>
+      </kits>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities>
+          <Item>
+            <Name>Standard White</Name>
+            <Value value="100" />
+          </Item>
+        </Probabilities>
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+    <Item>
+      <modelName>tourmav</modelName>
+      <colors>
+         <Item>
+          <indices content="char_array">
+            121
+            121
+            0
+            156
+          </indices>
+          <liveries/>
+        </Item>
+      </colors>
+      <kits/>
+      <windowsWithExposedEdges />
+      <plateProbabilities>
+        <Probabilities />
+      </plateProbabilities>
+      <lightSettings value="0" />
+      <sirenSettings value="0" />
+    </Item>
+  </variationData>
+</CVehicleModelInfoVariation>
