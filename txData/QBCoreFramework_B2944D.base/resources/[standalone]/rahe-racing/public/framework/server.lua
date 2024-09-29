@@ -73,3 +73,7 @@ function givePlayerMoney(playerId, amount)
         -- Fill this in for STANDALONE/CUSTOM if needed..
     end
 end
+
+QBCore.Functions.CreateUseableItem('racingtablet', function(source, item)    
+    TriggerClientEvent('rahe-racing:client:openTablet', source)
+end)

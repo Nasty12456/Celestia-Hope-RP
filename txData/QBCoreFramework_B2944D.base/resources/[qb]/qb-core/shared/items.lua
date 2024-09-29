@@ -3438,6 +3438,12 @@ QBShared.Items = {
 	["methlab"] 				 	 = {["name"] = "methlab", 			  			["label"] = "Lab", 						["weight"] = 15000, 	["type"] = "item", 		["image"] = "lab.png", 					["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A portable Meth Lab"},
 	["lithium"] 				 	 = {["name"] = "lithium", 			  			["label"] = "Lithium", 					["weight"] = 1000, 		["type"] = "item", 		["image"] = "lithium.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Lithium, something you can make Meth with!"},
 
+
+
+	--racing
+	['racingtablet'] = { ['name'] = 'racingtablet', ['label'] = 'Racing tablet', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'racingtablet.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Seems like something to do with cars.' },
+	
+
 	['vehiclekey'] = {
 		['name'] = 'vehiclekey',
 		['label'] = 'Vehicle key',
