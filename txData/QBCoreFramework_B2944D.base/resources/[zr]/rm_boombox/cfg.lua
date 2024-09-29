@@ -8,7 +8,7 @@ Config = {
     -- WARNING: Default mode will consume more ms. This option may cause performance loss!
     targetScript = "qb-target", -- Target script name (qtarget or qb-target or ox_target or default (for showhelpnotification))
     apiKey = "AIzaSyASwIPL9v53DuGDZfj1zLd5QpA_Dpslq00",-- ENTER API KEY (https://youtu.be/LLAZUTbc97I)
-    boomboxLimit = 5, -- maximum boombox in server
+    boomboxLimit = 10, -- maximum boombox in server
     syncCooldown = 15, -- 15 seconds
     removeCommand = "rboombox",
     staffList = {
