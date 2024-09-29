@@ -3442,7 +3442,10 @@ QBShared.Items = {
 
 	--racing
 	['racingtablet'] = { ['name'] = 'racingtablet', ['label'] = 'Racing tablet', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'racingtablet.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Seems like something to do with cars.' },
+	--skateboard
+	['skateboard'] 			     	= {['name'] = 'skateboard', 				['label'] = 'Skateboard', 				['weight'] = 3000, 		['type'] = 'item', 		['image'] = 'skateboard.png', 			['unique'] = true, 	    ['useable'] = true, 	['shouldClose'] = true,	   	   ['combinable'] = nil,   ['description'] = 'Skateboard'},
 	
+
 
 	['vehiclekey'] = {
 		['name'] = 'vehiclekey',
