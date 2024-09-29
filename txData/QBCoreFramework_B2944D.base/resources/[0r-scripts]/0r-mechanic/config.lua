@@ -316,7 +316,7 @@ Config.Locations = {
     }
 }
 
-Config.ExtraMenuLocations = {
+Config.ExtraMenuLocations = 
     ["LSPD"] = {
         job = "none",
         coords = {

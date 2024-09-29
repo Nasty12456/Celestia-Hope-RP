@@ -10,7 +10,8 @@ server_scripts {
     "editable_server.lua",
     "server.lua",
     -- "@mysql-async/lib/MySQL.lua",
-    "@oxmysql/lib/MySQL.lua", -- if you are using oxmysql
+    "@oxmysql/lib/MySQL.lua",
+     -- if you are using oxmysql
 }
 ui_page "ui/index.html"
 files {"ui/**", "data/*.meta", "stream/vehicle_paint_ramps.ytd"}

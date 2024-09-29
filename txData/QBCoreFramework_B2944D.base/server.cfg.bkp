@@ -83,7 +83,7 @@ ensure [0r-scripts]
 ensure [sandy]
 ensure [zr]
 ensure [houserobbery]
-restart [rainmad]
+ensure [casino]
 ##GABZ##
 
 ensure [gabz]
@@ -147,21 +147,22 @@ add_principal identifier.license:591d2af6b6e9178d53cec2177d685543f0e53a8d qbcore
 add_principal identifier.license:c9109e161d294aa63f3e5d28ec27cab3d7e08466 qbcore.god #Nasty
 add_principal identifier.license:0893d749544710555c8a1be335415d7ac72130be qbcore.god #Andrew
 add_principal identifier.license:9262ded8b3d9db98492c6a25708db169f59871df qbcore.god #Khelly
+add_principal identifier.license:ad486b443fd1cc40510127f7ab391d528fb021f7 qbcore.god #Jimmy
 
 
 ## Admins & Senior Admins Permissions ##
 add_principal identifier.fivem:12423654 qbcore.admin #Mrkingster
 add_principal identifier.fivem:7015454 qbcore.admin #Mark
 add_principal identifier.license:725bb0e34692aa1e94aa2b3c00694de522cf48e4 qbcore.admin #JohnBlackHead
-add_principal identifier.license:b1b4c4c55761327bcec500fa23a2816d645928e2 qbcore.admin #Emerson
 add_principal identifier.license:d504b13c141222c9a6508969ce37d310fbca716a qbcore.admin #Nat
+add_principal identifier.license:afbe5b72b9408dfb88e1f092e4a351dde62bf215 qbcore.admin #Marcello
+add_principal identifier.license:b1b4c4c55761327bcec500fa23a2816d645928e2 qbcore.admin #Emerson
 
 ## Script Permissions ##
 add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a jobcreator allow # Add permission to 'jellisbro' Rockstar license2
 add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a drugs_creator allow # Add permission to 'jellisbro' Rockstar license2
 add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a robberies_creator allow # Add permission to 'jellisbro' Rockstar license2
 add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a races_creator allow # Add permission to 'jellisbro' Rockstar license2
-add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a doors_creator allow # Add permission to 'jellisbro' Rockstar license2
 add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a shops_creator allow # Add permission to 'jellisbro' Rockstar license2
 add_ace identifier.license2:0893d749544710555c8a1be335415d7ac72130be drugs_creator allow # Add permission to 'andrewmiller7' Rockstar license2
 add_ace identifier.license2:3497e6909c70ee8036cbab9eab63b98bac9394c0 "can.givecar" allow # Add permission to 'erkan' Rockstar license2
@@ -170,7 +171,23 @@ add_ace identifier.license2:c9109e161d294aa63f3e5d28ec27cab3d7e08466 "can.giveca
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d "can.givecar" allow # Add permission to 'hardven' Rockstar license2
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d drugs_creator allow # Add permission to 'hardven' Rockstar license2
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d shops_creator allow # Add permission to 'hardven' Rockstar license2
+# Doors Creator Access#
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d doors_creator allow # Add permission to 'hardven' Rockstar license2
+add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a doors_creator allow # Add permission to 'jellisbro' Rockstar license2
+add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d doors_creator allow # Add permission to 'hardven' Rockstar license2
+add_ace identifier.license2:3389f2301a77bad3a26633096992265908b40148 doors_creator allow # Add permission to 'PumaUniverse' Rockstar license2
+add_ace identifier.license2:51e89c7ee74bd53b45eb54d7e6a5d182094a0b73 doors_creator allow # Add permission to 'mtaylor41' Rockstar license2
+add_ace identifier.license2:0893d749544710555c8a1be335415d7ac72130be doors_creator allow # Add permission to 'andrewmiller7' Rockstar license2
+add_ace identifier.license2:c9109e161d294aa63f3e5d28ec27cab3d7e08466 doors_creator allow # Add permission to 'nasty' Rockstar license2
+add_ace identifier.license2:ef3f072b763729e7b0e7d513869464cde21d7544 doors_creator allow # Add permission to 'duprative' Rockstar license2
+add_ace identifier.license2:408ff330310346da61c0d698e3bd632924dcb157 doors_creator allow # Add permission to 'willi' Rockstar license2
+add_ace identifier.license2:d504b13c141222c9a6508969ce37d310fbca716a doors_creator allow # Add permission to 'CherriBombz' Rockstar license2
+add_ace identifier.license2:4dc755199f36efd39302e5360ba1c521e40666f5 doors_creator allow # Add permission to 'JustOsiris' Rockstar license2
+add_ace identifier.license2:4a9f7a9a26f597df2f85bc6ae79876bcc248e38f doors_creator allow # Add permission to 'chronic' Rockstar license2
+
+
+
+
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d races_creator allow # Add permission to 'hardven' Rockstar license2
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d robberies_creator allow # Add permission to 'hardven' Rockstar license2
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d jobcreator allow # Add permission to 'hardven' Rockstar license2
