@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+</head>
+<body>
+    <!-- Three separate audio players for different sounds -->
+    <audio id="audioPlayer1" src="" type="audio/mp3"></audio>
+    <audio id="audioPlayer2" src="" type="audio/mp3"></audio>
+    <audio id="audioPlayer3" src="" type="audio/mp3"></audio>
+
+    <script>
+        const audioPlayer1 = document.getElementById('audioPlayer1');
+        const audioPlayer2 = document.getElementById('audioPlayer2');
+        const audioPlayer3 = document.getElementById('audioPlayer3');
+
+        // Set initial volume to 100% for all players
+        audioPlayer1.volume = 1;
+        audioPlayer2.volume = 1;
+        audioPlayer3.volume = 0.3;
+
+        // Listen for incoming NUI messages
+        window.addEventListener('message', (event) => {
+            const data = event.data;
+
+            // Play sound on specific player based on the message
+            if (data.transactionType === 'playSound') {
+                if (data.player === 1) {
+                    audioPlayer1.src = data.transactionFile;
+                    audioPlayer1.play();
+                } else if (data.player === 2) {
+                    audioPlayer2.src = data.transactionFile;
+                    audioPlayer2.play();
+                } else if (data.player === 3) {
+                    audioPlayer3.src = data.transactionFile;
+                    audioPlayer3.play();
+                }
+            }
+
+            // Stop sound on the specific player
+            else if (data.transactionType === 'stopSound') {
+                if (data.player === 1) {
+                    audioPlayer1.pause();
+                    audioPlayer1.currentTime = 0;
+                } else if (data.player === 2) {
+                    audioPlayer2.pause();
+                    audioPlayer2.currentTime = 0;
+                } else if (data.player === 3) {
+                    audioPlayer3.pause();
+                    audioPlayer3.currentTime = 0;
+                }
+            }
+
+            // Set volume for the specific player
+            else if (data.transactionType === 'setVolume') {
+                if (data.player === 1) {
+                    audioPlayer1.volume = data.volume;
+                } else if (data.player === 2) {
+                    audioPlayer2.volume = data.volume;
+                } else if (data.player === 3) {
+                    audioPlayer3.volume = data.volume;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
