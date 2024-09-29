@@ -3,7 +3,7 @@ Config = {
     Locale = "en", -- en
 
     -- Map
-    MapType = 5,
+    MapType = 10,
     -- 1: UncleJust Casino / DlcIplLoader
     -- 2: Gabz Casino
     -- 3: NoPixel Casino
@@ -39,7 +39,7 @@ Config = {
     TargetZoneType = 3, -- 1: q_target, 2: bt_target, 3: qb-target, 4: ox_target
 
     -- Chips, Inventory Settings
-    UseVirtualChips = false, -- false: use inventory for chips, true: use virtual chips which are saved in the casino_players table
+    UseVirtualChips = true, -- false: use inventory for chips, true: use virtual chips which are saved in the casino_players table
     InventoryResource = Inventory.AutoChoose, -- name of the inventory resource, set to Inventory.Framework if you want to use frameworks' inventory functions
     --[[
     choose InventoryResource = Inventory.AutoChoose for auto choose, or choose between:
