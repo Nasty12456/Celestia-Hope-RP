@@ -1305,6 +1305,18 @@
         {
             "text": "died | Drowning in Vehicle",
             "date": "29-09-2024 18:37"
+        },
+        {
+            "text": "murdered | Fist",
+            "date": "29-09-2024 19:16"
+        },
+        {
+            "text": "killed",
+            "date": "29-09-2024 19:18"
+        },
+        {
+            "text": "murdered | Fist",
+            "date": "29-09-2024 19:19"
         }
     ],
     "040a0727acb79ffc7a0a3bb49790e68a51c91659": [
@@ -2633,6 +2645,14 @@
         {
             "text": "killed",
             "date": "29-09-2024 19:10"
+        },
+        {
+            "text": "stabbed | Switchblade",
+            "date": "29-09-2024 19:17"
+        },
+        {
+            "text": "killed",
+            "date": "29-09-2024 19:17"
         }
     ],
     "725bb0e34692aa1e94aa2b3c00694de522cf48e4": [
@@ -3841,6 +3861,10 @@
         {
             "text": "murdered | Fist",
             "date": "29-09-2024 19:07"
+        },
+        {
+            "text": "killed | Knuckle",
+            "date": "29-09-2024 19:16"
         }
     ],
     "db0a170242ac74228c6fd86386c7fcebf5e7b7c9": [
@@ -4887,6 +4911,10 @@
         {
             "text": "Karwan_Not_Here logged out of the server",
             "date": "29-09-2024 19:02"
+        },
+        {
+            "text": "Karwan_Not_Here logged in to the server",
+            "date": "29-09-2024 19:17"
         }
     ],
     "6df3228abec2dd0f48e28c4843603c937c9615b0": [

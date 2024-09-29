@@ -9,11 +9,11 @@ Shared.EconomyTax = {
 }
 
 Shared.EconomyTaxPercentage = {
-    ['low'] = 0.3,
-    ['medium'] = 0.5,
-    ['high'] = 0.8,    
-    ['ultra'] = 1.0,
-    ['extreme'] = 3.0,
+    ['low'] = 0.1,
+    ['medium'] = 0.2,
+    ['high'] = 0.3,    
+    ['ultra'] = 0.4,
+    ['extreme'] = 0.5,
 }
 
 Shared.EconomyTaxInterval = 45 -- in minutes (2 hrs)
