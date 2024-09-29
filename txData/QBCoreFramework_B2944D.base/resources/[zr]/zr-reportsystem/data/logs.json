@@ -1325,6 +1325,10 @@
         {
             "date": "28-09-2024 21:28",
             "text": "bugs logged in to the server"
+        },
+        {
+            "date": "28-09-2024 21:38",
+            "text": "died"
         }
     ],
     "591d2af6b6e9178d53cec2177d685543f0e53a8d": [
@@ -3529,6 +3533,10 @@
         {
             "date": "28-09-2024 20:55",
             "text": "Nasty logged out of the server"
+        },
+        {
+            "date": "28-09-2024 21:36",
+            "text": "Nasty logged in to the server"
         }
     ],
     "bd7a89ac503ce8b2c69ea9fa567e6c73516b584a": [
