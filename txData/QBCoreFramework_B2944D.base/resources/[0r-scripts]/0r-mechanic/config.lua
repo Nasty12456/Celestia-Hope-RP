@@ -314,6 +314,47 @@ Config.Locations = {
         bossMenu = vector3(-216.13, -1317.89, 30.89),
         blipName = "Mechanic Shop",
     }
+    [3] = {
+        illegalMechanic = true,
+        Society = {
+            Enable = true,
+            Type = "default", -- default or custom
+            -- If Type is custom
+            getSocietyMoney = function(name)
+                -- esx_society
+                -- TriggerEvent('esx_society:getSociety', function(society)
+                --     TriggerEvent('esx_addonaccount:getSharedAccount', society.account, function(account)
+                --         return account.money
+                --     end)
+                -- end, name)
+                -- qb-banking & qb-management
+                return exports['qb-banking']:GetAccountBalance(name)
+            end,
+            addSocietyMoney = function(name, amount)
+                -- esx_society
+                -- TriggerEvent('esx_society:depositMoney', name, amount)
+                -- qb-banking & qb-management
+                exports['qb-banking']:AddMoney(name, amount)
+            end,
+            removeSocietyMoney = function(name, amount)
+                -- esx_society
+                -- TriggerEvent('esx_society:withdrawMoney', account, amount)
+                -- qb-banking & qb-management
+                exports['qb-banking']:RemoveMoney(name, amount)
+            end
+        },
+        job = "Rideoutmechanic",
+        coords = {
+            vector3(584.71, -162.69, 54.52)
+        },
+        defaultPriceInBossMenu = 50000,
+        showBlip = true,
+        blipSprite = 446,
+        blipColor = 4,
+        blipCoords = vector3(584.71, -162.69, 54.52),
+        bossMenu = vector3(564.91, -178.62, 59.07),
+        blipName = "Mechanic Shop",
+    }
 }
 
 Config.ExtraMenuLocations = {
