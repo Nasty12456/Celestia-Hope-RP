@@ -8,7 +8,7 @@ Config.BossMenus = {
         vector3(447.16, -974.31, 30.47),
     },
     ambulance = {
-        vector3(311.21, -599.36, 43.29),
+        vector3(309.78, -568.25, 43.27),
     },
     cardealer = {
         vector3(-32.94, -1114.64, 26.42),

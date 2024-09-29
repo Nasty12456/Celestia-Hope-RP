@@ -158,6 +158,11 @@ add_principal identifier.license:d504b13c141222c9a6508969ce37d310fbca716a qbcore
 add_principal identifier.license:afbe5b72b9408dfb88e1f092e4a351dde62bf215 qbcore.admin #Marcello
 add_principal identifier.license:b1b4c4c55761327bcec500fa23a2816d645928e2 qbcore.admin #Emerson
 
+
+## Moderators Permissions ##
+add_principal identifier.license:f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0 qbcore.mod #Nikki
+
+
 ## Script Permissions ##
 add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a jobcreator allow # Add permission to 'jellisbro' Rockstar license2
 add_ace identifier.license2:bd7a89ac503ce8b2c69ea9fa567e6c73516b584a drugs_creator allow # Add permission to 'jellisbro' Rockstar license2
