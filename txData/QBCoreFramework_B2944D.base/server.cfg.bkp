@@ -189,6 +189,8 @@ add_ace identifier.license2:408ff330310346da61c0d698e3bd632924dcb157 doors_creat
 add_ace identifier.license2:d504b13c141222c9a6508969ce37d310fbca716a doors_creator allow # Add permission to 'CherriBombz' Rockstar license2
 add_ace identifier.license2:4dc755199f36efd39302e5360ba1c521e40666f5 doors_creator allow # Add permission to 'JustOsiris' Rockstar license2
 add_ace identifier.license2:4a9f7a9a26f597df2f85bc6ae79876bcc248e38f doors_creator allow # Add permission to 'chronic' Rockstar license2
+add_ace identifier.license2:ddca6b744f47bbec8d11ec2aa417f3fa771af200 doors_creator allow # Add permission to 'bugs' Rockstar license2
+
 
 
 
