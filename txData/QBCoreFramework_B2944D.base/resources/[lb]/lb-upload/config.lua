@@ -23,11 +23,11 @@ Config.AutoReplace.Columns = {
 }
 
 Config.UploadPath = "RESOURCE_PATH/uploads" -- The path where images are uploaded. RESOURCE_PATH will automatically get replaced with the direct path to the resource. You should not change this.
-Config.DiscordWebhook = false -- You can set this to your discord webhook in order to see all uploaded images directly on discord.
+Config.DiscordWebhook = true -- You can set this to your discord webhook in order to see all uploaded images directly on discord.
 
 Config.Security = {}
-Config.Security.RequireConnected = false -- Should only players who are connected to your server be able to upload media?
-Config.Security.ApiKey = "CHANGEME" -- set to false to disable
+Config.Security.RequireConnected = true -- Should only players who are connected to your server be able to upload media?
+Config.Security.ApiKey = "false" -- set to false to disable
 Config.Security.RequireOrigin = false
 -- Config.Security.RequireOrigin = {
 -- 	"https://cfx-nui-lb-phone",
