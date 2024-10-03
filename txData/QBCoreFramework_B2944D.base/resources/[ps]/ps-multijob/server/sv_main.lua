@@ -8,7 +8,7 @@ local function GetJobs(citizenid)
         if jobs[1] and jobs ~= "[]" then
             jobs = json.decode(jobs[1].jobdata)
         else
-            local Player = QBCore.Functions.GetPlayerByCitizenId(citizenid)
+            local Player = QBCore.Functions.GetOfflinePlayerByCitizenId(citizenid)
             local temp = {}
             if not Config.IgnoredJobs[Player.PlayerData.job.name] then
                 temp[Player.PlayerData.job.name] = Player.PlayerData.job.grade.level
@@ -23,6 +23,7 @@ local function GetJobs(citizenid)
     end)
     return Citizen.Await(p)
 end
+exports("GetJobs", GetJobs)
     
 local function AddJob(citizenid, job, grade)
     local jobs = GetJobs(citizenid)
@@ -38,24 +39,87 @@ local function AddJob(citizenid, job, grade)
         jobdata = json.encode(jobs),
     })
 end
+exports("AddJob", AddJob)
 
-local function RemoveJob(citizenid, job, rgrade)
+local function UpdatePlayerJob(Player, job, grade)
+    if Player.PlayerData.source ~= nil then
+        Player.Functions.SetJob(job,grade)
+    else -- player is offline
+        local sharedJobData = QBCore.Shared.Jobs[job]
+        if sharedJobData == nil then return end
+
+        local sharedGradeData = sharedJobData.grades[grade]
+        if sharedGradeData == nil then return end
+
+        local isBoss = false
+        if sharedGradeData.isboss then isBoss = true end
+
+        MySQL.update.await("update players set job = @jobData where citizenid = @citizenid", {
+            jobData = json.encode({
+                label = sharedJobData.label,
+                name = job,
+                isboss = isBoss,
+                onduty = sharedJobData.defaultDuty,
+                payment = sharedGradeData.payment,
+                grade = {
+                    name = sharedGradeData.name,
+                    level = grade,
+                },
+            }),
+            citizenid = Player.PlayerData.citizenid
+        })
+    end
+end
+
+local function UpdateJobRank(citizenid, job, grade)
+    local Player = QBCore.Functions.GetOfflinePlayerByCitizenId(citizenid)
+    if Player == nil then
+        return
+    end
+
+    local jobs = GetJobs(citizenid)
+    if jobs[job] == nil then
+        return
+    end
+    
+    jobs[job] = grade
+    
+    MySQL.update.await("update multijobs set jobdata = :jobdata where citizenid = :citizenid", {
+        citizenid = citizenid,
+        jobdata = json.encode(jobs),
+    })
+    
+    -- if the current job matches, then update
+    if Player.PlayerData.job.name == job then
+        UpdatePlayerJob(Player, job, grade)
+    end
+end
+exports("UpdateJobRank", UpdateJobRank)
+
+local function RemoveJob(citizenid, job)
+    local Player = QBCore.Functions.GetPlayerByCitizenId(citizenid)
+
+    if Player == nil then
+        Player = QBCore.Functions.GetOfflinePlayerByCitizenId(citizenid)
+    end
+
+    if Player == nil then return end
+
     local jobs = GetJobs(citizenid)
     jobs[job] = nil
-    local Player = QBCore.Functions.GetPlayerByCitizenId(citizenid)
-    
+
     -- Since we removed a job, put player in a new job
     local foundNewJob = false
     if Player.PlayerData.job.name == job then
         for k,v in pairs(jobs) do
-            Player.Functions.SetJob(k,v)
+            UpdatePlayerJob(Player, k,v)
             foundNewJob = true
             break
         end
     end
 
     if not foundNewJob then
-        Player.Functions.SetJob("unemployed", 0)
+        UpdatePlayerJob(Player, "unemployed", 0)
     end
 
     MySQL.insert('INSERT INTO multijobs (citizenid, jobdata) VALUES (:citizenid, :jobdata) ON DUPLICATE KEY UPDATE jobdata = :jobdata', {
@@ -63,15 +127,16 @@ local function RemoveJob(citizenid, job, rgrade)
         jobdata = json.encode(jobs),
     })
 end
+exports("RemoveJob", RemoveJob)
 
-QBCore.Commands.Add('removejob', 'Remove Multi Job (Admin Only)', { { name = 'id', help = 'ID of player' }, { name = 'job', help = 'Job Name' }, { name = 'grade', help = 'Job Grade' } }, false, function(source, args)
+QBCore.Commands.Add('removejob', 'Remove Multi Job (Admin Only)', { { name = 'id', help = 'ID of player' }, { name = 'job', help = 'Job Name' } }, false, function(source, args)
     local source = source
     if source ~= 0 then
         if args[1] then
             local Player = QBCore.Functions.GetPlayer(tonumber(args[1]))
             if Player then
-                if args[2]and args[3] then
-                    RemoveJob(Player.PlayerData.citizenid, args[2], args[3])
+                if args[2] then
+                    RemoveJob(Player.PlayerData.citizenid, args[2])
                 else
                     TriggerClientEvent("QBCore:Notify", source, "Wrong usage!")
                 end
@@ -108,7 +173,7 @@ QBCore.Commands.Add('addjob', 'Add Multi Job (Admin Only)', { { name = 'id', hel
     end
 end, 'admin')
 
-QBCore.Functions.CreateCallback("ps-multijob:getJobs",function(source, cb)
+QBCore.Functions.CreateCallback("ps-multijob:getJobs", function(source, cb)
     local Player = QBCore.Functions.GetPlayer(source)
     local jobs = GetJobs(Player.PlayerData.citizenid)
     local multijobs = {}
@@ -117,6 +182,7 @@ QBCore.Functions.CreateCallback("ps-multijob:getJobs",function(source, cb)
     local active = {}
     local getjobs = {}
     local Players = QBCore.Functions.GetPlayers()
+
     for i = 1, #Players, 1 do
         local xPlayer = QBCore.Functions.GetPlayer(Players[i])
         active[xPlayer.PlayerData.job.name] = 0
@@ -124,25 +190,27 @@ QBCore.Functions.CreateCallback("ps-multijob:getJobs",function(source, cb)
             active[xPlayer.PlayerData.job.name] = active[xPlayer.PlayerData.job.name] + 1
         end
     end
+
     for job, grade in pairs(jobs) do
-        local online = active[job]
-        if online == nil then
-            online = 0
-        end
-        getjobs = {
-            name = job,
-            grade = grade,
-            description = Config.Descriptions[job],
-            icon = Config.FontAwesomeIcons[job],
-            label = QBCore.Shared.Jobs[job].label,
-            gradeLabel = QBCore.Shared.Jobs[job].grades[tostring(grade)].name,
-            salary = QBCore.Shared.Jobs[job].grades[tostring(grade)].payment,
-            active = online,
-        }
-        if Config.WhitelistJobs[job] then
-            whitelistedjobs[#whitelistedjobs+1] = getjobs
+        if QBCore.Shared.Jobs[job] == nil then
+            print("The job '" .. job .. "' has been removed and is not present in your QBCore jobs. Remove it from the multijob SQL or add it back to your qbcore jobs.lua.")
         else
-            civjobs[#civjobs+1] = getjobs
+            local online = active[job] or 0
+            getjobs = {
+                name = job,
+                grade = grade,
+                description = Config.Descriptions[job],
+                icon = Config.FontAwesomeIcons[job],
+                label = QBCore.Shared.Jobs[job].label,
+                gradeLabel = QBCore.Shared.Jobs[job].grades[tostring(grade)].name,
+                salary = QBCore.Shared.Jobs[job].grades[tostring(grade)].payment,
+                active = online,
+            }
+            if Config.WhitelistJobs[job] then
+                whitelistedjobs[#whitelistedjobs+1] = getjobs
+            else
+                civjobs[#civjobs+1] = getjobs
+            end
         end
     end
 
@@ -173,7 +241,7 @@ end)
 RegisterNetEvent("ps-multijob:removeJob",function(job, grade)
     local source = source
     local Player = QBCore.Functions.GetPlayer(source)
-    RemoveJob(Player.PlayerData.citizenid, job, grade)
+    RemoveJob(Player.PlayerData.citizenid, job)
 end)
 
 -- QBCORE EVENTS
