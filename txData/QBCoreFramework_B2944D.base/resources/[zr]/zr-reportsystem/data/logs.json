@@ -4643,6 +4643,14 @@
         {
             "text": "Nasty logged out of the server",
             "date": "02-10-2024 07:26"
+        },
+        {
+            "text": "Nasty logged in to the server",
+            "date": "03-10-2024 02:29"
+        },
+        {
+            "text": "Nasty logged out of the server",
+            "date": "03-10-2024 02:50"
         }
     ],
     "725bb0e34692aa1e94aa2b3c00694de522cf48e4": [
@@ -8533,6 +8541,10 @@
         {
             "text": "died",
             "date": "03-10-2024 00:57"
+        },
+        {
+            "text": "jellisbro logged out of the server",
+            "date": "03-10-2024 02:50"
         }
     ],
     "fd849b49a1b2b5cab67529f7d24938ffa5c92a9d": [
