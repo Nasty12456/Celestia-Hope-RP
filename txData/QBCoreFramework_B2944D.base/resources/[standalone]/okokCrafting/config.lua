@@ -22,7 +22,7 @@ Config.Key = 38 -- [E] Key to open the interaction, check here the keys ID: http
 
 Config.HideMinimap = true -- If true it'll hide the minimap when the Crafting menu is opened
 
-Config.ShowBlips = true -- If true it'll show the crafting blips on the map
+Config.ShowBlips = false -- If true it'll show the crafting blips on the map
 
 Config.ShowFloorBlips = true -- If true it'll show the crafting markers on the floor
 
@@ -115,7 +115,7 @@ Config.Crafting = {
 		},
 	},
 	{
-		coordinates = vector3(-817.0, 182.8, 72.3),
+		coordinates = vector3(319.53, 2883.42, 46.38),
 		radius = 1,
 		showMapBlip = true,
 		marker = {type = 20, r = 31, g = 94, b = 255, a = 155, bobUpAndDown = 0, faceCamera = 0, rotate = 1, textureDict = 0, textureName = 0, drawOnEnts = 0},
@@ -146,10 +146,13 @@ Config.Crafts = {
 		isItem = true, -- if true = is item | if false = is weapon
 		isDisassemble = false, -- true = disassemble | false = craft
 		time = 6, -- Time to craft (in seconds)
-		levelNeeded = 2, -- What level he needs to craft this item
+		levelNeeded = 4, -- What level he needs to craft this item
 		xpPerCraft = 40, -- How much XP he receives after crafting this item
 		recipe = { -- Recipe to craft it
-			{'iron', 1, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'iron', 200, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'plastic', 200, true, false},
+			{'copper', 200, true, false},
+			{'aluminum', 200, true, false},
 			{'cash', 2000, true, true},
 		},
 		job = { -- What jobs can craft this item in this workbench
@@ -169,7 +172,10 @@ Config.Crafts = {
 		levelNeeded = 2, -- What level he needs to craft this item
 		xpPerCraft = 40, -- How much XP he receives after crafting this item
 		recipe = { -- Recipe to craft it
-			{'iron', 1, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'iron', 100, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'plastic', 100, true, false},
+			{'copper', 100, true, false},
+			{'aluminum', 100, true, false},
 			{'cash', 2000, true, true},
 		},
 		job = { -- What jobs can craft this item in this workbench
@@ -189,7 +195,10 @@ Config.Crafts = {
 		levelNeeded = 2, -- What level he needs to craft this item
 		xpPerCraft = 40, -- How much XP he receives after crafting this item
 		recipe = { -- Recipe to craft it
-			{'iron', 1, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'iron', 100, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'plastic', 100, true, false},
+			{'copper', 100, true, false},
+			{'aluminum', 100, true, false},
 			{'cash', 2000, true, true},
 		},
 		job = { -- What jobs can craft this item in this workbench
@@ -206,10 +215,13 @@ Config.Crafts = {
 		isItem = true, -- if true = is item | if false = is weapon
 		isDisassemble = false, -- true = disassemble | false = craft
 		time = 6, -- Time to craft (in seconds)
-		levelNeeded = 2, -- What level he needs to craft this item
+		levelNeeded = 1, -- What level he needs to craft this item
 		xpPerCraft = 40, -- How much XP he receives after crafting this item
 		recipe = { -- Recipe to craft it
-			{'iron', 1, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'iron', 100, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'plastic', 100, true, false},
+			{'copper', 100, true, false},
+			{'aluminum', 100, true, false},
 			{'cash', 2000, true, true},
 		},
 		job = { -- What jobs can craft this item in this workbench
@@ -226,10 +238,13 @@ Config.Crafts = {
 		isItem = true, -- if true = is item | if false = is weapon
 		isDisassemble = false, -- true = disassemble | false = craft
 		time = 6, -- Time to craft (in seconds)
-		levelNeeded = 2, -- What level he needs to craft this item
+		levelNeeded = 0, -- What level he needs to craft this item
 		xpPerCraft = 40, -- How much XP he receives after crafting this item
 		recipe = { -- Recipe to craft it
-			{'iron', 1, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'iron', 100, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'plastic', 100, true, false},
+			{'copper', 100, true, false},
+			{'aluminum', 100, true, false},
 			{'cash', 2000, true, true},
 		},
 		job = { -- What jobs can craft this item in this workbench

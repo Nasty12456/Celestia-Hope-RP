@@ -60,14 +60,14 @@ Config.DrawMarkerIcon = 1 -- DrawMarker icon for dropping stolen vehicle off. Li
 Config.DrawMarkerColor = {R = 255, G = 97, B = 255} -- DrawMarker color for dropping stolen vehicle off. Rgb selector can be found here: https://www.rapidtables.com/web/color/RGB_Color.html
 ----------
 ----------
-Config.Currency = "bank" -- (money, bank, cash) what currency the player should get when breaking down parts and use to buy the garage
+Config.Currency = "cash" -- (money, bank, cash) what currency the player should get when breaking down parts and use to buy the garage
 
 Config.PayForScrappingCarMin = 550 -- Minimum amount a player can receive for fully scrapping a car (when they get in the car and hit E after removing all of the vehicles parts)
 Config.PayForScrappingCarMax = 700 -- Maximum amount a player can receive for fully scrapping a car (when they get in the car and hit E after removing all of the vehicles parts)
 ----------
 ----------
-Config.ChancePoliceAraCalled = 100 -- % chance that the police are called (1-100)
-Config.GaragePrice = 100000 -- price of garage (how much the owner of the garage pays to get one)
+Config.ChancePoliceAraCalled = 50 -- % chance that the police are called (1-100)
+Config.GaragePrice = 100000000 -- price of garage (how much the owner of the garage pays to get one)
 Config.BegginingPlayerCap = 1 -- The starting members capacity the garage starts with (DO NOT MAKE THIS LESS THEN 1)
 Config.BegginingVehicleCap = 5 -- The vehicle cap that the garage starts out with (How many cars can be stored when you purchase the garage. players upgrade these over time)
 Config.MembersUpgradePrice = 5500 -- Cost of upgrading members capacity (multiplied by current member capacity. example is if there is 4 players on the garage it will be 4*5500 = 22000)
