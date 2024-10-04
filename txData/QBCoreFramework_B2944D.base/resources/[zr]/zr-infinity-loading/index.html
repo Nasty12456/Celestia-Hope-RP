@@ -12,9 +12,30 @@
 <body>
     <div id="zr-app">
         <div class="overlay"></div>
-        <video id="zr-background-player" playsinline autoplay muted loop poster="/zr-assets/video/background.webp" id="bgvid">
-            <source src="/zr-assets/video/video.mp4" type="video/mp4">
+        <video id="zr-background-player" playsinline autoplay muted loop>
+            <source src="/zr-assets/video/video1.mp4" type="video/mp4">
+            <source src="/zr-assets/video/video2.mp4" type="video/mp4">
         </video>
+    </div>
+    <script>
+        function playRandomVideo() {
+            const videoElement = document.getElementById('zr-background-player');
+            const videos = backgroundPlayer.videos;
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            videoElement.src = videos[randomIndex];
+            videoElement.play().catch(error => {
+                console.error('Error playing video:', error);
+                if (randomIndex + 1 < videos.length) {
+                    videoElement.src = videos[randomIndex + 1];
+                    videoElement.play();
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', playRandomVideo);
+        videoElement.addEventListener('ended', playRandomVideo);
+    </script>
+    </script>
         <div id="zr-notification">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#00CCB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
