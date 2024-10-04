@@ -190,9 +190,9 @@ add_ace identifier.license2:d504b13c141222c9a6508969ce37d310fbca716a doors_creat
 add_ace identifier.license2:4dc755199f36efd39302e5360ba1c521e40666f5 doors_creator allow # Add permission to 'JustOsiris' Rockstar license2
 add_ace identifier.license2:4a9f7a9a26f597df2f85bc6ae79876bcc248e38f doors_creator allow # Add permission to 'chronic' Rockstar license2
 add_ace identifier.license2:ddca6b744f47bbec8d11ec2aa417f3fa771af200 doors_creator allow # Add permission to 'bugs' Rockstar license2
-
-
-
+add_ace identifier.license2:452540284983764e43aebabd1ea95cfdbf35efd6 doors_creator allow # Add permission to 'NO EXCUSES' Rockstar license2
+add_ace identifier.license2:452540284983764e43aebabd1ea95cfdbf35efd6 jobcreator allow # Add permission to 'NO EXCUSES' Rockstar license2
+add_ace identifier.license2:452540284983764e43aebabd1ea95cfdbf35efd6 drugs_creator allow # Add permission to 'NO EXCUSES' Rockstar license2
 
 
 add_ace identifier.license2:591d2af6b6e9178d53cec2177d685543f0e53a8d races_creator allow # Add permission to 'hardven' Rockstar license2

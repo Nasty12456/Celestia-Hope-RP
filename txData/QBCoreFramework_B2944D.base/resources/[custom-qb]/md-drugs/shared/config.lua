@@ -87,7 +87,7 @@ Config.lsdlabkitcost = 10000 -- price of the lsd lab kit
 ------------------------- Heroin Locations
 
 Config.dryplant = { -- turn resin into powder
-    {loc = vector3(-1353.77, -335.58, 43.92), l = 1.0, w = 1.0, rot = 45.0, gang = ""},
+    {loc = vector3(-1360.14, -337.03, 43.92), l = 1.0, w = 1.0, rot = 45.0, gang = ""},
 }
 
 Config.cutheroinone = { -- cut heroin stage 1-3 with baking soda
