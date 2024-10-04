@@ -11,7 +11,14 @@ const logo = {
     subtitle: 'Welcome To'
 }
 
-let backgroundPlayer = true; // if you want to use a video in the background
+let backgroundPlayer = {
+    enabled: true,
+    videos: [
+        '/zr-assets/video/video1.mp4',
+        '/zr-assets/video/video2.mp4'
+    ],
+    randomPlay: true // set to false if you want sequential play
+};
 
 const notifications = [
     {
@@ -514,25 +521,19 @@ const team = [
     },
     {
         image: '/zr-assets/team/zr-developer.webp',
-        name: 'Arty',
+        name: 'Rhino',
         role: 'Developer'
     },
     {
         image: '/zr-assets/team/zr-developer.webp',
-        name: 'Erkan',
+        name: 'Kim',
         role: 'Developer'
     },
     {
         image: '/zr-assets/team/zr-developer.webp',
-        name: 'Ali',
-        role: 'Head Admin'
+        name: 'Amelia',
+        role: 'Server Director'
     },
-    {
-        image: '/zr-assets/team/zr-developer.webp',
-        name: 'Andrew',
-        role: 'Head Admin'
-    },
-    
 ]
 var player;
 function onYouTubeIframeAPIReady() {
@@ -553,7 +554,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 let autoplay = true;
-let volume = 100; //Values between 0 and 100
+let volume = 25; //Values between 0 and 100
 // Define the tracks that have to be played
 let track_list = [
     {
@@ -575,34 +576,43 @@ let track_list = [
         path: "/zr-assets/music/song3.mp3"
       },
       {
-        name: "Turks & Caicos",
-        artist: "Rod Wave",
+        name: "TGIF",
+        artist: "GloRilla",
         image: "/zr-assets/musicpics/song4.png",
         path: "/zr-assets/music/song4.mp3"
       },
       {
-        name: "H00DBYAIR",
-        artist: "Votabias",
+        name: "Osiris The Skater",
+        artist: "Motion",
         image: "/zr-assets/musicpics/song5.png",
         path: "/zr-assets/music/song5.mp3"
       },
       {
-        name: "Get It Sexyy",
-        artist: "Sexyy Red",
+        name: "on one tonight",
+        artist: "Gunna",
         image: "/zr-assets/musicpics/song6.png",
         path: "/zr-assets/music/song6.mp3"
       },
       {
-        name: "on one tonight",
-        artist: "Gunna",
+        name: "Midnight City",
+        artist: "M83",
         image: "/zr-assets/musicpics/song7.png",
         path: "/zr-assets/music/song7.mp3"
       },
-      {
-        name: "Midnight City",
-        artist: "M83",
-        image: "/zr-assets/musicpics/song8.png",
-        path: "/zr-assets/music/song8.mp3"
-      },
 
 ];
+
+document.addEventListener('DOMContentLoaded', function() {
+    const videoElement = document.getElementById('zr-background-player');
+    const videos = backgroundPlayer.videos;
+    
+    function setRandomVideo() {
+        const randomIndex = Math.floor(Math.random() * videos.length);
+        videoElement.src = videos[randomIndex];
+    }
+
+    if (backgroundPlayer.enabled && backgroundPlayer.randomPlay) {
+        setRandomVideo();
+        videoElement.addEventListener('ended', setRandomVideo);
+    }
+});
