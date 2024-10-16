@@ -112,10 +112,8 @@ Config.Locations = { -- Edit the various interaction points for players or creat
         [3] = {coords = vector4(319.92, -567.68, 49.12, 343.62), taken = false, model = -421052012},
         [4] = {coords = vector4(318.25, -572.08, 49.12, 162.65), taken = false, model = -421052012},
         [5] = {coords = vector4(323.22, -568.66, 49.12, 160.96), taken = false, model = -421052012},
-	--- paleto
-	    [6] = {coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672},
-        [7] = {coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672},
-        [8] = {coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672}
+	
+	
     },
     ["jailbeds"] = {
         [1] = {coords = vector4(1761.96, 2597.74, 45.66, 270.14), taken = false, model = 2117668672},

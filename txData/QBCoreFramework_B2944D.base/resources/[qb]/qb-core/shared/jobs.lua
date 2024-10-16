@@ -338,25 +338,50 @@ QBShared.Jobs = {
 		offDutyPay = false,
 		grades = {
             ['0'] = {
-                name = 'Recruit',
-                payment = 100
+                name = 'Trainee',
+                payment = 0
             },
 			['1'] = {
-                name = 'Paramedic',
-                payment = 200
+                name = 'EMT',
+                payment = 0
             },
 			['2'] = {
-                name = 'Doctor',
-                payment = 300
+                name = 'First Responder',
+                payment = 0
             },
 			['3'] = {
-                name = 'Surgeon',
-                payment = 400
+                name = 'Paramedic',
+                payment = 0
             },
 			['4'] = {
                 name = 'Chief',
                 isboss = true,
-                payment = 500
+                payment = 0
+            },
+            ['5'] = {
+                name = 'Nurse',
+                isboss = true,
+                payment = 0
+            },
+            ['6'] = {
+                name = 'Nurse Practitioner',
+                isboss = true,
+                payment = 0
+            },
+            ['7'] = {
+                name = 'Registered Dr',
+                isboss = true,
+                payment = 0
+            },
+            ['8'] = {
+                name = 'Sr. paramedic',
+                isboss = true,
+                payment = 0
+            },
+            ['9'] = {
+                name = 'Surgeon',
+                isboss = true,
+                payment = 0
             },
         },
 	},
@@ -558,6 +583,22 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['vu'] = {
+        label = 'Vanilla Unicorn',
+        defaultDuty = true,
+        grades = {
+            ['0'] = { name = 'Employee', payment = 100},
+            ['1'] = { name = 'Owner', payment = 200, isboss = true },
+        },
+    },
+     ['bahama'] = {
+        label = 'Bahama Mama',
+        defaultDuty = true,
+        grades = {
+            ['0'] = { name = 'Employee', payment = 200 },
+            ['1'] = { name = 'Owner', payment = 100, isboss = true },
+        },
+    },
 }
 
 

@@ -18,7 +18,7 @@ Config.DefaultHudSettings   = {
     compass = { active = true, onlyInVehicle = true, editableByPlayers = true },
     cinematic = { active = true },
     -- kmH 'true' or 'false' | false is MPH
-    vehicle_info = { kmH = true },
+    vehicle_info = { kmH = false },
     --[[
         - It is located in the upper right corner.
         - It lists data such as date, server name, money, etc.

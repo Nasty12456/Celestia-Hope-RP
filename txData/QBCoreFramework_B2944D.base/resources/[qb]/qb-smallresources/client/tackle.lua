@@ -1,4 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
+local lastTackleTime = 0
+local tackleCooldown = 15000 -- 30 seconds in milliseconds
 
 local function tackleAnim()
     local ped = PlayerPedId()
@@ -19,9 +21,16 @@ local function tackleAnim()
 end
 
 RegisterCommand('tackle', function()
+    local currentTime = GetGameTimer()
+    if currentTime - lastTackleTime < tackleCooldown then
+        QBCore.Functions.Notify("You must wait " .. math.ceil((tackleCooldown - (currentTime - lastTackleTime)) / 1000) .. " seconds before tackling again.", "error")
+        return
+    end
+
     local closestPlayer, distance = QBCore.Functions.GetClosestPlayer()
     local ped = PlayerPedId()
     if distance ~= -1 and distance < 2 and GetEntitySpeed(ped) > 2.5 and not IsPedInAnyVehicle(ped, false) and not QBCore.Functions.GetPlayerData().metadata.ishandcuffed and not IsPedRagdoll(ped) then
+        lastTackleTime = currentTime
         TriggerServerEvent("tackle:server:TacklePlayer", GetPlayerServerId(closestPlayer))
         tackleAnim()
     end

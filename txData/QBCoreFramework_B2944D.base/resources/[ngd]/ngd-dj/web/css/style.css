@@ -1,0 +1,302 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+  
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* display: none; */
+}
+
+.header{
+	height: 3.5vw;
+	width: 47.5vw;
+	border-radius: 0.4688vw 0.4688vw 0 0;
+	/* background: #1A1B1E; */
+	display: flex;
+	justify-content: space-between;
+	color:#fff;
+	align-items: center;
+	padding: 1vw;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(https://giffiles.alphacoders.com/173/173323.gif);
+	background-size: top;
+	font-size: 1.75vw;
+/* 	border:15px solid rgb(83, 7, 151);
+	border-bottom: none; */
+}
+
+.footer{
+	height: 3vw;
+	width: 47.5vw;
+	border-radius: 0.4688vw 0.4688vw 0 0;
+	background: #1A1B1E;
+	display: flex;
+	justify-content: space-between;
+	color:#fff;
+	align-items: center;
+	padding: 0.5vw;
+	font-size: 1.25vw;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(https://giffiles.alphacoders.com/173/173323.gif);
+	background-size: top;
+	transform: rotate(180deg);
+
+}
+
+.header_title{
+	display: flex;
+	gap:0.52vw;
+}
+
+.header_title i{
+	font-size: 2.5vw;
+	color:rgb(110, 3, 110);
+	animation-name: animation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;    
+    animation-play-state: running;
+}
+
+.header_title h6{
+	line-height: 2.25vw;
+}
+
+.header_title img{
+	width: 2.25vw;
+}
+
+.header_close i{
+	font-size: 1.5vw;
+	/* color:#F44336; */
+	color:silver;
+	cursor: pointer;
+}
+
+.list_header{
+	color:#fff;
+	height: 3vw;
+	display: flex;
+	align-items: center;
+	gap: 0.5vw;
+	padding: 0.5vw;
+	font-size: 0.85vw;
+}
+
+.list_header i{
+	font-size: 1.45vw;
+	cursor: pointer;
+}
+
+
+
+
+.player {
+	/* padding: 2.8125vw; */
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 47.5vw;
+	height: 31.6052vw;
+	/* border:15px solid rgb(83, 7, 151);
+	border-top: none; */
+/* 	background: #1A1B1E; */
+	background: black;
+	/* display: none; */
+}
+
+.play{
+	cursor: pointer;
+}
+
+.current{
+	width: 65%;
+	height: 100%;
+	/* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('none'); */
+	/* background-size: cover; */
+
+}
+
+.list{
+	width: 35%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border-right: 3px solid #190140;
+}
+
+.video_boxes{
+	min-height: 85%;
+}
+
+.video_box{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 3.5vw;
+	padding: 0.1vw 1.1vw 0.1vw 0.2vw;
+	border-bottom: 1px solid rgba(255 , 255, 255, 0.2);
+}
+
+.video_info{
+	display: flex;
+	align-items: center;
+	gap: 0.5vw;
+}
+
+.titles h5, p {
+	margin: 0;
+	color: white;
+}
+	
+.titles h5 {
+	font-size: 0.75vw;
+	font-weight: 400;
+	width: 6vw;
+}
+	
+.titles p {
+	font-size: .75vw;
+	color: #929292;
+}
+
+.video_box .img{
+	width: 3vw;
+	height: 3vw;
+}
+
+.actions{
+	display: flex;
+	flex-direction: row;
+}
+
+
+.actions i{
+	color:#fff;
+	font-size: 1.25vw;
+	cursor: pointer;
+}
+
+.equalizer, .replay, .pause {
+	display: none;
+}
+
+
+@keyframes animation {
+    0.0%  {color:rgb(88, 2, 65);}
+	10.0%  {color:rgb(54, 7, 141);}
+	20.0%  {color:rgb(8, 26, 164);}
+	30.0%  {color:rgb(6, 118, 141);}
+	40.0%  {color:rgb(7, 149, 104);}
+	50.0%  {color:rgb(7, 208, 11);}
+	60.0%  {color:rgb(207, 197, 13);}
+	70.0%  {color:rgb(219, 104, 11);}
+	80.0%  {color:rgb(118, 4, 15);}
+	90.0%  {color:rgb(255, 255, 255);}
+}
+
+.list::-webkit-scrollbar {
+    width: .0vh;
+}
+
+.list::-webkit-scrollbar-track {
+    border-radius: 2vh;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: silver;
+    border-radius: 2vh;
+}
+
+.YoutubeVideoAdder {
+	display: none;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(https://giffiles.alphacoders.com/173/173323.gif);
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+	width: 500px;
+	position: absolute;
+	height: 250px;
+	z-index: 999;
+	padding: auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap:20px;
+	border-radius: 5px;
+  	transition: all ease 0.2s;
+	color:white;
+	font-size: 1.0vw;
+}
+
+.YoutubeVideoAdder input {
+	border-radius: 5px;
+	width: 80%;
+	height: 15%;
+}
+
+.input_diag_header {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+.progress {
+	position: relative;
+	height: 2px;
+	margin: 30px 20px 0px 20px;
+	background: rgba(255, 255, 255, 0.3);
+	top: 90% ;
+	display: none;
+}
+	
+.progress .played {
+	width: 0%;
+	height: 2px;
+	position: absolute;
+	background: #F44336;
+}
+		
+.progress .played .circle {
+	width: 10px;
+	height: 10px;
+	background: #F44336;
+	border-radius: 50%;
+	margin-left: 0px;
+	margin-top: -4px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+ .volume{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+} 
+
+.volume i{
+	color:#fff;
+} 
+
+.delete i {
+	color:#fff;
+	cursor: pointer;
+}
+
+/* input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 15px;
+	cursor: pointer;
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: #fff;
+
+	
+  } */

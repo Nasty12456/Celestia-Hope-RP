@@ -186,8 +186,26 @@ getVehicleProperties = function(vehicle)
 	end
 end
 
-setVehicleProperties = function(vehicle, props)
+setVehicleProperties = function(vehicle, props, resetWheels)
 	if DoesEntityExist(vehicle) and props then
+        if resetWheels then
+            for k, v in pairs(firstFitmentData) do
+                if k == "wheels-width" then
+                    SetVehicleWheelWidth(vehicle, v)
+                elseif k == "front-left-camber" then
+                    SetVehicleWheelYRotation(vehicle, fitmentData[k], v)
+                elseif k == "front-right-camber" then
+                    SetVehicleWheelYRotation(vehicle, fitmentData[k], v)
+                elseif k == "rear-left-camber" then
+                    SetVehicleWheelYRotation(vehicle, fitmentData[k], v)
+                elseif k == "rear-right-camber" then
+                    SetVehicleWheelYRotation(vehicle, fitmentData[k], v)
+                else
+                    SetVehicleWheelXOffset(vehicle, fitmentData[k], v)
+                end
+            end
+            TriggerServerEvent("0r-mechanic:server:syncFitment", NetworkGetNetworkIdFromEntity(vehicle), getVehicleFitment(vehicle))
+        end
         if props.extras then
             for id, enabled in pairs(props.extras) do
                 if enabled then

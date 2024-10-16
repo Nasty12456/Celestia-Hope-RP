@@ -346,7 +346,7 @@ Config.TransferLimits.Weekly = false -- The maximum amount of money that can be 
 Config.EnableMessagePay = true -- Allow players to pay other players via messages?
 Config.EnableVoiceMessages = true -- Allow players to send voice messages?
 
-Config.CityName = "Los Santos" -- The name that's being used in the weather app etc.
+Config.CityName = "Celestia Hope RP" -- The name that's being used in the weather app etc.
 Config.RealTime = true -- if true, the time will use real life time depending on where the user lives, if false, the time will be the ingame time.
 Config.CustomTime = false -- NOTE: disable Config.RealTime if using this. you can set this to a function that returns custom time, as a table: { hour = 0-24, minute = 0-60 }
 
@@ -360,8 +360,8 @@ Config.SyncFlash = true -- should flashlights be synced across all players? May 
 Config.EndLiveClose = false -- should InstaPic live end when you close the phone?
 
 Config.AllowExternal = { -- allow people to upload external images? (note: this means they can upload nsfw / gore etc)
-    Gallery = false, -- allow importing external links to the gallery?
-    Birdy = false, -- set to true to enable external images on that specific app, set to false to disable it.
+    Gallery = true, -- allow importing external links to the gallery?
+    Birdy = true, -- set to true to enable external images on that specific app, set to false to disable it.
     InstaPic = false,
     Spark = false,
     Trendy = false,

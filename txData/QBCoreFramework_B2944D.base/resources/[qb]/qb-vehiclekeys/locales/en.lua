@@ -1,42 +1,42 @@
 local Translations = {
     notify = {
+        ydhk = 'You don\'t have keys to this vehicle.',
+        nonear = 'There is nobody nearby to hand keys to',
         vlock = 'Vehicle locked!',
         vunlock = 'Vehicle unlocked!',
-        verrorkey = 'Something went wrong with the locking system!',
-        vnokey = 'You don\'t have the keys of the vehicle..',
-        vopendoor = 'Opened Door',
-        vcallcops = 'Someone Called The Police!',
-        vfaillockpick = 'You failed lock-pick the vehicle !',
-        vgotkey = 'You Got The Keys!',
-        vcalledthecop = 'They Called The Cops!',
-        vneedkey = 'you need to be in a vehicle to give key',
-        vhotwiresuc = 'Hotwire succeeded!',
-        vhotwirefail = 'You failed lock-pick the vehicle !',
-        vgivekeyss = 'You gave the keys!',
-        vplayernotonline = 'Player Not Online',
-        vnotyourvehicle = 'You Dont Own This Vehicle',
-        vvehiclenotfound = 'Vehicle is not found.',
-        vremovekeys = 'You have removed the keys of vehicle %s',
-        vnotyourvehiclepermission = 'You do not own this vehicle or lack the permissions.'
-
+        vlockpick = 'You managed to pick the door lock open!',
+        fvlockpick = 'You fail to find the keys and get frustrated.',
+        vgkeys = 'You hand over the keys.',
+        vgetkeys = 'You get keys to the vehicle!',
+        fpid = 'Fill out the player ID and Plate arguments',
+        cjackfail = 'Carjacking failed!',
+        vehclose = 'There\'s no close vehicle!',
     },
-    msg = {
-        vtheft = 'Vehicle theft attempt at',
-        vehicle = '. Vehicle: ',
-        vlicence = ',Licenseplate: ',
-        vtheftatt = 'Vehicle theft attempt at',
-
-    },
-    Progressbar = {
-        vrob = 'Attempting Robbery..',
+    progress = {
+        takekeys = 'Taking keys from body...',
+        hskeys = 'Searching for the car keys...',
+        acjack = 'Attempting Carjacking...',
     },
     info = {
-        vtogglelocks = 'Toggle Vehicle Locks',
-        vtoggleengine = 'Toggle Engine',
-        vgivekeys = 'Give Car Keys',
+        skeys = '~g~[H]~w~ - Search for Keys',
+        tlock = 'Toggle Vehicle Locks',
+        palert = 'Vehicle theft in progress. Type: ',
+        engine = 'Toggle Engine',
     },
-    error = {
-        platenil = 'vehiclekeys:server:SetVehicleOwner - plate argument is nil',
+    addcom = {
+        givekeys = 'Hand over the keys to someone. If no ID, gives to closest person or everyone in the vehicle.',
+        givekeys_id = 'id',
+        givekeys_id_help = 'Player ID',
+        addkeys = 'Adds keys to a vehicle for someone.',
+        addkeys_id = 'id',
+        addkeys_id_help = 'Player ID',
+        addkeys_plate = 'plate',
+        addkeys_plate_help = 'Plate',
+        rkeys = 'Remove keys to a vehicle for someone.',
+        rkeys_id = 'id',
+        rkeys_id_help = 'Player ID',
+        rkeys_plate = 'plate',
+        rkeys_plate_help = 'Plate',
     }
 
 }

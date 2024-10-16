@@ -1,28 +1,23 @@
 fx_version 'cerulean'
 game 'gta5'
+description 'QB-VehicleKeys'
+version '1.2.5'
+ui_page 'NUI/index.html'
 
-description 'QB-VehicleKeys - edit By: VT Development"s'
-version '1.0.5'
+files {
+    'NUI/index.html',
+    'NUI/style.css',
+    'NUI/script.js',
+    'NUI/images/*',
+}
 
-shared_script {
+shared_scripts {
     '@qb-core/shared/locale.lua',
-    'locales/en.lua',
     'locales/*.lua',
     'config.lua',
 }
 
-client_script 'client/*.lua'
+client_script 'client/main.lua'
 server_script 'server/main.lua'
-ui_page 'html/index.html'
-
-files {
-      'html/js/*.js',
-      'html/index.html',
-      'html/style.css',
-}
-
-exports {
-  "Circle"
-}
 
 lua54 'yes'

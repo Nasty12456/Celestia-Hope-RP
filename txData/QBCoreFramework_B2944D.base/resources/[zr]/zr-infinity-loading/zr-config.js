@@ -7,7 +7,7 @@ const backgroundRandomStart = false
 const backgroundInterval = 5  // in seconds
 
 const logo = {
-    title: 'Celestial Hope RP',
+    title: 'Celestia Hope RP',
     subtitle: 'Welcome To'
 }
 

@@ -641,7 +641,10 @@ function rgbaToHex(rgba) {
 $(document).on("click", ".category-one", function(){
     let attrId = $(this).attr("id")
     if (attrId == "fitment") {
-        openFitment();
+        $.post('https://0r-mechanic/getWheelFitment', JSON.stringify({}), function(fitmentData){
+            wheels = fitmentData;
+            openFitment()
+        });
     } else if (attrId == "customization") {
         buildMenu("main", null, null);
     }
@@ -784,7 +787,7 @@ function closePaintMenu() {
 function openFitment() {
     $('.main-menu').fadeOut(250);
     inFitmentMenu = true;
-    $.each(wheels, function (i, v) { 
+    $.each(wheels, function (i, v) {
         let span = $(`.fitment-modal[data-fitment="${i}"]`).children('#fitment');
         span.html(v.toFixed(2));
     });

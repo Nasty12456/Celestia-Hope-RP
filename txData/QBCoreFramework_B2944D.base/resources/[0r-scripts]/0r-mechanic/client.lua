@@ -21,7 +21,7 @@ local cartMods = {}
 local firstWheelType = nil
 local currentWheelType = nil
 local savedColorState = {}
-
+local fitmentPaid = false
 local windowTypes = {
     "WINDOWTINT_NONE",  
 	"WINDOWTINT_PURE_BLACK",  
@@ -52,8 +52,8 @@ local vehicleTractions = {
 	["AWD"] = 0.02,
 	["FourWD"] = 0.5,
 }
-
-local fitmentData = {
+firstFitmentData = {}
+fitmentData = {
     ["front-left"] = 0,
     ["front-right"] = 1,
     ["rear-left"] = 2,
@@ -761,9 +761,6 @@ addMod = function(vehicle, modId, stock, modPrice)
             end
         end
     else
-        if modId == 23 then
-            print(GetNumVehicleMods(vehicle, modId))
-        end
         if (GetNumVehicleMods(vehicle, modId) ~= nil and GetNumVehicleMods(vehicle, modId) > 0) then
             if stock then
                 dummy[#dummy + 1] = {
@@ -1327,7 +1324,9 @@ getVehicleFitment = function(vehicle)
 end
 
 openMechanicMenu = function(state, vehicle, enableSc)
-    
+    if state then
+        firstFitmentData = getVehicleFitment(vehicle)
+    end
     if not colorsLoaded then
         SendNUIMessage({
             type = "COLORS",
@@ -1815,6 +1814,7 @@ RegisterNUICallback("applyFitment", function(dt, cbj)
 
         TriggerServerEvent("0r-mechanic:server:syncFitment", NetworkGetNetworkIdFromEntity(vehicle), getVehicleFitment(vehicle))
         TriggerServerEvent("0r-mechanic:server:addElement", "fitment", data)
+        fitmentPaid = true
     end, { 
         price = Config.Menus.fitment.price, 
         currentMechanic = currentMechanic,
@@ -2034,7 +2034,6 @@ RegisterNUICallback('surfItem', function(data, cbj)
 
     if data.clear then
         UpdateMods(vehicle)
-        -- -- -- --print("şu an sikiyom")
         for k,v in pairs(currentFitmentData) do
             if k == "wheels-width" then
                 SetVehicleWheelWidth(vehicle, v)
@@ -2140,6 +2139,8 @@ RegisterNUICallback('changeFitment', function(data, cbj)
     else
         SetVehicleWheelXOffset(vehicle, fitmentData[data.type], data.value)
     end
+    --Citizen.Wait(1000)
+    TriggerServerEvent("0r-mechanic:server:syncFitment", NetworkGetNetworkIdFromEntity(vehicle), getVehicleFitment(vehicle))
 end)
 
 RegisterNUICallback('getWheelFitment', function(data, cbj)
@@ -2262,13 +2263,13 @@ RegisterNUICallback("close", function(data, cbj)
     menuOpened = false
 
 
-    if data.type == true then
-    else
+    if not data.type then
         ShowNotification(Config.Locale["save_cancel"])
-        setVehicleProperties(vehicle, currentModData)
+        setVehicleProperties(vehicle, currentModData, not fitmentPaid)
 
     end
     cartMods = {}
+    fitmentPaid = false
 end)
 
 RegisterNetEvent("0r-mechanic:client:updateVehData", function(obj)
@@ -2289,7 +2290,13 @@ RegisterNetEvent("0r-mechanic:client:syncFitment", function(vehicleId, fitmentDa
         elseif k == "rear-right-camber" then
             SetVehicleWheelYRotation(vehicle, fitmentData[k], v)
         else
-            SetVehicleWheelXOffset(vehicle, fitmentData[k], v)
+            local wheelIndex = {
+                ["front-left"] = 0,
+                ["front-right"] = 1,
+                ["rear-left"] = 2,
+                ["rear-right"] = 3
+            }
+            SetVehicleWheelXOffset(vehicle, wheelIndex[k], v)
         end
     end
 end)

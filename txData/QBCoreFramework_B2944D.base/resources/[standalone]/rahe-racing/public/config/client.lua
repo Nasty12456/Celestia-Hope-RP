@@ -1,6 +1,6 @@
 clConfig = {
     -- If the default command (/racing) should be enabled. Disable this if you have the tablet as an inventory item.
-    commandsEnabled = true,
+    commandsEnabled = false,
 
     -- The distance (in meters) from which players can see the 3D race join text and can press a key to join.
     joinProximity = 60,

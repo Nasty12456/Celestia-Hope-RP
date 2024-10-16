@@ -1,6 +1,6 @@
 Config = {}
 
-Config.UseMPH = false
+Config.UseMPH = true
 
 Config.StressChance = 0.2         -- Default: 10% -- Percentage Stress Chance When Shooting (0-1)
 Config.MinimumStress = 50         -- Minimum Stress Level For Screen Shaking
