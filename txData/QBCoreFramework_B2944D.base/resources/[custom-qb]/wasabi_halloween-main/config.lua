@@ -11,7 +11,7 @@ Config.TrickOrTreat = true -- Enable trick or treat? Put this to false to just e
 
 Config.RequireCandyBasket = false -- Require candy basket to be equipped to trick-or-treat?
 
-Config.onePlayerPerHouse = true -- Set to false if you want everyone a chance to trick-or-treat every house
+Config.onePlayerPerHouse = false -- Set to false if you want everyone a chance to trick-or-treat every house
 
 Config.onlyAtNight = true -- Set to false if you want to be able to trick or treat during daytime
 
