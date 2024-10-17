@@ -9,9 +9,9 @@ Config.CandyBasket = 'jackolantern' -- Item must be existing in server. You use 
 
 Config.TrickOrTreat = true -- Enable trick or treat? Put this to false to just enable the usable candy baskets
 
-Config.RequireCandyBasket = false -- Require candy basket to be equipped to trick-or-treat?
+Config.RequireCandyBasket = true-- Require candy basket to be equipped to trick-or-treat?
 
-Config.onePlayerPerHouse = true -- Set to false if you want everyone a chance to trick-or-treat every house
+Config.onePlayerPerHouse = false -- Set to false if you want everyone a chance to trick-or-treat every house
 
 Config.onlyAtNight = true -- Set to false if you want to be able to trick or treat during daytime
 
@@ -120,13 +120,13 @@ Config.Houses = {
 }
 
 Config.Treats = { -- Put items here you want as rewards(Must be existing items in server)
-	{ item = 'money', min = 350, max = 650 },
-	{ item = 'doritos', min = 2, max = 5 },
-	{ item = 'black_money', min = 495, max = 1200 },
+	
+	{ item = 'beer', min = 2, max = 5 },
 	{ item = 'donut', min = 1, max = 4 },
 	{ item = 'sandwich', min = 3, max = 6 },
 	{ item = 'twerks_candy', min = 3, max = 6 },
 	{ item = 'nikkel_candy', min = 3, max = 6 },
+	
 }
 
 --[[
