@@ -464,8 +464,9 @@ QBShared.Items = {
 	['firework3'] 				 	 = {['name'] = 'firework3', 			  	  	['label'] = 'WipeOut', 					['weight'] = 10, 		['type'] = 'item', 		['image'] = 'firework3.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Fireworks', ["created"] = nil, ["decay"] = 5.0, ["delete"] = false},
 	['firework4'] 				 	 = {['name'] = 'firework4', 			  	  	['label'] = 'Weeping Willow', 			['weight'] = 10, 		['type'] = 'item', 		['image'] = 'firework4.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Fireworks', ["created"] = nil, ["decay"] = 5.0, ["delete"] = false},
 
-
-
+ ---wasabiiiii
+ ["jackolantern"] 			 	 = {["name"] = "jackolantern", 				    ["label"] = "jackolantern", 			 ["weight"] = 100,  	["type"] = "item", 		["image"] = "jackolantern.png", 			["unique"] = false,     ["useable"] = true, 	["shouldClose"] = true,   ["combinable"] = nil,   ["description"] = "Wasibi Brand jackolantern" },
+ 
 	-- Sea Tools
     ['dendrogyra_coral'] 			 = {['name'] = 'dendrogyra_coral', 			  	['label'] = 'Dendrogyra', 				['weight'] = 10, 		['type'] = 'item', 		['image'] = 'dendrogyra_coral.png', 	['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'Its also known as pillar coral', ["created"] = nil, ["decay"] = 15.0, ["delete"] = false},
     ['antipatharia_coral'] 			 = {['name'] = 'antipatharia_coral', 			['label'] = 'Antipatharia', 			['weight'] = 10, 		['type'] = 'item', 		['image'] = 'antipatharia_coral.png', 	['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'Its also known as black corals or thorn corals', ["created"] = nil, ["decay"] = 15.0, ["delete"] = false},
