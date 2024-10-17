@@ -11,7 +11,7 @@ Config.TrickOrTreat = true -- Enable trick or treat? Put this to false to just e
 
 Config.RequireCandyBasket = false -- Require candy basket to be equipped to trick-or-treat?
 
-Config.onePlayerPerHouse = false -- Set to false if you want everyone a chance to trick-or-treat every house
+Config.onePlayerPerHouse = true -- Set to false if you want everyone a chance to trick-or-treat every house
 
 Config.onlyAtNight = true -- Set to false if you want to be able to trick or treat during daytime
 
@@ -125,6 +125,8 @@ Config.Treats = { -- Put items here you want as rewards(Must be existing items i
 	{ item = 'black_money', min = 495, max = 1200 },
 	{ item = 'donut', min = 1, max = 4 },
 	{ item = 'sandwich', min = 3, max = 6 },
+	{ item = 'twerks_candy', min = 3, max = 6 },
+	{ item = 'nikkel_candy', min = 3, max = 6 },
 }
 
 --[[
