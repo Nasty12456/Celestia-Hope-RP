@@ -148,7 +148,7 @@ Config.Blip = {
 -- ██║ ╚████║╚██████╔╝██████╔╝      ██████╔╝╚█████╔╝
 -- ╚═╝  ╚═══╝ ╚═════╝ ╚═════╝       ╚═════╝  ╚════╝
 
-Config.UseMusicPlayer = false --Use built in music player?  (Requires the installation of the ngd-dj resource included with script.)
+Config.UseMusicPlayer = true --Use built in music player?  (Requires the installation of the ngd-dj resource included with script.)
 
 Config.DjBooths = {
   [1] = {
