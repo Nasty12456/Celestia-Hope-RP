@@ -93,7 +93,7 @@ if Config.CommandEnabled then
         end
     end)
 else
-    RegisterKeyMapping(Config.GrabCommand, 'Grab ped key', 'keyboard', 'F2')
+    RegisterKeyMapping(Config.GrabCommand, 'Grab ped key', 'keyboard', 'F1')
 end
 
 -- [[ Exports ]]

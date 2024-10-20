@@ -3,7 +3,7 @@ Config = {}
 
 
 Config.Sound = true
-Config.MultP = 0.10
+Config.MultP = 0.1
 Config.Item = "tunerlaptop"
 
 Config.Lang = {
