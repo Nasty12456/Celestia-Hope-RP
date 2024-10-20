@@ -39,7 +39,7 @@ function AddMoneyToAccount(account, amount, isNotRent)
     else
         local result = MySQL.Sync.fetchAll('SELECT ' .. accountsColumn .. ' FROM ' .. userTable .. ' WHERE ' .. identifierColumn .. ' = ?', { account })
         if not result[1] then return print('Add Money Account : Not finded this account: ' .. account) end
-        local accounts = Config.Framework == 'qbcore' and result[1].money or result[1].accounts
+        local accounts = Config.Framework == 'qb' and result[1].money or result[1].accounts
         accounts = json.decode(accounts)
         accounts.bank = accounts.bank + amount
         MySQL.Sync.execute('UPDATE ' .. userTable .. ' SET ' .. accountsColumn .. ' = ? WHERE ' .. identifierColumn .. ' = ?', {
