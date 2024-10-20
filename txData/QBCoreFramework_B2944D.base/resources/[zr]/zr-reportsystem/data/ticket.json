@@ -1,164 +1,257 @@
 {
-    "b0af-a724-c12d-2e09": {
-        "description": "sexual harrassment he is humping me against my will",
-        "ticketOwnerDetails": {
-            "licenseID": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
-            "ping": 110,
-            "name": "epik",
-            "ip": "98.97.58.201",
-            "id": 13,
-            "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
-            "discordName": "llepikll",
-            "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
-            "live": "1055519471993987",
-            "discordID": "967626401375211530"
+    "e609-907a-ae48-005d": {
+        "date": "18-10-2024 10:27",
+        "status": "resolving",
+        "addUser": [],
+        "claimedAdmin": [],
+        "ticketOwner": "8ebd419ef166059265f98ff7b667d42425bff2ce",
+        "priority": {
+            "type": "normal",
+            "text": "Normal",
+            "color": "#4CAF50"
         },
+        "ticketID": "e609-907a-ae48-005d",
         "claimed": false,
+        "solved": false,
+        "category": {
+            "text": "Question",
+            "type": "question"
+        },
+        "ticketOwnerDetails": {
+            "discordID": "1161529762196488194",
+            "id": 3,
+            "ip": "69.251.65.13",
+            "identifier": "8ebd419ef166059265f98ff7b667d42425bff2ce",
+            "ping": 47,
+            "licenseID": "8ebd419ef166059265f98ff7b667d42425bff2ce",
+            "live": "914801514514971",
+            "xbl": "2535441757490670",
+            "name": "jrepo"
+        },
+        "description": "help fishing cant find please",
+        "title": "where do i go buy fishing supplies and where can i fish?",
         "messages": [
             {
-                "player": {
-                    "licenseID": "6df3228abec2dd0f48e28c4843603c937c9615b0",
-                    "avatar": "https://cdn.discordapp.com/avatars/728441602628124773/0ce4f596c8f6ddd9328b63fe46311f7d.png",
-                    "name": "isoja",
-                    "ip": "73.211.165.179",
-                    "ping": 57,
-                    "id": 14,
-                    "xbl": "2535413006768216",
-                    "discordName": "sackchaserduke",
-                    "identifier": "6df3228abec2dd0f48e28c4843603c937c9615b0",
-                    "live": "1055519895215531",
-                    "discordID": "728441602628124773"
-                },
+                "date": "18-10-2024 10:27",
+                "name": "jrepo",
+                "message": "help fishing cant find please",
                 "media": [],
-                "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
-                "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
-                "name": "epik",
-                "date": "26-09-2024 02:28",
-                "message": "sexual harrassment he is humping me against my will"
+                "identifier": "8ebd419ef166059265f98ff7b667d42425bff2ce"
             }
-        ],
-        "ticketOwner": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
-        "category": {
-            "type": "player",
-            "text": "Player Report"
-        },
-        "date": "26-09-2024 02:28",
-        "solved": false,
-        "addUser": [],
-        "priority": {
-            "text": "Critical",
-            "type": "critical",
-            "color": "#F53D6B"
-        },
-        "status": "resolving",
-        "claimedAdmin": [],
-        "title": "Jayson is bothering me in city",
-        "ticketID": "b0af-a724-c12d-2e09"
+        ]
     },
     "ee05-00db-86b0-f992": {
+        "date": "28-09-2024 22:37",
+        "status": "resolving",
+        "addUser": [],
+        "claimedAdmin": [],
         "ticketOwner": "3389f2301a77bad3a26633096992265908b40148",
-        "solved": false,
+        "title": "Bugs is being a Meanie Poopie Shit Head ",
+        "ticketID": "ee05-00db-86b0-f992",
+        "claimed": false,
+        "priority": {
+            "color": "#F53D6B",
+            "text": "Critical",
+            "type": "critical"
+        },
+        "category": {
+            "text": "Player Report",
+            "type": "player"
+        },
         "ticketOwnerDetails": {
-            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
-            "ping": 42,
-            "name": "Puma Universe",
-            "ip": "71.201.93.81",
+            "discordName": "pumauniverse",
             "discordID": "507683090714329089",
             "id": 1,
-            "discordName": "pumauniverse",
-            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
-            "identifier": "3389f2301a77bad3a26633096992265908b40148",
+            "ip": "71.201.93.81",
             "live": "985155883192101",
-            "xbl": "2535414680691290"
+            "ping": 42,
+            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
+            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
+            "identifier": "3389f2301a77bad3a26633096992265908b40148",
+            "xbl": "2535414680691290",
+            "name": "Puma Universe"
         },
+        "description": "She tried to walk in on me and my Girl Erping and then upped the FYE on me what the hell",
+        "solved": false,
         "messages": [
             {
+                "date": "28-09-2024 22:37",
+                "identifier": "3389f2301a77bad3a26633096992265908b40148",
+                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
                 "message": "She tried to walk in on me and my Girl Erping and then upped the FYE on me what the hell",
                 "media": [
                     {
                         "select": true,
-                        "id": "76a1-591f",
                         "fileDate": "26-09-2024 20:42",
-                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
+                        "id": "76a1-591f",
                         "video": true,
+                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
                         "fileName": "76a1-591f.mp4"
                     }
                 ],
-                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
-                "name": "Puma Universe",
-                "date": "28-09-2024 22:37",
-                "identifier": "3389f2301a77bad3a26633096992265908b40148"
+                "name": "Puma Universe"
             }
-        ],
-        "description": "She tried to walk in on me and my Girl Erping and then upped the FYE on me what the hell",
-        "category": {
-            "type": "player",
-            "text": "Player Report"
-        },
-        "addUser": [],
-        "claimed": false,
-        "date": "28-09-2024 22:37",
-        "priority": {
-            "text": "Critical",
-            "type": "critical",
-            "color": "#F53D6B"
-        },
-        "status": "resolving",
-        "claimedAdmin": [],
-        "title": "Bugs is being a Meanie Poopie Shit Head ",
-        "ticketID": "ee05-00db-86b0-f992"
+        ]
     },
     "f6c8-46f3-61c9-818d": {
+        "date": "28-09-2024 22:35",
+        "status": "resolving",
+        "addUser": [],
+        "claimedAdmin": [],
         "ticketOwner": "3389f2301a77bad3a26633096992265908b40148",
-        "solved": false,
+        "title": "How do I use the ERP Menu In city? ",
+        "ticketID": "f6c8-46f3-61c9-818d",
+        "claimed": false,
+        "priority": {
+            "color": "#F53D6B",
+            "text": "Critical",
+            "type": "critical"
+        },
+        "category": {
+            "text": "Question",
+            "type": "question"
+        },
         "ticketOwnerDetails": {
-            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
-            "ping": 42,
-            "name": "Puma Universe",
-            "ip": "71.201.93.81",
+            "discordName": "pumauniverse",
             "discordID": "507683090714329089",
             "id": 1,
-            "discordName": "pumauniverse",
-            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
-            "identifier": "3389f2301a77bad3a26633096992265908b40148",
+            "ip": "71.201.93.81",
             "live": "985155883192101",
-            "xbl": "2535414680691290"
+            "ping": 42,
+            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
+            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
+            "identifier": "3389f2301a77bad3a26633096992265908b40148",
+            "xbl": "2535414680691290",
+            "name": "Puma Universe"
         },
+        "description": "Hey I think I found the love of my life and want to know if you have any way or tutorial of how to use the ERP Menu ",
+        "solved": false,
         "messages": [
             {
+                "date": "28-09-2024 22:35",
+                "identifier": "3389f2301a77bad3a26633096992265908b40148",
+                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
                 "message": "Hey I think I found the love of my life and want to know if you have any way or tutorial of how to use the ERP Menu ",
                 "media": [
                     {
                         "select": true,
-                        "id": "76a1-591f",
                         "fileDate": "26-09-2024 20:42",
-                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
+                        "id": "76a1-591f",
                         "video": true,
+                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
                         "fileName": "76a1-591f.mp4"
                     }
                 ],
-                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
-                "name": "Puma Universe",
-                "date": "28-09-2024 22:35",
-                "identifier": "3389f2301a77bad3a26633096992265908b40148"
+                "name": "Puma Universe"
             }
-        ],
-        "description": "Hey I think I found the love of my life and want to know if you have any way or tutorial of how to use the ERP Menu ",
+        ]
+    },
+    "b0af-a724-c12d-2e09": {
+        "date": "26-09-2024 02:28",
+        "status": "resolving",
+        "addUser": [],
+        "claimedAdmin": [],
+        "ticketOwner": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+        "title": "Jayson is bothering me in city",
+        "ticketID": "b0af-a724-c12d-2e09",
+        "claimed": false,
+        "priority": {
+            "color": "#F53D6B",
+            "text": "Critical",
+            "type": "critical"
+        },
+        "category": {
+            "text": "Player Report",
+            "type": "player"
+        },
+        "ticketOwnerDetails": {
+            "discordName": "llepikll",
+            "discordID": "967626401375211530",
+            "id": 13,
+            "ip": "98.97.58.201",
+            "live": "1055519471993987",
+            "ping": 110,
+            "licenseID": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+            "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
+            "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+            "name": "epik"
+        },
+        "description": "sexual harrassment he is humping me against my will",
+        "solved": false,
+        "messages": [
+            {
+                "date": "26-09-2024 02:28",
+                "name": "epik",
+                "player": {
+                    "discordName": "sackchaserduke",
+                    "discordID": "728441602628124773",
+                    "id": 14,
+                    "ip": "73.211.165.179",
+                    "live": "1055519895215531",
+                    "ping": 57,
+                    "avatar": "https://cdn.discordapp.com/avatars/728441602628124773/0ce4f596c8f6ddd9328b63fe46311f7d.png",
+                    "licenseID": "6df3228abec2dd0f48e28c4843603c937c9615b0",
+                    "identifier": "6df3228abec2dd0f48e28c4843603c937c9615b0",
+                    "xbl": "2535413006768216",
+                    "name": "isoja"
+                },
+                "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
+                "message": "sexual harrassment he is humping me against my will",
+                "media": [],
+                "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0"
+            }
+        ]
+    },
+    "f174-5e97-9c61-5bda": {
+        "date": "18-10-2024 09:18",
+        "status": "closed",
+        "addUser": [],
+        "claimedAdmin": [],
+        "ticketOwner": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+        "solvedPlayer": {
+            "discordID": "1179179820949708810",
+            "id": 13,
+            "ip": "96.2.127.244",
+            "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "ping": 38,
+            "licenseID": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "live": "844425388304662",
+            "xbl": "2535463424134422",
+            "name": "nobody"
+        },
+        "priority": {
+            "color": "#F53D6B",
+            "text": "Critical",
+            "type": "critical"
+        },
+        "solved": true,
+        "claimed": false,
+        "ticketID": "f174-5e97-9c61-5bda",
         "category": {
             "type": "question",
             "text": "Question"
         },
-        "addUser": [],
-        "claimed": false,
-        "date": "28-09-2024 22:35",
-        "priority": {
-            "text": "Critical",
-            "type": "critical",
-            "color": "#F53D6B"
+        "ticketOwnerDetails": {
+            "discordID": "1179179820949708810",
+            "id": 2,
+            "ip": "96.2.127.244",
+            "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "ping": 39,
+            "licenseID": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "live": "844425388304662",
+            "xbl": "2535463424134422",
+            "name": "nobody"
         },
-        "status": "resolving",
-        "claimedAdmin": [],
-        "title": "How do I use the ERP Menu In city? ",
-        "ticketID": "f6c8-46f3-61c9-818d"
+        "description": "help me ID 2 im down lmao",
+        "title": "help me plz",
+        "messages": [
+            {
+                "date": "18-10-2024 09:18",
+                "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+                "message": "help me ID 2 im down lmao",
+                "media": [],
+                "name": "nobody"
+            }
+        ]
     }
 }
