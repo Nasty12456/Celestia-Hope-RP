@@ -137,13 +137,13 @@ Config.Locations = {
 
     ['Popular'] = {
         settings = {
-            label = 'Customs Motorworks',
-            welcomeLabel = "Welcome to Customs Motorworks!",
+            label = 'Rideout Customs',
+            welcomeLabel = "Welcome to Rideout Customs!",
             enabled = true,
         },
         blip = {
             label = 'Bennys Motorworks',
-            coords = vector3(725.8828, -1088.7747, 22.1693),
+            coords = vector3(587.13, -179.14, 54.77),
             sprite = 72,
             scale = 0.65,
             color = 0,
@@ -166,12 +166,12 @@ Config.Locations = {
             cosmetics = true,
         },
         drawtextui = {
-            text = "Customs Motorworks"
+            text = "Rideout Customs"
         },
         restrictions = { deniedClasses = { 18 } },
         zones = {
-            { coords = vector3(732.99, -1075.0, 22.17), length = 6.0, width = 4.0, heading = 180.0, minZ = 21.0, maxZ = 25.0 },
-            { coords = vector3(731.47, -1088.91, 22.17), length = 6.0, width = 4.0, heading = 90.0, minZ = 21.0, maxZ = 25.0 },
+            { coords = vector3(587.13, -179.14, 54.77), length = 6.0, width = 4.0, heading = 180.0, minZ = 21.0, maxZ = 25.0 },
+            { coords = vector3(587.13, -179.14, 54.77), length = 6.0, width = 4.0, heading = 90.0, minZ = 21.0, maxZ = 25.0 },
         }
     },
 
