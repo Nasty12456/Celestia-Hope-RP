@@ -276,6 +276,96 @@ exports("addPlayerMoneyToBankAccount", function(playerSource, amount)
     return Framework:AddPlayerMoneyToBankAccount(playerSource, amount)
 end)
 
+-- Add money to an offline player's bank account depending on the framework
+-- @param playerIdentifier string The player identifier
+-- @param amount number The amount to add
+-- @return boolean true if the money was added, false otherwise
+function Framework:AddBankMoneyToOfflinePlayer(playerIdentifier, amount)
+    if self.currentFramework == "esx" then
+        local usersORM = ORM:new("users")
+        local targetRow = usersORM:findOne({ "accounts" }):where({ identifier = playerIdentifier }):execute()
+
+        if not targetRow then
+            Logger:error(("No target player found for adding money to offline player for playerIdentifier=%s"):format(playerIdentifier))
+
+            return false
+        end
+
+        local accountsResult = json.decode(targetRow["accounts"])
+        accountsResult.bank = accountsResult.bank + amount
+
+        usersORM:update({ accounts = json.encode(accountsResult) }):where({ identifier = playerIdentifier }):execute()
+
+        return true
+    elseif self.currentFramework == "qbcore" then
+        local playersORM = ORM:new("players")
+        local targetRow = playersORM:findOne({ "money" }):where({ citizenid = playerIdentifier }):execute()
+
+        if not targetRow then
+            Logger:error(("No target player found for adding money to offline player for playerIdentifier=%s"):format(playerIdentifier))
+
+            return false
+        end
+
+        local moneyResult = json.decode(targetRow["money"])
+        moneyResult.bank = moneyResult.bank + amount
+
+        playersORM:update({ money = json.encode(moneyResult) }):where({ citizenid = playerIdentifier }):execute()
+
+        return true
+    end
+
+    Logger:error(("No framework found for adding money to offline player for playerIdentifier=%s"):format(playerIdentifier))
+
+    return false
+end
+exports("addBankMoneyToOfflinePlayer", function(playerIdentifier, amount)
+    return Framework:AddBankMoneyToOfflinePlayer(playerIdentifier, amount)
+end)
+
+function Framework:RemoveBankMoneyFromOfflinePlayer(playerIdentifier, amount)
+    if self.currentFramework == "esx" then
+        local usersORM = ORM:new("users")
+        local targetRow = usersORM:findOne({ "accounts" }):where({ identifier = playerIdentifier }):execute()
+
+        if not targetRow then
+            Logger:error(("No target player found for removing money from offline player for playerIdentifier=%s"):format(playerIdentifier))
+
+            return false
+        end
+
+        local accountsResult = json.decode(targetRow["accounts"])
+        accountsResult.bank = accountsResult.bank - amount
+
+        usersORM:update({ accounts = json.encode(accountsResult) }):where({ identifier = playerIdentifier }):execute()
+
+        return true
+    elseif self.currentFramework == "qbcore" then
+        local playersORM = ORM:new("players")
+        local targetRow = playersORM:findOne({ "money" }):where({ citizenid = playerIdentifier }):execute()
+
+        if not targetRow then
+            Logger:error(("No target player found for removing money from offline player for playerIdentifier=%s"):format(playerIdentifier))
+
+            return false
+        end
+
+        local moneyResult = json.decode(targetRow["money"])
+        moneyResult.bank = moneyResult.bank - amount
+
+        playersORM:update({ money = json.encode(moneyResult) }):where({ citizenid = playerIdentifier }):execute()
+
+        return true
+    end
+
+    Logger:error(("No framework found for removing money from offline player for playerIdentifier=%s"):format(playerIdentifier))
+
+    return false
+end
+exports("removeBankMoneyFromOfflinePlayer", function(playerIdentifier, amount)
+    return Framework:RemoveBankMoneyFromOfflinePlayer(playerIdentifier, amount)
+end)
+
 -- Add cash to a player depending on the framework
 -- @param playerSource number The player source
 -- @param amount number The amount to add

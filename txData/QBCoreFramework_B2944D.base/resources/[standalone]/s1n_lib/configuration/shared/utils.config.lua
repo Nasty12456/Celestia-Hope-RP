@@ -3,6 +3,10 @@ Config = Config or {}
 Config.DefaultMapObjects = {
     positions = {
         atmModels = {
+            --
+            -- ⚠️ IF YOU HAVE CUSTOM ATM MODELS, ADD THEIR POSITIONS HERE. THIS IS USED TO DETECT IF THE PLAYER IS NEAR AN ATM SERVER SIDE (FOR SECURITY REASONS)
+            --
+            vector3(145.9776, -1034.857, 29.344),
             vector3(-386.733, 6045.953, 31.501),
             vector3(-284.037, 6224.385, 31.187),
             vector3(-284.037, 6224.385, 31.187),

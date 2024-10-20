@@ -7,10 +7,14 @@ Inventory = Inventory or {}
 function Inventory:HasItemInInventory(playerSource, itemName, itemCount)
     if Framework:GetCurrentFrameworkName() == "qbcore" then
         local qbPlayer = Framework.object.Functions.GetPlayer(playerSource)
-        if not qbPlayer then return false end
+        if not qbPlayer then
+            return false
+        end
 
         local item = qbPlayer.Functions.GetItemByName(itemName)
-        if not item then return false end
+        if not item then
+            return false
+        end
 
         if itemCount then
             return item.amount >= itemCount
@@ -19,10 +23,14 @@ function Inventory:HasItemInInventory(playerSource, itemName, itemCount)
         return item.amount > 0
     elseif Framework:GetCurrentFrameworkName() == "esx" then
         local xPlayer = Framework.object.GetPlayerFromId(playerSource)
-        if not xPlayer then return false end
+        if not xPlayer then
+            return false
+        end
 
         local item = xPlayer.getInventoryItem(itemName)
-        if not item then return false end
+        if not item then
+            return false
+        end
 
         if itemCount then
             return item.count >= itemCount
@@ -67,14 +75,18 @@ function Inventory:AddInventoryItem(dataObject, optionsObject)
 
     if Framework:GetCurrentFrameworkName() == "qbcore" then
         local qbPlayer = Framework.object.Functions.GetPlayer(dataObject.playerSource)
-        if not qbPlayer then return end
+        if not qbPlayer then
+            return
+        end
 
         qbPlayer.Functions.AddItem(dataObject.itemName, dataObject.amount)
 
         return true
     elseif Framework:GetCurrentFrameworkName() == "esx" then
         local xPlayer = Framework.object.GetPlayerFromId(dataObject.playerSource)
-        if not xPlayer then return end
+        if not xPlayer then
+            return
+        end
 
         xPlayer.addInventoryItem(dataObject.itemName, dataObject.amount)
 
@@ -96,14 +108,18 @@ end)
 function Inventory:RemoveInventoryItem(dataObject, optionsObject)
     if Framework:GetCurrentFrameworkName() == "qbcore" then
         local qbPlayer = Framework.object.Functions.GetPlayer(dataObject.playerSource)
-        if not qbPlayer then return end
+        if not qbPlayer then
+            return
+        end
 
         qbPlayer.Functions.RemoveItem(dataObject.itemName, dataObject.amount)
 
         return true
     elseif Framework:GetCurrentFrameworkName() == "esx" then
         local xPlayer = Framework.object.GetPlayerFromId(dataObject.playerSource)
-        if not xPlayer then return end
+        if not xPlayer then
+            return
+        end
 
         xPlayer.removeInventoryItem(dataObject.itemName, dataObject.amount)
 
@@ -123,11 +139,19 @@ end)
 -- @param optionsObject table The options object
 -- @return boolean Whether the item was transferred or not
 function Inventory:TransferInventoryItem(dataObject, optionsObject)
-    if not self:RemoveInventoryItem({ playerSource = dataObject.playerSource, itemName = dataObject.itemName, amount = dataObject.amount }, optionsObject) then
+    if not self:RemoveInventoryItem({
+        playerSource = dataObject.playerSource,
+        itemName = dataObject.itemName,
+        amount = dataObject.amount
+    }, optionsObject) then
         return false
     end
 
-    if not self:AddInventoryItem({ playerSource = dataObject.targetPlayerSource, itemName = dataObject.itemName, amount = dataObject.amount }, optionsObject) then
+    if not self:AddInventoryItem({
+        playerSource = dataObject.targetPlayerSource,
+        itemName = dataObject.itemName,
+        amount = dataObject.amount
+    }, optionsObject) then
         return false
     end
 
@@ -144,16 +168,21 @@ end)
 function Inventory:CanCarryItem(dataObject, optionsObject)
     if Framework:GetCurrentFrameworkName() == "qbcore" then
         local qbPlayer = Framework.object.Functions.GetPlayer(dataObject.playerSource)
-        if not qbPlayer then return end
+        if not qbPlayer then
+            return
+        end
 
-        if Config.Dependencies.qbInventory then
-            return exports[Config.ExportNames.qbInventory]:CanAddItem(dataObject.playerSource, dataObject.itemName, dataObject.amount)
+        if Config.Dependencies.inventoryScripts.qbInventory then
+            return exports[Config.ExportNames.qbInventory]:CanAddItem(dataObject.playerSource, dataObject.itemName,
+                dataObject.amount)
         end
 
         return true
     elseif Framework:GetCurrentFrameworkName() == "esx" then
         local xPlayer = Framework.object.GetPlayerFromId(dataObject.playerSource)
-        if not xPlayer then return end
+        if not xPlayer then
+            return
+        end
 
         return xPlayer.canCarryItem(dataObject.itemName, dataObject.amount)
     end
@@ -176,12 +205,16 @@ function Inventory:GetPlayerItems(dataObject, optionsObject)
 
     if frameworkName == "qbcore" then
         local player = Framework.object.Functions.GetPlayer(dataObject.playerSource)
-        if not player then return end
+        if not player then
+            return
+        end
 
         items = player.PlayerData.items
     elseif frameworkName == "esx" then
         local xPlayer = Framework.object.GetPlayerFromId(dataObject.playerSource)
-        if not xPlayer then return end
+        if not xPlayer then
+            return
+        end
 
         items = xPlayer.getInventory()
     else
@@ -190,10 +223,14 @@ function Inventory:GetPlayerItems(dataObject, optionsObject)
         return false
     end
 
-    if not items then return false end
+    if not items then
+        return false
+    end
 
     -- Return the items as they are if no options are provided
-    if not optionsObject then return items end
+    if not optionsObject then
+        return items
+    end
 
     -- Filter the items
     if optionsObject.filter then
@@ -208,7 +245,9 @@ function Inventory:GetPlayerItems(dataObject, optionsObject)
                         -- Verify if the metadata key exists and if it's superior to the value
                         if not (item.metadata and item.metadata[metaKey] and item.metadata[metaKey] > metaValue.superior) then
                             shouldInclude = false
-                            Logger:debug(("Functions:GetPlayerItems - Metadata key %s not found or not superior to the value in the item %s"):format(metaKey, json.encode(item)))
+                            Logger:debug(
+                                ("Functions:GetPlayerItems - Metadata key %s not found or not superior to the value in the item %s"):format(
+                                    metaKey, json.encode(item)))
 
                             break
                         end
@@ -236,7 +275,7 @@ function Inventory:GetPlayerItems(dataObject, optionsObject)
                 local mappedItemKey = key
 
                 -- Handle the amount key
-                local possibleAmountKeys = { "amount", "count", "quantity" }
+                local possibleAmountKeys = {"amount", "count", "quantity"}
 
                 if mappedItemKey == "amount" or mappedItemKey == "count" then
                     local foundAmountKey = false
@@ -257,21 +296,24 @@ function Inventory:GetPlayerItems(dataObject, optionsObject)
                     end
 
                     if not foundAmountKey then
-                        Logger:warn(("Functions:GetPlayerItems - No amount key found in the item %s"):format(json.encode(item)))
+                        Logger:warn(("Functions:GetPlayerItems - No amount key found in the item %s"):format(
+                            json.encode(item)))
                     end
                 else
                     -- Handle the other keys
                     if type(item) == "table" and item[mappedItemKey] ~= nil then
                         filteredItem[key] = item[mappedItemKey]
                     else
-                        Logger:warn(("Functions:GetPlayerItems - Key %s not found or isn't a table in the item %s"):format(mappedItemKey, json.encode(item)))
+                        Logger:warn(
+                            ("Functions:GetPlayerItems - Key %s not found or isn't a table in the item %s"):format(
+                                mappedItemKey, json.encode(item)))
                     end
                 end
             end
 
             table.insert(filteredItems, filteredItem)
 
-            :: continue ::
+            ::continue::
         end
 
         return filteredItems
@@ -293,4 +335,44 @@ EventManager:registerEvent("getPlayerItems", function(source, callback, dataObje
     end
 
     callback(Inventory:GetPlayerItems(dataObject, options))
+end)
+
+-- Force open the player's inventory
+-- @param dataObject table The data object
+-- @return void
+function Inventory:ForceOpenInventory(dataObject)
+    if Framework:GetCurrentFrameworkName() == "qbcore" then
+        if Utils:IsUsingDependency("qbInventory") then
+            exports[Config.ExportNames.qbInventory]:OpenInventory(dataObject.playerSource,
+                dataObject.inventoryIdentifier, {
+                    maxweight = dataObject.capacity,
+                    slots = dataObject.slots
+                })
+
+            return true
+        end
+    end
+
+    if Utils:IsUsingDependency("oxInventory") then
+        -- TODO: move register stash. It should be done once and not every time the inventory is opened
+        exports[Config.ExportNames.oxInventory]:RegisterStash(dataObject.inventoryIdentifier, "", dataObject.slots,
+            dataObject.capacity)
+
+        exports[Config.ExportNames.oxInventory]:forceOpenInventory(dataObject.playerSource, 'stash',
+            dataObject.inventoryIdentifier)
+
+        return true
+    elseif Utils:IsUsingDependency("qsInventory") then
+        exports['qs-inventory']:RegisterStash(dataObject.playerSource, dataObject.inventoryIdentifier, dataObject.slots,
+            dataObject.capacity)
+
+        return true
+    end
+
+    Logger:error("Inventory:ForceOpenInventory - No inventory module found")
+
+    return false
+end
+exports("forceOpenInventory", function(dataObject)
+    return Inventory:ForceOpenInventory(dataObject)
 end)

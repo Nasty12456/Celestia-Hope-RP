@@ -7,8 +7,11 @@ function Utils:FormatTime(milliseconds)
     local seconds = math.floor(milliseconds / 1000)
     local minutes = math.floor(seconds / 60)
     local hours = math.floor(minutes / 60)
+    local days = math.floor(hours / 24)
 
-    if hours > 0 then
+    if days > 0 then
+        return string.format("%dd", days)
+    elseif hours > 0 then
         return string.format("%dh", hours)
     elseif minutes > 0 then
         return string.format("%dmin", minutes)

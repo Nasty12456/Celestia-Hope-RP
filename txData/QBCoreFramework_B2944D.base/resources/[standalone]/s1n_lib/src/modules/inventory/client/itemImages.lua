@@ -12,11 +12,11 @@ function Inventory:GetInventoryImagePath()
 
         return Config.Inventory.imagePath
     -- Automatic detection
-    elseif Config.Dependencies.oxInventory then
+    elseif Config.Dependencies.inventoryScripts.oxInventory then
         return ("nui://%s/web/images/{itemName}.png"):format(Config.ExportNames.oxInventory)
-    elseif Config.Dependencies.qbInventory then
+    elseif Config.Dependencies.inventoryScripts.qbInventory then
         return ("nui://%s/html/images/{itemName}.png"):format(Config.ExportNames.qbInventory)
-    elseif Config.Dependencies.qsInventory then
+    elseif Config.Dependencies.inventoryScripts.qsInventory then
         return ("nui://%s/html/images/{itemName}.png"):format(Config.ExportNames.qsInventory)
     else
         Logger:error("Inventory:GetInventoryImagePath - No inventory dependency found. Please set the image path manually in the inventory.config.lua file.")

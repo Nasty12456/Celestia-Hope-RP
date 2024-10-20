@@ -23,7 +23,9 @@ function Utils:AddKeyMapping(options)
             return
         end
 
-        options.onPressed()
+        if options.onPressed then
+            options.onPressed()
+        end
     end, false)
 
     RegisterCommand(("-%s"):format(keyIdentifier), function()

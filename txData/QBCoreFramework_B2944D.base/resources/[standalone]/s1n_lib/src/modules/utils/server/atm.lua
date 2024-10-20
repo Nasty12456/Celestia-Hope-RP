@@ -19,7 +19,16 @@ function Utils:IsNearAnATM(dataObject)
         end
     end
 
-    return nearestAtm
+    local resultDataObject = {
+        found = false
+    }
+
+    if nearestAtm ~= nil then
+        resultDataObject.found = true
+        resultDataObject.position = nearestAtm
+    end
+
+    return resultDataObject
 end
 exports("isNearAnATM", function(...)
     return Utils:IsNearAnATM(...)

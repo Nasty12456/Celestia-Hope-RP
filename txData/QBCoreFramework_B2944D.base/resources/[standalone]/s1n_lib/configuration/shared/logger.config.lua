@@ -5,5 +5,8 @@ Config.Logger = {
     enable = true,
 
     -- Set this variable to true if you want to enable the debug mode (for developers and support)
-    debugMode = true
+    debugMode = true,
+
+    -- Set this variable to true if you want to enable the script version check (it will check if the script is outdated and notify in server console)
+    versionCheck = true,
 }

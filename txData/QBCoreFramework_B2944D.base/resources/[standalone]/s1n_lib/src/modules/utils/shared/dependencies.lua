@@ -4,7 +4,20 @@ Utils = Utils or {}
 -- @param dependency string The dependency to check
 -- @return boolean Whether the dependency is being used
 function Utils:IsUsingDependency(dependency)
-    return Config.Dependencies[dependency]
+    Logger:debug(("Utils:IsUsingDependency - Checking if dependency is being used: %s"):format(dependency))
+
+    -- Check if the dependency is an inventory script
+    if Config.Dependencies.inventoryScripts[dependency] then
+        return Config.Dependencies.inventoryScripts[dependency]
+    end
+
+    local dependencyValue = Config.Dependencies[dependency]
+
+    if dependencyValue == nil then
+        Logger:warn(("Utils:IsUsingDependency - Dependency %s not found in configuration"):format(dependency))
+    end
+
+    return dependencyValue
 end
 exports("isUsingDependency", function(...)
     return Utils:IsUsingDependency(...)
