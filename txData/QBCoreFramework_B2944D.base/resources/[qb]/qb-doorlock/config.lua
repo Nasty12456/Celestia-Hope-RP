@@ -313,7 +313,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
-		distance = 1.0,
+		distance = 0.5,
 	},
 	-- Cell 1
 	{
@@ -324,7 +324,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
-		distance = 1.0,
+		distance = 0.5,
 	},
 	-- Cell 2
 	{
@@ -335,7 +335,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
-		distance = 1.0,
+		distance = 0.5,
 	},
 	-- Cell 3
 	{
@@ -346,7 +346,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
-		distance = 1.0,
+		distance = 0.5,
 	},
 	-- To Back
 	{
@@ -357,7 +357,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
-		distance = 1.0,
+		distance = 0.5,
 	},
 	-- Mission Row Back
 	-- Back (double doors)
