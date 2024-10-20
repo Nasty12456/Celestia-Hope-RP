@@ -107,7 +107,7 @@ Config = {
     POKER_JUNIOR_COORDS = {998.439, 61.031, 68.432},
 
     -- Cashier
-    CASHIER_DAILY_BONUS = 1000, -- daily visitor bonus that players can request at the Cashier, set to 0 if you don't want any daily bonuses. def: 1000
+    CASHIER_DAILY_BONUS = 500, -- daily visitor bonus that players can request at the Cashier, set to 0 if you don't want any daily bonuses. def: 1000
     CASHIER_VIP_PRICE = 50000, -- price of the VIP casino membership, def: 50000
     CASHIER_VIP_DURATION = (60 * 60 * 24) * 7, -- VIP for player resets after this time, def: 7 days
     CASHIER_SHOW_SOCIETY_BALANCE = false, -- whether to show avaiable society balance in cashier UI
@@ -164,9 +164,9 @@ Config = {
 
     -- Society
     -- ⚠️ In order to make society work, please follow these instructions: https://documentation.rcore.cz/paid-resources/rcore_casino/society
-    EnableSociety = false, -- whether to enable society account
+    EnableSociety = true, -- whether to enable society account
     SocietyAutoInstall = true, -- auto install society account if it doesn't exist
-    SocietyName = "society_casino",
+    SocietyName = "casino",
     SocietyLimitFromBalance = 10000, -- if society account has less money than this, it will start paying out reduced money, (SocietyLimitPayoutPercentage)
     SocietyLimitPayoutPercentage = 35, -- example: if SocietyLimitPayoutPercentage is 35%, and SocietyLimitFromBalance is 10000 => 1000 payout at the Cashier will be limited to 350, if the society bank account balance is less than 10 000
     -- when enabled, all casino payments (Cashier, Bar, Lucky Wheel) go through the society account, players don't get paid if there's not enough money in the 

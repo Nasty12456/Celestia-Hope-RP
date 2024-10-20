@@ -1060,10 +1060,10 @@ PokerTableDatas[2] = {
     Title = "Poker Junior",
     PlaceBetsTime = 15,
     MinBetValueAntePlay = 10,
-    MaxBetValueAntePlay = 500,
+    MaxBetValueAntePlay = 200,
     MinBetValuePairPlus = 10,
     MaxBetValuePairPlus = 50,
-    UnluckyRound = 3 -- each 3rd round will be unlucky (high possibility that players get useless cards)
+    UnluckyRound = 5 -- each 3rd round will be unlucky (high possibility that players get useless cards)
 }
 
 PokerTableDatas[3] = {
@@ -1075,7 +1075,7 @@ PokerTableDatas[3] = {
     MinBetValuePairPlus = 1000,
     MaxBetValuePairPlus = 5000,
     VIP = true,
-    UnluckyRound = 3 -- each 3rd round will be unlucky (high possibility that players get useless cards)
+    UnluckyRound = 2 -- each 3rd round will be unlucky (high possibility that players get useless cards)
 }
 
 BlackJackCardScores = {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3,
@@ -1122,7 +1122,7 @@ BlackjackTableDatas[0] = {
     Title = "Blackjack",
     PlaceBetsTime = 40,
     MinimumBet = 10,
-    MaximumBet = 5000,
+    MaximumBet = 10000,
     DealerBlackjackPossibility = 25, -- 25% chance that dealer gets blackjack
     Dealer21Possibility = 25 -- 25% chance that dealer gets 21
 }
@@ -1135,7 +1135,7 @@ BlackjackTableDatas[3] = {
     MaximumBet = 50000,
     VIP = true,
     DealerBlackjackPossibility = 25, -- 25% chance that dealer gets blackjack
-    Dealer21Possibility = 25 -- 25% chance that dealer gets 21
+    Dealer21Possibility = 30 -- 25% chance that dealer gets 21
 }
 
 BlackjackTableDatas[2] = {
@@ -1143,9 +1143,9 @@ BlackjackTableDatas[2] = {
     Title = "Blackjack Junior",
     PlaceBetsTime = 15,
     MinimumBet = 2,
-    MaximumBet = 200,
-    DealerBlackjackPossibility = 25, -- 25% chance that dealer gets blackjack
-    Dealer21Possibility = 25 -- 25% chance that dealer gets 21
+    MaximumBet = 100,
+    DealerBlackjackPossibility = 20, -- 25% chance that dealer gets blackjack
+    Dealer21Possibility = 15 -- 25% chance that dealer gets 21
 }
 
 RouletteAnimationNumbers = {38, 19, 34, 15, 30, 11, 26, 7, 22, 3, 25, 6, 37, 18, 33, 14, 29, 10, 8, 27, 12, 31, 16, 35,
@@ -1165,7 +1165,7 @@ RouletteTableDatas[0] = {
     SpinDelayMin = 5,
     SpinDelayMax = 12,
     UnluckyRound = 4, -- each 4th round spins to the unluckiest number and costs casino the least
-    TriggerUnluckyRoundFrom = 10000 -- always switch to unluckiest number if the spun number costs casino more than this
+    TriggerUnluckyRoundFrom = 500 -- always switch to unluckiest number if the spun number costs casino more than this
 }
 
 RouletteTableDatas[2] = {
@@ -1180,7 +1180,7 @@ RouletteTableDatas[2] = {
     SpinDelayMin = 1,
     SpinDelayMax = 1,
     UnluckyRound = 6, -- each 6th round spins to the unluckiest number and costs casino the least
-    TriggerUnluckyRoundFrom = 5000 -- always switch to unluckiest number if the spun number costs casino more than this
+    TriggerUnluckyRoundFrom = 2500 -- always switch to unluckiest number if the spun number costs casino more than this
 }
 
 RouletteTableDatas[3] = {
@@ -1196,7 +1196,7 @@ RouletteTableDatas[3] = {
     SpinDelayMax = 12,
     VIP = true,
     UnluckyRound = 3, -- each 3rd round spins to the unluckiest number and costs casino the least
-    TriggerUnluckyRoundFrom = 50000 -- always switch to unluckiest number if the spun number costs casino more than this
+    TriggerUnluckyRoundFrom = 25000 -- always switch to unluckiest number if the spun number costs casino more than this
 }
 
 RouletteMaleVoices = {"S_M_Y_Casino_01_WHITE_01", "S_M_Y_Casino_01_WHITE_02", "S_M_Y_Casino_01_ASIAN_01",
