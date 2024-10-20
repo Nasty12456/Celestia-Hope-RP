@@ -80,8 +80,8 @@ Config.Days = {
             itemType = "item"
         },
         [3] = {
-            itemName = "weapon_appistol",
-            itemLabel = "Ap Pistol",
+            itemName = "weapon_fireextinguisher",
+            itemLabel = "Fire Extinguisher",
             itemCount = 1,
             itemType = "item"
         },
@@ -242,8 +242,8 @@ Config.Days = {
             itemType = "vehicle"
         },
         [5] = {
-            itemName = "weapon_combatpdw",
-            itemLabel = "Combat PDW",
+            itemName = "weapon_bzgas",
+            itemLabel = "BZ Gas",
             itemCount = 1,
             itemType = "item"
         },
