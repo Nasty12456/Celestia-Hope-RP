@@ -15,6 +15,25 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['casino'] = {
+		label = 'Casino',
+		grades = {
+            ['0'] = {
+                name = 'Employee',
+                payment = 250
+            },            
+			['1'] = {
+                name = 'Manager',
+                isboss = true,
+                payment = 500
+            },
+            ['2'] = {
+                name = 'Boss',
+                isboss = true,
+                payment = 1000
+            },
+        },
+	},
     ['firefighter'] = {
         label = 'Firefighter',
         defaultDuty = true,
