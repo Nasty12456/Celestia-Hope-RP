@@ -16,7 +16,9 @@ QBShared.Weapons = {
 	[`weapon_m1911`] 		 		= {['name'] = 'weapon_m1911', 				['label'] = 'M1911',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
     [`weapon_glock20`] 		 		= {['name'] = 'weapon_glock20', 			['label'] = 'Glock-20',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
     [`weapon_glock19gen4`] 		 	= {['name'] = 'weapon_glock19gen4', 		['label'] = 'Glock-19 Gen 4',		    ['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
+    [`weapon_celap`] 		 		= {['name'] = 'weapon_celap', 				['label'] = 'Celap',		    		['weapontype'] = 'Pistol',			['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
     
+
     --  Custom Weapons -- SMGs
     [`weapon_pmxfm`] 			 	= {['name'] = 'weapon_pmxfm', 				['label'] = 'Beretta PMX', 				['weapontype'] = 'Submachine Gun',	['ammotype'] = 'AMMO_SMG',				['damagereason'] = 'Riddled / Drilled / Finished / Submachine Gunned'},
     [`weapon_mac10`] 			 	= {['name'] = 'weapon_mac10', 				['label'] = 'MAC-10', 					['weapontype'] = 'Submachine Gun',	['ammotype'] = 'AMMO_SMG',				['damagereason'] = 'Riddled / Drilled / Finished / Submachine Gunned'},
