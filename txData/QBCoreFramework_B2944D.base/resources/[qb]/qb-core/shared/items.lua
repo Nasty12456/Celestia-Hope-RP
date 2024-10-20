@@ -70,6 +70,8 @@ QBShared.Items = {
 	['weapon_candycane']             = {['name'] = 'weapon_candycane',                ['label'] = 'Candy Cane',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = nil,                        ['image'] = 'weapon_candycane.png',        ['unique'] = true,        ['useable'] = true,        ['description'] = 'Candy Cane'},
 	-- Pistols
 	['weapon_pistolxm3']             = {['name'] = 'weapon_pistolxm3',                ['label'] = 'Pistol XM3',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = 'AMMO_PISTOL',            ['image'] = 'weapon_pistolxm3.png',        ['unique'] = true,        ['useable'] = true,        ['description'] = 'Pistol XM3'},
+	['weapon_celap']                 = {['name'] = 'weapon_celap',                    ['label'] = 'celap',                     ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = 'AMMO_PISTOL',            ['image'] = 'weapon_pistolxm3.png',        ['unique'] = true,        ['useable'] = true,        ['description'] = 'celap'},
+
 	--Heavy Weapons
 	['weapon_railgunxm3']             = {['name'] = 'weapon_railgunxm3',                ['label'] = 'Railgun XM3',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = nil,                        ['image'] = 'weapon_railgun.png',    ['unique'] = true,        ['useable'] = false,    ['description'] = 'A weapon that uses electromagnetic force to launch high velocity projectiles'},
 
@@ -4290,6 +4292,11 @@ QBShared.Items = {
 	['grinder'] 			     = {['name'] = 'grinder', 				['label'] = 'grinder', 				['weight'] = 20, 		['type'] = 'item', 		['image'] = 'grinder.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ["created"] = nil, ["decay"] = 30.0,   ['description'] = 'Grinder'},
 	['rope'] 			     = {['name'] = 'rope', 					['label'] = 'rope', 				['weight'] = 20, 		['type'] = 'item', 		['image'] = 'rope.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ["created"] = nil, ["decay"] = 30.0,   ['description'] = 'Rope'},
 	['knife'] 			     = {['name'] = 'knife', 					['label'] = 'knife', 				['weight'] = 20, 		['type'] = 'item', 		['image'] = 'knife.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,  ["created"] = nil, ["decay"] = 30.0,   ['description'] = 'knife'},		  	  		
+
+-- Jim-Recycle Items
+    ["recyclablematerial"]  = {["name"] = "recyclablematerial",   ["label"] = "Recycle Box",      ["weight"] = 100, ["type"] = "item", 		["image"] = "recyclablematerial.png",   ["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false, ["combinable"] = nil,   ["description"] = "A box of Recyclable Materials"},
+    ["bottle"]              = {["name"] = "bottle",               ["label"] = "Empty Bottle",     ["weight"] = 10,  ["type"] = "item", 		["image"] = "bottle.png",               ["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false, ["combinable"] = nil,   ["description"] = "A glass bottle"},
+    ["can"]                 = {["name"] = "can",                  ["label"] = "Empty Can",        ["weight"] = 10,  ["type"] = "item", 		["image"] = "can.png",                  ["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false, ["combinable"] = nil,   ["description"] = "An empty can, good for recycling"},
 
 	-- CLOTHES
 	['rose'] = {
