@@ -955,7 +955,7 @@ section {
 }
 
 .creditRightSide {
-    justify-content: space-between;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -963,6 +963,7 @@ section {
 }
 
 .creditRightBottom {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 1.1979vw;

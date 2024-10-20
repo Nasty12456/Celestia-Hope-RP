@@ -2,7 +2,7 @@ fx_version 'cerulean'
 
 description 'S1nScripts Bank System'
 author 'S1nScripts'
-version '1.26.4'
+version '1.27.4'
 
 lua54 'yes'
 

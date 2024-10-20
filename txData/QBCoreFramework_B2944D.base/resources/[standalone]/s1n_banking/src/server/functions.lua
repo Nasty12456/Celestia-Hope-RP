@@ -296,80 +296,6 @@ function Functions:GetActiveCredits()
     return credits
 end
 
--- Get the amount to pay for a credit depending on the duration
--- @param amount The amount of the credit
--- @param duration The duration of the credit
--- @return number The amount to pay
-function Functions:GetCreditAmountToPay(amount, duration)
-    local days = duration / Constants.SECONDS_IN_ONE_DAY
-
-    if (days <= 7) then
-        return amount
-    elseif (days > 7 and days < 30) then
-        return math.floor(amount / math.floor(days / 7))
-    elseif (days == 30) then
-        return amount
-    elseif (days > 30) then
-        return math.floor(amount / math.floor(days / 30))
-    end
-end
-
--- Remove money from an account depending on the credit duration and amount
--- @param data The data to remove the money
-function Functions:RemoveCreditMoney(data)
-    Utils:Debug("Removing credit money")
-
-    local database = SQL.Execute("SELECT `credit` FROM `s1n_bank_accounts` WHERE `iban` = ?", { data.iban })[1]
-    local credits = json.decode(database.credit)
-
-    for key, credit in pairs(credits) do
-        if credit.id == data.id then
-            local amountToPay = Functions:GetCreditAmountToPay(credit.amount, credit.duration)
-
-            local playerSource = exports[Config.ExportNames.s1nLib]:getPlayerSourceFromIdentifier(database.owner)
-            if not playerSource then return end
-
-            if database.type == "useraccount" then
-                if exports[Config.ExportNames.s1nLib]:RemovePlayerMoneyFromBankAccount(playerSource, amountToPay) then
-                    credit.paid = credit.paid + amountToPay
-
-                    if credit.amount == credit.paid then
-                        exports[Config.ExportNames.s1nLib]:addPlayerMoneyToBankAccount(playerSource, (Config.Credit.SecurityDeposit / 100) * credit.amount)
-                    end
-                else
-                    table.remove(credits, key)
-                end
-            elseif database.type == "societyaccount" then
-                local accountData = Functions:GetSocietyAccountByName(database.name)
-
-                if exports[Config.ExportNames.s1nLib]:removeMoneyFromSocietyAccount(accountData.name, amountToPay, { removePatternInName = "society_" }) then
-                    credit.paid = credit.paid + amountToPay
-
-                    if credit.amount == credit.paid then
-                        exports[Config.ExportNames.s1nLib]:addMoneyToSocietyAccount(accountData.name, (Config.Credit.SecurityDeposit / 100) * credit.amount, { removePatternInName = "society_" })
-                    end
-                else
-                    table.remove(credits, key)
-                end
-            elseif database.type == 'sharedaccount' then
-                if database.balance >= amountToPay and credit.amount ~= credit.paid then
-                    database.balance = database.balance - amountToPay
-
-                    credit.paid = credit.paid + amountToPay
-
-                    if credit.amount == credit.paid then
-                        database.balance = database.balance + (Config.Credit.SecurityDeposit / 100) * credit.amount
-                    end
-                else
-                    table.remove(credits, key)
-                end
-            end
-        end
-    end
-
-    SQL.Execute('UPDATE `s1n_bank_accounts` SET credit = ?, balance = ? WHERE `iban` = ?', { json.encode(credits), database.balance, database.iban })
-end
-
 -- Sign a contract for a player
 -- @param playerSource The player source
 -- @param data The data to sign the contract
@@ -563,8 +489,12 @@ function Functions:GetAccountData(playerSource, data)
     local frameworkPlayerJob = exports[Config.ExportNames.s1nLib]:getPlayerJob(playerSource)
     if not frameworkPlayerJob then return end
 
-    if data.type == 'societyaccount' and not Config.SocietyRanks[string.lower(frameworkPlayerJob.name)] then return false, Config.Translation.NOT_IN_SOCIETY end
-    if data.type == 'societyaccount' and not Functions:CanLoginToSocietyAccount(playerSource) then return false, Config.Translation.NO_ROLE_ACCESS_SOCIETY_ACCOUNT end
+    if data.type == 'societyaccount' and not Config.SocietyRanks[string.lower(frameworkPlayerJob.name)] then 
+        return false, Config.Translation.NOT_IN_SOCIETY 
+    end
+    if data.type == 'societyaccount' and not Functions:CanLoginToSocietyAccount(playerSource) then 
+        return false, Config.Translation.NO_ROLE_ACCESS_SOCIETY_ACCOUNT 
+    end
 
     local accountData
 
@@ -706,16 +636,12 @@ end
 function Functions:GetAccountHistory(iban)
     Utils:Debug(("Getting account history for %s"):format(iban))
 
-    local history = { }
-    local statements = SQL.Execute('SELECT * FROM s1n_bank_statements', { })
-
-    for _, statement in pairs(statements) do
-        if statement.iban == iban then
-            history[#history + 1] = statement
-        end
+    local historyRecords = SQL.Execute('SELECT * FROM `s1n_bank_statements` WHERE `iban` = ?', { iban })
+    if not historyRecords[1] then 
+        return {} 
     end
 
-    return history
+    return historyRecords
 end
 
 -- Check if a player is in a shared account
@@ -1469,4 +1395,168 @@ function Functions:GiveCreditCard(frameworkPlayer)
     end
 
     return true
+end
+
+
+--
+-- Credits
+--
+
+-- Get the payment interval for a credit
+-- @param durationInDays The duration of the credit in days
+-- @return number The payment interval in seconds
+function Functions:GetPaymentInterval(durationInDays)
+    if durationInDays <= 30 then
+        return 604800 -- 1 week in seconds for durations up to 1 month
+    else
+        return 2592000 -- 30 days in seconds for monthly durations
+    end
+end
+
+-- Check if a credit payment is due
+-- @param credit The credit object
+-- @param currentTime The current time
+-- @return boolean If the payment is due
+function Functions:IsCreditPaymentDue(credit, currentTime)
+    local startDate = credit.date
+    local duration = credit.duration
+    local timePassed = currentTime - startDate
+    
+    -- Convert the duration in days
+    local durationInDays = duration / 86400
+    
+    -- Get the payment interval
+    local paymentInterval = self:GetPaymentInterval(durationInDays)
+    
+    -- Check if a payment is due
+    return timePassed >= paymentInterval and timePassed % paymentInterval < 86400
+end
+
+-- Get the next payment date for a credit
+-- @param credit The credit object
+-- @param currentTime The current time
+-- @return number The next payment date
+function Functions:GetNextPaymentDate(credit, currentTime)
+    local startDate = credit.date
+    local duration = credit.duration
+    local durationInDays = duration / 86400
+    
+    local paymentInterval = self:GetPaymentInterval(durationInDays)
+    
+    local timePassed = currentTime - startDate
+    local nextPaymentDate = startDate + (math.floor(timePassed / paymentInterval) + 1) * paymentInterval
+    
+    return nextPaymentDate
+end
+
+-- Get the payments overdue for a credit
+-- @param credit The credit object
+-- @param currentTime The current time
+-- @return number The number of payments overdue
+-- @return number The total amount due
+function Functions:GetPaymentsOverdue(credit, currentTime)
+    local startDate = credit.date
+    local duration = credit.duration
+    local timePassed = currentTime - startDate
+    
+    -- Convert the duration in days
+    local durationInDays = duration / 86400
+    
+    -- Get the payment interval
+    local paymentInterval = self:GetPaymentInterval(durationInDays)
+    
+    -- Calculate the total number of payments that should have been made
+    local totalPaymentsDue = math.floor(timePassed / paymentInterval)
+    
+    -- Calculate the amount per payment
+    local amountPerPayment = Functions:GetCreditAmountToPay(credit.amount, credit.duration)
+    
+    -- Calculate the total amount that should have been paid
+    local totalAmountDue = totalPaymentsDue * amountPerPayment
+    
+    -- Calculate the amount still due (considering what has already been paid)
+    local amountStillDue = math.max(0, totalAmountDue - credit.paid)
+    
+    -- Calculate the number of payments still overdue
+    local paymentsOverdue = math.ceil(amountStillDue / amountPerPayment)
+    
+    return paymentsOverdue, amountStillDue
+end
+
+-- Remove money from an account depending on the credit duration and amount
+-- @param credit The credit data
+-- @param amountToPay The amount to pay (optional, will be calculated if not provided)
+-- @return boolean If the money was successfully removed
+function Functions:RemoveCreditMoney(credit, amountToPay)
+    Utils:Debug("Removing credit money")
+
+    local account = Functions:GetAccountFromIban(credit.iban)
+    if not account then
+        Utils:Debug("Account not found")
+        return false
+    end
+
+    if not amountToPay then
+        amountToPay = Functions:GetCreditAmountToPay(credit.amount, credit.duration)
+    end
+
+    Utils:Debug(("Attempting to remove %s from credit %s"):format(amountToPay, credit.id))
+
+    local success = false
+    if account.type == 'useraccount' then
+        success = exports[Config.ExportNames.s1nLib]:removeBankMoneyFromOfflinePlayer(account.owner, amountToPay)
+    elseif account.type == 'sharedaccount' then
+        if account.balance >= amountToPay then
+            account.balance = account.balance - amountToPay
+            SQL.Execute('UPDATE `s1n_bank_accounts` SET balance = ? WHERE `iban` = ?', { account.balance, account.iban })
+            success = true
+        end
+    elseif account.type == 'societyaccount' then
+        success = exports[Config.ExportNames.s1nLib]:removeMoneyFromSocietyAccount(account.name, amountToPay, { removePatternInName = "society_" })
+    end
+
+    if success then
+        local database = SQL.Execute("SELECT `credit` FROM `s1n_bank_accounts` WHERE `iban` = ?", { credit.iban })[1]
+        local credits = json.decode(database.credit)
+
+        for key, creditData in pairs(credits) do
+            if creditData.id == credit.id then
+                creditData.paid = creditData.paid + amountToPay
+                if creditData.paid >= creditData.amount then
+                    table.remove(credits, key)
+                end
+                break
+            end
+        end
+
+        SQL.Execute('UPDATE `s1n_bank_accounts` SET credit = ? WHERE `iban` = ?', { json.encode(credits), credit.iban })
+
+        return true
+    else
+        return false
+    end
+end
+
+-- Calculate the amount to pay for each credit payment
+-- @param totalAmount The total amount of the credit
+-- @param duration The duration of the credit in seconds
+-- @return number The amount to pay for each payment
+function Functions:GetCreditAmountToPay(totalAmount, duration)
+    -- Convert duration from seconds to days
+    local durationInDays = duration / 86400
+    
+    -- Determine the number of payments based on the duration
+    local numberOfPayments
+    if durationInDays <= 7 then
+        numberOfPayments = 1  -- One-time payment for very short durations
+    elseif durationInDays <= 30 then
+        numberOfPayments = math.ceil(durationInDays / 7)  -- Weekly payments
+    else
+        numberOfPayments = math.ceil(durationInDays / 30)  -- Monthly payments
+    end
+    
+    -- Calculate the amount per payment
+    local amountPerPayment = math.ceil(totalAmount / numberOfPayments)
+    
+    return amountPerPayment
 end

@@ -138,16 +138,24 @@ const OpenBankPage = (data) => {
         window.$(`#creditamount-${amount}`).on('click', () => {
             window.$('.creditAmountSelect').removeClass('selected');
             window.$(`#creditamount-${amount}`).addClass('selected');
+
             window.$('#creditwant').html('$' + amount);
             window.$('#credittobank').html('$' + amount);
             window.$('#creditsecurity').html('$' + (Config.Credit.SecurityDeposit / 100) * amount);
             window.$('#creditrepaid').html('$' + (amount + ((Config.Credit.SecurityDeposit / 100) * amount)));
+            
             selectedCreditAmount = amount;
-            if (selectedCreditDuration) {
-                window.$('.creditRequestTotalBox').css('display', 'flex');
-                window.$('.creditRightSide').css('justify-content', 'space-between');
-                window.$('.creditRightBottom').css('margin-top', '0px');
-            }
+
+            // Set the input value to the selected amount
+            window.$('#creditamountinput').val(amount);
+
+            // Reset the duration
+            selectedCreditDuration = null;
+            window.$('#creditduration').val('');
+            window.$('#creditduration').prop('selectedIndex', 0);
+            
+            // Hide the total box as duration is now unselected
+            window.$('.creditRequestTotalBox').css('display', 'none');
         })
     });
     window.$('#creditduration').html('');
@@ -159,8 +167,9 @@ const OpenBankPage = (data) => {
         selectedCreditDuration = event.target.value;
         if (selectedCreditAmount) {
             window.$('.creditRequestTotalBox').css('display', 'flex');
-            window.$('.creditRightSide').css('justify-content', 'space-between');
-            window.$('.creditRightBottom').css('margin-top', '0px');
+            window.$('.creditRightSide').css('justify-content', 'flex-start');
+            window.$('.creditRightBottom').css('margin-top', '10px');
+
             let duration = Config.Credit.Duration[selectedCreditDuration];
             let days = duration.Time / 86400;
             if (days <= 7) {
@@ -235,8 +244,7 @@ const OpenBankPage = (data) => {
         }
     }
     window.$('.creditRequestTotalBox').css('display', 'none');
-    window.$('.creditRightSide').css('justify-content', 'flex-start');
-    window.$('.creditRightBottom').css('margin-top', '10px');
+
     CreateLastTransactions();
     CreateHistoryList();
     CreateChart([data.chart[8].deposit, data.chart[7].deposit, data.chart[6].deposit, data.chart[5].deposit, data.chart[4].deposit, data.chart[3].deposit, data.chart[2].deposit, data.chart[1].deposit, data.chart[0].deposit], [data.chart[8].withdraw, data.chart[7].withdraw, data.chart[6].withdraw, data.chart[5].withdraw, data.chart[4].withdraw, data.chart[3].withdraw, data.chart[2].withdraw, data.chart[1].withdraw, data.chart[0].withdraw]);
@@ -364,7 +372,7 @@ const CreateHistoryList = () => {
         });
     }
     for (let index = 0; index < currentBankData.history.length; index++) {
-        if (currentBankData.history[index] && (selectedHistoryCategory ? selectedHistoryCategory === currentBankData.history[index].action : true)) {
+        if (currentBankData.history[index] && (selectedHistoryCategory ? (selectedHistoryCategory === currentBankData.history[index].action || (selectedHistoryCategory === 'transfer' && (currentBankData.history[index].action === 'transfer:withdraw' || currentBankData.history[index].action === 'transfer:deposit'))) : true)) {
             transaction = currentBankData.history[index];
             let cssData = GetTransactionCss(transaction);
 
@@ -834,9 +842,12 @@ window.$(document).ready(function () {
         let amount = parseInt(window.$('#creditamountinput').val());
         if (!amount) {
             selectedCreditAmount = null;
+            selectedCreditDuration = null; // Reset the duration
             window.$('.creditRequestTotalBox').css('display', 'none');
-            window.$('.creditRightSide').css('justify-content', 'flex-start');
-            window.$('.creditRightBottom').css('margin-top', '10px');
+            
+            // Reset the duration dropdown
+            window.$('#creditduration').val('');
+            window.$('#creditduration').prop('selectedIndex', 0);
         } else {
             window.$('.creditAmountSelect').removeClass('selected');
             window.$(`#creditamount-${amount}`).addClass('selected');
@@ -845,13 +856,17 @@ window.$(document).ready(function () {
             window.$('#creditsecurity').html('$' + (Config.Credit.SecurityDeposit / 100) * amount);
             window.$('#creditrepaid').html('$' + (amount + ((Config.Credit.SecurityDeposit / 100) * amount)));
             selectedCreditAmount = amount;
-            if (selectedCreditDuration) {
-                window.$('.creditRequestTotalBox').css('display', 'flex');
-                window.$('.creditRightSide').css('justify-content', 'space-between');
-                window.$('.creditRightBottom').css('margin-top', '0px');
-            }
+            
+            // Reset the duration
+            selectedCreditDuration = null;
+            window.$('#creditduration').val('');
+            window.$('#creditduration').prop('selectedIndex', 0);
+            
+            // Hide the total box as duration is now unselected
+            window.$('.creditRequestTotalBox').css('display', 'none');
         }
     });
+    
 
     window.$('.signContractButton').on('click', () => {
         if (!selectedCreditAmount) return;
@@ -868,8 +883,7 @@ window.$(document).ready(function () {
 
                 window.$('.creditAmountSelect').removeClass('selected');
                 window.$('.creditRequestTotalBox').css('display', 'none');
-                window.$('.creditRightSide').css('justify-content', 'flex-start');
-                window.$('.creditRightBottom').css('margin-top', '10px');
+
                 window.$('#creditamountinput').val('');
                 window.$('#creditduration').html('');
                 window.$('#creditduration').append(`<option value="" disabled selected>${Config.Translation.UI_TEXT_DURATION}</option>`);

@@ -6,6 +6,8 @@ local function init()
     end
 
     Functions:CheckDatabase()
+
+    Threads:StartCheckCreditsLoop()
 end
 
 RegisterServerEvent("onResourceStart", function(resourceName)
