@@ -374,27 +374,22 @@ QBShared.Jobs = {
             },
 			['4'] = {
                 name = 'Chief',
-                isboss = true,
                 payment = 0
             },
             ['5'] = {
                 name = 'Nurse',
-                isboss = true,
                 payment = 0
             },
             ['6'] = {
                 name = 'Nurse Practitioner',
-                isboss = true,
                 payment = 0
             },
             ['7'] = {
                 name = 'Registered Dr',
-                isboss = true,
                 payment = 0
             },
             ['8'] = {
                 name = 'Sr. paramedic',
-                isboss = true,
                 payment = 0
             },
             ['9'] = {
