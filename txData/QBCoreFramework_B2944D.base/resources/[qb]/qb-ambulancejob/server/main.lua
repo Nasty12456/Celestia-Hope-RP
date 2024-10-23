@@ -132,7 +132,8 @@ RegisterNetEvent('hospital:server:SetDeathStatus', function(isDead)
 	end
 end)
 
-RegisterNetEvent('hospital:server:SetLaststandStatus', function(bool)
+RegisterNetEvent('hospital:server:SetLaststandStatus', function(
+	ol)
 	local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
 	if Player then
@@ -477,4 +478,3 @@ QBCore.Functions.CreateUseableItem("firstaid", function(source, item)
 end)
 
 exports('GetDoctorCount', function() return doctorCount end)
-

@@ -1064,6 +1064,3 @@ else
         end
     end)
 end
-
-
--- QBCore#4011 -- discord.gg/qbcoreframework
