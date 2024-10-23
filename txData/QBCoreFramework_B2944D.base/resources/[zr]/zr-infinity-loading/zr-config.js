@@ -14,8 +14,7 @@ const logo = {
 let backgroundPlayer = {
     enabled: true,
     videos: [
-        '/zr-assets/video/video1.mp4',
-        '/zr-assets/video/video2.mp4'
+        '/zr-assets/video/video.mp4'
     ],
     randomPlay: true // set to false if you want sequential play
 };
