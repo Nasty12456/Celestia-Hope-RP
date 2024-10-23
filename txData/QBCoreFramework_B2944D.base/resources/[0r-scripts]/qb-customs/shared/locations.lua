@@ -168,7 +168,9 @@ Config.Locations = {
         drawtextui = {
             text = "Rideout Customs"
         },
-        restrictions = { deniedClasses = { 18 } },
+        restrictions = { -- A person must pass ALL the restriction checks. Remove an item below to automatically pass that check.
+            job = "rideoutmech", -- Allowed job. Can be an array of strings for multiple jobs. Any for all jobs
+        } ,
         zones = {
             { coords = vector3(587.13, -179.14, 54.77), length = 6.0, width = 4.0, heading = 180.0, minZ = 21.0, maxZ = 25.0 },
             { coords = vector3(587.13, -179.14, 54.77), length = 6.0, width = 4.0, heading = 90.0, minZ = 21.0, maxZ = 25.0 },
