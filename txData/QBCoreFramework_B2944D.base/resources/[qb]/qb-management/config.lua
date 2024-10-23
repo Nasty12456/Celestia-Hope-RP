@@ -16,8 +16,8 @@ Config.BossMenus = {
     mechanic = {
         vector3(-347.59, -133.35, 39.01),
     },
-    rideoutmechanic = {
-        vector3(-347.59, -133.35, 39.01),
+    rideoutmech = {
+        vector3(564.12, -178.91, 59.00),
     },
 }
 
