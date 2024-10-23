@@ -173,7 +173,7 @@ Config.Locations = {
         } ,
         zones = {
             { coords = vector3(571.44, -147.02, 54.1), length = 6.0, width = 4.0, heading = 180.0, minZ = 53.0, maxZ = 55.0 },
-            { coords = vector3(587.42, -179.72, 54.35), length = 6.0, width = 4.0, heading = 90.0, minZ = 53.0, maxZ = 55.0 },
+            { coords = vector3(587.42, -179.72, 54.35), length = 6.0, width = 4.0, heading = 0.0, minZ = 53.0, maxZ = 55.0 },
         }
     },
 
