@@ -142,7 +142,7 @@ Config.Locations = {
             enabled = true,
         },
         blip = {
-            label = 'Bennys Motorworks',
+            label = 'Rideout Customs',
             coords = vector3(587.13, -179.14, 54.77),
             sprite = 72,
             scale = 0.65,
@@ -172,8 +172,8 @@ Config.Locations = {
             job = "rideoutmech", -- Allowed job. Can be an array of strings for multiple jobs. Any for all jobs
         } ,
         zones = {
-            { coords = vector3(587.13, -179.14, 54.77), length = 6.0, width = 4.0, heading = 180.0, minZ = 21.0, maxZ = 25.0 },
-            { coords = vector3(587.13, -179.14, 54.77), length = 6.0, width = 4.0, heading = 90.0, minZ = 21.0, maxZ = 25.0 },
+            { coords = vector3(571.44, -147.02, 54.1), length = 6.0, width = 4.0, heading = 180.0, minZ = 53.0, maxZ = 55.0 },
+            { coords = vector3(587.42, -179.72, 54.35), length = 6.0, width = 4.0, heading = 90.0, minZ = 53.0, maxZ = 55.0 },
         }
     },
 
