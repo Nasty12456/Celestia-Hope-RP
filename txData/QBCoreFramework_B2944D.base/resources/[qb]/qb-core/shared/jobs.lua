@@ -92,6 +92,30 @@ QBShared.Jobs = {
             },
         },
     },
+    ['rideoutmech'] = {
+        label = 'Rideout Mechanics',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Trainee',
+                payment = 50
+            },
+            ['1'] = {
+                name = 'Mechanic',
+                payment = 75
+            },
+            ['2'] = {
+                name = 'Manager',
+                payment = 100
+            },
+            ['3'] = {
+                name = 'Boss',
+            isboss = true,
+                payment = 125
+            },
+        },
+    },
     ['taco'] = {
 		label = 'Taco Shop',
 		defaultDuty = false,
