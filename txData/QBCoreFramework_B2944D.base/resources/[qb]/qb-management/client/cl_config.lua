@@ -5,7 +5,7 @@ Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target in
 
 Config.BossMenus = {
     ['police'] = {
-        vector3(461.45, -986.2, 30.73),
+        vector3(460.75, -985.52, 30.73),
     },
     ['ambulance'] = {
         vector3(310.58, -568.73, 43.27),
@@ -20,13 +20,16 @@ Config.BossMenus = {
         vector3(-27.47, -1107.13, 27.27),
     },
     ['mechanic'] = {
-        vector3(-339.53, -156.44, 44.59),
+        vector3(-206.62, -1341.23, 34.89),
+    },
+    ['rideoutmech'] = {
+        vector3(564.12, -178.91, 59.00),
     },
 }
 
 Config.BossMenuZones = {
     ['police'] = {
-        { coords = vector3(461.45, -986.2, 30.73), length = 0.35, width = 0.45, heading = 351.0, minZ = 30.58, maxZ = 30.68 } ,
+        { coords = vector3(460.75, -985.52, 30.73), length = 0.35, width = 0.45, heading = 351.0, minZ = 30.58, maxZ = 30.68 } ,
     },
     ['ambulance'] = {
         { coords = vector3(310.58, -568.73, 43.27), length = 1.2, width = 2.0, heading = 341.0, minZ = 43.13, maxZ = 43.73 },
@@ -41,7 +44,10 @@ Config.BossMenuZones = {
         { coords = vector3(-27.47, -1107.13, 27.27), length = 2.4, width = 1.05, heading = 340.0, minZ = 27.07, maxZ = 27.67 },
     },
     ['mechanic'] = {
-        { coords = vector3(-339.53, -156.44, 44.59), length = 1.15, width = 2.6, heading = 353.0, minZ = 43.59, maxZ = 44.99 },
+        { coords = vector3(-206.62, -1341.23, 34.89), length = 1.15, width = 2.6, heading = 353.0, minZ = 33.59, maxZ = 34.99 },
+    },
+    ['rideoutmech'] = {
+        { coords = vector3(564.12, -178.91, 59.00), length = 1.15, width = 2.6, heading = 353.0, minZ = 58, maxZ = 60 },
     },
 }
 
