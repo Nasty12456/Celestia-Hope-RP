@@ -244,4 +244,5 @@ end)
             end)
             exports("addMoney", AddMoney)
             exports("removeMoney", RemoveMoney)
+			exports("getAccount", GetAccount)
         
