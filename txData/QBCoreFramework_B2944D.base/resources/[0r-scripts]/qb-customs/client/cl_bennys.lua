@@ -104,12 +104,12 @@ local function AllowVehicleClass(restrictionData, vehicle)
 end
 
 --#[Global Functions]#--
-function AttemptPurchase(type, upgradeLevel)
+function AttemptPurchase(type, upgradeLevel, mechanic)
 
     if upgradeLevel ~= nil then
         upgradeLevel = upgradeLevel + 2
     end
-    TriggerServerEvent("qb-customs:server:attemptPurchase", type, upgradeLevel)
+    TriggerServerEvent("qb-customs:server:attemptPurchase", type, upgradeLevel, mechanic)
 
     attemptingPurchase = true
 
@@ -803,11 +803,17 @@ function EnterLocation(override)
     end)
 
     isPlyInBennys = true
-    DisableControls(repairOnly)
+    local mechanic = locationData.restrictions.job
+    DisableControls(repairOnly, mechanic)
+    print(mechanic)
+
+
+
+
 end
 
 
-function DisableControls(repairOnly)
+function DisableControls(repairOnly, mechanic)
     CreateThread(function()
         while isPlyInBennys do
             DisableControlAction(1, 38, true) --Key: E
@@ -832,12 +838,12 @@ function DisableControls(repairOnly)
             end
 
             if IsDisabledControlJustReleased(1, 176) then --Key: Enter
-                MenuManager(true, repairOnly)
+                MenuManager(true, repairOnly, mechanic)
                 PlaySoundFrontend(-1, "OK", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
             end
 
             if IsDisabledControlJustReleased(1, 177) then --Key: Backspace
-                MenuManager(false)
+                MenuManager(false, mechanic)
                 PlaySoundFrontend(-1, "NO", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
             end
 
