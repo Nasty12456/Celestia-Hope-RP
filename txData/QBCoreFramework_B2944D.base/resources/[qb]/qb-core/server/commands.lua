@@ -113,7 +113,7 @@ QBCore.Commands.Add('tp', Lang:t("command.tp.help"), { { name = Lang:t("command.
             TriggerClientEvent('QBCore:Notify', source, Lang:t('error.missing_args'), 'error')
         end
     end
-end, 'admin')
+end, 'mod')
 
 QBCore.Commands.Add('tpm', Lang:t("command.tpm.help"), {}, false, function(source)
     TriggerClientEvent('QBCore:Command:GoToMarker', source)
