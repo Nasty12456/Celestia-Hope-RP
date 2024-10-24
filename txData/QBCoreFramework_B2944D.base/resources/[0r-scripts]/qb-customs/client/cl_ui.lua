@@ -574,12 +574,12 @@ function DisplayMenu(state, menu)
     updateMenuSubheading(menu)
 end
 
-function MenuManager(state, repairOnly)
+function MenuManager(state, repairOnly, mechanic)
     if state then
         if currentMenuItem2 ~= "Installed" then
             if isMenuActive("modMenu") then
                 if currentCategory == 18 then --Turbo
-                    if AttemptPurchase("turbo", currentMenuItemID) then
+                    if AttemptPurchase("turbo", currentMenuItemID, mechanic) then
                         ApplyMod(currentCategory, currentMenuItemID)
                         playSoundEffect("wrench", 0.4)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -588,7 +588,7 @@ function MenuManager(state, repairOnly)
                         updateMenuStatus("Not Enough Money!")
                     end
                 elseif currentCategory == 11 or currentCategory == 12 or currentCategory== 13 or currentCategory == 15 or currentCategory == 16 then --Performance Upgrades
-                    if AttemptPurchase("performance", currentMenuItemID) then
+                    if AttemptPurchase("performance", currentMenuItemID, mechanic) then
                         ApplyMod(currentCategory, currentMenuItemID)
                         playSoundEffect("wrench", 0.4)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -597,7 +597,7 @@ function MenuManager(state, repairOnly)
                         updateMenuStatus("Not Enough Money")
                     end
                 else
-                    if AttemptPurchase("cosmetics") then
+                    if AttemptPurchase("cosmetics", currentMenuItemID, mechanic) then
                         ApplyMod(currentCategory, currentMenuItemID)
                         playSoundEffect("wrench", 0.4)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -607,7 +607,7 @@ function MenuManager(state, repairOnly)
                     end
                 end
             elseif isMenuActive("ResprayMenu") then
-                if AttemptPurchase("respray") then
+                if AttemptPurchase("respray", currentMenuItemID, mechanic) then
                     ApplyColour(currentResprayCategory, currentResprayType, currentMenuItemID)
                     playSoundEffect("respray", 1.0)
                     updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -617,7 +617,7 @@ function MenuManager(state, repairOnly)
                 end
             elseif isMenuActive("WheelsMenu") then
                 if currentWheelCategory == 20 then
-                    if AttemptPurchase("wheelsmoke") then
+                    if AttemptPurchase("wheelsmoke", currentMenuItemID, mechanic) then
                         local r = vehicleTyreSmokeOptions[currentMenuItemID].r
                         local g = vehicleTyreSmokeOptions[currentMenuItemID].g
                         local b = vehicleTyreSmokeOptions[currentMenuItemID].b
@@ -636,7 +636,7 @@ function MenuManager(state, repairOnly)
                         if currentWheel == -1 then
                             updateMenuStatus("Can't Apply Custom Tyres to Stock Wheels")
                         else
-                            if AttemptPurchase("customwheels") then
+                            if AttemptPurchase("customwheels", currentMenuItemID, mechanic) then
                                 ApplyCustomWheel(currentMenuItemID)
                                 playSoundEffect("wrench", 0.4)
                                 updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -652,7 +652,7 @@ function MenuManager(state, repairOnly)
                         if currentCustomWheelState and currentWheel == -1 then
                             updateMenuStatus("Can't Apply Stock Wheels With Custom Tyres")
                         else
-                            if AttemptPurchase("wheels") then
+                            if AttemptPurchase("wheels", currentMenuItemID, mechanic) then
                                 ApplyWheel(currentCategory, currentMenuItemID, currentWheelCategory)
                                 playSoundEffect("wrench", 0.4)
                                 updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -664,7 +664,7 @@ function MenuManager(state, repairOnly)
                     end
                 end
             elseif isMenuActive("NeonsSideMenu") then
-                if AttemptPurchase("neonside") then
+                if AttemptPurchase("neonside", currentMenuItemID, mechanic) then
                     ApplyNeon(currentNeonSide, currentMenuItemID)
                     playSoundEffect("wrench", 0.4)
                     updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -674,7 +674,7 @@ function MenuManager(state, repairOnly)
                 end
             else
                 if currentMenu == "repairMenu" then
-                    if AttemptPurchase("repair") then
+                    if AttemptPurchase("repair", repairOnly, mechanic) then
                         currentMenu = "mainMenu"
 
                         RepairVehicle()
@@ -747,7 +747,7 @@ function MenuManager(state, repairOnly)
                     updateMenuHeading(currentMenu)
                     updateMenuSubheading(currentMenu)
                 elseif currentMenu == "WindowTintMenu" then
-                    if AttemptPurchase("windowtint") then
+                    if AttemptPurchase("windowtint", currentMenuItemID, mechanic) then
                         ApplyWindowTint(currentMenuItemID)
                         playSoundEffect("respray", 1.0)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -756,7 +756,7 @@ function MenuManager(state, repairOnly)
                         updateMenuStatus("Not Enough Money")
                     end
                 elseif currentMenu == "NeonColoursMenu" then
-                    if AttemptPurchase("neoncolours") then
+                    if AttemptPurchase("neoncolours", currentMenuItemID, mechanic) then
                         local r = vehicleNeonOptions.neonColours[currentMenuItemID].r
                         local g = vehicleNeonOptions.neonColours[currentMenuItemID].g
                         local b = vehicleNeonOptions.neonColours[currentMenuItemID].b
@@ -769,7 +769,7 @@ function MenuManager(state, repairOnly)
                         updateMenuStatus("Not Enough Money")
                     end
                 elseif currentMenu == "HeadlightsMenu" then
-                    if AttemptPurchase("headlights") then
+                    if AttemptPurchase("headlights", currentMenuItemID, mechanic) then
                         ApplyXenonLights(currentCategory, currentMenuItemID)
                         playSoundEffect("wrench", 0.4)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -778,7 +778,7 @@ function MenuManager(state, repairOnly)
                         updateMenuStatus("Not Enough Money")
                     end
                 elseif currentMenu == "XenonColoursMenu" then
-                    if AttemptPurchase("xenoncolours") then
+                    if AttemptPurchase("xenoncolours", currentMenuItemID, mechanic) then
                         ApplyXenonColour(currentMenuItemID)
                         playSoundEffect("respray", 1.0)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -787,7 +787,7 @@ function MenuManager(state, repairOnly)
                         updateMenuStatus("Not Enough Money")
                     end
                 elseif currentMenu == "OldLiveryMenu" then
-                    if AttemptPurchase("oldlivery") then
+                    if AttemptPurchase("oldlivery", currentMenuItemID, mechanic) then
                         ApplyOldLivery(currentMenuItemID)
                         playSoundEffect("wrench", 0.4)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
@@ -796,7 +796,7 @@ function MenuManager(state, repairOnly)
                         updateMenuStatus("Not Enough Money")
                     end
                 elseif currentMenu == "PlateIndexMenu" then
-                    if AttemptPurchase("plateindex") then
+                    if AttemptPurchase("plateindex", currentMenuItemID, mechanic) then
                         ApplyPlateIndex(currentMenuItemID)
                         playSoundEffect("wrench", 0.4)
                         updateItem2Text(currentMenu, currentMenuItemID, "Installed")
