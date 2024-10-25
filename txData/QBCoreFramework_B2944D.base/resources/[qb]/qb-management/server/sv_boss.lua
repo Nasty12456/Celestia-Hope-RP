@@ -183,12 +183,10 @@ QBCore.Functions.CreateCallback('qb-bossmenu:getplayers', function(source, cb)
 	cb(players)
 end)
 
-
-            -- jaksam's scripts integration
-            exports("getAccounts", function() 
-                return Accounts
-            end)
-            exports("addMoney", AddMoney)
-            exports("removeMoney", RemoveMoney)
-			exports("getAccount", GetAccount)
-        
+-- Exports
+exports("getAccounts", function() 
+    return Accounts
+end)
+exports("addMoney", AddMoney)
+exports("removeMoney", RemoveMoney)
+exports("getAccount", GetAccount)     
