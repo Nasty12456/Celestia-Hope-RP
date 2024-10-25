@@ -104,7 +104,7 @@ local function AllowVehicleClass(restrictionData, vehicle)
 end
 
 --#[Global Functions]#--
-function AttemptPurchase(type, upgradeLevel, mechanic)
+function AttemptPurchase(type, upgradeLevel, mechanic)        
 
     if upgradeLevel ~= nil then
         upgradeLevel = upgradeLevel + 2
