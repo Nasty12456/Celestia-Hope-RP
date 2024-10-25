@@ -140,6 +140,7 @@ Config.ConsumablesDrink = {
     ["burgershot_colab"] = math.random(40, 50),
     ["burgershot_colas"] = math.random(20, 30),
     ["burgershot_coffee"] = math.random(10, 20),
+    ["bigfruit"] = math.random(20, 40),
     
 }
 
