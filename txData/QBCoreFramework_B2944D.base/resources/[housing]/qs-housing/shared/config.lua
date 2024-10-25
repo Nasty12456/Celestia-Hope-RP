@@ -246,7 +246,7 @@ Config.PoliceJobs = {  -- Jobs that will be considered police
 
 Config.EnableRobbery = true            -- Enable or disable the usable item to initiate robberies
 Config.EnableRaid = true               -- Enable or disable the usable item to initiate raids
-Config.RobberyItem = 'lockpick'        -- Item to start the robbery of houses
+Config.RobberyItem = 'advancedlockpick'        -- Item to start the robbery of houses
 Config.StomRamItem = 'police_stormram' -- Item to begin the search of a house
 
 --[[
