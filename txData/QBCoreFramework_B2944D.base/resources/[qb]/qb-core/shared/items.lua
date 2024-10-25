@@ -70,8 +70,9 @@ QBShared.Items = {
 	['weapon_candycane']             = {['name'] = 'weapon_candycane',                ['label'] = 'Candy Cane',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = nil,                        ['image'] = 'weapon_candycane.png',        ['unique'] = true,        ['useable'] = true,        ['description'] = 'Candy Cane'},
 	-- Pistols
 	['weapon_pistolxm3']             = {['name'] = 'weapon_pistolxm3',                ['label'] = 'Pistol XM3',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = 'AMMO_PISTOL',            ['image'] = 'weapon_pistolxm3.png',        ['unique'] = true,        ['useable'] = true,        ['description'] = 'Pistol XM3'},
-	['weapon_celap']                 = {['name'] = 'weapon_celap',                    ['label'] = 'celap',                     ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = 'AMMO_PISTOL',            ['image'] = 'weapon_pistolxm3.png',        ['unique'] = true,        ['useable'] = true,        ['description'] = 'celap'},
-
+	['weapon_galaxy'] 				 = {['name'] = 'weapon_galaxy', 				['label'] = 'Combat Pistol (Galaxy)', 				['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_galaxy.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'Its a galaxy pistol. Cool.'},
+	['weapon_celap'] 				 = {['name'] = 'weapon_celap', 				['label'] = 'Combat Pistol (Halloween)', 				['weight'] = 7000, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_celap.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'Its a halloween pistol. Spooky.'},
+	
 	--Heavy Weapons
 	['weapon_railgunxm3']             = {['name'] = 'weapon_railgunxm3',                ['label'] = 'Railgun XM3',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = nil,                        ['image'] = 'weapon_railgun.png',    ['unique'] = true,        ['useable'] = false,    ['description'] = 'A weapon that uses electromagnetic force to launch high velocity projectiles'},
 
