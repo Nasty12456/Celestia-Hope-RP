@@ -25,6 +25,9 @@ Config.BossMenus = {
     ['rideoutmech'] = {
         vector3(564.12, -178.91, 59.00),
     },
+    ['uwu'] = {
+        vector3( -596.9116, -1052.6813, 23.2446),
+    },
 }
 
 Config.BossMenuZones = {
@@ -48,6 +51,9 @@ Config.BossMenuZones = {
     },
     ['rideoutmech'] = {
         { coords = vector3(564.12, -178.91, 59.00), length = 1.15, width = 2.6, heading = 353.0, minZ = 58, maxZ = 60 },
+    },
+    ['uwu'] = {
+        { coords = vector3(-596.9116, -1052.6813, 23.2446), length = 1.15, width = 2.6, heading = 353.0, minZ = 22, maxZ = 24 },
     },
 }
 
