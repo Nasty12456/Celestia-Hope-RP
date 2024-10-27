@@ -1,17 +1,33 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
--- Config for pole locations and animations
 local Config = {
     animations = {
-        {label = "Pole Dance 1", dict = "mini@strip_club@pole_dance@pole_dance1", anim = "pd_dance_01"},
-        {label = "Pole Dance 2", dict = "mini@strip_club@pole_dance@pole_dance2", anim = "pd_dance_02"},
-        {label = "Pole Dance 3", dict = "mini@strip_club@pole_dance@pole_dance3", anim = "pd_dance_03"},
+        {
+            label = "Pole Dance 1", 
+            dict = "mini@strip_club@pole_dance@pole_dance1", 
+            anim = "pd_dance_01",
+            offset = vector3(0.0, 0.0, 0.0),
+            rotation = 180.0
+        },
+        {
+            label = "Pole Dance 2", 
+            dict = "mini@strip_club@pole_dance@pole_dance2", 
+            anim = "pd_dance_02",
+            offset = vector3(0.0, 0.0, 0.0),
+            rotation = 180.0
+        },
+        {
+            label = "Pole Dance 3", 
+            dict = "mini@strip_club@pole_dance@pole_dance3", 
+            anim = "pd_dance_03",
+            offset = vector3(0.0, 0.0, 0.0),
+            rotation = 180.0
+        },
     }
 }
 
--- Initialize QB-Target
 CreateThread(function()
-    exports['qb-target']:AddTargetModel(`5d_vanillapole`, {
+    exports['qb-target']:AddTargetModel(`prop_strip_pole_01`, {
         options = {
             {
                 type = "client",
@@ -27,7 +43,6 @@ CreateThread(function()
     })
 end)
 
--- Menu to select dance
 RegisterNetEvent('stripper:startDance', function()
     local dancingOptions = {}
     for i, dance in ipairs(Config.animations) do
@@ -37,23 +52,33 @@ RegisterNetEvent('stripper:startDance', function()
                 event = 'stripper:performDance',
                 args = {
                     dict = dance.dict,
-                    anim = dance.anim
+                    anim = dance.anim,
+                    offset = dance.offset,
+                    rotation = dance.rotation
                 }
             }
         })
     end
-    
     exports['qb-menu']:openMenu(dancingOptions)
 end)
 
--- Perform the selected dance
 RegisterNetEvent('stripper:performDance', function(data)
     local ped = PlayerPedId()
+    local poleCoords = GetEntityCoords(GetClosestObjectOfType(GetEntityCoords(ped), 2.0, `prop_strip_pole_01`, false, false, false))
     
     RequestAnimDict(data.dict)
     while not HasAnimDictLoaded(data.dict) do
         Wait(0)
     end
 
+    -- Position player correctly at the pole
+    local targetPosition = vector3(
+        poleCoords.x + data.offset.x,
+        poleCoords.y + data.offset.y,
+        poleCoords.z + data.offset.z
+    )
+    
+    SetEntityCoords(ped, targetPosition.x, targetPosition.y, targetPosition.z)
+    SetEntityHeading(ped, data.rotation)
     TaskPlayAnim(ped, data.dict, data.anim, 8.0, -8.0, -1, 1, 0, false, false, false)
 end)
