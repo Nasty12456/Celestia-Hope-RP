@@ -674,7 +674,7 @@ function MenuManager(state, repairOnly, mechanic)
                 end
             else
                 if currentMenu == "repairMenu" then
-                    if AttemptPurchase("repair", repairOnly, mechanic) then
+                    if AttemptPurchase("repair", true, mechanic, repairOnly) then
                         currentMenu = "mainMenu"
 
                         RepairVehicle()

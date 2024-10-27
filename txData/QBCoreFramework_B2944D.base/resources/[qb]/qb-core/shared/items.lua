@@ -75,7 +75,8 @@ QBShared.Items = {
 	
 	--Heavy Weapons
 	['weapon_railgunxm3']             = {['name'] = 'weapon_railgunxm3',                ['label'] = 'Railgun XM3',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = nil,                        ['image'] = 'weapon_railgun.png',    ['unique'] = true,        ['useable'] = false,    ['description'] = 'A weapon that uses electromagnetic force to launch high velocity projectiles'},
-
+-- extra weapons
+[`weapon_digiscanner`]                  = { name = 'weapon_digiscanner', label = 'Signal Booster', weapontype = 'Miscellaneous', ammotype = nil, damagereason = '' },
 	-- Handguns
 	['weapon_pistol'] 				 = {['name'] = 'weapon_pistol', 			 	['label'] = 'Walther P99', 				['weight'] = 600, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_pistol.png', 		['unique'] = true, 		['useable'] = false, 	['description'] = 'A small firearm designed to be held in one hand'},
 	['weapon_pistol_mk2'] 			 = {['name'] = 'weapon_pistol_mk2', 			['label'] = 'Pistol Mk II', 			['weight'] = 600, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_pistol_mk2.png', 	['unique'] = true, 		['useable'] = false, 	['description'] = 'An upgraded small firearm designed to be held in one hand'},
@@ -501,7 +502,7 @@ QBShared.Items = {
 	----rental
 	['renting_contract'] 			 = {['name'] = 'renting_contract', 				['label'] = 'Renting Contract', 				['weight'] = 50, 		['type'] = 'item', 		['image'] = 'renting_contract.png', 		['unique'] = true, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'rental recipts', ["created"] = nil, ["decay"] = 1.0, ["delete"] = false},
 
-	["digiscanner"] 			= {["name"] = "digiscanner", 					["label"] = "Digiscanner", 						["weight"] = 200, 		["type"] = "item", 			["image"] = "digiscanner.png", 					["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Used to scan for things..", ["created"] = nil, ["decay"] = 8.0, ["delete"] = false},
+	--["digiscanner"] 			= {["name"] = "digiscanner", 					["label"] = "Digiscanner", 						["weight"] = 200, 		["type"] = "item", 			["image"] = "digiscanner.png", 					["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Used to scan for things..", ["created"] = nil, ["decay"] = 8.0, ["delete"] = false},
 	-- ["shovel"] 			        = {["name"] = "shovel", 						["label"] = "Shovel", 							["weight"] = 300, 		["type"] = "item", 			["image"] = "shovel.png", 						["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A handy shovel.", ["created"] = nil, ["decay"] = 20.0, ["delete"] = false},
 
 	
@@ -768,6 +769,27 @@ QBShared.Items = {
     ["crack"] 			             = {["name"] = "crack", 				        ["label"] = "Crack", 			        ["weight"] = 30, 		["type"] = "item", 		["image"] = "crack.png", 			    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil, ["description"] = "Explore a new universe!"},
     ["baking_soda"] 			     = {["name"] = "baking_soda", 				    ["label"] = "Baking Soda", 			    ["weight"] = 30, 		["type"] = "item", 		["image"] = "baking_soda.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil, ["description"] = "Baking Bad!"},
 
+
+	--heists
+	['painting'] 			 		 			= {['name'] = 'painting', 							['label'] = 'Painting', 				    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'painting.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['bomb_c4'] 			 		 	 			= {['name'] = 'bomb_c4', 							['label'] = 'C4 Explosive', 				    ['weight'] = 3000, 		['type'] = 'item', 		['image'] = 'bomb_c4.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['purple_keycard'] 			 		 		    = {['name'] = 'purple_keycard', 							['label'] = 'Purple Keycard', 				    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'purple_keycard.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['contracts_tablet'] 			 		 	 	= {['name'] = 'contracts_tablet', 							['label'] = 'Contract Tablet', 				    ['weight'] = 400, 		['type'] = 'item', 		['image'] = 'contracts_tablet.png', 		        ['unique'] = true, 	['useable'] = true, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['rare_coins'] 			 		 			 	= {['name'] = 'rare_coins', 							['label'] = 'Rare Coins', 				    ['weight'] = 500, 		['type'] = 'item', 		['image'] = 'rare_coins.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['classified_docs'] 			 		 	 	= {['name'] = 'classified_docs', 							['label'] = 'Classified Documents', 				    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'classified_docs.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['diamond_necklace'] 			 		 	 	= {['name'] = 'diamond_necklace', 							['label'] = 'Diamond Necklace', 				    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'diamond_necklace.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['luxurious_watch'] 			 		 	 	= {['name'] = 'luxurious_watch', 							['label'] = 'Luxurious Watch', 				    ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'luxurious_watch.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['hack_usb'] 			 		 	 			= {['name'] = 'hack_usb', 							['label'] = 'Phantom USB', 				    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'hack_usb.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['gold_bar'] 			 		 	 			= {['name'] = 'gold_bar', 							['label'] = 'Gold Bar', 				    ['weight'] = 500, 		['type'] = 'item', 		['image'] = 'gold_bar.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['diamond_ring'] 			 		 	 		= {['name'] = 'diamond_ring', 							['label'] = 'Diamond Ring', 				    ['weight'] = 50, 		['type'] = 'item', 		['image'] = 'diamond_ring.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['large_drill'] 			 		 	 		= {['name'] = 'large_drill', 							['label'] = 'Large Drill', 				    ['weight'] = 12500, 		['type'] = 'item', 		['image'] = 'large_drill.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['diamonds_box'] 			 		 	 		= {['name'] = 'diamonds_box', 							['label'] = 'Diamonds Box', 				    ['weight'] = 200, 		['type'] = 'item', 		['image'] = 'diamonds_box.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['hack_card'] 			 		 	 			= {['name'] = 'hack_card', 							['label'] = 'Spoofing Card', 				    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'hack_card.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['angle_grinder'] 			 		 	 		= {['name'] = 'angle_grinder', 							['label'] = 'Angle Grinder', 				    ['weight'] = 1500, 		['type'] = 'item', 		['image'] = 'angle_grinder.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['blue_keycard'] 			 		 	 		= {['name'] = 'blue_keycard', 							['label'] = 'Blue Keycard', 				    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'blue_keycard.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['thermite'] 			 		 	 			= {['name'] = 'thermite', 							['label'] = 'Thermite', 				    ['weight'] = 350, 		['type'] = 'item', 		['image'] = 'thermite.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['coins'] 			 		 	 				= {['name'] = 'coins', 							['label'] = 'Coins', 				    ['weight'] = 10, 		['type'] = 'item', 		['image'] = 'coins.png', 		        ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = '' },
+['weapon_digiscanner']             			 	= { name = 'weapon_digiscanner', label = 'Signal Booster', weight = 1200, type = 'weapon', ammotype = nil, image = 'WEAPON_DIGISCANNER.png', unique = true, useable = false, description = 'A hacker device used for retrieving a keyfob signal.' },
 
 	['seedonion'] = {
 		['name'] = 'seedonion',

@@ -104,35 +104,51 @@ local function AllowVehicleClass(restrictionData, vehicle)
 end
 
 --#[Global Functions]#--
-function AttemptPurchase(type, upgradeLevel, mechanic)        
+function AttemptPurchase(type, upgradeLevel, mechanic, repairOnly)        
+    if repairOnly then
+        TriggerServerEvent("qb-customs:server:attemptPurchase", type, upgradeLevel, mechanic)
+        attemptingPurchase = true
 
-    if upgradeLevel ~= nil then
-        upgradeLevel = upgradeLevel + 2
+        while attemptingPurchase do
+            Wait(1)
+        end
+
+        if not isPurchaseSuccessful then
+            PlaySoundFrontend(-1, "ERROR", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+        end
+
+        return isPurchaseSuccessful
+    else 
+        if upgradeLevel ~= nil then
+            upgradeLevel = upgradeLevel + 2
+        end
+        TriggerServerEvent("qb-customs:server:attemptPurchase", type, upgradeLevel, mechanic)
+        attemptingPurchase = true
+
+        while attemptingPurchase do
+            Wait(1)
+        end
+
+        if not isPurchaseSuccessful then
+            PlaySoundFrontend(-1, "ERROR", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
+        end
+
+        return isPurchaseSuccessful
     end
-    TriggerServerEvent("qb-customs:server:attemptPurchase", type, upgradeLevel, mechanic)
-
-    attemptingPurchase = true
-
-    while attemptingPurchase do
-        Wait(1)
-    end
-
-    if not isPurchaseSuccessful then
-        PlaySoundFrontend(-1, "ERROR", "HUD_FRONTEND_DEFAULT_SOUNDSET", 1)
-    end
-
-    return isPurchaseSuccessful
 end
 
 function RepairVehicle()
     local plyPed = PlayerPedId()
     local plyVeh = GetVehiclePedIsIn(plyPed, false)
     local getFuel = GetVehicleFuelLevel(plyVeh)
-
+    
+    print("Before repair health:", GetVehicleBodyHealth(plyVeh))
     SetVehicleFixed(plyVeh)
-	SetVehicleDirtLevel(plyVeh, 0.0)
+    SetVehicleDirtLevel(plyVeh, 0.0)
     SetVehiclePetrolTankHealth(plyVeh, 4000.0)
     SetVehicleFuelLevel(plyVeh, getFuel)
+    print("After repair health:", GetVehicleBodyHealth(plyVeh))
+
 
     for i = 0,5 do SetVehicleTyreFixed(plyVeh, i) end
 end
@@ -805,11 +821,6 @@ function EnterLocation(override)
     isPlyInBennys = true
     local mechanic = locationData.restrictions.job
     DisableControls(repairOnly, mechanic)
-    print(mechanic)
-
-
-
-
 end
 
 
