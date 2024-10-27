@@ -151,60 +151,72 @@ Config = {
 
 ------------------------------------------------------------
 	SellItems = { -- Selling Prices
-		['copperore'] = 100,
-		['goldore'] = 100,
-		['silverore'] = 100,
-		['ironore'] = 100,
-		['carbon'] = 100,
-
-		['goldingot'] = 100,
-		['silveringot'] = 100,
-
-		['uncut_emerald'] = 100,
-		['uncut_ruby'] = 100,
-		['uncut_diamond'] = 100,
-		['uncut_sapphire'] = 100,
-
-		['emerald'] = 100,
-		['ruby'] = 100,
-		['diamond'] = 100,
-		['sapphire'] = 100,
-
-		['diamond_ring'] = 100,
-		['emerald_ring'] = 100,
-		['ruby_ring'] = 100,
-		['sapphire_ring'] = 100,
-		['diamond_ring_silver'] = 100,
-		['emerald_ring_silver'] = 100,
-		['ruby_ring_silver'] = 100,
-		['sapphire_ring_silver'] = 100,
-
-		['diamond_necklace'] = 100,
-		['emerald_necklace'] = 100,
-		['ruby_necklace'] = 100,
-		['sapphire_necklace'] = 100,
-		['diamond_necklace_silver'] = 100,
-		['emerald_necklace_silver'] = 100,
-		['ruby_necklace_silver'] = 100,
-		['sapphire_necklace_silver'] = 100,
-
-		['diamond_earring'] = 100,
-		['emerald_earring'] = 100,
-		['ruby_earring'] = 100,
-		['sapphire_earring'] = 100,
-		['diamond_earring_silver'] = 100,
-		['emerald_earring_silver'] = 100,
-		['ruby_earring_silver'] = 100,
-		['sapphire_earring_silver'] = 100,
-
-		['gold_ring'] = 100,
-		['goldchain'] = 100,
-		['goldearring'] = 100,
-		['silver_ring'] = 100,
-		['silverchain'] = 100,
-		['silverearring'] = 100,
-
+	    -- Raw Ores
+	    ['copperore'] = 45,
+	    ['goldore'] = 125,
+	    ['silverore'] = 85,
+	    ['ironore'] = 35,
+	    ['carbon'] = 25,
+	
+	    -- Ingots
+	    ['goldingot'] = 750,
+	    ['silveringot'] = 450,
+	
+	    -- Uncut Gems
+	    ['uncut_emerald'] = 225,
+	    ['uncut_ruby'] = 250,
+	    ['uncut_diamond'] = 350,
+	    ['uncut_sapphire'] = 225,
+	
+	    -- Cut Gems
+	    ['emerald'] = 475,
+	    ['ruby'] = 525,
+	    ['diamond'] = 750,
+	    ['sapphire'] = 475,
+	
+	    -- Gold Jewelry
+	    ['diamond_ring'] = 1250,
+	    ['emerald_ring'] = 875,
+	    ['ruby_ring'] = 925,
+	    ['sapphire_ring'] = 875,
+	    ['gold_ring'] = 450,
+	    ['goldchain'] = 650,
+	    ['goldearring'] = 425,
+	
+	    -- Silver Jewelry
+	    ['diamond_ring_silver'] = 950,
+	    ['emerald_ring_silver'] = 675,
+	    ['ruby_ring_silver'] = 725,
+	    ['sapphire_ring_silver'] = 675,
+	    ['silver_ring'] = 250,
+	    ['silverchain'] = 350,
+	    ['silverearring'] = 225,
+	
+	    -- Gold Necklaces
+	    ['diamond_necklace'] = 1450,
+	    ['emerald_necklace'] = 1075,
+	    ['ruby_necklace'] = 1125,
+	    ['sapphire_necklace'] = 1075,
+	
+	    -- Silver Necklaces
+	    ['diamond_necklace_silver'] = 1150,
+	    ['emerald_necklace_silver'] = 875,
+	    ['ruby_necklace_silver'] = 925,
+	    ['sapphire_necklace_silver'] = 875,
+	
+	    -- Gold Earrings
+	    ['diamond_earring'] = 1050,
+	    ['emerald_earring'] = 775,
+	    ['ruby_earring'] = 825,
+	    ['sapphire_earring'] = 775,
+	
+	    -- Silver Earrings
+	    ['diamond_earring_silver'] = 850,
+	    ['emerald_earring_silver'] = 575,
+	    ['ruby_earring_silver'] = 625,
+	    ['sapphire_earring_silver'] = 575,
 	},
+
 
 ------------------------------------------------------------
 --Added mine lighting for my first world NVE problems
