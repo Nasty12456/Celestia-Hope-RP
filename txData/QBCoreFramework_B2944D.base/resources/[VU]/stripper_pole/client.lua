@@ -64,7 +64,7 @@ end)
 
 RegisterNetEvent('stripper:performDance', function(data)
     local ped = PlayerPedId()
-    local poleCoords = GetEntityCoords(GetClosestObjectOfType(GetEntityCoords(ped), 2.0, `prop_strip_pole_01`, false, false, false))
+    local poleCoords = GetEntityCoords(GetClosestObjectOfType(GetEntityCoords(ped), 2.0, `5d_vanillapole`, false, false, false))
     
     RequestAnimDict(data.dict)
     while not HasAnimDictLoaded(data.dict) do
