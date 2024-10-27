@@ -11,7 +11,7 @@ local Config = {
 
 -- Initialize QB-Target
 CreateThread(function()
-    exports['qb-target']:AddTargetModel(`prop_strip_pole_01`, {
+    exports['qb-target']:AddTargetModel(`5d_vanillapole`, {
         options = {
             {
                 type = "client",
