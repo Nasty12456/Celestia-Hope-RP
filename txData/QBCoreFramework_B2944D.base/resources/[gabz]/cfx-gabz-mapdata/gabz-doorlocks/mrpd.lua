@@ -263,10 +263,10 @@ table.insert(Config.DoorList, {
 		['police'] = 0,
 	}
 })
-
+ 
 -- Cell 2
 table.insert(Config.DoorList, {
-	objCoords = vector3(480.9128, -1012.189, 26.48005),
+	objCoords = vector3(480.54, -1011.81, 26.27),
 	objHeading = 0,
 	objHash = -53345114, -- gabz_mrpd_cells_door
 	maxDistance = 2,
@@ -286,7 +286,7 @@ table.insert(Config.DoorList, {
 
 -- Cell 3
 table.insert(Config.DoorList, {
-	objCoords = vector3(483.9127, -1012.189, 26.48005),
+	objCoords = vector3(483.34, -1011.61, 26.27),
 	objHeading = 0,
 	objHash = -53345114, -- gabz_mrpd_cells_door
 	maxDistance = 2,
@@ -306,7 +306,7 @@ table.insert(Config.DoorList, {
 
 -- Cell 4
 table.insert(Config.DoorList, {
-	objCoords = vector3(486.9131, -1012.189, 26.48005),
+	objCoords = vector3(486.57, -1011.71, 26.27),
 	objHeading = 0,
 	objHash = -53345114, -- gabz_mrpd_cells_door
 	maxDistance = 2,
@@ -326,7 +326,7 @@ table.insert(Config.DoorList, {
 
 -- Cell 5
 table.insert(Config.DoorList, {
-	objCoords = vector3(484.1764, -1007.734, 26.48005),
+	objCoords = vector3(484.31, -1008.13, 26.27),
 	objHeading = 180,
 	objHash = -53345114, -- gabz_mrpd_cells_door
 	maxDistance = 2,
