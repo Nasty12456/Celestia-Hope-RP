@@ -6,21 +6,21 @@ local Config = {
             label = "Pole Dance 1", 
             dict = "mini@strip_club@pole_dance@pole_dance1", 
             anim = "pd_dance_01",
-            offset = vector3(0.0, 0.0, -2.0),
+            offset = vector3(0.4, -0.2, -1.5),
             rotation = 180.0
         },
         {
             label = "Pole Dance 2", 
             dict = "mini@strip_club@pole_dance@pole_dance2", 
             anim = "pd_dance_02",
-            offset = vector3(0.0, 0.0, -2.0),
+            offset = vector3(0.4, -0.2, -1.5),
             rotation = 180.0
         },
         {
             label = "Pole Dance 3", 
             dict = "mini@strip_club@pole_dance@pole_dance3", 
             anim = "pd_dance_03",
-            offset = vector3(0.0, 0.0, -2.0),
+            offset = vector3(0.4, -0.2, -1.5),
             rotation = 180.0
         },
     }
