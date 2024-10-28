@@ -1,0 +1,2 @@
+
+	["kq_airdrop_flare"] 			 = {["name"] = "kq_airdrop_flare", 			    ["label"] = "Airdrop flare",	 		    ["weight"] = 300, 		["type"] = "item", 		["image"] = "kq_airdrop_flare.png", 	    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Flare which calls upon an airdrop"},
