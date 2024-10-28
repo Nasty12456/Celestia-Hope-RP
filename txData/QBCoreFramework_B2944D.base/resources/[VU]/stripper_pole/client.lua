@@ -31,21 +31,19 @@ CreateThread(function()
         options = {
             {
                 type = "client",
-                event = "stripper:startDance",
                 icon = "fas fa-music",
                 label = "Dance on Pole",
-                canInteract = function(entity)
-                    return not IsPedInAnyVehicle(PlayerPedId())
-                end,
                 action = function(entity)
-                    TriggerEvent('stripper:startDance', entity)
+                    TriggerEvent('stripper:startDance', {poleObject = entity})
+                end,
+                canInteract = function()
+                    return not IsPedInAnyVehicle(PlayerPedId())
                 end
             }
         },
         distance = 2.5,
     })
 end)
-
 
 RegisterNetEvent('stripper:startDance', function(data)
     local dancingOptions = {}
@@ -59,7 +57,7 @@ RegisterNetEvent('stripper:startDance', function(data)
                     anim = dance.anim,
                     offset = dance.offset,
                     rotation = dance.rotation,
-                    poleObject = data.poleObject -- Pass through the pole object
+                    poleObject = data.poleObject
                 }
             }
         })
@@ -71,7 +69,7 @@ RegisterNetEvent('stripper:performDance', function(data)
     local ped = PlayerPedId()
     local poleCoords = GetEntityCoords(data.poleObject)
     print("Pole Coords: " .. poleCoords.x .. ", " .. poleCoords.y .. ", " .. poleCoords.z)
-    print(data)
+    
     RequestAnimDict(data.dict)
     while not HasAnimDictLoaded(data.dict) do
         Wait(0)
