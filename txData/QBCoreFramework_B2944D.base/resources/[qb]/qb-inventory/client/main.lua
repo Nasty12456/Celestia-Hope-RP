@@ -689,6 +689,20 @@ RegisterNetEvent('inventory:client:craftTarget',function()
     TriggerServerEvent("inventory:server:OpenInventory", "crafting", math.random(1, 99), crafting)
 end)
 
+RegisterNetEvent('inventory:client:UseItem', function(item)
+    if item.name == "lockpick" then
+        TriggerEvent('qb-lockpick:client:openLockpick', function(success)
+            if success then
+                print("Lockpick succeeded!")
+                -- Add your vehicle unlocking logic here
+            else
+                print("Lockpick failed!")
+            end
+        end)
+    end
+end)
+
+
 -- Commands
 
 RegisterCommand('closeinv', function()
