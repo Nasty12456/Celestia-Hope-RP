@@ -247,7 +247,7 @@ table.insert(Config.DoorList, {
 -- Cell 1
 table.insert(Config.DoorList, {
 	objCoords = vector3(477.9126, -1012.189, 26.48005),
-	objHeading = 180,
+	objHeading = 0,
 	objHash = -53345114, -- gabz_mrpd_cells_door
 	maxDistance = 2,
 	locked = true,
@@ -267,7 +267,7 @@ table.insert(Config.DoorList, {
 -- Cell 2
 table.insert(Config.DoorList, {
 	objCoords = vector3(480.9128, -1012.189, 26.48005),
-	objHeading = 180,
+	objHeading = 0,
 	objHash = -53345114, -- gabz_mrpd_cells_door
 	maxDistance = 2,
 	locked = true,

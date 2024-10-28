@@ -259,7 +259,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 4,
+            slot = 3,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [4] = {
@@ -274,7 +274,7 @@ Config.Items = {
                 }
             },
             type = "weapon",
-            slot = 5,
+            slot = 4,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [5] = {
@@ -283,7 +283,7 @@ Config.Items = {
             amount = 1,
             info = {},
             type = "weapon",
-            slot = 6,
+            slot = 5,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [6] = {
@@ -292,7 +292,7 @@ Config.Items = {
             amount = 5,
             info = {},
             type = "item",
-            slot = 7,
+            slot = 6,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [7] = {
@@ -301,7 +301,7 @@ Config.Items = {
             amount = 5,
             info = {},
             type = "item",
-            slot = 8,
+            slot = 7,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [8] = {
@@ -310,7 +310,7 @@ Config.Items = {
             amount = 5,
             info = {},
             type = "item",
-            slot = 9,
+            slot = 8,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [9] = {
@@ -319,7 +319,7 @@ Config.Items = {
             amount = 5,
             info = {},
             type = "item",
-            slot = 10,
+            slot = 9,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [10] = {
@@ -328,7 +328,7 @@ Config.Items = {
             amount = 1,
             info = {},
             type = "item",
-            slot = 11,
+            slot = 10,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [11] = {
@@ -337,7 +337,7 @@ Config.Items = {
             amount = 1,
             info = {},
             type = "weapon",
-            slot = 12,
+            slot = 11,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [12] = {
@@ -346,7 +346,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 13,
+            slot = 12,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [13] = {
@@ -355,7 +355,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 14,
+            slot = 13,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [14] = {
@@ -364,7 +364,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 15,
+            slot = 14,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [15] = {
@@ -373,7 +373,7 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 16,
+            slot = 15,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         },
         [16] = {
@@ -382,9 +382,18 @@ Config.Items = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 17,
+            slot = 16,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
         }
+        [17] = {
+            name = "ifaks",
+            price = 0,
+            amount = 15,
+            info = {},
+            type = "item",
+            slot = 17,
+            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16, 17, 18}
+        },
     }
 }
 
