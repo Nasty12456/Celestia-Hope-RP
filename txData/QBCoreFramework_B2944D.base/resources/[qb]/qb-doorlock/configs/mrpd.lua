@@ -327,7 +327,7 @@ table.insert(Config.DoorList, {
 -- Cell 5
 table.insert(Config.DoorList, {
 	objCoords = vector3(484.1764, -1007.734, 26.48005),
-	objHeading = 180,
+	objHeading = 0,
 	objHash = -53345114, -- gabz_mrpd_cells_door
 	maxDistance = 2,
 	locked = true,

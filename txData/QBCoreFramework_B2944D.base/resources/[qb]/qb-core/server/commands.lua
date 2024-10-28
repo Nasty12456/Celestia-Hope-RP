@@ -293,3 +293,13 @@ QBCore.Commands.Add('me', Lang:t("command.me.help"), {{name = Lang:t("command.me
         end
     end
 end, 'user')
+
+QBCore.Commands.Add('setgang', Lang:t('command.setgang.help'), { { name = Lang:t('command.setgang.params.id.name'), help = Lang:t('command.setgang.params.id.help') }, { name = Lang:t('command.setgang.params.gang.name'), help = Lang:t('command.setgang.params.gang.help') }, { name = Lang:t('command.setgang.params.grade.name'), help = Lang:t('command.setgang.params.grade.help') } }, true, function(source, args)
+    local Player = QBCore.Functions.GetPlayer(tonumber(args[1]))
+    if Player then
+        TriggerEvent('QBCore:Server:SetGang', source, tostring(args[2]), tonumber(args[3]))
+        --Player.Functions.SetGang(tostring(args[2]), tonumber(args[3]))
+    else
+        TriggerClientEvent('QBCore:Notify', source, Lang:t('error.not_online'), 'error')
+    end
+end, 'admin')

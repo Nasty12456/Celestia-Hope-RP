@@ -378,6 +378,24 @@ function SetupDoors()
 	Config.DoorList = Citizen.Await(p)
 end
 
+CreateThread(function()
+    while true do
+        Wait(0)
+        local ped = PlayerPedId()
+        local pos = GetEntityCoords(ped)
+        
+        for k, v in pairs(Config.DoorList) do
+            local dist = #(pos - v.objCoords)
+            if dist < 3.0 then
+                print("Door ID: " .. k)
+                print("Distance: " .. dist)
+                print("Door Hash: " .. v.objHash)
+                print("Door State: " .. tostring(v.locked))
+            end
+        end
+    end
+end)
+
 -- Events
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
