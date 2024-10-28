@@ -62,7 +62,7 @@ Config.Zones = {
     [20] = { coords = vector3(-591.07, -1056.52, 22.38), radius = 0.44, icon = "fa-solid fa-bowl-food", event = "qb-uwucafe:client:makeFood", label = "Food", job = "uwu" },
     [21] = { coords = vector3(-583.98, -1058.18, 22.74), radius = 0.5, icon = "fa-solid fa-mug-hot", event = "qb-uwucafe:client:makeTea", label = "Tea", job = "uwu" },
     [22] = { coords = vector3(-586.74, -1061.95, 22.64), radius = 0.4, icon = "fa-solid fa-mug-saucer", event = "qb-uwucafe:client:makeCoffee", label = "Coffee Machine", job = "uwu" },
-    [23] = { coords = vector3(-577.7687, -1066.8713, 26.5152), radius = 0.7, icon = "fa-solid fa-building", event = "qb-bossmenu:client:OpenMenu", label = "Boss Menu", job = {['uwu'] = 4} },
+    [23] = { coords = vector3(-596.9116, -1052.6813, 23.2446), radius = 0.7, icon = "fa-solid fa-building", event = "qb-bossmenu:client:OpenMenu", label = "Boss Menu", job = {['uwu'] = 4} },
     [24] = { coords = vector3(-585.25, -1055.29, 22.34), radius = 0.78, icon = "fa-solid fa-basket-shopping", event = "qb-uwucafe:client:openShop", label = "UwU Shop", job = "uwu" },
     [25] = { coords = vector3(-589.35, -1068.52, 21.84), radius = 0.7, icon = "fa-solid fa-boxes-stacked", event = "qb-uwucafe:client:grabIce", label = "Ice Machine", job = "uwu" },
     [26] = { coords = vector3(-594.35, -1054.15, 23.04), radius = 0.6, icon = "fa-solid fa-martini-glass-citrus", event = "qb-uwucafe:clientToggleDuty", label = "Toggle Duty", job = "uwu" },
