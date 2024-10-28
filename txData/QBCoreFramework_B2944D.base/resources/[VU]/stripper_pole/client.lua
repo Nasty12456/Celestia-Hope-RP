@@ -34,6 +34,7 @@ CreateThread(function()
                 event = "stripper:startDance",
                 icon = "fas fa-music",
                 label = "Dance on Pole",
+                poleObject = entity, -- Pass the targeted pole object
                 canInteract = function()
                     return not IsPedInAnyVehicle(PlayerPedId())
                 end
@@ -43,7 +44,7 @@ CreateThread(function()
     })
 end)
 
-RegisterNetEvent('stripper:startDance', function()
+RegisterNetEvent('stripper:startDance', function(data)
     local dancingOptions = {}
     for i, dance in ipairs(Config.animations) do
         table.insert(dancingOptions, {
@@ -54,7 +55,8 @@ RegisterNetEvent('stripper:startDance', function()
                     dict = dance.dict,
                     anim = dance.anim,
                     offset = dance.offset,
-                    rotation = dance.rotation
+                    rotation = dance.rotation,
+                    poleObject = data.poleObject -- Pass through the pole object
                 }
             }
         })
@@ -64,14 +66,13 @@ end)
 
 RegisterNetEvent('stripper:performDance', function(data)
     local ped = PlayerPedId()
-    local poleCoords = GetEntityCoords(GetClosestObjectOfType(GetEntityCoords(ped), 2.0, `5d_vanillapole`, false, false, false))
-    print("Pole Coords: " .. poleCoords.x .. ", " .. poleCoords.y .. ", " .. poleCoords.z)
+    local poleCoords = GetEntityCoords(data.poleObject)
+    print("Pole Coords:", poleCoords)
     RequestAnimDict(data.dict)
     while not HasAnimDictLoaded(data.dict) do
         Wait(0)
     end
 
-    -- Position player correctly at the pole
     local targetPosition = vector3(
         poleCoords.x + data.offset.x,
         poleCoords.y + data.offset.y,
