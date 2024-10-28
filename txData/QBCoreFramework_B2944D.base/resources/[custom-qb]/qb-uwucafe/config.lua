@@ -10,6 +10,14 @@ Config.VehicleSpawn = vector4(-596.5880, -1059.0718, 22.1253, 91.0356)
 
 Config.Vehicle = 'nspeedo'
 
+Config.CatModel = "a_c_cat"
+
+Config.CatSpawns = {
+    {coords = vector4(-587.55, -1059.31, 21.34, 180.5), scenario = "WORLD_CAT_SLEEPING"},
+    {coords = vector4(-585.17, -1062.07, 21.34, 90.5), scenario = "WORLD_CAT_SITTING"},
+    {coords = vector4(-590.89, -1058.66, 21.34, 270.5), scenario = "WORLD_CAT_SLEEPING"}
+}
+
 HungerFill = { -- How much they fill your hunger
     ["gingerkitty_cookie"] = math.random(35, 45),
     ["kira_kira_currye"] = math.random(35, 45),
