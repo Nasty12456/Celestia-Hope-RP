@@ -234,10 +234,36 @@ QBCore.Commands.Add('gang', Lang:t("command.gang.help"), {}, false, function(sou
     TriggerClientEvent('QBCore:Notify', source, Lang:t('info.gang_info', {value = PlayerGang.label, value2 = PlayerGang.grade.name}))
 end, 'user')
 
-QBCore.Commands.Add('setgang', Lang:t("command.setgang.help"), { { name = Lang:t("command.setgang.params.id.name"), help = Lang:t("command.setgang.params.id.help") }, { name = Lang:t("command.setgang.params.gang.name"), help = Lang:t("command.setgang.params.gang.help") }, { name = Lang:t("command.setgang.params.grade.name"), help = Lang:t("command.setgang.params.grade.help") } }, true, function(source, args)
+QBCore.Commands.Add('setgang', Lang:t('command.setgang.help'), { { name = Lang:t('command.setgang.params.id.name'), help = Lang:t('command.setgang.params.id.help') }, { name = Lang:t('command.setgang.params.gang.name'), help = Lang:t('command.setgang.params.gang.help') }, { name = Lang:t('command.setgang.params.grade.name'), help = Lang:t('command.setgang.params.grade.help') } }, true, function(source, args)
     local Player = QBCore.Functions.GetPlayer(tonumber(args[1]))
     if Player then
-        Player.Functions.SetGang(tostring(args[2]), tonumber(args[3]))
+        local newGang = {name = tostring(args[2]):lower()}
+        local lastGang = json.encode(Player.PlayerData.gang)
+
+        gang = tostring(args[2]):lower()
+        grade = tostring(tonumber(args[3])) or '0'
+        if not QBCore.Shared.Gangs[gang] then return false end
+        Player.PlayerData.gang.name = gang
+        Player.PlayerData.gang.label = QBCore.Shared.Gangs[gang].label
+        if QBCore.Shared.Gangs[gang].grades[grade] then
+            local ganggrade = QBCore.Shared.Gangs[gang].grades[grade]
+            Player.PlayerData.gang.grade = {}
+            Player.PlayerData.gang.grade.name = ganggrade.name
+            Player.PlayerData.gang.grade.level = tonumber(grade)
+            Player.PlayerData.gang.isboss = ganggrade.isboss or false
+        else
+            Player.PlayerData.gang.grade = {}
+            Player.PlayerData.gang.grade.name = 'No Grades'
+            Player.PlayerData.gang.grade.level = 0
+            Player.PlayerData.gang.isboss = false
+        end
+
+        if not Player.Offline then
+            Player.Functions.UpdatePlayerData()
+            TriggerEvent('QBCore:Server:OnGangUpdate', Player.PlayerData.source, Player.PlayerData.gang)
+            TriggerClientEvent('QBCore:Client:OnGangUpdate', Player.PlayerData.source, Player.PlayerData.gang)
+            TriggerEvent('brutal_gangs:server:qbcore-gang-update', Player.PlayerData.source, newGang, json.decode(lastGang))
+        end
     else
         TriggerClientEvent('QBCore:Notify', source, Lang:t('error.not_online'), 'error')
     end
