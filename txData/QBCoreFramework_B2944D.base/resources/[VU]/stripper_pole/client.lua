@@ -84,5 +84,5 @@ RegisterNetEvent('stripper:performDance', function(data)
     
     SetEntityCoords(ped, targetPosition.x, targetPosition.y, targetPosition.z)
     SetEntityHeading(ped, data.rotation)
-    TaskPlayAnim(ped, data.dict, data.anim, 8.0, -8.0, -1, 1, 0, true, true, true)
+    TaskPlayAnim(ped, data.dict, data.anim, 8.0, -8.0, -1, 32769, 0, true, true, true)
 end)
