@@ -11,7 +11,9 @@ QBShared.Items = {
 	["casino_vip"] 					 = {["name"] = "casino_vip", 			 	 ["label"] = "V.I.P Membership", 		["weight"] = 500, 		["type"] = "item", 		["image"] = "np_casino_high_roller.png", 				["unique"] = true, 		["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Diamond Casino V.I.P Card", ['created'] = nil, ['decay'] = 28.0},
 	----
 	["oxy-box"] 			    	 = {["name"] = "oxy-box",				    ["label"] = "Drug Package",			   	["weight"] = 4000,    	["type"] = "item",		["image"] = "oxy-box.png",         	["unique"] = true,		["useable"] = false,	    ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "",								["created"] = nil, 		["decay"] = 0.0	},
-	
+	--airdrop
+	["kq_airdrop_flare"] 			 = {["name"] = "kq_airdrop_flare", 			    ["label"] = "Airdrop flare",	 		    ["weight"] = 300, 		["type"] = "item", 		["image"] = "kq_airdrop_flare.png", 	    ["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Flare which calls upon an airdrop"},
+
 	['weapon_katana'] 				 = {['name'] = 'weapon_katana', 	 		  	['label'] = 'Katana', 					['weight'] = 2000, 		['type'] = 'weapon', 	['ammotype'] = nil,						['image'] = 'weapon_katana.png', 			['unique'] = true, 		['useable'] = false,	['description'] = 'A single-edged sword that is the longer of a pair worn by the Japanese samurai.'},
     ['weapon_shiv'] 				 = {['name'] = 'weapon_shiv', 	 		  		['label'] = 'Shiv', 					['weight'] = 1000, 		['type'] = 'weapon', 	['ammotype'] = nil,						['image'] = 'weapon_shiv.png', 				['unique'] = true, 		['useable'] = false,	['description'] = 'An instrument composed of a blade fixed into a handle, used for cutting or as a weapon.'},
     ['weapon_sledgehammer'] 		 = {['name'] = 'weapon_sledgehammer', 	 		['label'] = 'Sledge Hammer', 			['weight'] = 9000, 		['type'] = 'weapon', 	['ammotype'] = nil,						['image'] = 'weapon_sledgehammer.png', 		['unique'] = true, 		['useable'] = false,	['description'] = 'A Sledge Hammer to destroy peoples heads... jk... unless...'},
