@@ -55,12 +55,7 @@ MySQL.ready(function()
 							door.objHeading = door.objYaw or 0
 						end
 
-					local groups = door.authorizedJobs or {}
-
-						-- Add your authorized jobs here
-						groups['police'] 
-						groups['ambulance'] 
-						groups['mechanic'] 
+						local groups = door.authorizedJobs or {}
 
 						if door.authorizedGangs then
 							for gang, grade in pairs(door.authorizedGangs) do
