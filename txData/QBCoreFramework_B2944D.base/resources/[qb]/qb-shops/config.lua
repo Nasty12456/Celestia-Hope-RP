@@ -1530,6 +1530,9 @@ AC = {
             ["coords"] = vector4(-678.40, 5838.34, 17.33, 175.0),
             ["scenario"] = "WORLD_HUMAN_CLIPBOARD"
         },
+        ["blipsprite"] = 141,  -- Hunting blip sprite
+        ["blipcolor"] = 1,     -- White color
+        ["blipscale"] = 0.7,   -- Size of blip
         ["category"] = "All In One",
         ["job"] = "",
         ["categoryList"] = {
