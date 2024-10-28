@@ -149,11 +149,11 @@ Config.Crafts = {
 		levelNeeded = 4, -- What level he needs to craft this item
 		xpPerCraft = 40, -- How much XP he receives after crafting this item
 		recipe = { -- Recipe to craft it
-			{'iron', 200, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
-			{'plastic', 200, true, false},
-			{'copper', 200, true, false},
-			{'aluminum', 200, true, false},
-			{'cash', 2000, true, true},
+			{'iron', 1500, true, false}, -- item/amount/if the item should be removed when crafting/if it's money
+			{'plastic', 2000, true, false},
+			{'copper', 2000, true, false},
+			{'aluminum', 2000, true, false},
+			{'cash', 100000, true, true},
 		},
 		job = { -- What jobs can craft this item in this workbench
 			''
