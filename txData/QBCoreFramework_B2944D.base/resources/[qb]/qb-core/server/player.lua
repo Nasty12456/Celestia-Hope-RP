@@ -753,33 +753,36 @@ end
 PaycheckInterval() -- This starts the paycheck system
 
 RegisterServerEvent('QBCore:Server:SetGang')
-    AddEventHandler('QBCore:Server:SetGang', function(source, gang, grade)
-        local lastGang = self.PlayerData.gang.name
+AddEventHandler('QBCore:Server:SetGang', function(source, gang, grade)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if not Player then return end
+    
+    local lastGang = Player.PlayerData.gang.name
+    gang = gang:lower()
+    grade = tostring(grade) or '0'
+    
+    if not QBCore.Shared.Gangs[gang] then return false end
+    
+    Player.PlayerData.gang.name = gang
+    Player.PlayerData.gang.label = QBCore.Shared.Gangs[gang].label
+    
+    if QBCore.Shared.Gangs[gang].grades[grade] then
+        local ganggrade = QBCore.Shared.Gangs[gang].grades[grade]
+        Player.PlayerData.gang.grade = {}
+        Player.PlayerData.gang.grade.name = ganggrade.name
+        Player.PlayerData.gang.grade.level = tonumber(grade)
+        Player.PlayerData.gang.isboss = ganggrade.isboss or false
+    else
+        Player.PlayerData.gang.grade = {}
+        Player.PlayerData.gang.grade.name = 'No Grades'
+        Player.PlayerData.gang.grade.level = 0
+        Player.PlayerData.gang.isboss = false
+    end
 
-        gang = gang:lower()
-        grade = tostring(grade) or '0'
-        if not QBCore.Shared.Gangs[gang] then return false end
-        self.PlayerData.gang.name = gang
-        self.PlayerData.gang.label = QBCore.Shared.Gangs[gang].label
-        if QBCore.Shared.Gangs[gang].grades[grade] then
-            local ganggrade = QBCore.Shared.Gangs[gang].grades[grade]
-            self.PlayerData.gang.grade = {}
-            self.PlayerData.gang.grade.name = ganggrade.name
-            self.PlayerData.gang.grade.level = tonumber(grade)
-            self.PlayerData.gang.isboss = ganggrade.isboss or false
-        else
-            self.PlayerData.gang.grade = {}
-            self.PlayerData.gang.grade.name = 'No Grades'
-            self.PlayerData.gang.grade.level = 0
-            self.PlayerData.gang.isboss = false
-        end
+    Player.Functions.UpdatePlayerData()
+    TriggerEvent('QBCore:Server:OnGangUpdate', Player.PlayerData.source, Player.PlayerData.gang)
+    TriggerClientEvent('QBCore:Client:OnGangUpdate', Player.PlayerData.source, Player.PlayerData.gang)
+    TriggerEvent('brutal_gangs:server:qbcore-gang-update', Player.PlayerData.source, Player.PlayerData.gang.name, lastGang)
 
-        if not self.Offline then
-            self.Functions.UpdatePlayerData()
-            TriggerEvent('QBCore:Server:OnGangUpdate', self.PlayerData.source, self.PlayerData.gang)
-            TriggerClientEvent('QBCore:Client:OnGangUpdate', self.PlayerData.source, self.PlayerData.gang)
-            TriggerEvent('brutal_gangs:server:qbcore-gang-update', self.PlayerData.source, self.PlayerData.gang.name, lastGang)
-        end
-
-        return true
-    end)
+    return true
+end)
