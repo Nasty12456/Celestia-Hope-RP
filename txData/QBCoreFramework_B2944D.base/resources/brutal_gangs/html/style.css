@@ -1,0 +1,2450 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&display=swap');
+
+body{
+    font-family: 'Oswald', sans-serif;
+    user-select: none;
+    background: none;
+    font-display: fallback;
+}
+
+:root{
+    --main_color: rgb(251, 133, 16);
+    --background_color: rgb(34, 34, 39);
+    --text_color: white;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:disabled{
+    opacity: 0.6;
+    cursor: none;
+}
+
+button:hover{
+    cursor: pointer;
+    filter: brightness(110%);
+}
+
+button:disabled:hover{
+    filter: none;
+}
+
+button:active{
+    transition: all 0.05s;
+    filter: brightness(70%);
+    scale: 0.9;
+}
+
+button:disabled:active{
+    filter: none;
+    scale: 1;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+hr{
+    height: 2px;
+    background-color: white;
+}
+
+.input-group input{
+    background-color: rgba(113, 134, 158, 0.438);
+    color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.input-group input::placeholder{
+    color: #ffffffd0;
+}
+
+.input-group input:focus{
+    color: white;
+    background-color: rgba(107, 128, 151, 0.582);
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.input-group input:disabled{
+    background-color: rgba(52, 63, 73, 0.295);
+    color: #7A7A7A;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: 700;
+}
+
+.custom-checkbox  .form-check-label{
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.custom-checkbox .form-check-input{
+    height: 30px;
+    width: 30px;
+    background-color: rgba(114, 135, 160, 0.459);
+    border-radius: 3px;
+    border: none;
+}
+
+.custom-checkbox .form-check-input:checked{
+    border: none;
+    background-color: rgba(141, 180, 228, 0.651);
+}
+
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    transform: rotate(45deg);
+    cursor: pointer;
+    box-shadow: none;
+    border: solid 2px white;
+    transition: 0.3s;
+}
+
+.range::-webkit-slider-thumb:active{
+    background: #32EBBE;
+}
+
+.range{
+    -webkit-appearance: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    outline: none;
+    background-color: #B7B7B7;
+}
+
+.custom-control.ios-switch {
+    scale: 1.6;
+    margin-bottom: 15px;
+}
+
+.custom-control.ios-switch .ios-switch-control-input {
+    display: none;
+}
+
+.custom-control.ios-switch .ios-switch-control-input:active~.ios-switch-control-indicator::after {
+    width: 20px;
+}
+
+.custom-control.ios-switch .ios-switch-control-input:checked~.ios-switch-control-indicator {
+    border: 10px solid rgb(117, 214, 27);
+    background: rgb(117, 214, 27);
+}
+
+.custom-control.ios-switch .ios-switch-control-input:checked~.ios-switch-control-indicator::after {
+    top: -8px;
+    left: 8px;
+}
+
+.custom-control.ios-switch .ios-switch-control-input:checked:active~.ios-switch-control-indicator::after {
+    left: 4px;
+}
+
+.custom-control.ios-switch .ios-switch-control-indicator {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    top: 4px;
+    width: 36px;
+    height: 20px;
+    background: rgb(51, 49, 70);
+    border-radius: 16px;
+    transition: 0.3s;
+    border: 2px solid rgb(54, 72, 94);
+}
+
+.custom-control.ios-switch .ios-switch-control-indicator::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    transition: 0.3s;
+    top: 0px;
+    left: 0px;
+    background: rgb(236, 236, 236);
+}
+
+.dropdown .dropdown-menu{
+    background-color: rgba(106, 126, 148, 0.651);
+    backdrop-filter: blur(10px);
+    border: 2px rgba(255, 255, 255, 0.644);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown .dropdown-menu .dropdown-item{
+    color: white;
+    height: 40px;
+    transition: all 0.3s ease;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover{
+    background-color: rgba(141, 166, 194, 0.493);
+}
+
+.dropdown .dropdown-menu .dropdown-item img{
+    height: 35px;
+    width: 35px;
+    margin-top: -5px;
+    margin-left: -10px;
+    border-radius: 6px;
+}
+
+/* //////////////////////////////////////////////////////// MAIN THINGS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.actbtn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.actbtn:hover{
+    cursor: pointer;
+    filter: brightness(110%);
+}
+
+.actbtn:disabled:hover{
+    filter: none;
+}
+
+.actbtn:active{
+    transition: all 0.05s;
+    filter: brightness(70%);
+    scale: 0.9;
+}
+
+.actbtn:disabled:active{
+    filter: none;
+    scale: 1;
+}
+
+.gang_menu{
+    display: none;
+}
+
+@keyframes showmenu {
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes hidemenu {
+    100%{
+        opacity: 0;
+    }
+}
+
+.gang_menu .panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 670px;
+    width: 1088px;
+    border-radius: 14px;
+    background-color: rgba(61, 61, 61, 0.425);
+    backdrop-filter: blur(25px);
+    font-family: "Anek Gujarati", sans-serif;
+    overflow: hidden;
+    box-shadow: inset 0px 1px 2.5px -1px rgba(255, 255, 255, 0.24);
+}
+
+.gang_menu .level_con{
+    position: relative;
+    height: 163px;
+    width: 651px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+}
+
+.gang_menu .level_con .gang_name{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    margin-left: 10px;
+}
+
+.gang_menu .level_con .levels_des{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.705);
+    text-align: right;
+    width: 65%;
+}
+
+.gang_menu .level_con .level_line_con{
+    position: absolute;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+}
+
+.gang_menu .level_con .level_line_con .level_line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 10px;
+    width: 568px;
+    border-radius: 3vh;
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+.gang_menu .level_con .level_line_con .level_line .progress{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    border-radius: 3vh;
+    background-color: #C337FB;
+    transition: .6s ease;
+    transition-delay: 0.14s;
+    z-index: 10;
+}
+
+.gang_menu .level_con .level_line_con .level_line .progress2{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    border-radius: 3vh;
+    background-color: #53addac5;
+    transition: .6s ease;
+    transition-delay: 0.14s;
+}
+
+.gang_menu .level_con .level_line_con .level_text{
+    margin-top: 2px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    transition: .6s ease;
+    transition-delay: 0.14s;
+}
+
+.gang_menu .level_con .level_line_con .level_text.current{
+    font-size: 21px;
+    line-height: 15px;
+    font-weight: 500;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.747);
+}
+
+.gang_menu .level_con .level_line_con .indicator{
+    position: relative;
+    height: 20px;
+    width: 7px;
+    background-color: #D9D9D9;
+    border-radius: 3vh;
+    z-index: 10;
+}
+
+.gang_menu .level_con .level_line_con .level_price{
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: #98DC92;
+}
+
+.gang_menu .level_con .level_line_con .level_price .rep{
+    margin-top: -8px;
+    color: #C337FB;
+}
+
+.gang_menu .level_con .level_line_con .hover_area{
+    position: absolute;
+    height: 100%;
+    width: 80px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 100;
+}
+
+.gang_menu .level_unlock_panel{
+    position: absolute;
+    top: 150px;
+    left: 345px;
+    transform: translate(-50%, 0%);
+    min-height: 100px;
+    width: 200px;
+    background-color: rgba(104, 133, 165, 0.507);
+    backdrop-filter: blur(10px);
+    border-radius: 9px;
+    z-index: 100;
+    padding-bottom: 35px;
+    animation: Home_cons 0.3s ease;
+    display: none;
+}
+
+.gang_menu .level_unlock_panel .level_title{
+    position: absolute;
+    top: 27px;
+    left: -27px;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.356);
+    transform: rotate(90deg);
+}
+
+.gang_menu .level_unlock_panel .level_money{
+    text-align: right;
+    font-size: 20px;
+    font-weight: 400;
+    color: #98DC92;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 0px
+}
+
+.gang_menu .level_unlock_panel .level_rep{
+    text-align: right;
+    font-size: 18px;
+    font-weight: 400;
+    color: #C337FB;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.gang_menu .level_unlock_panel .unlockable_element{
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    line-height: 16px;
+    margin-top: 2px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.gang_menu .level_unlock_panel .unlock_btn{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 30px;
+    font-size: 24px;
+    color: #65C95B;
+    font-weight: 200;
+    background-color: transparent;
+}
+
+.gang_menu .money_con{
+    position: relative;
+    height: 163px;
+    width: 380px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+}
+
+.gang_menu .money_con .gang_pic{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #616c78bd;
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
+    object-fit: scale-down;
+    background-size: cover;
+    background-position: center;
+}
+
+.gang_menu .money_con .main_money{
+    text-align: right;
+    font-size: 41px;
+    font-weight: 400;
+    color: #98DC92;
+    margin-right: 10px;
+    margin-bottom: 0px
+}
+
+.gang_menu .money_con .rep_money{
+    text-align: right;
+    font-size: 36px;
+    font-weight: 400;
+    color: #C337FB;
+    margin-right: 10px;
+    margin-top: -20px;
+}
+
+.gang_menu .money_con .members{
+    position: absolute;
+    bottom: 10px;
+    left: 25%;
+    transform: translate(-50%, 0%);
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #53ADDA;
+    text-align: center;
+}
+
+.gang_menu .money_con .online{
+    position: absolute;
+    bottom: 10px;
+    left: 75%;
+    transform: translate(-50%, 0%);
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #98DC92;
+    text-align: center;
+}
+
+.gang_menu .map{
+    position: relative;
+    height: 446px;
+    width: 338px;
+    border-radius: 13px;
+    background-image: url('assets/gta5_map.webp');
+    object-fit: scale-down;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.gang_menu .basic_label{
+    font-size: 33px;
+    font-weight: 600;
+    color: white;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    text-align: left;
+}
+
+.gang_menu .task_con{
+    position: relative;
+    height: 261px;
+    width: 338px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.gang_menu .home_task_element{
+    position: relative;
+    margin-top: 8px;
+    margin-left: 11.5px;
+    height: 97px;
+    width: 315px;
+    background-color: rgba(83, 99, 117, 0.452);
+    border-radius: 9px;
+    text-align: left;
+}
+
+.gang_menu .home_task_element .label{
+    font-size: 26px;
+    font-weight: 400;
+    color: white;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.gang_menu .home_task_element .des{
+    width: 70%;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.726);
+    margin-top: -4px;
+    margin-left: 15px;
+}
+
+.gang_menu .home_task_element .arrows{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-image: url('assets/arrows.svg');
+    height: 37px;
+    width: 60px;
+}   
+
+.gang_menu .spray_con{
+    position: relative;
+    height: 168px;
+    width: 338px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.gang_menu .spray_con.can_start{
+    background: linear-gradient(180deg, rgba(33, 41, 50, 0.795) 50%, rgba(100, 145, 97, 0.26) 100%);
+}
+
+.gang_menu .spray_con .reward{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #C337FB;
+    text-align: right;
+}
+
+.gang_menu .spray_con .des{
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.726);
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 70%;
+}
+
+.gang_menu .spray_con .ready_text{
+    text-align: right;
+    font-size: 27px;
+    color: #65C95B;
+    text-shadow: 0px 0px 5px #64c95bc2;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.gang_menu .status_text{
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+}
+
+.gang_menu .status_text.right_side{
+    right: 5%;
+    text-align: right;
+}
+
+.gang_menu .progress_line{
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    border-radius: 3vh;
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+.gang_menu .progress_line .progress{
+    height: 100%;
+    width: 50%;
+    border-radius: 3vh;
+    background-color: #C337FB;
+}
+
+.gang_menu .invite_con{
+    position: relative;
+    height: 168px;
+    width: 338px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.gang_menu .invite_con .des{
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.726);
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 70%;
+}
+
+.gang_menu .invite_con .invite_btn{
+    position: absolute;
+    bottom: 9px;
+    left: 2.5%;
+    height: 40px;
+    width: 95%;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, rgba(83, 99, 117, 0.719) 0%, rgba(152,220,146,0.5) 50%, rgba(83,99,117,0.719) 100%);
+    font-size: 33px;
+    font-weight: 300;
+    color: #98DC92;
+    border-radius: 9px;
+    line-height: 45px;
+}
+
+.gang_menu .upgrade_con{
+    position: relative;
+    height: 261px;
+    width: 338px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    color: white;
+    font-size: 26px;
+    font-weight: 200;
+    text-align: center;
+    overflow: hidden;
+}
+
+.gang_menu .plus_currencies{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: fit-content;
+    width: 200px;
+    background-color: #516c8a75;
+    border-radius: 11px;
+    padding: 3px;
+    backdrop-filter: blur(10px);
+    animation: plus_currencies_anim 0.8s ease-in-out 1s both, plus_currencies_anim2 3s infinite;
+    display: none;
+}
+
+@keyframes plus_currencies_anim {
+    0%{
+        transform: translate(-50%, -80px);
+        scale: 0.8;
+    }
+    50%{
+        transform: translate(-50%, 0px);
+    }
+}
+
+@keyframes plus_currencies_anim_reverse {
+    0%{
+        transform: translate(-50%, 0px);
+    }
+    50%{
+        transform: translate(-50%, -80px);
+    }
+    100%{
+        transform: translate(-50%, -80px);
+        scale: 0.8;
+    }
+}
+
+@keyframes plus_currencies_anim2 {
+    0%{
+        box-shadow: 0px 3px 6px -2px #98DC92, 0px -3px 6px -2px #C337FB, 3px 0px 6px -2px #FFEB00, -3px 0px 6px -2px #009FBD;
+    }
+    50%{
+        box-shadow: 0px -3px 6px -2px #98DC92, 0px 3px 6px -2px #C337FB, 3px 0px 6px -2px #009FBD, -3px 0px 6px -2px #FFEB00;
+    }
+    100%{
+        box-shadow: 0px 3px 6px -2px #98DC92, 0px -3px 6px -2px #C337FB, 3px 0px 6px -2px #FFEB00, -3px 0px 6px -2px #009FBD;
+    }
+}
+
+.gang_menu .plus_currencies .added_plus{
+    margin-top: 5px;
+    width: 100%;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #98DC92; 
+    text-align: center;
+    text-shadow: 0px 0px 4px #98DC92;
+}
+
+.gang_menu .plus_currencies .added_plus span{
+    color: #C337FB;
+    text-shadow: 0px 0px 4px #C337FB; 
+}
+
+.gang_menu .map_container{
+    position: relative;
+    margin-top: 93px;
+    height: 558px;
+    width: 1044px;
+    border-radius: 13px;
+    display: none;
+    overflow: hidden;
+    background-color: rgba(33, 41, 50, 0.795);
+    animation: map_container_anim .6s ease;
+}
+
+@keyframes map_container_anim {
+    0%{
+        transform: scale(0.6);
+        opacity: 0;
+    }
+}
+
+.gang_menu .map_container .main_map{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    animation: main_map_anim .4s ease .6s both;
+}
+
+@keyframes main_map_anim {
+    0%{
+        display: none;
+        opacity: 0;
+    }
+    1%{
+        display: block;
+    }
+}
+
+.gang_menu .icon{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.514);
+}
+
+.leaflet-tooltip-own{
+    font-family: "Anek Gujarati", sans-serif !important;
+    font-size: 18px !important;
+    background-color: rgba(35, 43, 52, 0.192) !important;
+    border: none !important;
+    outline: none !important;
+    backdrop-filter: blur(10px);
+    color: white !important;
+}
+
+.leaflet-tooltip-top:before, 
+.leaflet-tooltip-bottom:before, 
+.leaflet-tooltip-left:before, 
+.leaflet-tooltip-right:before {
+    border: none !important;
+}
+
+.gang_menu .map_container .center_popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 13px;
+    background-color: rgba(53, 53, 53, 0.541);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: none;
+}
+
+.gang_menu .map_container .center_popup .panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    padding-bottom: 30px;
+    width: 282px;
+    border-radius: 9px;
+    background-color: rgba(35, 43, 52, 0.466);
+    backdrop-filter: blur(15px);
+}
+
+.gang_menu .map_container .center_popup .panel .basic_label{
+    font-size: 24px;
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 10px;
+    line-height: 26px;
+}
+
+.gang_menu .map_container .center_popup .panel .price{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #98DC92;
+}
+
+.gang_menu .map_container .center_popup .panel .price span{
+    color: #C337FB;
+}
+
+.gang_menu .map_container .center_popup .panel .capture_text{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffffbe;
+}
+
+.gang_menu .map_container .current_gang{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 282px;
+    min-height: 100px;
+    background-color: rgba(35, 43, 52, 0.466);
+    border-radius: 9px;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    display: none;
+    overflow: hidden;
+}
+
+.gang_menu .map_container .current_gang.green{
+    background-image: linear-gradient(rgba(152, 220, 146, 0.274), rgba(35, 43, 52, 0.466));
+}
+
+.gang_menu .map_container .current_gang .current_gang_name{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    text-align: right;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+.gang_menu .map_container .current_gang  .friend_btn{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    height: 25px;
+    padding-inline: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(152, 220, 146, 0.822);
+    background-color: transparent;
+}
+
+.gang_menu .map_container .current_gang  .friend_btn.red{
+    color: rgba(255, 88, 88, 0.815);
+}
+
+.gang_menu .map_container .current_gang  .scout_date{
+    text-align: right;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.644);
+}
+
+.gang_menu .map_container .current_gang .info_con{
+    position: relative;
+    margin-top: 6px;
+    margin-left: 6px;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    min-height: 60px;
+    width: 50%;
+    line-height: 20px;
+}
+
+.gang_menu .map_container .current_gang .info_con .gang_info{
+    height: 24px;
+    width: fit-content;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.171);
+    border-radius: 5px;
+    padding-inline: 6px;
+    margin-bottom: 3px;
+    overflow: hidden;
+}
+
+.faded{
+    filter: blur(10px);
+}
+
+.raid_price{
+    position: absolute;
+    bottom: 37px;
+    right: 10px;
+    color: #C337FB;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.gang_menu .map_container .current_gang  .map_btn{
+    height: 34px;
+    background-color: rgba(101, 121, 143, 0.664);
+    font-size: 23px;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+    padding-inline: 15px;
+    line-height: 37px;
+}
+
+
+.gang_menu .map_container .current_gang  .map_btn#raid{
+    background-color: #F15050;
+}
+
+.gang_menu .map_container .marker_placer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 282px;
+    min-height: 100px;
+    background-color: rgba(35, 43, 52, 0.466);
+    border-radius: 9px;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    padding-bottom: 45px;
+    display: none;
+    overflow: hidden;
+}
+
+.gang_menu .map_container .marker_placer .icon_container{
+    position: relative;
+    height: 75px;
+    width: 90%; 
+    margin-left: 5%;
+    border-radius: 7px;
+}
+
+.gang_menu .map_container .marker_placer .icon_container .icon_element{
+    position: relative;
+    float: inline-start;
+    height: 28px;
+    width: 27.5px;
+    background-color: rgba(113, 134, 158, 0.438);
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-left: 4px;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 28px;
+}
+
+.gang_menu .map_container .marker_placer .icon_container .icon_element.choosed_icon{
+    background-color: rgba(181, 199, 218, 0.438);
+}
+
+.gang_menu .map_container .marker_placer .icon_container .icon_element i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.gang_menu .map_container .marker_placer .color_btn{
+    height: 30px;
+    width: 90% !important; 
+    margin-left: 5%;
+    border-radius: 7px;
+    background-color: rgba(113, 134, 158, 0.438);
+    color: #ffffff;
+    font-size: 20px !important;
+    line-height: 34px !important;
+    border: none !important;
+    outline: none !important;
+    text-align: center;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.514);
+}
+
+.gang_menu .map_container .marker_placer .marker_btn_con{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.gang_menu .map_container .marker_btn{
+    height: 33px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #65C95B;
+    background-color: transparent;
+}
+
+.gang_menu .map_container .marker_btn.red{
+    color: #FB5C5C;
+}
+
+.gang_menu .top_bar{
+    display: none;
+}
+
+.gang_menu .nav_bar{
+    position: absolute;
+    top: 14px;
+    left: 0px;
+}
+
+.gang_menu .nav_bar .nav_btn{
+    font-size: 34px;
+    background-color: transparent;
+    color: white;
+    padding-bottom: 10px;
+    transition: .4 ease-in-out;
+    padding-inline: 10px;
+    border-radius: 10px
+}
+
+.gang_menu .nav_bar .nav_btn:hover{
+    scale: 1.2;
+    transform: translateY(-5px);
+    filter: none;
+    margin-inline: 10px;
+}
+
+.gang_menu .nav_bar .nav_btn.choosed{
+    scale: 1.2;
+    text-shadow: 0px 0px 5px white;
+    transform: translateY(-5px);
+    box-shadow: inset 0px -51px 30px -50px white;
+    margin-inline: 10px;
+}
+
+.gang_menu  .gang_label{
+    position: absolute;
+    top: 22px;
+    right: 400px;
+    height: 58px;
+    text-align: right;
+    font-size: 25px;
+    line-height: 62px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.658);
+}
+
+.gang_menu .top_bar .gang_pic{
+    position: absolute;
+    top: 22px;
+    right: 330px;
+    height: 58px;
+    width: 58px;
+    border-radius: 9px;
+    background-color: #616c78bd;
+    object-fit: scale-down;
+    background-size: cover;
+    background-position: center;
+}
+
+.gang_menu .info_bar{
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    height: 58px;
+    width: 295px;
+    border-radius: 9px;
+    background-color: rgba(33, 41, 50, 0.795);
+}
+
+.gang_menu .info_bar .main_money{
+    text-align: right;
+    font-size: 23px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #98DC92;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 0px
+}
+
+.gang_menu .info_bar .rep_money{
+    text-align: right;
+    font-size: 20px;
+    font-weight: 400;
+    color: #C337FB;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.gang_menu .info_bar .members{
+    position: absolute;
+    bottom: 5px;
+    left: 100px;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+    font-weight: 400;
+    color: #53ADDA;
+    line-height: 20px;
+}
+
+.gang_menu .info_bar .online{
+    position: absolute;
+    top: 8px;
+    left: 100px;
+    transform: translate(-50%, 0%);
+    font-size: 20px;
+    font-weight: 400;
+    color: #98DC92;
+    line-height: 20px;
+}
+
+.gang_menu .info_bar i{
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.gang_menu .info_bar .percent{
+    position: absolute;
+    top: 5.5px;
+    left: 5.5px;
+    width: 47px;
+    height: 47px;
+    rotate: -90deg;
+    border-radius: 50%;
+}
+
+.gang_menu .info_bar .percent svg{
+    width: 47px;
+    height: 47px;
+}
+
+.gang_menu .info_bar .percent svg circle{ 
+    width: 47px;
+    height: 47px;
+    fill: none;
+    stroke-width: 4;
+    stroke: black;
+    transform: translate(2.35px, 2.35px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.gang_menu .info_bar .percent svg circle:nth-child(1){
+    stroke-dashoffset: 270;
+    stroke: #8d8d8d;
+}
+
+.gang_menu .info_bar .percent svg circle:nth-child(2){
+    stroke: #B438E5;
+    transition: stroke-dashoffset 1s ease 0.4s;
+    stroke-linecap: round;
+}
+
+.gang_menu .info_bar .level_num{
+    position: absolute;
+    top: 55%;
+    left: 5.5px;
+    transform: translate(0%, -50%);
+    width: 47px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+}
+
+.gang_menu .big_sub_con{
+    position: relative;
+    height: 554px;
+    width: 515px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.gang_menu .task_container{
+    position: absolute;
+    bottom: 0;
+    height: 500px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.gang_menu .player_kills .task_container{
+    height: 360px;
+    padding-bottom: 12px;
+}
+
+.gang_menu .task_element{
+    position: relative;
+    height: 112px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    background-color: rgba(83, 99, 117, 0.459);
+    border-radius: 9px;
+    text-align: left;
+}
+
+.gang_menu .task_element.can_start{
+    background: linear-gradient(90deg, rgba(83, 99, 117, 0.459) 50%, rgba(150, 218, 145, 0.315) 100%);
+}
+
+.gang_menu .task_element .label{
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.gang_menu .task_element .label span{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.479);
+}
+
+.gang_menu .task_element .des{
+    width: 40%;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.726);
+    margin-top: -4px;
+    margin-left: 15px;
+}
+
+.gang_menu .task_element .reward{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.gang_menu .task_element .reward .small_max{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.719);
+    font-weight: 200
+}
+
+.green_text{
+    color: #98DC92;
+}
+
+.purple_text{
+    color: #C337FB;
+}
+
+.gang_menu .task_element .start_task_btn{
+    height: 30px;
+    width: fit-content;
+    background-color: transparent;
+    font-size: 26px;
+    font-weight: 400;
+    color: #65C95B;
+}
+
+.gang_menu .task_element .start_task_btn img{
+    height: 30px;
+    margin-top: -3px;
+    margin-left: -10px;
+}
+
+.gang_menu .side_task_con{
+    position: relative;
+    height: 135px;
+    width: 250px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.gang_menu .side_task_con.can_start{
+    background: linear-gradient(180deg, #212932 50%, rgba(113, 163, 109, 0.356) 100%);
+}
+
+.gang_menu .side_task_con .reward{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #C337FB;
+    text-align: right;
+}
+
+.gang_menu .side_task_con .des{
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.726);
+    margin-left: 10%;
+    margin-top: 10px;
+    width: 80%;
+}
+
+.gang_menu .side_task_con .ready_text{
+    text-align: right;
+    font-size: 21px;
+    color: #65C95B;
+    text-shadow: 0px 0px 5px #64c95bc2;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.gang_menu .player_kills{
+    position: relative;
+    height: 403px;
+    width: 515px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.gang_menu .player_kills.disabled{
+    opacity: 0.6;
+}
+
+.gang_menu .player_kills.disabled .disabled_text{
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    z-index: 10;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 14px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.712);
+}
+
+.gang_menu .player_kills.disabled .disabled_text a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #009FBD;
+}
+
+.gang_menu .player_kills i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-weight: 700;
+    color: white;
+    z-index: 10;
+}
+
+.gang_menu .side_task_con .sec_label{
+    font-size: 29px;
+    font-weight: 400;
+    color: white;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: -15px;
+}
+
+.gang_menu .top_opener_btn{
+    height: 33px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #65C95B;
+    background-color: transparent;
+}
+
+.gang_menu .top_opener_btn#ranks{
+    color: #ABDBF3;
+}
+
+.gang_menu .top_opener_btn.red{
+    color: #FB5C5C;
+}
+
+.gang_menu .player_element{
+    position: relative;
+    height: 55px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    background-color: rgba(83, 99, 117, 0.459);
+    border-radius: 9px;
+    line-height: 55px;
+}
+
+.gang_menu .player_element .player_name{
+    font-size: 27px;
+    font-weight: 300;
+    color: white;
+}
+
+.gang_menu .picture_change_btn{
+    height: 45px;
+    margin-top: 5px;
+    border-radius: 8px;
+    background: rgba(103, 123, 146, 0.473);
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+    line-height: 45px;
+}
+
+.gang_menu .picture_change_btn img{
+    height: 35px;
+    width: 35px;
+    margin-left: -10px;
+    border-radius: 6px;
+}
+
+.gang_menu .rank_change_btn{
+    height: 45px;
+    margin-top: 5px;
+    border-radius: 8px;
+    background: rgba(103, 123, 146, 0.473);
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+    line-height: 45px;
+}
+
+.gang_menu .upgrades_con{
+    position: relative;
+    height: 318px;
+    width: 515px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.gang_menu .upgrades_con .upgrades_container{
+    position: absolute;
+    bottom: 0;
+    height: 274px;
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 26px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.scroll_effect{
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(33, 41, 50, 0.842);
+    filter: blur(10px);
+    z-index: 100;
+}
+
+.gang_menu .settings_con{
+    position: relative;
+    height: 219px;
+    width: 515px;
+    margin-top: 17px;
+    background-color: rgba(33, 41, 50, 0.795);
+    border-radius: 13px;
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.gang_menu .settings_con .settings_container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+
+.gang_menu .settings_con .settings_container .settings_element{
+    height: 45px;
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: rgba(83, 99, 117, 0.459);
+    border-radius: 9px;
+}
+
+.gang_menu .settings_con .settings_container .settings_element .name{
+    font-size: 27px;
+    line-height: 52px;
+    font-weight: 500;
+    color: white;
+}
+
+.gang_menu .settings_con .settings_container .settings_element .settings_btn{
+    margin-top: -4px;
+    height: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #65C95B;
+    background-color: transparent;
+}
+
+.gang_menu .settings_con .settings_container .settings_element .settings_btn.red{
+    color: #FB5C5C;
+}
+
+.gang_menu .settings_con .settings_container .settings_element .settings_btn.white{
+    color: #ffffff;
+}
+
+.sub_panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(53, 53, 53, 0.541);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: none;
+}
+
+.sub_panel#picture_replacer .panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 360px;
+    background-color: rgba(104, 133, 165, 0.507);
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    overflow: visible;
+}
+
+.sub_panel#invite_container .panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 360px;
+    background-color: rgba(104, 133, 165, 0.507);
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    overflow: visible;
+}
+
+.sub_panel#ranks_container .panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    width: 360px;
+    background-color: rgba(104, 133, 165, 0.507);
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    padding-bottom: 50px;
+}
+
+.sub_panel#ranks_container_del .panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    width: 360px;
+    background-color: rgba(104, 133, 165, 0.507);
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    padding-bottom: 50px;
+    overflow: visible;
+}
+
+.sub_panel .panel .sub_exit{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.671);
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.sub_panel .panel .players_con{
+    min-height: 47px;
+    max-height: 94px;
+    margin-left: 5%;
+    width: 90%;
+    background-color: rgba(36, 43, 51, 0.438);
+    border-radius: 9px;
+}
+
+.sub_panel .panel .players_con .no_players{
+    text-align: center;
+    color: #c7c7c7;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.sub_panel .panel .players_con .player_btn{
+    position: relative;
+    height: 38px;
+    width: 136px;
+    background-color: rgba(88, 107, 126, 0.623);
+    border-radius: 7px;
+}
+
+.sub_panel .panel .choosed_player{
+    border: 2px solid #E1CD15;
+}
+
+.sub_panel .panel .players_con .player_btn span{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.sub_panel .panel .players_con .player_btn .id{
+    position: absolute;
+    bottom: 1px;
+    right: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(160, 160, 160);
+}
+
+.action_btn{
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    height: 33px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #65C95B;
+    background-color: transparent;
+}
+
+.r{
+    color: #FB5C5C;
+}
+
+.delete_rank_btn{
+    position: absolute;
+    top: 10px;
+    right: 70px;
+    height: 33px;
+    font-size: 24px;
+    font-weight: 300;
+    color: #FB5C5C;
+    background-color: transparent;
+}
+
+.delete_rank_btn.g{
+    color: #65C95B;
+}
+
+.home_con{
+    animation: Home_cons 0.5s;
+    box-shadow: 0px 4px 12px -1px rgba(41, 50, 58, 0.582);
+}
+
+@keyframes Home_cons {
+    0%{
+        scale: 0.8;
+        opacity: 0;
+    }
+    50%{
+        scale: 1.017;
+    }
+}
+
+@keyframes reverse_Home_cons {
+    100%{
+        scale: 1.1;
+        opacity: 0;
+    }
+}
+
+.garage_menu{
+    display: none;
+}
+
+.garage_menu .panel{
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    width: 350px;
+    min-height: 100px;
+    height: fit-content;
+    border-radius: 14px;
+    background-color: rgba(52, 63, 73, 0.678);
+    backdrop-filter: blur(10px);
+}
+
+.garage_menu .title{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 33px;
+    color: white;
+    font-weight: 700;
+}
+
+.garage_menu .available{
+    position: absolute;
+    top: 8px;
+    left: 20%;
+    transform: translate(-50%, 0%);
+    font-size: 19px;
+    font-weight: 400;
+    color: #98DC92;
+    line-height: 19px;
+    text-align: center;
+}
+
+.garage_menu .vehicle_container{
+    margin-top: 60px;
+    margin-left: 2.5%;
+    height: fit-content;
+    width: 95%;
+    padding-bottom: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.garage_menu .vehicle_container .vehicle_element{
+    position: relative;
+    margin-top: 5px;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(118, 139, 163, 0.527);
+    border-radius: 9px;
+    text-align: left;
+    padding: none;
+}
+
+.garage_menu .vehicle_container .vehicle_element .name{
+    line-height: 23px;
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+}
+
+.garage_menu .vehicle_container .vehicle_element .plate{
+    margin-left: 4px;
+    line-height: 16px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.61);
+    font-weight: 500;
+}
+
+.garage_menu .vehicle_container .vehicle_element .plate i{
+    font-size: 14px;
+}
+
+.garage_menu .vehicle_container .vehicle_element .arrows{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0%, -50%);
+    background-image: url('assets/arrows.svg');
+    height: 50px;
+    width: 70px;
+    background-size: 105%;
+}
+
+.balance_menu{
+   display: none;
+}
+
+.balance_menu .panel{
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    width: 350px;
+    min-height: 280px;
+    height: fit-content;
+    padding-bottom: 16px;
+    border-radius: 14px;
+    background-color: rgba(52, 63, 73, 0.644);
+    backdrop-filter: blur(10px);
+}
+
+.balance_menu .title{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    font-size: 33px;
+    line-height: 33px;
+    color: white;
+    font-weight: 700;
+}
+
+.balance_menu .balance{
+    margin-top: 45px;
+    margin-bottom: 5px;
+    width: 95%;
+    margin-left: 2.5%;
+    font-size: 37px;
+    color: #98DC92;
+    font-weight: 400;
+    text-align: center;
+}
+
+.balance_menu .label{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.671);
+    margin-left: 5%;
+    margin-top: -5px;
+    margin-bottom: 2px;
+}
+
+.balance_menu  .balance_btn{
+    margin-top: 7px;
+    margin-left: 5%;
+    height: 45px;
+    width: 90%;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, rgba(52, 63, 73, 0.644) 0%, rgba(93, 134, 90, 0.5) 50%, rgba(52, 63, 73, 0.644) 100%);
+    font-size: 33px;
+    font-weight: 400;
+    color: #98DC92;
+    border-radius: 9px;
+    line-height: 37px;
+}
+
+.balance_menu  .balance_btn.red{
+    background-image: linear-gradient(90deg, rgba(52, 63, 73, 0.644) 0%, rgba(128, 47, 47, 0.506) 50%, rgba(52, 63, 73, 0.644) 100%);
+    color: #FB5C5C;
+}
+
+.task_completed_menu{
+    display: none;
+}
+
+.task_completed_menu .panel{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 75px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgba(52, 63, 73, 0.644);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.task_completed_menu .panel .title{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.task_completed_menu .panel .task_label{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.61);
+    text-align: center;
+}
+
+.task_completed_menu .panel .task_plus_money{
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #98DC92;
+    text-shadow: 0px 0px 4px #98dc92;
+    text-align: center;
+}
+
+.task_completed_menu .panel .task_plus_rep{
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #C337FB;
+    text-shadow: 0px 0px 4px #c337fb;
+    text-align: center;
+}
+
+.task_next_menu{
+    display: none;
+}
+
+.task_next_menu .panel{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: fit-content;
+    width: 350px;
+    padding-inline: 25px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgba(52, 63, 73, 0.644);
+    box-shadow: inset 0px 1px 2.5px -1px rgba(255, 255, 255, 0.356);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.task_next_menu .panel .title{
+    width: 90%;
+    margin-left: 5%;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+.task_next_menu .panel .next_des{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.753);
+    text-align: center;
+}
+
+.scout_panel{
+    position: absolute;
+    top: 60%;
+    right: 15px;
+    width: 350px;
+    height: 110px;
+    border-radius: 14px;
+    background-color: rgba(52, 63, 73, 0.836);
+    box-shadow: inset 0px 1.5px 2.5px -1px rgba(255, 255, 255, 0.233);
+    display: none;
+}
+
+.scout_panel .title{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 33px;
+    line-height: 33px;
+    color: white;
+    font-weight: 700;
+}
+
+.scout_panel .time{
+    position: absolute;
+    top: 8px;
+    left: 20%;
+    transform: translate(-50%, 0%);
+    font-size: 19px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 19px;
+    text-align: center;
+}
+
+.scout_panel .time span{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.747);
+}
+
+.scout_panel .players{
+    position: absolute;
+    bottom: 27px;
+    left: 6%;
+    font-size: 19px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.scout_panel .percentage{
+    position: absolute;
+    bottom: 27px;
+    right: 6%;
+    font-size: 19px;
+    font-weight: 700;
+    color: #C337FB;
+}
+
+.scout_panel .progress_line{
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    border-radius: 3vh;
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+.scout_panel .progress_line .progress{
+    height: 100%;
+    width: 50%;
+    border-radius: 3vh;
+    background-color: #C337FB;
+}
+
+.raid_panel{
+    position: absolute;
+    top: 60%;
+    right: 15px;
+    width: 350px;
+    height: 120px;
+    border-radius: 14px;
+    background-color: rgba(52, 63, 73, 0.918);  
+    box-shadow: inset 0px 1.5px 2.5px -1px rgba(255, 255, 255, 0.233);
+    display: none;
+}
+
+.raid_anim{
+    animation: raid_panel_anim 3s infinite;
+}
+
+@keyframes raid_panel_anim {
+    0%{
+        background-color: rgba(71, 25, 25, 0.918);  
+    }
+    50%{
+        background-color: rgba(52, 63, 73, 0.918);  
+    }
+    100%{
+        background-color: rgba(71, 25, 25, 0.918);  
+    }
+}
+
+.raid_panel .title{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 33px;
+    line-height: 33px;
+    color: white;
+    font-weight: 700;
+}
+
+.raid_panel .time{
+    position: absolute;
+    top: 8px;
+    left: 20%;
+    transform: translate(-50%, 0%);
+    font-size: 19px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 19px;
+    text-align: center;
+}
+
+.raid_panel .time span{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.747);
+}
+
+.raid_panel .gang_per{
+    position: absolute;
+    top: 45px;
+    left: 6%;
+    font-size: 19px;
+    color: #C337FB;
+    font-weight: 400;
+}
+
+.raid_panel .gang{
+    position: absolute;
+    top: 65px;
+    left: 6%;
+    font-size: 19px;
+    color: #C337FB;
+    font-weight: 400;
+}
+
+.raid_panel .sec{
+    right: 6%;
+    color: #98DC92;
+    text-align: right;
+}
+
+.raid_panel .progress_line{
+    position: absolute;
+    bottom: 15px;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    border-radius: 3vh;
+    background-color: rgba(255, 255, 255, 0.363);
+    overflow: hidden;
+}
+
+.raid_panel .progress_line .progress{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #C337FB;
+    border-radius: 0px;
+    transition: all 1s;
+}
+
+.raid_panel .progress_line .progress2{
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 50%;
+    background-color: #98DC92;
+    transition: all 1s;
+}
+
+.clothe_menu{
+    display: none;
+}
+
+.clothe_menu .panel{
+    position: absolute;
+    top: 30%;
+    right: 15px;
+    width: 350px;
+    min-height: 100px;
+    height: fit-content;
+    border-radius: 14px;
+    background-color: rgba(52, 63, 73, 0.678);
+    backdrop-filter: blur(10px);
+}
+
+.clothe_menu .title{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 33px;
+    color: white;
+    font-weight: 700;
+}
+
+.clothe_menu .clothe_conatiner{
+    margin-top: 60px;
+    margin-left: 2.5%;
+    height: fit-content;
+    width: 95%;
+    padding-bottom: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.clothe_menu .clothe_conatiner .clothe_element{
+    position: relative;
+    margin-top: 5px;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(118, 139, 163, 0.527);
+    border-radius: 9px;
+    text-align: left;
+    padding: none;
+}
+
+.clothe_menu .clothe_conatiner .clothe_element .name{
+    line-height: 23px;
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+}
+
+.clothe_menu .clothe_conatiner .clothe_element .arrows{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(0%, -50%);
+    background-image: url('assets/arrows.svg');
+    height: 50px;
+    width: 70px;
+    background-size: 105%;
+}
+
+.admin_menu{
+    display: none;
+}
+
+.admin_menu .panel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 430px;
+    height: 300px;
+    border-radius: 14px;
+    background-color: rgba(52, 63, 73, 0.644);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.admin_menu .title{
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    font-size: 33px;
+    line-height: 33px;
+    color: white;
+    font-weight: 700;
+}
+
+.admin_menu .gang_change_btn{
+    height: 50px;
+    margin-top: 55px;
+    border-radius: 8px;
+    background: rgba(103, 123, 146, 0.473);
+    font-size: 27px;
+    font-weight: 600;
+    color: white;
+    line-height: 15px;
+    padding-top: 5px;
+    margin-inline: 15px;
+}
+
+.admin_menu .gang_change_btn span{
+    font-size: 12px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.admin_menu .dropdown .dropdown-menu .dropdown-item{
+    line-height: 15px;
+    text-align: center;
+}
+
+.admin_menu .dropdown .dropdown-menu .dropdown-item span{
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.admin_menu .label{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.671);
+    margin-inline: 15px;
+    margin-bottom: 2px;
+}
+
+.admin_menu input.balance{
+    color: #98DC92 !important;
+    text-shadow: 0px 0px 4px #98dc92d3;
+    font-weight: 500;
+}
+
+.admin_menu input.balance::placeholder{
+    color: #98DC92 !important;
+}
+
+.admin_menu input.reputation{
+    color: #C337FB !important;
+    text-shadow: 0px 0px 4px #c337fbd7;
+    font-weight: 500;
+}
+
+.admin_menu input.reputation::placeholder{
+    color: #C337FB !important;
+}
+
+.admin_menu .admin_btn{
+    position: relative;
+    height: 33px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #65C95B;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.admin_menu .admin_btn.red{
+    color: #FB5C5C;
+}
+
+.nopermission{
+    animation: wrong 0.5s ease-in-out;
+}
+
+@keyframes wrong {
+	20% {
+        transform: translateX(-5px) scaleX(1.07);
+	}
+	40% {
+        transform: translateX(10px) scaleX(1.15);
+	}
+	60% {
+        transform: translateX(-10px) scaleX(1.15);
+	}
+	80% {
+        transform: translateX(5px) scaleX(1.07);
+	}
+}
+
+.timer{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 80px;
+    width: 350px;
+    background: linear-gradient(90deg, #C337FB 50%, transparent 50%);
+    border-radius: 50px;
+    animation: plus_currencies_anim 0.8s ease-in-out both;
+    display: none;
+}
+
+.timer .panel{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 70px;
+    width: 340px;
+    background-color: #424951;
+    border-radius: 50px;
+}
+
+.timer .panel .title{
+    position: absolute;
+    top: 8px;
+    left: 24px;
+    color: white;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 27px;
+    margin: 0;
+}
+
+.timer .panel .des{
+    position: absolute;
+    top: 36px;
+    left: 24px;
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 15px;
+    font-weight: 400;
+    width: 60%;
+    line-height: 13px;
+}
+
+.timer .panel .time_left{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 32px;
+}
