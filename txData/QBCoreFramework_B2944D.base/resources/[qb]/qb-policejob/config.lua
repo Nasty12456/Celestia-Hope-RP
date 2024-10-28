@@ -14,7 +14,7 @@ Config.HandCuffItem = 'handcuffs'
 
 
 
-Config.LicenseRank = 0
+Config.LicenseRank = -1
 
 Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.Locations = {
