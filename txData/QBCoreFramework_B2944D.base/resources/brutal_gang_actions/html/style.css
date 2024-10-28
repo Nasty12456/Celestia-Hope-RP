@@ -1,0 +1,426 @@
+@import url('https://fonts.cdnfonts.com/css/stringline');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    background: none;
+}
+
+:root{
+    --main_color: #C337FB;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:disabled{
+    opacity: 0.6;
+    cursor: none;
+}
+
+button:hover{
+    filter: brightness(120%);
+}
+
+button:disabled:hover{
+    filter: none;
+}
+
+button:active{
+    transition: all 0.1s;
+    filter: brightness(90%);
+}
+
+button:disabled:active{
+    filter: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.input-group input{
+    background-color: rgb(61, 61, 61);
+    color: rgb(226, 226, 226);
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: 700;
+}
+
+.input-group input::placeholder{
+    color: rgba(212, 212, 212, 0.671);
+}
+
+.input-group input:focus{
+    background-color: rgb(61, 61, 61);
+    color: white;
+    box-shadow: 0px 0px 0px 3px var(--main_color);
+}
+
+.input-group textarea{
+    background-color: rgb(72, 72, 72);
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.input-group textarea::placeholder{
+    color: rgb(192, 192, 192);
+}
+
+.input-group textarea:disabled{
+    background-color: rgb(64, 64, 64);
+}
+
+.input-group textarea:focus{
+    background-color: rgb(65, 65, 65);
+    color: white;
+    box-shadow: 0px 0px 0px 3px var(--main_color);
+}
+
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background: rgb(54, 72, 94);
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.range::-webkit-slider-thumb:active{
+    height: 25px;
+    width: 25px;
+    background: var(--main_color);
+}
+
+.range{
+    -webkit-appearance: none;
+    width: 75%;
+    height: 13px;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgb(51, 49, 70);
+}
+
+.typeahead + .dropdown-menu{
+    margin-top: 10px;
+    background-color: var(--background_color);
+    color: var(--text_color);
+    border: solid 2px var(--main_color);
+}
+
+.typeahead + .dropdown-menu a{
+    background-color: var(--background_color);
+    color: var(--text_color);
+}
+
+.typeahead + .dropdown-menu .active > a:hover {
+    background-color: var(--secondary_color);
+}
+
+/*////////////////////////////////////////////////////////////// JOB MENU \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.job_menu{
+    position: relative;
+    border-radius: 50%;
+    height: 343px;
+    width: 343px;
+    display: none;
+    animation: ShowJobMenu 1s ease;
+}
+
+@keyframes showmenu {
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes hidemenu {
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes ScaleUp{
+    0%{
+        opacity: 0;
+        scale: 0.5;
+    }
+    50%{
+        opacity: 1;
+        scale: 1.03;
+    }
+}
+
+@keyframes ScaleDown{
+    50%{
+        opacity: 0;
+        scale: 0.5;
+    }
+    100%{
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+
+@keyframes ChangeJobMenu{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes BackJobMenu{
+    0%{
+        transform: rotate(-360deg);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes circle_element {
+    0%{
+        scale: 0.8;
+        opacity: 0;
+    }
+    50%{
+        scale: 1.05;
+    }
+}
+
+@keyframes reverse_circle_element {
+    50%{
+        scale: 0.8;
+        opacity: 0;
+    }
+    100%{
+        scale: 0.8;
+        opacity: 0;
+    }
+}
+
+.scaleup_anim{
+    animation: ScaleUp 0.4s ease-in-out both;
+}
+
+.job_menu .circle_element{
+    height: 75px;
+    width: 75px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -38px;
+    font-size: 33px;
+    font-weight: 600;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.267);
+    color: rgba(255, 255, 255, 0.671);
+    transition: all 0.3s;
+}
+
+.job_menu .circle_element img{
+    height: 50px;
+    width: 50px;
+}
+
+.job_menu .circle_element.hovered_circle{ 
+    color: var(--main_color) !important;
+    scale: 1.05;
+    filter: drop-shadow(0px 0px 5px var(--main_color));
+}
+
+.job_menu .circle_element .bg_color{
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    transform: translate(8%, -90%);
+    border-radius: 50%;
+    background-color: transparent;
+    filter: blur(25px);
+    transition: all 0.2s ease;
+}
+
+.job_menu .circle_element.hovered_circle .bg_color{
+    opacity: 0.6;
+    background-color: var(--main_color);
+}
+
+.job_menu .circles_label{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: white;
+    font-size: 20px;
+    line-height: 17px;
+    font-weight: 600;
+    text-align: center;
+    z-index: 11;
+}
+
+@keyframes text_anim {
+    48%{
+        opacity: 0;
+    }
+    50%{
+        transform: translate(-50%, -70%) rotate3d(1, 0, 0, 90deg);
+        opacity: 0;
+    }
+    51%{
+        transform: translate(-50%, 70%) rotate3d(-1, 0, 0, 90deg);
+        opacity: 0;
+    }
+    54%{
+        opacity: 0;
+    }
+}
+
+.job_menu .circles_description{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 13px;
+    line-height: 12px;
+    font-weight: 400;
+    width: 90px;
+    text-align: center;
+    z-index: 11;
+    animation: showmenu 0.4s ease-in-out 0.2s both;
+}
+
+.job_menu .center_circle{
+    height: 146px;
+    width: 146px;
+    border-radius: 50%;
+    background-color: #212932;
+    background: linear-gradient(185deg, rgba(84, 93, 105, .7), rgba(30, 37, 45, .7));
+    box-shadow:  0px 10px 27px #0a0c0e8a, inset 0px 1px 3px -1px rgba(255, 255, 255, 0.288);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    animation-delay: 0.1s !important;
+}
+
+.job_menu .outer_circle{
+    height: 343px;
+    width: 343px;
+    border-radius: 50%;
+    background-color: rgba(33, 41, 50, 0.582);
+    box-shadow:  0px 17px 36px #0a0c0e5d, inset 0px 1px 3px -1px rgba(255, 255, 255, 0.288);
+}
+
+.job_menu .rotating_con{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: all 0.1s ease;
+    animation: showmenu 0.4s ease-in-out 0.2s both;
+    z-index: 9;
+}
+
+.job_menu .rotating_con .signal_cube{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -95%) rotate(45deg);
+    height: 73px;
+    width: 73px;
+    background-color: transparent;
+    background: linear-gradient(135deg, #ffffff 10%, transparent 25%);
+}
+
+.black_fade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: none;
+}
+
+.hostage{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 67px;
+    padding-inline: 25px;
+    border-radius: 8px;
+    background-color: #212932b9;
+    animation: hostage_anim 0.8s ease-in-out both;
+    display: none;
+}
+
+.hostage .title{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.hostage .text{
+    margin-top: -5px;
+    width: 100%;
+    top: 37px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hostage .text span{
+    border-radius: 3px;
+    color: #98DC92;
+    font-weight: 700;
+}
+
+.hostage .text span.red{
+    color: #FB5C5C;
+}
+
+@keyframes hostage_anim {
+    0%{
+        transform: translate(-50%, 80px);
+        scale: 0.8;
+    }
+    50%{
+        transform: translate(-50%, 0px);
+    }
+}
+
+@keyframes hostage_anim_reverse {
+    0%{
+        transform: translate(-50%, 0px);
+    }
+    50%{
+        transform: translate(-50%, 80px);
+    }
+    100%{
+        transform: translate(-50%, 80px);
+        scale: 0.8;
+    }
+}

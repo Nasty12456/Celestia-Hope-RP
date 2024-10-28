@@ -667,7 +667,9 @@ QBShared.Items = {
 	['cocktail-glass'] 			   	 = {['name'] = 'cocktail-glass', 			   	['label'] = 'Cocktail Glass', 		   	['weight'] = 100, 		['type'] = 'item', 		['image'] = 'cocktail-glass.png', 	   	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A Shiny Cocktail Glass'},
 	['shot-glass'] 			     	 = {['name'] = 'shot-glass', 			  	   	['label'] = 'Shot Glass', 		     	['weight'] = 100, 		['type'] = 'item', 		['image'] = 'shot-glass.png', 	    	['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A Little Shot Glass'},
 
-	
+	--brutal gangs
+	['spraycan'] 			 		 = {['name'] = 'spraycan', 						['label'] = 'Spray Can', 						['weight'] = 1, 		['type'] = 'item', 		['image'] = 'spraycan.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
+['sprayremover'] 			 			 = {['name'] = 'sprayremover', 							['label'] = 'Spray Remover', 						['weight'] = 1, 		['type'] = 'item', 		['image'] = 'sprayremover.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
 	
 	-- prison
 	

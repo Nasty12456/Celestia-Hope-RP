@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"></link>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://jsuites.net/v4/jsuites.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+    <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+    <title>Brutal Gangs</title>
+</head>
+
+<body style="background: none;">
+
+    <div class="gang_menu" id="gang_menu">
+        <object id="plugin" type="application/x-cfx-game-view" style="
+        position: absolute; top: 0%; left: 0%; height: 100%; width: 100%; clip-path: inset(calc((100% - 670px) / 2) calc((100% - 1088px) / 2));">
+        </object>
+
+        <div class="panel">
+            <div class="top_bar" id="top_bar">
+                <div class="nav_bar">
+                    <div class="d-flex flex-column align-items-center" style="width: 300px;">
+                        <div class="row">
+                            <div class="col pe-1">
+                                <button class="nav_btn" id="home" onclick="SwitchPage(id)"><i class="bi bi-house"></i></button>
+                            </div>
+                            <div class="col px-1">
+                                <button class="nav_btn choosed" id="map" onclick="SwitchPage(id)"><i class="bi bi-map"></i></button>
+                            </div>
+                            <div class="col  px-1">
+                                <button class="nav_btn" id="tasks" onclick="SwitchPage(id)"><i class="bi bi-view-stacked"></i></button>
+                            </div>
+                            <div class="col  px-1">
+                                <button class="nav_btn" id="settings" onclick="SwitchPage(id)"><i class="bi bi-gear"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gang_label"></div>
+                <button class="gang_pic" id="gang_pic" onclick="OpenPicReplacer('picture_replacer')"></button>
+                <div class="info_bar">
+                    <div class="main_money"></div>
+                    <div class="rep_money"></div>
+                    <div class="online"></div>
+                    <div class="members"></div>
+                    <div class="level_num"></div>
+                    <div class="percent">
+                        <svg>
+                            <circle cx="21.15" cy="21.15" r="21.15"></circle>
+                            <circle cx="21.15" cy="21.15" r="21.15"></circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="d-flex flex-column align-items-center">
+                <div class="map_container" id="map_container">
+                    <dotlottie-player src="https://lottie.host/0b811246-264e-44ef-94c8-f215e73d6ad9/X84li11k3S.json" background="transparent" speed="1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                    <div class="main_map" id="main_map"></div>
+                    <div class="current_gang" id="current_gang">
+                        <div class="current_gang_name" id="current_gang_name"></div>
+                        <button class="friend_btn red" id="friend_btn" onclick="SendFriend(true)">ADD FRIEND</button>
+                        <div class="info_con">
+                            <div class="gang_info" id="member"></div>
+                            <div class="gang_info" id="level"></div>
+                            <div class="gang_info" id="safe"></div>
+                            <div class="scout_date"></div>
+                        </div>
+                        
+                        <div class="row me-2 mb-2" style="float: inline-end;">
+                            <div class="col px-1">
+                                <button class="map_btn" id="scout" onclick="SendScout()">SCOUT</button>
+                            </div>
+                            <div class="col px-0">
+                                <button class="map_btn" id="raid" onclick="OpenCenterPopup('center_popup')">RAID</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="center_popup" id="center_popup">
+                        <div class="panel">
+                            <div class="basic_label">Are you sure start raiding this gang?</div>
+                            <div class="price"><br><span></span></div>
+                            <div class="row me-1 mt-2">
+                                <div class="col-8">
+                                    <div class="capture_text">Capture their base</div>
+                                </div>
+                                <div class="col">
+                                    <label class="custom-control ios-switch float-end" style="scale: 1.3;">
+                                        <input type="checkbox" id="capture" class="ios-switch-control-input">
+                                        <span class="ios-switch-control-indicator"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row" style="position: absolute; bottom: 5px; right: 15px;">
+                                <div class="col px-1">
+                                    <button class="marker_btn red" onclick="hide2('center_popup')">NO</button>
+                                </div>
+                                <div class="col px-0">
+                                    <button class="marker_btn" onclick="hide2('center_popup'), SendRaid()">YES</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="marker_placer" id="marker_placer">
+                        <div class="basic_label">MARKER</div>
+                        <button class="marker_btn" id="marker_pin" onclick="PinMarker()" style="position: absolute; top: 5px; right: 5px;">PIN</button>
+                        <div class="title" style="margin-bottom: -5px;" >NAME</div>
+                        <div class="input-group input-group-lg" style="width: 90%; margin-left: 5%;">
+                            <input type="text" id="map_marker_name" class="form-control" placeholder="Marker name">
+                        </div>
+                        <div class="title" style="margin-bottom: -5px;">ICON</div>
+                        <div class="icon_container">
+                            <button class="icon_element" id="icon_1" onclick="ChooseIcon(id)"><i class="fa-solid fa-house"></i></button>
+                            <button class="icon_element" id="icon_2" onclick="ChooseIcon(id)"><i class="fa-solid fa-gun"></i></button>
+                            <button class="icon_element" id="icon_3" onclick="ChooseIcon(id)"><i class="fa-solid fa-cannabis"></i></button>
+                            <button class="icon_element" id="icon_4" onclick="ChooseIcon(id)"><i class="fa-solid fa-prescription-bottle-medical"></i></button>
+                            <button class="icon_element" id="icon_5" onclick="ChooseIcon(id)"><i class="fa-solid fa-skull"></i></button>
+                            <button class="icon_element" id="icon_6" onclick="ChooseIcon(id)"><i class="fa-solid fa-car-side"></i></button>
+                            <button class="icon_element" id="icon_7" onclick="ChooseIcon(id)"><i class="fa-solid fa-truck"></i></button>
+                            <button class="icon_element" id="icon_8" onclick="ChooseIcon(id)"><i class="fa-solid fa-shirt"></i></button>
+                            <button class="icon_element" id="icon_9" onclick="ChooseIcon(id)"><i class="fa-solid fa-warehouse"></i></button>
+                            <button class="icon_element" id="icon_10" onclick="ChooseIcon(id)"><i class="fa-solid fa-circle-info"></i></button>
+                            <button class="icon_element" id="icon_11" onclick="ChooseIcon(id)"><i class="fa-solid fa-location-dot"></i></button>
+                            <button class="icon_element" id="icon_12" onclick="ChooseIcon(id)"><i class="fa-solid fa-triangle-exclamation"></i></button>
+                            <button class="icon_element" id="icon_13" onclick="ChooseIcon(id)"><i class="fa-solid fa-circle-question"></i></button>
+                            <button class="icon_element" id="icon_14" onclick="ChooseIcon(id)"><i class="fa-solid fa-users-viewfinder"></i></button>
+                            <button class="icon_element" id="icon_15" onclick="ChooseIcon(id)"><i class="fa-solid fa-money-bill-wave"></i></button>
+                            <button class="icon_element" id="icon_16" onclick="ChooseIcon(id)"><i class="fa-solid fa-poo"></i></button>
+                        </div>
+                        <div id="color-picker" class="color_btn mt-2">COLOR</div>
+                        <div class="marker_btn_con">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container">
+                
+            </div>
+
+            <div class="plus_currencies" id="plus_currencies">
+                <div class="added_plus"><br><span></span></div>
+            </div>
+
+            <div class="sub_panel" id="picture_replacer">
+                <div class="panel">
+                    <div class="basic_label">GANG PICTURE</div>
+                    <button class="sub_exit" onclick="hide2('picture_replacer')"><i class="bi bi-box-arrow-left"></i></button>
+                    <div class="title">Choose your picture</div>
+                    <div class="dropdown" style="margin-top: -6px;">
+                        <button class="picture_change_btn px-3 ms-4" id="pic_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="https://cdn.discordapp.com/attachments/907358524907081798/1283075171128705046/image.png?ex=66e3a69f&is=66e2551f&hm=39cbd920038120408c3a1b326ca4b4e7f5ed637e6bf1c6150bfbf9a6ca7c5fcd&"> Vagos</button>
+                        <ul class="dropdown-menu">
+                            
+                        </ul>
+                    </div>
+                    <button class="action_btn" onclick="hide2('picture_replacer'), ReplacePicSend()">REPLACE</button>
+                </div>
+            </div>
+    
+            <div class="sub_panel" id="invite_container">
+                <div class="panel">
+                    <div class="basic_label">INVITE</div>
+                    <button class="sub_exit" onclick="hide2('invite_container')"><i class="bi bi-box-arrow-left"></i></button>
+                    <div class="title">Nearby players</div>
+                    <div class="players_con d-flex flex-column align-items-center justify-content-center">
+                        <div class="row " style="width: 97%;">
+                            <div class="col px-0 d-flex flex-column align-items-center">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <button class="action_btn" onclick="SendInvite(), hide2('invite_container')">INVITE</button>
+                </div>
+            </div>
+    
+            <div class="sub_panel" id="ranks_container">
+                <div class="panel">
+                    <div class="basic_label">RANKS</div>
+                    <button class="sub_exit" onclick="hide2('ranks_container')"><i class="bi bi-box-arrow-left"></i></button>
+                    <button class="delete_rank_btn" onclick="show2('ranks_container_del'), hide2('ranks_container')">DELETE</button>
+                    <div class="title">Name</div>
+                    <div class="input-group input-group-lg" style="width: 90%; margin-left: 5%;">
+                        <input type="text" id="rank_name" class="form-control" placeholder="Rank name">
+                    </div>
+    
+                    <div class="form-check custom-checkbox ps-0 mt-2" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >All premissions</label>
+                        <button class="action_btn float-end" onclick="AllPerm()" style="position:relative; margin-top: 5px; margin-right: -10px;"><i class="bi bi-plus-square"></i></button>
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Garage</label>
+                        <input class="form-check-input float-end" id="garage_per" type="checkbox" value="" >
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Stash</label>
+                        <input class="form-check-input float-end" id="invite_per" type="checkbox" value="" >
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Invite</label>
+                        <input class="form-check-input float-end" id="invite_per" type="checkbox" value="" >
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Tasks</label>
+                        <input class="form-check-input float-end" id="invite_per" type="checkbox" value="" >
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Settings</label>
+                        <input class="form-check-input float-end" id="settings_per" type="checkbox" value="" >
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Scout/Raid</label>
+                        <input class="form-check-input float-end" id="raid_per" type="checkbox" value="" >
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Safe</label>
+                        <input class="form-check-input float-end" id="raid_per" type="checkbox" value="" >
+                    </div>
+                    <div class="form-check custom-checkbox ps-0 mt-1" style="width: 90%; margin-left: 5%;">
+                        <label class="form-check-label" >Edit ranks</label>
+                        <input class="form-check-input float-end" id="edit_ranks_per" type="checkbox" value="" >
+                    </div>
+                    
+                    <button class="action_btn" onclick="SendCreateRank(), hide2('ranks_container')">CREATE</button>
+                </div>
+            </div>
+    
+            <div class="sub_panel" id="ranks_container_del">
+                <div class="panel">
+                    <div class="basic_label">RANKS</div>
+                    <button class="sub_exit" onclick="hide2('ranks_container_del')"><i class="bi bi-box-arrow-left"></i></button>
+                    <button class="delete_rank_btn g" onclick="show2('ranks_container'), hide2('ranks_container_del')">CREATE</button>
+                    <div class="title">Name</div>
+                    <div class="dropdown">
+                        <button class="rank_change_btn px-3 ms-4" id="del_rank_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">LEADER</button>
+                        <ul class="dropdown-menu">
+                            
+                        </ul>
+                    </div>
+                    
+                    <button class="action_btn r" onclick="SendDeleteRank(), hide2('ranks_container_del')">DELETE</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="garage_menu" id="garage_menu">
+        <object id="plugin2" type="application/x-cfx-game-view" style="position: absolute; top: 0%; left: 0%; height: 100vh; width: 100vw;"></object>
+        <div class="panel" id="panel_garage">
+            <div class="title">VEHICLES</div>
+            <div class="available"></div>
+            <div class="vehicle_container">
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="clothe_menu" id="clothe_menu">
+        <object id="plugin3" type="application/x-cfx-game-view" style="position: absolute; top: 0%; left: 0%; height: 100vh; width: 100vw;"></object>
+        <div class="panel" id="panel_clothe">
+            <div class="title">CLOTHES</div>
+            <div class="clothe_conatiner">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="balance_menu" id="balance_menu">
+        <object id="plugin4" type="application/x-cfx-game-view" style="position: absolute; top: 0%; left: 0%; height: 100vh; width: 100vw;"></object>
+        <div class="panel" id="panel_balance">
+            <div class="title">BALANCE</div>
+            <div class="balance"></div>
+            <div class="label">AMOUNT</div>
+            <div class="input-group input-group-lg mb-4" style="width: 86%; margin-left: 7%;">
+                <input type="text" id="balance_input" class="form-control" placeholder="0" onkeypress="return isNumber(event)">
+            </div>
+            <button class="balance_btn" onclick="SendDeposite()">DEPOSITE</button>
+            <button class="balance_btn red" onclick="SendWithdraw()">WITHDRAW</button>
+        </div>
+    </div>
+
+    <div class="task_completed_menu" id="task_completed_menu">
+        <object id="plugin5" type="application/x-cfx-game-view" style="position: absolute; top: 0%; left: 0%; height: 100vh; width: 100vw;"></object>
+        <div class="panel" id="panel_task_completed">
+            <div class="title"></div>
+            <div class="task_label"></div>
+            <div class="row mt-1">
+                <div class="col"><div class="task_plus_money"></div></div>
+                <div class="col"><div class="task_plus_rep"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task_next_menu" id="task_next_menu">
+        <object id="plugin6" type="application/x-cfx-game-view" style="position: absolute; top: 0%; left: 0%; height: 100vh; width: 100vw;"></object>
+        <div class="panel" id="panel_task_next">
+            <div class="title"></div>
+            <div class="next_des"></div>
+        </div>
+    </div>
+
+    <div class="admin_menu" id="admin_menu">
+        <object id="plugin7" type="application/x-cfx-game-view" style="position: absolute; top: 0%; left: 0%; height: 100vh; width: 100vw;"></object>
+        <div class="panel" id="panel_admin">
+            <div class="title">ADMIN SETTINGS</div>
+            <button class="admin_btn red" style="position: absolute; top: 5px; right: 5px;" onclick="DeleteGang()">DELETE</button>
+            <div class="dropdown">
+                <button class="gang_change_btn px-3" id="main_admin_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"></span></button>
+                <ul class="dropdown-menu">
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="label mt-2">Name</div>
+                    <div class="input-group input-group-lg" style="width: 170px; margin-left: 15px;">
+                        <input type="text" id="admin_gang_name" class="form-control" placeholder="Gang name" style="height: 40px;">
+                    </div>
+                    <div class="label">Label</div>
+                    <div class="input-group input-group-lg" style="width: 170px; margin-left: 15px;">
+                        <input type="text" id="admin_gang_label" class="form-control" placeholder="Gang label" style="height: 40px;">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="label float-end mt-2">Balance</div>
+                    <div class="input-group float-end input-group-lg" style="width: 170px; margin-inline: 15px;">
+                        <input type="text" id="admin_gang_money" class="form-control balance" placeholder="0" style="height: 40px;" onkeypress="return isNumber(event)">
+                    </div>
+                    <div class="label float-end">Reputation</div>
+                    <div class="input-group float-end input-group-lg" style="width: 170px; margin-inline: 15px;">
+                        <input type="text" id="admin_gang_rep" class="form-control reputation" placeholder="0" style="height: 40px;" onkeypress="return isNumber(event)">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="position: absolute; bottom: 5px; right: 15px;">
+                <div class="col px-1">
+                    <button class="admin_btn red" onclick="Close()">EXIT</button>
+                </div>
+                <div class="col px-0">
+                    <button class="admin_btn" onclick="SaveGang()">SAVE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scout_panel" id="scout_panel">
+        <div class="title">SCOUT</div>
+        <div class="time"></div>
+        <div class="players"></div>
+        <div class="percentage"></div>
+        <div class="progress_line">
+            <div class="progress" id="scout_per"></div>
+        </div>
+    </div>
+
+    <div class="raid_panel" id="raid_panel">
+        <div class="title">GANG WAR</div>
+        <div class="time"></div>
+        <div class="gang_per"></div>
+        <div class="gang"></div>
+        <div class="gang_per sec"></div>
+        <div class="gang sec"></div>
+        <div class="progress_line">
+            <div class="progress" id="raid_percen"></div>
+            <div class="progress2" id="raid_percen2"></div>
+        </div>
+    </div>
+
+    <div class="timer" id="timer">
+        <div class="panel">
+            <div class="title"></div>
+            <div class="des"></div>
+            <div class="time_left"></div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js">
+</script>
+<script src="script.js"></script>
+</html>
+
