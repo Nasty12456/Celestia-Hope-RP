@@ -1,6 +1,7 @@
 local lockpickCallback = nil
 
 AddEventHandler('qb-lockpick:client:openLockpick', function(callback)
+    print("Lockpick event triggered") -- Debug line
     lockpickCallback = callback
     openLockpick(true)
 end)
