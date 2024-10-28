@@ -1525,6 +1525,11 @@ AC = {
     [9] = {
         ["name"] = "Hunting Shop",
         ["coords"] = vector3(-678.40, 5838.34, 17.33),
+        ["ped"] = {
+            ["model"] = "ig_hunter",
+            ["coords"] = vector4(-678.40, 5838.34, 17.33, 175.0),
+            ["scenario"] = "WORLD_HUMAN_CLIPBOARD"
+        },
         ["category"] = "All In One",
         ["job"] = "",
         ["categoryList"] = {
