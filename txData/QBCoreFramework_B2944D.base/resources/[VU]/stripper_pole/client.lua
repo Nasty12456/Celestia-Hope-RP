@@ -26,7 +26,6 @@ local Config = {
     }
 }
 
-
 CreateThread(function()
     exports['qb-target']:AddTargetModel(`5d_vanillapole`, {
         options = {
@@ -69,7 +68,6 @@ end)
 RegisterNetEvent('stripper:performDance', function(data)
     local ped = PlayerPedId()
     local poleCoords = GetEntityCoords(data.poleObject)
-    print("Pole Coords: " .. poleCoords.x .. ", " .. poleCoords.y .. ", " .. poleCoords.z)
     
     RequestAnimDict(data.dict)
     while not HasAnimDictLoaded(data.dict) do
@@ -84,5 +82,10 @@ RegisterNetEvent('stripper:performDance', function(data)
     
     SetEntityCoords(ped, targetPosition.x, targetPosition.y, targetPosition.z)
     SetEntityHeading(ped, data.rotation)
+    
+    -- Network the animation to all players
+    ClearPedTasks(ped)
+    SetPedCurrentWeaponVisible(ped, false, true, true, true)
+    NetworkRequestControlOfEntity(ped)
     TaskPlayAnim(ped, data.dict, data.anim, 8.0, -8.0, -1, 32769, 0, true, true, true)
 end)
