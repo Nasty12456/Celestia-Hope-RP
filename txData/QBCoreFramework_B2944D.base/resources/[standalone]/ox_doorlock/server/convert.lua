@@ -1,6 +1,11 @@
 ---@diagnostic disable: inject-field
 ---@type table?
-Config.DoorList = {}
+Config.DoorList = {
+    authorizedJobs = {
+        ['police'] = -1,
+        ['bcso'] = 0
+    }
+}
 
 local utils = require 'server.utils'
 
