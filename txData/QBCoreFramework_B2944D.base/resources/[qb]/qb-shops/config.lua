@@ -1523,123 +1523,195 @@ AC = {
         }
     }, 
     [9] = {
-        ["name"] = "Hunting Shop",
-        ["coords"] = vector3(-678.40, 5838.34, 17.33),
-        ["ped"] = {
-            ["model"] = "ig_hunter",
-            ["coords"] = vector4(-678.40, 5838.34, 17.33, 175.0),
-            ["scenario"] = "WORLD_HUMAN_CLIPBOARD"
-        },
-        ["blipsprite"] = 141,  -- Hunting blip sprite
-        ["blipcolor"] = 1,     -- White color
-        ["blipscale"] = 0.7,   -- Size of blip
+        ["name"] = "TO OPEN",
         ["category"] = "All In One",
         ["job"] = "",
         ["categoryList"] = {
-            ["General"] = "Hunting Equipment",
-            ["Food"] = "Food and Drinks",
-            ["Knifes"] = "Hunting Knives",
-            ["Weapons"] = "Hunting Weapons"
+            ["General"] = "Diverse items for various needs.",
+            ["Knifes"] = "Assortment of sharp cutting tools.",
         },
         ["itemList"] = {
-            ["General"] = {
-                [1] = {
-                    ["name"] = "Hunting License",
-                    ["price"] = 500,
-                    ["amount"] = 1,
-                    ["info"] = {},
-                    ["type"] = "item",
-                    ["itemname"] = "hunting_license"
-                }
-            },
-            ["Food"] = {
+            ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
+                
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
-                    ["type"] = "item",
+                    ["type"] = "weapon",
                     ["image"] = "snikkel_candy.png",
-                    ["itemname"] = "snikkel_candy"
+                    ["itemname"] = "snikkel_candy",
                 },
                 [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
-                    ["type"] = "item",
+                    ["type"] = "weapon",
                     ["image"] = "tosti.png",
-                    ["itemname"] = "tosti"
+                    ["itemname"] = "tosti",
                 },
                 [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
-                    ["type"] = "item",
+                    ["type"] = "weapon",
                     ["image"] = "water_bottle.png",
-                    ["itemname"] = "water_bottle"
+                    ["itemname"] = "water_bottle",
                 },
                 [4] = {
                     ["name"] = "Beer",
                     ["price"] = 13,
                     ["amount"] = 1,
-                    ["type"] = "item",
+                    ["type"] = "weapon",
                     ["image"] = "beer.png",
-                    ["itemname"] = "beer"
+                    ["itemname"] = "beer",
                 },
                 [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
-                    ["type"] = "item",
+                    ["type"] = "weapon",
                     ["image"] = "cola.png",
-                    ["itemname"] = "kurkakola"
+                    ["itemname"] = "kurkakola",
                 },
                 [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
-                    ["type"] = "item",
+                    ["type"] = "weapon",
                     ["image"] = "sandwich.png",
-                    ["itemname"] = "sandwich"
+                    ["itemname"] = "sandwich",
                 },
                 [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
-                    ["type"] = "item",
+                    ["type"] = "weapon",
                     ["image"] = "twerks_candy.png",
-                    ["itemname"] = "twerks_candy"
-                }
-            },
-            ["Knifes"] = {
-                [1] = {
-                    ["name"] = "Hunting Knife",
-                    ["price"] = 150,
-                    ["amount"] = 1,
-                    ["info"] = {},
-                    ["type"] = "weapon",
-                    ["itemname"] = "weapon_knife"
-                }
-            },
-            ["Weapons"] = {
-                [1] = {
-                    ["name"] = "Musket",
-                    ["price"] = 1500,
-                    ["amount"] = 1,
-                    ["info"] = {},
-                    ["type"] = "weapon",
-                    ["itemname"] = "weapon_musket"
+                    ["itemname"] = "twerks_candy",
                 },
-                [2] = {
-                    ["name"] = "Musket Ammo",
+                [8] = {
+                    ["name"] = "Ball",
+                    ["price"] = 17,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_ball.png",
+                    ["itemname"] = "weapon_ball",
+                },
+                [9] = {
+                    ["name"] = "Petrolcan",
+                    ["price"] = 18,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_petrolcan.png",
+                    ["itemname"] = "weapon_petrolcan",
+                },
+                [10] = {
+                    ["name"] = "Whiskey",
+                    ["price"] = 20,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "whiskey.png",
+                    ["itemname"] = "whiskey",
+                },
+                [11] = {
+                    ["name"] = "Wine",
+                    ["price"] = 21,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "wine.png",
+                    ["itemname"] = "wine",
+                },
+                [12] = {
+                    ["name"] = "Sticky Note",
+                    ["price"] = 10,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "stickynote.png",
+                    ["itemname"] = "stickynote",
+                },
+                [13] = {
+                    ["name"] = "Baking Soda",
                     ["price"] = 15,
                     ["amount"] = 1,
-                    ["info"] = {},
-                    ["type"] = "item",
-                    ["itemname"] = "musket_ammo"
-                }
-            }
+                    ["type"] = "weapon",
+                    ["image"] = "bakingsoda.png",
+                    ["itemname"] = "bakingsoda",
+                },
+                [14] = {
+                    ["name"] = "Empty Vial",
+                    ["price"] = 15,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "lsd_vial_two.png",
+                    ["itemname"] = "emptyvial",
+                },
+                [15] = {
+                    ["name"] = "Needle",
+                    ["price"] = 15,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "syringe.png",
+                    ["itemname"] = "needle",
+                },
+                [16] = {
+                    ["name"] = "Camera",
+                    ["price"] = 220,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "camera.png",
+                    ["itemname"] = "polaroid_camera",
+                },
+                [17] = {
+                    ["name"] = "Polaroid Paper",
+                    ["price"] = 20,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "polaroid_paper.png",
+                    ["itemname"] = "polaroid_paper",
+                },
+                [18] = {
+                    ["name"] = "Fitbit",
+                    ["price"] = 100,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "fitbit.png",
+                    ["itemname"] = "fitbit",
+                },
+                [19] = {
+                    ["name"] = "Rubikcube",
+                    ["price"] = 50,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "rubikcube.png",
+                    ["itemname"] = "rubikcube",
+                },
+                [20] = {
+                    ["name"] = "White Watch",
+                    ["price"] = 200,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "watch_white.png",
+                    ["itemname"] = "watch_white",
+                },
+                [21] = {
+                    ["name"] = "Black Watch",
+                    ["price"] = 200,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "watch_black.png",
+                    ["itemname"] = "watch_black",
+                },
+                [22] = {
+                    ["name"] = "jackolantern",
+                    ["price"] = 50,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "jackolantern.png",
+                    ["itemname"] = "jackolantern",
+                },
+            },
         }
-    }    
+    }, 
     [10] = {
         ["name"] = "TO OPEN",
         ["category"] = "All In One",
@@ -3731,8 +3803,105 @@ AC = {
             },
         },
     },
-    
-}
+    [21] = {
+        ["name"] = "Hunting Shop",
+        ["category"] = "All In One",
+        ["job"] = "",
+        ["categoryList"] = {
+            ["General"] = "Diverse items for various needs.",
+            ["Knifes"] = "Assortment of sharp cutting tools.",
+            ["Weapons"] = "Weapons",
+        },
+        ["itemList"] = {
+            ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
+                
+                [1] = {
+                    ["name"] = "Snikkel Candy",
+                    ["price"] = 15,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "snikkel_candy.png",
+                    ["itemname"] = "snikkel_candy",
+                },
+                [2] = {
+                    ["name"] = "tosti",
+                    ["price"] = 20,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "tosti.png",
+                    ["itemname"] = "tosti",
+                },
+                [3] = {
+                    ["name"] = "Water",
+                    ["price"] = 17,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "water_bottle.png",
+                    ["itemname"] = "water_bottle",
+                },
+                [4] = {
+                    ["name"] = "Beer",
+                    ["price"] = 13,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "beer.png",
+                    ["itemname"] = "beer",
+                },
+                [5] = {
+                    ["name"] = "Cola",
+                    ["price"] = 12,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "cola.png",
+                    ["itemname"] = "kurkakola",
+                },
+                [6] = {
+                    ["name"] = "Sandwich",
+                    ["price"] = 15,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "sandwich.png",
+                    ["itemname"] = "sandwich",
+                },
+                [7] = {
+                    ["name"] = "Twerks Candy",
+                    ["price"] = 11,
+                    ["amount"] = 1,
+                    ["type"] = "item",
+                    ["image"] = "twerks_candy.png",
+                    ["itemname"] = "twerks_candy"
+                }
+            },
+            ["Knifes"] = {
+                [1] = {
+                    ["name"] = "Hunting Knife",
+                    ["price"] = 150,
+                    ["amount"] = 1,
+                    ["info"] = {},
+                    ["type"] = "weapon",
+                    ["itemname"] = "weapon_knife"
+                }
+            },
+            ["Weapons"] = {
+                [1] = {
+                    ["name"] = "Musket",
+                    ["price"] = 1500,
+                    ["amount"] = 1,
+                    ["info"] = {},
+                    ["type"] = "weapon",
+                    ["itemname"] = "weapon_musket"
+                },
+                [2] = {
+                    ["name"] = "Musket Ammo",
+                    ["price"] = 15,
+                    ["amount"] = 1,
+                    ["info"] = {},
+                    ["type"] = "item",
+                    ["itemname"] = "musket_ammo"
+                }
+            }
+        }
+    }
 
 
 Pos = {
@@ -3756,6 +3925,7 @@ Pos = {
     [18] = vector3(1165.17, 2710.88, 38.16),
     [19] = vector3(1134.2, -982.91, 46.42),
     [20] = vector3(-1030.1, -2759.72, 21.34)
+    [21] = vector3(-678.81, 5837.96, 17.33),
 }
 
 function AC.Error(cb)
