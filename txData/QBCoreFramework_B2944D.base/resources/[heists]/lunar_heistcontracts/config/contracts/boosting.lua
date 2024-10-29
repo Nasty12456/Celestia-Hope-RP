@@ -7,7 +7,7 @@ Config.contracts.boosting = {
         expiry = 24 * 60,
         timeToStart = 2 * 60,
         minMembers = 2,
-        minPolice = 1
+        minPolice = 0
     },
 
     dispatch = {

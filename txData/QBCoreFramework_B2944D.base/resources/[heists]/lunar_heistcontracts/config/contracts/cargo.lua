@@ -7,9 +7,9 @@ Config.contracts.cargo = {
         requiredExperience = 200,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 3,
+        minMembers = 2,
         rewards = { crypto = 25, experience = 250 }, -- Other rewards such as items are listed below
-        minPolice = 5
+        minPolice = 0
     },
 
     duration = 60, -- minutes before reset

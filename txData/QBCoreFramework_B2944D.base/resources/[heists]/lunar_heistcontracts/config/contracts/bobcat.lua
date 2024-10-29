@@ -3,13 +3,13 @@ Config.contracts.bobcat = {
     settings = {
         disabled = false,
         chance = 10,
-        price = 350,
-        requiredExperience = 1250,
+        price = 1,
+        requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 5,
+        minMembers = 2,
         rewards = { crypto = 400, experience = 750 }, -- Other rewards such as items are listed below
-        minPolice = 5,
+        minPolice = 0,
     },
 
     duration = 80, -- minutes before reset

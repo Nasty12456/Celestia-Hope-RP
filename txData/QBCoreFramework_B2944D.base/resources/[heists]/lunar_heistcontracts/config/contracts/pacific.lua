@@ -3,13 +3,13 @@ Config.contracts.pacific = {
     settings = {
         disabled = false,
         chance = 5,
-        price = 750,
-        requiredExperience = 1500,
+        price = 1,
+        requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 6,
+        minMembers = 1,
         rewards = { crypto = 325, experience = 2500 },
-        minPolice = 10
+        minPolice = 0
     },
 
     duration = 120, -- The bank will reset after 120 minutes

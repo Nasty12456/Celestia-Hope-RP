@@ -3,13 +3,13 @@ Config.contracts.artasylum = {
     settings = {
         disabled = false,
         chance = 5,
-        price = 1000,
-        requiredExperience = 2000,
+        price = 1,
+        requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 8,
+        minMembers = 2,
         rewards = { crypto = 625, experience = 3500 },
-        minPolice = 10
+        minPolice = 0
     },
 
     duration = 120, -- The bank will reset after this duration (minutes)

@@ -3,13 +3,13 @@ Config.contracts.cashexchange = {
     settings = {
         disabled = false,
         chance = 10,
-        price = 125,
-        requiredExperience = 750,
+        price = 1,
+        requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 4,
+        minMembers = 2,
         rewards = { crypto = 65, experience = 500 }, -- Other rewards such as items are listed below
-        minPolice = 6
+        minPolice = 0
     },
 
     duration = 120, -- minutes before reset

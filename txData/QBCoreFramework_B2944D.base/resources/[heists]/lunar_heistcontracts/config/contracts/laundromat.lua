@@ -3,13 +3,13 @@ Config.contracts.laundromat = {
     settings = {
         disabled = false,
         chance = 10,
-        price = 75,
-        requiredExperience = 500,
+        price = 1,
+        requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 4,
+        minMembers = 2,
         rewards = { crypto = 35, experience = 350 },
-        minPolice = 4
+        minPolice = 0
     },
 
     duration = 120, -- The laundromat will reset after this duration (minutes)
