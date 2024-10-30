@@ -1,8 +1,5 @@
 local Translations = {
-
     error = {
-        ["not_inJail"] = "You are not in jail..",
-        ["Freffy_cooldown"] = "There is no cooldown..",
         ["missing_something"] = "It looks like you are missing something...",
         ["not_enough_police"] = "Not enough Police..",
         ["door_open"] = "The door is already open..",
@@ -16,7 +13,6 @@ local Translations = {
         ["security_activated"] = "Highest security level is active, stay with the cell blocks!"
     },
     success = {
-        ["EnteredZone"] = "You found a phone..",
         ["found_phone"] = "You found a phone..",
         ["time_cut"] = "You've worked some time off your sentence.",
         ["free_"] = "You're free! Enjoy it! :)",
@@ -41,7 +37,8 @@ local Translations = {
         ["working_electricity"] = "Connecting Wires"
     }
 }
-Lang = Locale:new({
+
+Lang = Lang or Locale:new({
     phrases = Translations,
     warnOnMissing = true
 })
