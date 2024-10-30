@@ -318,6 +318,8 @@ Config.DurabilityMultiplier = {
     ['weapon_tglock19'] 	 	     = 0.15,
 	['weapon_tec9s'] 	 	         = 0.15,
 	['weapon_woarp']   	             = 0.15,
+    ['weapon_celap']   	             = 0.15,
+    ['weapon_galaxy']   	         = 0.15,
     
 }
 

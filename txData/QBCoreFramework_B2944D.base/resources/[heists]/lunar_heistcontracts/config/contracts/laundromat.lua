@@ -7,7 +7,7 @@ Config.contracts.laundromat = {
         requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 2,
+        minMembers = 1,
         rewards = { crypto = 35, experience = 350 },
         minPolice = 0
     },

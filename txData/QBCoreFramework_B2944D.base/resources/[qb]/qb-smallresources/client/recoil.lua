@@ -201,6 +201,8 @@ local weapons = {
 	[GetHashKey('weapon_BAR15')] = {recoil = 0.2, shake = 0.06},
 	[GetHashKey('weapon_BSCAR')] = {recoil = 0.2, shake = 0.06},
 	[GetHashKey('weapon_DMK18')] = {recoil = 0.2, shake = 0.06},
+	[GetHashKey('weapon_galaxy')] = {recoil = 0.2, shake = 0.06},
+	[GetHashKey('weapon_celap')] = {recoil = 0.2, shake = 0.06},
 	
 
 }

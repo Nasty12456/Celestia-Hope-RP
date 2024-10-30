@@ -7,7 +7,7 @@ Config.contracts.artasylum = {
         requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 2,
+        minMembers = 1,
         rewards = { crypto = 625, experience = 3500 },
         minPolice = 0
     },

@@ -7,7 +7,7 @@ Config.contracts.paleto = {
         requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 2,
+        minMembers = 1,
         rewards = { crypto = 500, experience = 2500 },
         minPolice = 0
     },

@@ -7,7 +7,7 @@ Config.contracts.bobcat = {
         requiredExperience = 1,
         expiry = 24 * 60,
         timeToStart = 2 * 60,
-        minMembers = 2,
+        minMembers = 1,
         rewards = { crypto = 400, experience = 750 }, -- Other rewards such as items are listed below
         minPolice = 0,
     },
