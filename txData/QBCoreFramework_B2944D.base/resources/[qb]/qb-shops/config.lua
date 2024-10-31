@@ -3040,9 +3040,8 @@ AC = {
                     ["image"] = "jackolantern.png",
                     ["itemname"] = "jackolantern",
                 },
-              }
             },
-        }
+        },
     },
     [17] = {
         ["name"] = "TO OPEN",
@@ -3840,10 +3839,11 @@ AC = {
                     ["type"] = "weapon",
                     ["image"] = "weapon_musket.png",
                     ["itemname"] = "weapon_musket"
-                }
-            }
-        }
-    }
+                }, 
+              },
+            },
+        },
+    },
 
 
 Pos = {
@@ -3866,8 +3866,8 @@ Pos = {
     [17] = vector3(-2966.39, 391.42, 15.04),
     [18] = vector3(1165.17, 2710.88, 38.16),
     [19] = vector3(1134.2, -982.91, 46.42),
-    [20] = vector3(-1030.1, -2759.72, 21.34)
-    [21] = vector3(-678.81, 5837.96, 17.33),
+    [20] = vector3(-1030.1, -2759.72, 21.34),
+    [21] = vector3(-678.81, 5837.96, 17.33)
 }
 
 function AC.Error(cb)
