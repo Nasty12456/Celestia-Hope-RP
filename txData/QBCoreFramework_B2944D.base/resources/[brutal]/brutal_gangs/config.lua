@@ -14,7 +14,7 @@ Config = {
     Inventory = 'qb_inventory', -- 'ox_inventory' / 'qb_inventory' / 'quasar_inventory' / 'chezza_inventory' / 'codem_inventory' / 'core_inventory' // Custom can be add in the cl_utils.lua!!!
     TextUI = 'ox_lib', -- false / 'brutal_textui' / 'ox_lib' / 'okokTextUI' / 'ESXTextUI' / 'QBDrawText' // Custom can be add in the cl_utils.lua!!!
     Target = 'qb-target', -- 'oxtarget' / 'qb-target' // if the TextUI is set to false target will step its place 
-    BrutalNotify = false, -- Buy here: (4€+VAT) https://store.brutalscripts.com | Or set up your own notify >> cl_utils.lua
+    BrutalNotify = true, -- Buy here: (4€+VAT) https://store.brutalscripts.com | Or set up your own notify >> cl_utils.lua
     SteamName = false, -- true = Steam name | false = character name
     DateFormat = '%d/%m/%Y', -- Date format
 
