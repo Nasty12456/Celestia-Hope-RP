@@ -1,6 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-AC = {}
+AC = {
 
     [1] = {
         ["name"] = "TO OPEN",
@@ -3040,6 +3040,7 @@ AC = {}
                     ["image"] = "jackolantern.png",
                     ["itemname"] = "jackolantern",
                 },
+              }
             },
         }
     },
@@ -3816,118 +3817,58 @@ AC = {}
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
                 
                 [1] = {
-                    ["name"] = "Snikkel Candy",
-                    ["price"] = 15,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "snikkel_candy.png",
-                    ["itemname"] = "snikkel_candy",
-                },
-                [2] = {
-                    ["name"] = "tosti",
-                    ["price"] = 20,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "tosti.png",
-                    ["itemname"] = "tosti",
-                },
-                [3] = {
-                    ["name"] = "Water",
-                    ["price"] = 17,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "water_bottle.png",
-                    ["itemname"] = "water_bottle",
-                },
-                [4] = {
-                    ["name"] = "Beer",
-                    ["price"] = 13,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "beer.png",
-                    ["itemname"] = "beer",
-                },
-                [5] = {
-                    ["name"] = "Cola",
-                    ["price"] = 12,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "cola.png",
-                    ["itemname"] = "kurkakola",
-                },
-                [6] = {
-                    ["name"] = "Sandwich",
-                    ["price"] = 15,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "sandwich.png",
-                    ["itemname"] = "sandwich",
-                },
-                [7] = {
-                    ["name"] = "Twerks Candy",
-                    ["price"] = 11,
-                    ["amount"] = 1,
-                    ["type"] = "item",
-                    ["image"] = "twerks_candy.png",
-                    ["itemname"] = "twerks_candy"
-                }
-            },
-            ["Knifes"] = {
-                [1] = {
-                    ["name"] = "Hunting Knife",
-                    ["price"] = 150,
-                    ["amount"] = 1,
-                    ["info"] = {},
-                    ["type"] = "weapon",
-                    ["itemname"] = "weapon_knife"
-                }
-            },
-            ["Weapons"] = {
-                [1] = {
-                    ["name"] = "Musket",
-                    ["price"] = 1500,
-                    ["amount"] = 1,
-                    ["info"] = {},
-                    ["type"] = "weapon",
-                    ["itemname"] = "weapon_musket"
-                },
-                [2] = {
                     ["name"] = "Musket Ammo",
                     ["price"] = 15,
                     ["amount"] = 1,
-                    ["info"] = {},
                     ["type"] = "item",
-                    ["itemname"] = "musket_ammo"
+                    ["image"] = "musket_ammo.png",
+                    ["itemname"] = "musket_ammo",
+                },
+                [2] = {
+                    ["name"] = "Hunting Knife",
+                    ["price"] = 150,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_knife.png",
+                    ["itemname"] = "weapon_knife",
+                },
+
+                [3] = {
+                    ["name"] = "Musket",
+                    ["price"] = 1500,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_musket.png",
+                    ["itemname"] = "weapon_musket"
                 }
             }
         }
     }
 
 
-    Pos = {
-        [1] = vector3(24.47, -1346.62, 30.0),
-        [2] = vector3(-3039.54, 584.38, 8.31),
-        [3] = vector3(-3242.97, 1000.01, 13.23),
-        [4] = vector3(1728.07, 6415.63, 35.04),
-        [5] = vector3(1959.82, 3740.48, 32.34),
-        [6] = vector3(549.13, 2670.85, 42.16),
-        [7] = vector3(2677.47, 3279.76, 55.24),
-        [8] = vector3(2556.66, 380.84, 108.62),
-        [9] = vector3(372.66, 326.98, 103.57),
-        [10] = vector3(-47.02, -1758.23, 29.42),
-        [11] = vector3(-706.06, -913.97, 19.22),
-        [12] = vector3(-1820.02, 794.03, 138.09),
-        [13] = vector3(1164.71, -322.94, 69.21),
-        [14] = vector3(1697.87, 4922.96, 42.06),
-        [15] = vector3(-1221.58, -908.15, 12.33),
-        [16] = vector3(-1486.59, -377.68, 40.16),
-        [17] = vector3(-2966.39, 391.42, 15.04),
-        [18] = vector3(1165.17, 2710.88, 38.16),
-        [19] = vector3(1134.2, -982.91, 46.42),
-        [20] = vector3(-1030.1, -2759.72, 21.34),
-        [21] = vector3(-678.81, 5837.96, 17.33)
-    }
-    
+Pos = {
+    [1] = vector3(24.47, -1346.62, 30.0),
+    [2] = vector3(-3039.54, 584.38, 8.31),
+    [3] = vector3(-3242.97, 1000.01, 13.23),
+    [4] = vector3(1728.07, 6415.63, 35.04),
+    [5] = vector3(1959.82, 3740.48, 32.34),
+    [6] = vector3(549.13, 2670.85, 42.16),
+    [7] = vector3(2677.47, 3279.76, 55.24),
+    [8] = vector3(2556.66, 380.84, 108.62),
+    [9] = vector3(372.66, 326.98, 103.57),
+    [10] = vector3(-47.02, -1758.23, 29.42),
+    [11] = vector3(-706.06, -913.97, 19.22),
+    [12] = vector3(-1820.02, 794.03, 138.09),
+    [13] = vector3(1164.71, -322.94, 69.21),
+    [14] = vector3(1697.87, 4922.96, 42.06),
+    [15] = vector3(-1221.58, -908.15, 12.33),
+    [16] = vector3(-1486.59, -377.68, 40.16),
+    [17] = vector3(-2966.39, 391.42, 15.04),
+    [18] = vector3(1165.17, 2710.88, 38.16),
+    [19] = vector3(1134.2, -982.91, 46.42),
+    [20] = vector3(-1030.1, -2759.72, 21.34)
+    [21] = vector3(-678.81, 5837.96, 17.33),
+}
 
 function AC.Error(cb)
     TriggerClientEvent('QBCore:Notify', source, "You don't have enough balance.", "error")
