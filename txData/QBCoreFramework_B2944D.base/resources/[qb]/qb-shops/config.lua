@@ -11,7 +11,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -201,7 +201,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -391,7 +391,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -581,7 +581,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -772,7 +772,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -963,7 +963,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -1152,7 +1152,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -1342,7 +1342,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -1722,7 +1722,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -1913,7 +1913,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -2104,7 +2104,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -2293,7 +2293,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -2483,7 +2483,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -2673,7 +2673,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -2863,7 +2863,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -3053,7 +3053,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -3243,7 +3243,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -3433,7 +3433,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -3623,7 +3623,7 @@ AC = {
         },
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
+
                 [1] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
@@ -3803,35 +3803,8 @@ AC = {
             },
         },
     },
-    [21] = {
-        ["name"] = "Hunting Shop",
-        ["category"] = "All In One",
-        ["job"] = "",
-        ["categoryList"] = {
-            ["General"] = "Diverse items for various needs.",
-            ["Knifes"] = "Assortment of sharp cutting tools.",
-            ["Weapons"] = "Weapons",
-        },
-        ["itemList"] = {
-            ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
-                
-                [1] = {
-                    ["name"] = "Musket Ammo",
-                    ["price"] = 15,
-                    ["amount"] = 1,
-                    ["type"] = "item",
-                    ["image"] = "musket_ammo.png",
-                    ["itemname"] = "musket_ammo",
-                },
-                [2] = {
-                    ["name"] = "Hunting Knife",
-                    ["price"] = 150,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "weapon_knife.png",
-                    ["itemname"] = "weapon_knife",
-                },
 
+<<<<<<< Updated upstream
                 [3] = {
                     ["name"] = "Musket",
                     ["price"] = 1500,
@@ -3844,6 +3817,9 @@ AC = {
             },
         },
     },
+=======
+}
+>>>>>>> Stashed changes
 
 
 Pos = {
@@ -3866,8 +3842,12 @@ Pos = {
     [17] = vector3(-2966.39, 391.42, 15.04),
     [18] = vector3(1165.17, 2710.88, 38.16),
     [19] = vector3(1134.2, -982.91, 46.42),
+<<<<<<< Updated upstream
     [20] = vector3(-1030.1, -2759.72, 21.34),
     [21] = vector3(-678.81, 5837.96, 17.33)
+=======
+    [20] = vector3(-1030.1, -2759.72, 21.34)
+>>>>>>> Stashed changes
 }
 
 function AC.Error(cb)
