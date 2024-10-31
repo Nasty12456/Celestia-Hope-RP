@@ -1,6 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-AC = {
+AC = {}
 
     [1] = {
         ["name"] = "TO OPEN",
