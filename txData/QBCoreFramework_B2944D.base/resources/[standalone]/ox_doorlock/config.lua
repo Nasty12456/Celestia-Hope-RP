@@ -2,8 +2,6 @@
 ---@diagnostic disable-next-line: missing-fields
 Config = {}
 
-Config.Framework = 'qb'
-
 ---Trigger a notification on the client when the door state is successfully updated.
 Config.Notify = false
 
