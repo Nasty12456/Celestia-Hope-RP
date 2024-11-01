@@ -39,24 +39,24 @@ Config.Rewards = { -- the numbers in boxes translate to which tier of house and 
 	[2] = {
 		cabin =      {"advancedlockpick", "diamond_ring", "goldchain", "thermite", "cryptostick", "advancedrepairkit"},
 		kitchen =    {"tosti", "sandwich", "goldchain"},
-		chest =      {"advancedlockpick", "advancedrepairkit", "diamond_ring", "goldchain", "xtcbaggy", "cryptostick", "weapon_knife"},
+		chest =      {"advancedlockpick", "contracts_tablet", "diamond_ring", "goldchain", "xtcbaggy", "cryptostick", "weapon_knife"},
     },
 	[3] = {
 	   art =     	{'art1', 'art2', "goldchain"},
-       kitchen =    {"tosti", "sandwich", "twerks_candy", 'kurkakola'},
+       kitchen =    {"tosti", "contracts_tablet", "twerks_candy", 'kurkakola'},
        chest =      {"advancedlockpick", "rolex", "diamond_ring", "goldchain", "thermite", "cryptostick", "weapon_machete"},
-       electronic =	{"trojan_usb", "rolex", "radioscanner", "pinger", "thermite", "cryptostick", "phone", "pistol_ammo"}
+       electronic =	{"trojan_usb", "rolex", "radioscanner", "pinger", "thermite", "ccontracts_tablet", "phone", "pistol_ammo"}
     },
 	[4] = {
 	    art =     	{'art1', 'art2', 'art3',},
         kitchen =   {"tosti", "sandwich", "twerks_candy", 'kurkakola'},
-        chest =     {"firework1", "rolex", "diamond_ring", "goldchain",  "thermite", "cryptostick", "weapon_wrench"},
-        electronic ={"gatecrack", "drill", "electronickit", "goldchain", "thermite", "cryptostick", "tablet", "pistol_ammo",'houselaptop', 'mansionlaptop'}
+        chest =     {"firework1", "rolex", "diamond_ring", "goldchain",  "thermite", "contracts_tablet", "weapon_wrench"},
+        electronic ={"gatecrack", "drill", "electronickit", "goldchain", "thermite", "contracts_tablet", "tablet", "pistol_ammo",'houselaptop', 'mansionlaptop'}
     },
 	[5] = {
         kitchen =   {"tosti", "sandwich", "twerks_candy", 'kurkakola'},
         art =       {'art1', 'art2', 'art3', 'art4', 'art5',},
-        electronic ={"electronickit", "boombox", "mdspeakers", "mdtablet", "mddesktop", "laptop", "tablet", 'checkbook'}
+        electronic ={"contracts_tablet", "boombox", "mdspeakers", "mdtablet", "mddesktop", "laptop", "tablet", 'checkbook'}
     },
 	[6] = {
         kitchen =  {"tosti", "sandwich", "goldchain"},

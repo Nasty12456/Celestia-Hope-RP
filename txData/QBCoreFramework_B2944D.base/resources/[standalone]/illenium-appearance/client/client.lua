@@ -113,8 +113,6 @@ function InitializeCharacter(gender, onSubmit, onCancel)
     TriggerServerEvent("illenium-appearance:server:ChangeRoutingBucket")
     client.startPlayerCustomization(function(appearance)
         if (appearance) then
-            TriggerEvent("qb-cutscene:client:StartCutscene") -->> Start qb-cutscene
-            print('^2Started qb-cutscene')
             TriggerServerEvent("illenium-appearance:server:saveAppearance", appearance)
             if onSubmit then
                 onSubmit()

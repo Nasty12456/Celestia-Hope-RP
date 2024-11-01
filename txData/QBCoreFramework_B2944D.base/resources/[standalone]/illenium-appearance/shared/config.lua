@@ -14,7 +14,7 @@ Config.RCoreTattoosCompatibility = false
 
 Config.AsynchronousLoading = false -- Change this to false if you want the NUI data to load before displaying the appearance UI
 
-Config.UseTarget = true
+Config.UseTarget = false
 
 Config.TextUIOptions = {
     position = "left-center"
@@ -26,11 +26,11 @@ Config.NotifyOptions = {
 
 Config.OutfitCodeLength = 10
 
-Config.UseRadialMenu = true
-Config.UseOxRadial = true -- Set to true to use ox_lib radial menu, both this and UseRadialMenu must be true 
+Config.UseRadialMenu = false
+Config.UseOxRadial = false -- Set to true to use ox_lib radial menu, both this and UseRadialMenu must be true 
 
-Config.EnablePedsForShops = true
-Config.EnablePedsForClothingRooms = true
+Config.EnablePedsForShops = false
+Config.EnablePedsForClothingRooms = false
 Config.EnablePedsForPlayerOutfitRooms = true
 
 Config.EnablePedMenu = true
@@ -38,8 +38,8 @@ Config.PedMenuGroup = "group.admin"
 
 Config.EnableJobOutfitsCommand = false -- Enables /joboutfits and /gangoutfits commands
 
-Config.ShowNearestShopOnly = true
-Config.HideRadar = true -- Hides the minimap while the appearance menu is open
+Config.ShowNearestShopOnly = false
+Config.HideRadar = false -- Hides the minimap while the appearance menu is open
 Config.NearestShopBlipUpdateDelay = 10000
 
 Config.InvincibleDuringCustomization = true
@@ -73,11 +73,6 @@ Config.ReloadSkinCooldown = 5000
 
 Config.AutomaticFade = false -- Enables automatic fading and hides the Fade section from Hair
 
--- ACE Permissions Config
-Config.EnableACEPermissions = false
-Config.ACEResetCooldown = 5000
-Config.ACEListCooldown = 60 * 60 * 1000 -- 1 Hour
-
 Config.DisableComponents = {
     Masks = false,
     UpperBody = false,
@@ -98,6 +93,9 @@ Config.DisableProps = {
     Watches = false,
     Bracelets = false
 }
+
+---@type string[]
+Config.Aces = {} -- list of ace permissions used for blacklisting
 
 Config.Blips = {
     ["clothing"] = {
@@ -415,7 +413,7 @@ Config.Stores = {
     },
     {
         type = "barber",
-        coords = vector4(1786.53, 3756.94, 34.06, 28.17),
+        coords = vector4(1931.41, 3729.73, 32.84, 212.08),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
@@ -428,7 +426,7 @@ Config.Stores = {
     },
     {
         type = "barber",
-        coords = vector4(1212.8, -472.9, 67.2, 60.94),
+        coords = vector4(1212.8, -472.9, 65.2, 60.94),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
@@ -519,7 +517,7 @@ Config.Stores = {
     },
     {
         type = "tattoo",
-        coords = vector4(1788.87, 3798.74, 34.02, 125.34),
+        coords = vector4(1864.1, 3747.91, 33.03, 17.23),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
