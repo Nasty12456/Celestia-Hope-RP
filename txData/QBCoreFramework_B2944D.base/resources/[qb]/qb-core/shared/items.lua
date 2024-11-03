@@ -78,7 +78,7 @@ QBShared.Items = {
 	--Heavy Weapons
 	['weapon_railgunxm3']             = {['name'] = 'weapon_railgunxm3',                ['label'] = 'Railgun XM3',                ['weight'] = 1000,        ['type'] = 'weapon',    ['ammotype'] = nil,                        ['image'] = 'weapon_railgun.png',    ['unique'] = true,        ['useable'] = false,    ['description'] = 'A weapon that uses electromagnetic force to launch high velocity projectiles'},
 -- extra weapons
-[`weapon_digiscanner`]                  = { name = 'weapon_digiscanner', label = 'Signal Booster', weapontype = 'Miscellaneous', ammotype = nil, damagereason = '' },
+--[`weapon_digiscanner`]                  = { name = 'weapon_digiscanner', label = 'Signal Booster', weapontype = 'Miscellaneous', ammotype = nil, damagereason = '' },
 	-- Handguns
 	['weapon_pistol'] 				 = {['name'] = 'weapon_pistol', 			 	['label'] = 'Walther P99', 				['weight'] = 600, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_pistol.png', 		['unique'] = true, 		['useable'] = false, 	['description'] = 'A small firearm designed to be held in one hand'},
 	['weapon_pistol_mk2'] 			 = {['name'] = 'weapon_pistol_mk2', 			['label'] = 'Pistol Mk II', 			['weight'] = 600, 		['type'] = 'weapon', 	['ammotype'] = 'AMMO_PISTOL',			['image'] = 'weapon_pistol_mk2.png', 	['unique'] = true, 		['useable'] = false, 	['description'] = 'An upgraded small firearm designed to be held in one hand'},

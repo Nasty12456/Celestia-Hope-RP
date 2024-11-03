@@ -104,7 +104,7 @@ Config.contracts.cargo = {
             color = 1
         },
         looting = {
-            enabled = true, -- Players can loot the guards
+            enabled = false, -- Players can loot the guards
             progressDuration = 5000
         },
         weapons = {

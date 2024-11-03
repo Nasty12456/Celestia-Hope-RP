@@ -194,54 +194,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -249,7 +201,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -257,7 +209,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -265,7 +217,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -273,7 +225,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -281,7 +233,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -289,7 +241,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -297,7 +249,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -305,7 +257,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -313,7 +265,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -321,7 +273,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -329,7 +281,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -369,54 +321,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -424,7 +328,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -432,7 +336,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -440,7 +344,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -448,7 +352,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -456,7 +360,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -464,7 +368,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -472,7 +376,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -480,7 +384,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -488,7 +392,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -496,7 +400,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -504,7 +408,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -544,54 +448,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -599,7 +455,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -607,7 +463,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -615,7 +471,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -623,7 +479,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -631,7 +487,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -639,7 +495,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -647,7 +503,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -655,7 +511,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -663,7 +519,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -671,7 +527,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -679,7 +535,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -720,54 +576,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -775,7 +583,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -783,7 +591,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -791,7 +599,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -799,7 +607,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -807,7 +615,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -815,7 +623,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -823,7 +631,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -831,7 +639,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -839,7 +647,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -847,7 +655,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -855,7 +663,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -896,54 +704,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -951,7 +711,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -959,7 +719,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -967,7 +727,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -975,7 +735,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -983,7 +743,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -991,7 +751,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -999,7 +759,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1007,7 +767,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -1015,7 +775,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1023,7 +783,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1031,7 +791,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1072,54 +832,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1127,7 +839,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1135,7 +847,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1143,7 +855,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -1151,7 +863,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -1159,7 +871,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1167,7 +879,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -1175,7 +887,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1183,7 +895,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -1191,7 +903,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1199,7 +911,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1207,7 +919,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1248,54 +960,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1303,7 +967,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1311,7 +975,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1319,7 +983,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -1327,7 +991,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -1335,7 +999,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1343,7 +1007,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -1351,7 +1015,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1359,7 +1023,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -1367,7 +1031,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1375,7 +1039,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1383,7 +1047,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1424,62 +1088,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
-                    ["name"] = "Snikkel Candy",
-                    ["price"] = 15,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "snikkel_candy.png",
-                    ["itemname"] = "snikkel_candy",
-                },
-            [8] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1487,7 +1095,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [2] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1495,7 +1103,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [3] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -1503,7 +1111,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [4] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -1511,7 +1119,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [5] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1519,7 +1127,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [6] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -1527,7 +1135,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [7] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1535,7 +1143,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [8] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -1543,7 +1151,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [9] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1551,7 +1159,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [10] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1559,7 +1167,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [11] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1600,54 +1208,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1655,7 +1215,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1663,7 +1223,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1671,7 +1231,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -1679,7 +1239,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -1687,7 +1247,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1695,7 +1255,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -1703,7 +1263,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1711,7 +1271,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -1719,7 +1279,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1727,7 +1287,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1735,7 +1295,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1776,54 +1336,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1831,7 +1343,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1839,7 +1351,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1847,7 +1359,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -1855,7 +1367,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -1863,7 +1375,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -1871,7 +1383,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -1879,7 +1391,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -1887,7 +1399,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -1895,7 +1407,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -1903,7 +1415,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1911,7 +1423,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -1952,54 +1464,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2007,7 +1471,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2015,7 +1479,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2023,7 +1487,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -2031,7 +1495,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -2039,7 +1503,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2047,7 +1511,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -2055,7 +1519,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2063,7 +1527,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -2071,7 +1535,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2079,7 +1543,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2087,7 +1551,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2128,54 +1592,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2183,7 +1599,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2191,7 +1607,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2199,7 +1615,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -2207,7 +1623,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -2215,7 +1631,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2223,7 +1639,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -2231,7 +1647,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2239,7 +1655,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -2247,7 +1663,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2255,7 +1671,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2263,7 +1679,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2304,54 +1720,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2359,7 +1727,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2367,7 +1735,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2375,7 +1743,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -2383,7 +1751,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -2391,7 +1759,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2399,7 +1767,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -2407,7 +1775,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2415,7 +1783,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -2423,7 +1791,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2431,7 +1799,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2439,7 +1807,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2480,62 +1848,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
-                    ["name"] = "Snikkel Candy",
-                    ["price"] = 15,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "snikkel_candy.png",
-                    ["itemname"] = "snikkel_candy",
-                },
-            [8] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2543,7 +1855,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [2] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2551,7 +1863,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [3] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -2559,7 +1871,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [4] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -2567,7 +1879,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [5] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2575,7 +1887,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [6] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -2583,7 +1895,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [7] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2591,7 +1903,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [8] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -2599,7 +1911,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [9] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2607,7 +1919,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [10] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2615,7 +1927,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [11] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2656,54 +1968,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2711,7 +1975,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2719,7 +1983,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2727,7 +1991,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -2735,7 +1999,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -2743,7 +2007,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2751,7 +2015,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -2759,7 +2023,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2767,7 +2031,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -2775,7 +2039,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2783,7 +2047,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2791,7 +2055,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2832,54 +2096,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2887,7 +2103,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2895,7 +2111,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2903,7 +2119,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -2911,7 +2127,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -2919,7 +2135,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -2927,7 +2143,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -2935,7 +2151,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -2943,7 +2159,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -2951,7 +2167,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -2959,7 +2175,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -2967,7 +2183,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -3184,54 +2400,6 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
-                ["name"] = "Armor",
-                ["price"] = 100,
-                ["amount"] = 1,
-                ["type"] = "weapon",
-                ["image"] = "armor.png",
-                ["itemname"] = "armor",
-            },
-            [2] = {
-                    ["name"] = "Handcuffs",
-                    ["price"] = 130,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "handcuffs.png",
-                    ["itemname"] = "handcuffs",
-                },
-            [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
-                },
-            [4] = {
-                    ["name"] = "Radio",
-                    ["price"] = 160,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radio.png",
-                    ["itemname"] = "radio",
-                },
-            [5] = {
-                    ["name"] = "Radioscanner",
-                    ["price"] = 110,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "radioscanner.png",
-                    ["itemname"] = "radioscanner",
-                },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
                     ["name"] = "Snikkel Candy",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -3239,7 +2407,7 @@ AC = {
                     ["image"] = "snikkel_candy.png",
                     ["itemname"] = "snikkel_candy",
                 },
-            [8] = {
+            [2] = {
                     ["name"] = "tosti",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -3247,7 +2415,7 @@ AC = {
                     ["image"] = "tosti.png",
                     ["itemname"] = "tosti",
                 },
-            [9] = {
+            [3] = {
                     ["name"] = "Water",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -3255,7 +2423,7 @@ AC = {
                     ["image"] = "water_bottle.png",
                     ["itemname"] = "water_bottle",
                 },
-            [10] = {
+            [4] = {
                     ["name"] = "Beer",
                     ["price"] = 9,
                     ["amount"] = 1,
@@ -3263,7 +2431,7 @@ AC = {
                     ["image"] = "beer.png",
                     ["itemname"] = "beer",
                 },
-            [11] = {
+            [5] = {
                     ["name"] = "Cola",
                     ["price"] = 12,
                     ["amount"] = 1,
@@ -3271,7 +2439,7 @@ AC = {
                     ["image"] = "cola.png",
                     ["itemname"] = "kurkakola",
                 },
-            [12] = {
+            [6] = {
                     ["name"] = "Sandwich",
                     ["price"] = 15,
                     ["amount"] = 1,
@@ -3279,7 +2447,7 @@ AC = {
                     ["image"] = "sandwich.png",
                     ["itemname"] = "sandwich",
                 },
-            [13] = {
+            [7] = {
                     ["name"] = "Twerks Candy",
                     ["price"] = 11,
                     ["amount"] = 1,
@@ -3287,7 +2455,7 @@ AC = {
                     ["image"] = "twerks_candy.png",
                     ["itemname"] = "twerks_candy",
                 },
-            [14] = {
+            [8] = {
                     ["name"] = "Ball",
                     ["price"] = 17,
                     ["amount"] = 1,
@@ -3295,7 +2463,7 @@ AC = {
                     ["image"] = "weapon_ball.png",
                     ["itemname"] = "weapon_ball",
                 },
-            [15] = {
+            [9] = {
                     ["name"] = "Petrolcan",
                     ["price"] = 18,
                     ["amount"] = 1,
@@ -3303,7 +2471,7 @@ AC = {
                     ["image"] = "weapon_petrolcan.png",
                     ["itemname"] = "weapon_petrolcan",
                 },
-            [16] = {
+            [10] = {
                     ["name"] = "Whiskey",
                     ["price"] = 20,
                     ["amount"] = 1,
@@ -3311,7 +2479,7 @@ AC = {
                     ["image"] = "whiskey.png",
                     ["itemname"] = "whiskey",
                 },
-            [17] = {
+            [11] = {
                     ["name"] = "Wine",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -3319,7 +2487,7 @@ AC = {
                     ["image"] = "wine.png",
                     ["itemname"] = "wine",
                 },
-            [18] = {
+            [12] = {
                     ["name"] = "Sticky Note",
                     ["price"] = 21,
                     ["amount"] = 1,
@@ -3360,8 +2528,136 @@ AC = {
         ["itemList"] = {
             ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
             [1] = {
+                    ["name"] = "Snikkel Candy",
+                    ["price"] = 15,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "snikkel_candy.png",
+                    ["itemname"] = "snikkel_candy",
+                },
+            [2] = {
+                    ["name"] = "tosti",
+                    ["price"] = 20,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "tosti.png",
+                    ["itemname"] = "tosti",
+                },
+            [3] = {
+                    ["name"] = "Water",
+                    ["price"] = 17,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "water_bottle.png",
+                    ["itemname"] = "water_bottle",
+                },
+            [4] = {
+                    ["name"] = "Beer",
+                    ["price"] = 9,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "beer.png",
+                    ["itemname"] = "beer",
+                },
+            [5] = {
+                    ["name"] = "Cola",
+                    ["price"] = 12,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "cola.png",
+                    ["itemname"] = "kurkakola",
+                },
+            [6] = {
+                    ["name"] = "Sandwich",
+                    ["price"] = 15,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "sandwich.png",
+                    ["itemname"] = "sandwich",
+                },
+            [7] = {
+                    ["name"] = "Twerks Candy",
+                    ["price"] = 11,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "twerks_candy.png",
+                    ["itemname"] = "twerks_candy",
+                },
+            [8] = {
+                    ["name"] = "Ball",
+                    ["price"] = 17,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_ball.png",
+                    ["itemname"] = "weapon_ball",
+                },
+            [9] = {
+                    ["name"] = "Petrolcan",
+                    ["price"] = 18,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_petrolcan.png",
+                    ["itemname"] = "weapon_petrolcan",
+                },
+            [10] = {
+                    ["name"] = "Whiskey",
+                    ["price"] = 20,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "whiskey.png",
+                    ["itemname"] = "whiskey",
+                },
+            [11] = {
+                    ["name"] = "Wine",
+                    ["price"] = 21,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "wine.png",
+                    ["itemname"] = "wine",
+                },
+            [12] = {
+                    ["name"] = "Sticky Note",
+                    ["price"] = 21,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "stickynote.png",
+                    ["itemname"] = "stickynote",
+                },
+            },
+            ["Knifes"] = {
+                [1] = {
+                    ["name"] = "Knife",
+                    ["price"] = 2500,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_knife.png",
+                    ["itemname"] = "weapon_knife",
+                },
+                [2] = {
+                    ["name"] = "Dagger",
+                    ["price"] = 6000,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_dagger.png",
+                    ["itemname"] = "weapon_dagger",
+                }, 
+            },
+        },
+    },
+    [21] = {
+        ["name"] = "TOOLSHOP",
+        ["category"] = "All In One",
+        ["job"] = "",
+        ["categoryList"] = {
+            ["General"] = "Diverse items for various needs.",
+            ["Knifes"] = "Assortment of sharp cutting tools.",
+            ---["Weapons"] = "Lethal tools for self-defense.",
+        },
+        ["itemList"] = {
+            ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
+            [1] = {
                 ["name"] = "Armor",
-                ["price"] = 100,
+                ["price"] = 25000,
                 ["amount"] = 1,
                 ["type"] = "weapon",
                 ["image"] = "armor.png",
@@ -3369,19 +2665,19 @@ AC = {
             },
             [2] = {
                     ["name"] = "Handcuffs",
-                    ["price"] = 130,
+                    ["price"] = 20000,
                     ["amount"] = 1,
                     ["type"] = "weapon",
                     ["image"] = "handcuffs.png",
                     ["itemname"] = "handcuffs",
                 },
             [3] = {
-                    ["name"] = "Painkillers",
-                    ["price"] = 170,
+                    ["name"] = "weapon_crowbar",
+                    ["price"] = 2000,
                     ["amount"] = 1,
                     ["type"] = "weapon",
-                    ["image"] = "painkillers.png",
-                    ["itemname"] = "painkillers",
+                    ["image"] = "weapon_crowbar.png",
+                    ["itemname"] = "weapon_crowbar",
                 },
             [4] = {
                     ["name"] = "Radio",
@@ -3399,131 +2695,9 @@ AC = {
                     ["image"] = "radioscanner.png",
                     ["itemname"] = "radioscanner",
                 },
-            [6] = {
-                    ["name"] = "Repairkit",
-                    ["price"] = 155,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "repairkit.png",
-                    ["itemname"] = "repairkit",
-                },
-            [7] = {
-                    ["name"] = "Snikkel Candy",
-                    ["price"] = 15,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "snikkel_candy.png",
-                    ["itemname"] = "snikkel_candy",
-                },
-            [8] = {
-                    ["name"] = "tosti",
-                    ["price"] = 20,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "tosti.png",
-                    ["itemname"] = "tosti",
-                },
-            [9] = {
-                    ["name"] = "Water",
-                    ["price"] = 17,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "water_bottle.png",
-                    ["itemname"] = "water_bottle",
-                },
-            [10] = {
-                    ["name"] = "Beer",
-                    ["price"] = 9,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "beer.png",
-                    ["itemname"] = "beer",
-                },
-            [11] = {
-                    ["name"] = "Cola",
-                    ["price"] = 12,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "cola.png",
-                    ["itemname"] = "kurkakola",
-                },
-            [12] = {
-                    ["name"] = "Sandwich",
-                    ["price"] = 15,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "sandwich.png",
-                    ["itemname"] = "sandwich",
-                },
-            [13] = {
-                    ["name"] = "Twerks Candy",
-                    ["price"] = 11,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "twerks_candy.png",
-                    ["itemname"] = "twerks_candy",
-                },
-            [14] = {
-                    ["name"] = "Ball",
-                    ["price"] = 17,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "weapon_ball.png",
-                    ["itemname"] = "weapon_ball",
-                },
-            [15] = {
-                    ["name"] = "Petrolcan",
-                    ["price"] = 18,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "weapon_petrolcan.png",
-                    ["itemname"] = "weapon_petrolcan",
-                },
-            [16] = {
-                    ["name"] = "Whiskey",
-                    ["price"] = 20,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "whiskey.png",
-                    ["itemname"] = "whiskey",
-                },
-            [17] = {
-                    ["name"] = "Wine",
-                    ["price"] = 21,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "wine.png",
-                    ["itemname"] = "wine",
-                },
-            [18] = {
-                    ["name"] = "Sticky Note",
-                    ["price"] = 21,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "stickynote.png",
-                    ["itemname"] = "stickynote",
-                },
-            },
-            ["Knifes"] = {
-                [1] = {
-                    ["name"] = "Knife",
-                    ["price"] = 100,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "weapon_knife.png",
-                    ["itemname"] = "weapon_knife",
-                },
-                [2] = {
-                    ["name"] = "Dagger",
-                    ["price"] = 250,
-                    ["amount"] = 1,
-                    ["type"] = "weapon",
-                    ["image"] = "weapon_dagger.png",
-                    ["itemname"] = "weapon_dagger",
-                },
             },
         },
-    },
+    }, 
 }
 
 
@@ -3546,7 +2720,9 @@ Pos = {
     [16] = vector3(-1486.59, -377.68, 40.16),
     [17] = vector3(-2966.39, 391.42, 15.04),
     [18] = vector3(1165.17, 2710.88, 38.16),
-    [19] = vector3(1134.2, -982.91, 46.42)
+    [19] = vector3(1134.2, -982.91, 46.42),
+    [20] = vector3(1134.2, -982.91, 46.42),
+    [21] = vector3(46.62, -1749.7, 29.63)
 }
 
 function AC.Error(cb)
