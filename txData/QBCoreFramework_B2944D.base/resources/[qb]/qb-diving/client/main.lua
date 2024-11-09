@@ -334,14 +334,15 @@ RegisterNetEvent('qb-diving:client:UseGear', function()
                                     elseif oxgenlevell == 10 then
                                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "breathdivingsuit", 0.25)
                                     elseif oxgenlevell == 0 then
-                                        --   deleteGear()
+                                        deleteGear()
                                         SetEnableScuba(ped, false)
                                         SetPedMaxTimeUnderwater(ped, 1.00)
                                         currentGear.enabled = false
                                         iswearingsuit = false
                                         TriggerServerEvent("InteractSound_SV:PlayOnSource", nil, 0.25)
-                                    end
-                                end
+                                        QBCore.Functions.Notify(Lang:t("warning.oxygen_running_out"), "error")
+                                        --TriggerServerEvent("qb-diving:server:GiveBackGear")
+                                    end                                end
                                 Wait(1000)
                             end
                         end)
