@@ -419,3 +419,22 @@ CreateThread(function()
      end
     end
 end)
+
+RegisterCommand('removedivinggear', function()
+    local ped = PlayerPedId()
+    if IsPedSwimming(ped) then
+        QBCore.Functions.Notify("You can't remove gear while swimming", "error")
+        return
+    end
+    
+    TriggerEvent('qb-clothing:client:loadOutfit', {
+        outfitData = {
+            ["vest"] = { item = -1, texture = 0 }
+        }
+    })
+    
+    TriggerServerEvent("QBCore:Server:AddItem", "diving_gear", 1)
+    TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["diving_gear"], "add")
+    oxgenlevell = 0
+    QBCore.Functions.Notify(Lang:t("info.pullout_suit"), "success")
+end)
