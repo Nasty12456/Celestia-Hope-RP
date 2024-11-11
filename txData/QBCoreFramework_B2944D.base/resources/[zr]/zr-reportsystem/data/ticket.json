@@ -1,367 +1,415 @@
 {
-    "ee05-00db-86b0-f992": {
-        "ticketID": "ee05-00db-86b0-f992",
-        "claimed": false,
-        "solved": false,
-        "priority": {
-            "color": "#F53D6B",
-            "type": "critical",
-            "text": "Critical"
-        },
-        "date": "28-09-2024 22:37",
-        "claimedAdmin": [],
-        "status": "resolving",
-        "category": {
-            "type": "player",
-            "text": "Player Report"
-        },
-        "description": "She tried to walk in on me and my Girl Erping and then upped the FYE on me what the hell",
-        "ticketOwnerDetails": {
-            "ip": "71.201.93.81",
-            "discordID": "507683090714329089",
-            "live": "985155883192101",
-            "identifier": "3389f2301a77bad3a26633096992265908b40148",
-            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
-            "xbl": "2535414680691290",
-            "discordName": "pumauniverse",
-            "name": "Puma Universe",
-            "ping": 42,
-            "id": 1,
-            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png"
-        },
-        "addUser": [],
-        "messages": [
-            {
-                "date": "28-09-2024 22:37",
-                "identifier": "3389f2301a77bad3a26633096992265908b40148",
-                "name": "Puma Universe",
-                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
-                "message": "She tried to walk in on me and my Girl Erping and then upped the FYE on me what the hell",
-                "media": [
-                    {
-                        "fileDate": "26-09-2024 20:42",
-                        "video": true,
-                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
-                        "select": true,
-                        "id": "76a1-591f",
-                        "fileName": "76a1-591f.mp4"
-                    }
-                ]
-            }
-        ],
-        "title": "Bugs is being a Meanie Poopie Shit Head ",
-        "ticketOwner": "3389f2301a77bad3a26633096992265908b40148"
-    },
-    "7ffb-c814-f503-2be7": {
-        "ticketID": "7ffb-c814-f503-2be7",
-        "claimed": false,
-        "category": {
-            "type": "question",
-            "text": "Question"
-        },
-        "solved": false,
-        "date": "23-10-2024 14:43",
-        "claimedAdmin": [],
-        "status": "resolving",
+    "c31a-91e4-2954-7a57": {
+        "description": "bouncing up and down through floor when taking driving test",
         "priority": {
             "color": "#4CAF50",
-            "type": "normal",
-            "text": "Normal"
+            "text": "Normal",
+            "type": "normal"
         },
-        "description": "NEED HELP PLZ\nIM SAD\nI HAVE GENERAL QUESTIONS \n",
-        "ticketOwnerDetails": {
-            "licenseID": "cc1f418776f0840b0dca24d4b4b75df6c969ad37",
-            "ip": "172.59.1.252",
-            "ping": 88,
-            "name": "GHOSTASSASIN420",
-            "discordID": "646608901122293778",
-            "live": "844426547600647",
-            "id": 12,
-            "identifier": "cc1f418776f0840b0dca24d4b4b75df6c969ad37"
-        },
+        "date": "10-11-2024 20:14",
         "addUser": [],
-        "messages": [
-            {
-                "date": "23-10-2024 14:43",
-                "media": [],
-                "name": "GHOSTASSASIN420",
-                "message": "NEED HELP PLZ\nIM SAD\nI HAVE GENERAL QUESTIONS \n",
-                "identifier": "cc1f418776f0840b0dca24d4b4b75df6c969ad37"
-            }
-        ],
-        "title": "NEED HELP PLZ",
-        "ticketOwner": "cc1f418776f0840b0dca24d4b4b75df6c969ad37"
-    },
-    "e609-907a-ae48-005d": {
-        "ticketID": "e609-907a-ae48-005d",
-        "claimed": true,
+        "ticketID": "c31a-91e4-2954-7a57",
+        "status": "resolving",
+        "ticketOwnerDetails": {
+            "live": "914800600814101",
+            "ip": "104.183.92.124",
+            "id": 6,
+            "identifier": "25fd38c298bf940848fcd6a48a367e0c633d6884",
+            "xbl": "2533274860341437",
+            "name": "KillRoy",
+            "ping": 54,
+            "licenseID": "25fd38c298bf940848fcd6a48a367e0c633d6884",
+            "discordID": "877769718147194940"
+        },
+        "category": {
+            "text": "System Issue",
+            "type": "bug"
+        },
         "solved": false,
-        "category": {
-            "type": "question",
-            "text": "Question"
-        },
-        "date": "18-10-2024 10:27",
-        "claimedAdmin": [
-            {
-                "admin": true,
-                "ip": "131.117.155.92",
-                "licenseID": "c9109e161d294aa63f3e5d28ec27cab3d7e08466",
-                "name": "Nasty",
-                "discordID": "366666266049773568",
-                "ping": 150,
-                "id": 3,
-                "identifier": "c9109e161d294aa63f3e5d28ec27cab3d7e08466"
-            }
-        ],
-        "status": "open",
-        "priority": {
-            "color": "#4CAF50",
-            "type": "normal",
-            "text": "Normal"
-        },
-        "description": "help fishing cant find please",
-        "ticketOwnerDetails": {
-            "ip": "69.251.65.13",
-            "discordID": "1161529762196488194",
-            "live": "914801514514971",
-            "identifier": "8ebd419ef166059265f98ff7b667d42425bff2ce",
-            "licenseID": "8ebd419ef166059265f98ff7b667d42425bff2ce",
-            "xbl": "2535441757490670",
-            "ping": 47,
-            "id": 3,
-            "name": "jrepo"
-        },
-        "addUser": [],
-        "messages": [
-            {
-                "date": "18-10-2024 10:27",
-                "media": [],
-                "name": "jrepo",
-                "message": "help fishing cant find please",
-                "identifier": "8ebd419ef166059265f98ff7b667d42425bff2ce"
-            }
-        ],
-        "title": "where do i go buy fishing supplies and where can i fish?",
-        "ticketOwner": "8ebd419ef166059265f98ff7b667d42425bff2ce"
-    },
-    "f174-5e97-9c61-5bda": {
-        "ticketID": "f174-5e97-9c61-5bda",
         "claimed": false,
-        "category": {
-            "type": "question",
-            "text": "Question"
-        },
-        "addUser": [],
-        "solvedPlayer": {
-            "ip": "96.2.127.244",
-            "discordID": "1179179820949708810",
-            "live": "844425388304662",
-            "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
-            "licenseID": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
-            "xbl": "2535463424134422",
-            "ping": 38,
-            "id": 13,
-            "name": "nobody"
-        },
-        "date": "18-10-2024 09:18",
-        "claimedAdmin": [],
-        "status": "closed",
-        "priority": {
-            "color": "#F53D6B",
-            "type": "critical",
-            "text": "Critical"
-        },
-        "description": "help me ID 2 im down lmao",
-        "ticketOwnerDetails": {
-            "ip": "96.2.127.244",
-            "discordID": "1179179820949708810",
-            "live": "844425388304662",
-            "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
-            "licenseID": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
-            "xbl": "2535463424134422",
-            "ping": 39,
-            "id": 2,
-            "name": "nobody"
-        },
-        "solved": true,
         "messages": [
             {
-                "date": "18-10-2024 09:18",
                 "media": [],
-                "name": "nobody",
-                "message": "help me ID 2 im down lmao",
-                "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27"
-            }
-        ],
-        "title": "help me plz",
-        "ticketOwner": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27"
-    },
-    "fec0-c146-26fb-7abc": {
-        "ticketID": "fec0-c146-26fb-7abc",
-        "claimed": false,
-        "solved": false,
-        "priority": {
-            "color": "#FFA500",
-            "type": "important",
-            "text": "Important"
-        },
-        "date": "23-10-2024 18:08",
-        "claimedAdmin": [],
-        "ticketOwner": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
-        "category": {
-            "type": "player",
-            "text": "Player Report"
-        },
-        "description": "test test test test test ",
-        "ticketOwnerDetails": {
-            "ip": "199.27.253.183",
-            "discordID": "688523221334884499",
-            "live": "1055518630913957",
-            "xbl": "2535434452827181",
-            "licenseID": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
-            "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
-            "ping": 13,
-            "id": 15,
-            "name": "bugs"
-        },
-        "addUser": [],
-        "messages": [
-            {
-                "player": {
-                    "ip": "199.27.253.183",
-                    "discordID": "688523221334884499",
-                    "live": "1055518630913957",
-                    "xbl": "2535434452827181",
-                    "licenseID": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
-                    "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
-                    "ping": 25,
-                    "id": 15,
-                    "name": "bugs"
-                },
-                "date": "23-10-2024 18:08",
-                "media": [],
-                "name": "bugs",
-                "message": "test test test test test ",
-                "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935"
+                "name": "KillRoy",
+                "date": "10-11-2024 20:14",
+                "message": "bouncing up and down through floor when taking driving test",
+                "identifier": "25fd38c298bf940848fcd6a48a367e0c633d6884"
             },
             {
-                "date": "23-10-2024 18:11",
                 "media": [],
-                "name": "bugs",
-                "message": "hi",
-                "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935"
+                "name": "KillRoy",
+                "date": "10-11-2024 20:18",
+                "message": "Also failing me after following rules",
+                "identifier": "25fd38c298bf940848fcd6a48a367e0c633d6884"
             }
         ],
-        "title": "test test test test ",
-        "status": "resolving"
+        "claimedAdmin": [],
+        "ticketOwner": "25fd38c298bf940848fcd6a48a367e0c633d6884",
+        "title": "boincing up and down through floor when taking driving test"
     },
     "f6c8-46f3-61c9-818d": {
-        "ticketID": "f6c8-46f3-61c9-818d",
-        "claimed": false,
-        "solved": false,
+        "claimedAdmin": [],
         "priority": {
-            "color": "#F53D6B",
             "type": "critical",
-            "text": "Critical"
+            "text": "Critical",
+            "color": "#F53D6B"
         },
         "date": "28-09-2024 22:35",
-        "claimedAdmin": [],
+        "addUser": [],
+        "ticketID": "f6c8-46f3-61c9-818d",
         "status": "resolving",
+        "ticketOwnerDetails": {
+            "live": "985155883192101",
+            "ip": "71.201.93.81",
+            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
+            "discordName": "pumauniverse",
+            "identifier": "3389f2301a77bad3a26633096992265908b40148",
+            "xbl": "2535414680691290",
+            "name": "Puma Universe",
+            "id": 1,
+            "ping": 42,
+            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
+            "discordID": "507683090714329089"
+        },
         "category": {
-            "type": "question",
-            "text": "Question"
+            "text": "Question",
+            "type": "question"
         },
         "description": "Hey I think I found the love of my life and want to know if you have any way or tutorial of how to use the ERP Menu ",
-        "ticketOwnerDetails": {
-            "ip": "71.201.93.81",
-            "discordID": "507683090714329089",
-            "live": "985155883192101",
-            "identifier": "3389f2301a77bad3a26633096992265908b40148",
-            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
-            "xbl": "2535414680691290",
-            "discordName": "pumauniverse",
-            "name": "Puma Universe",
-            "ping": 42,
-            "id": 1,
-            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png"
-        },
-        "addUser": [],
-        "messages": [
-            {
-                "date": "28-09-2024 22:35",
-                "identifier": "3389f2301a77bad3a26633096992265908b40148",
-                "name": "Puma Universe",
-                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
-                "message": "Hey I think I found the love of my life and want to know if you have any way or tutorial of how to use the ERP Menu ",
-                "media": [
-                    {
-                        "fileDate": "26-09-2024 20:42",
-                        "video": true,
-                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
-                        "select": true,
-                        "id": "76a1-591f",
-                        "fileName": "76a1-591f.mp4"
-                    }
-                ]
-            }
-        ],
-        "title": "How do I use the ERP Menu In city? ",
-        "ticketOwner": "3389f2301a77bad3a26633096992265908b40148"
-    },
-    "b0af-a724-c12d-2e09": {
-        "ticketID": "b0af-a724-c12d-2e09",
         "claimed": false,
         "solved": false,
-        "priority": {
-            "color": "#F53D6B",
-            "type": "critical",
-            "text": "Critical"
-        },
-        "date": "26-09-2024 02:28",
-        "claimedAdmin": [],
-        "status": "resolving",
-        "category": {
-            "type": "player",
-            "text": "Player Report"
-        },
-        "description": "sexual harrassment he is humping me against my will",
-        "ticketOwnerDetails": {
-            "ip": "98.97.58.201",
-            "discordID": "967626401375211530",
-            "live": "1055519471993987",
-            "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
-            "licenseID": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
-            "name": "epik",
-            "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
-            "discordName": "llepikll",
-            "id": 13,
-            "ping": 110
-        },
-        "addUser": [],
         "messages": [
             {
-                "player": {
-                    "ip": "73.211.165.179",
-                    "discordID": "728441602628124773",
-                    "live": "1055519895215531",
-                    "identifier": "6df3228abec2dd0f48e28c4843603c937c9615b0",
-                    "licenseID": "6df3228abec2dd0f48e28c4843603c937c9615b0",
-                    "xbl": "2535413006768216",
-                    "discordName": "sackchaserduke",
-                    "name": "isoja",
-                    "ping": 57,
-                    "id": 14,
-                    "avatar": "https://cdn.discordapp.com/avatars/728441602628124773/0ce4f596c8f6ddd9328b63fe46311f7d.png"
-                },
-                "date": "26-09-2024 02:28",
-                "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
-                "name": "epik",
-                "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
-                "message": "sexual harrassment he is humping me against my will",
-                "media": []
+                "identifier": "3389f2301a77bad3a26633096992265908b40148",
+                "name": "Puma Universe",
+                "date": "28-09-2024 22:35",
+                "media": [
+                    {
+                        "select": true,
+                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
+                        "video": true,
+                        "id": "76a1-591f",
+                        "fileDate": "26-09-2024 20:42",
+                        "fileName": "76a1-591f.mp4"
+                    }
+                ],
+                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
+                "message": "Hey I think I found the love of my life and want to know if you have any way or tutorial of how to use the ERP Menu "
             }
         ],
-        "title": "Jayson is bothering me in city",
-        "ticketOwner": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0"
+        "ticketOwner": "3389f2301a77bad3a26633096992265908b40148",
+        "title": "How do I use the ERP Menu In city? "
+    },
+    "f174-5e97-9c61-5bda": {
+        "claimedAdmin": [],
+        "description": "help me ID 2 im down lmao",
+        "solvedPlayer": {
+            "live": "844425388304662",
+            "ip": "96.2.127.244",
+            "id": 13,
+            "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "xbl": "2535463424134422",
+            "name": "nobody",
+            "licenseID": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "ping": 38,
+            "discordID": "1179179820949708810"
+        },
+        "date": "18-10-2024 09:18",
+        "addUser": [],
+        "ticketID": "f174-5e97-9c61-5bda",
+        "status": "closed",
+        "ticketOwnerDetails": {
+            "live": "844425388304662",
+            "ip": "96.2.127.244",
+            "id": 2,
+            "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "xbl": "2535463424134422",
+            "name": "nobody",
+            "licenseID": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+            "ping": 39,
+            "discordID": "1179179820949708810"
+        },
+        "category": {
+            "text": "Question",
+            "type": "question"
+        },
+        "priority": {
+            "type": "critical",
+            "text": "Critical",
+            "color": "#F53D6B"
+        },
+        "claimed": false,
+        "messages": [
+            {
+                "media": [],
+                "message": "help me ID 2 im down lmao",
+                "date": "18-10-2024 09:18",
+                "identifier": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+                "name": "nobody"
+            }
+        ],
+        "solved": true,
+        "ticketOwner": "b7569caa02fc0bd25c4b7eab76c7855430bc8b27",
+        "title": "help me plz"
+    },
+    "fec0-c146-26fb-7abc": {
+        "claimedAdmin": [],
+        "priority": {
+            "type": "important",
+            "text": "Important",
+            "color": "#FFA500"
+        },
+        "date": "23-10-2024 18:08",
+        "addUser": [],
+        "ticketID": "fec0-c146-26fb-7abc",
+        "solved": false,
+        "ticketOwnerDetails": {
+            "live": "1055518630913957",
+            "ip": "199.27.253.183",
+            "id": 15,
+            "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
+            "xbl": "2535434452827181",
+            "name": "bugs",
+            "licenseID": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
+            "ping": 13,
+            "discordID": "688523221334884499"
+        },
+        "category": {
+            "text": "Player Report",
+            "type": "player"
+        },
+        "status": "resolving",
+        "claimed": false,
+        "description": "test test test test test ",
+        "messages": [
+            {
+                "media": [],
+                "name": "bugs",
+                "date": "23-10-2024 18:08",
+                "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
+                "message": "test test test test test ",
+                "player": {
+                    "live": "1055518630913957",
+                    "ip": "199.27.253.183",
+                    "id": 15,
+                    "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
+                    "xbl": "2535434452827181",
+                    "name": "bugs",
+                    "licenseID": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
+                    "ping": 25,
+                    "discordID": "688523221334884499"
+                }
+            },
+            {
+                "media": [],
+                "message": "hi",
+                "date": "23-10-2024 18:11",
+                "identifier": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
+                "name": "bugs"
+            }
+        ],
+        "ticketOwner": "ef0c495a4f393db9e914dd88dd737e4225e7a935",
+        "title": "test test test test "
+    },
+    "7ffb-c814-f503-2be7": {
+        "claimedAdmin": [],
+        "priority": {
+            "type": "normal",
+            "text": "Normal",
+            "color": "#4CAF50"
+        },
+        "date": "23-10-2024 14:43",
+        "addUser": [],
+        "ticketID": "7ffb-c814-f503-2be7",
+        "status": "resolving",
+        "ticketOwnerDetails": {
+            "live": "844426547600647",
+            "identifier": "cc1f418776f0840b0dca24d4b4b75df6c969ad37",
+            "id": 12,
+            "name": "GHOSTASSASIN420",
+            "licenseID": "cc1f418776f0840b0dca24d4b4b75df6c969ad37",
+            "ping": 88,
+            "ip": "172.59.1.252",
+            "discordID": "646608901122293778"
+        },
+        "category": {
+            "text": "Question",
+            "type": "question"
+        },
+        "description": "NEED HELP PLZ\nIM SAD\nI HAVE GENERAL QUESTIONS \n",
+        "claimed": false,
+        "solved": false,
+        "messages": [
+            {
+                "media": [],
+                "message": "NEED HELP PLZ\nIM SAD\nI HAVE GENERAL QUESTIONS \n",
+                "date": "23-10-2024 14:43",
+                "identifier": "cc1f418776f0840b0dca24d4b4b75df6c969ad37",
+                "name": "GHOSTASSASIN420"
+            }
+        ],
+        "ticketOwner": "cc1f418776f0840b0dca24d4b4b75df6c969ad37",
+        "title": "NEED HELP PLZ"
+    },
+    "b0af-a724-c12d-2e09": {
+        "claimedAdmin": [],
+        "priority": {
+            "type": "critical",
+            "text": "Critical",
+            "color": "#F53D6B"
+        },
+        "date": "26-09-2024 02:28",
+        "addUser": [],
+        "ticketID": "b0af-a724-c12d-2e09",
+        "status": "resolving",
+        "ticketOwnerDetails": {
+            "live": "1055519471993987",
+            "ip": "98.97.58.201",
+            "licenseID": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+            "discordName": "llepikll",
+            "ping": 110,
+            "name": "epik",
+            "id": 13,
+            "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+            "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
+            "discordID": "967626401375211530"
+        },
+        "category": {
+            "text": "Player Report",
+            "type": "player"
+        },
+        "description": "sexual harrassment he is humping me against my will",
+        "claimed": false,
+        "solved": false,
+        "messages": [
+            {
+                "identifier": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+                "media": [],
+                "name": "epik",
+                "date": "26-09-2024 02:28",
+                "message": "sexual harrassment he is humping me against my will",
+                "avatar": "https://cdn.discordapp.com/avatars/967626401375211530/0305aac6771ccb8d97ff710adf81747e.png",
+                "player": {
+                    "live": "1055519895215531",
+                    "ip": "73.211.165.179",
+                    "licenseID": "6df3228abec2dd0f48e28c4843603c937c9615b0",
+                    "discordName": "sackchaserduke",
+                    "identifier": "6df3228abec2dd0f48e28c4843603c937c9615b0",
+                    "xbl": "2535413006768216",
+                    "name": "isoja",
+                    "id": 14,
+                    "ping": 57,
+                    "avatar": "https://cdn.discordapp.com/avatars/728441602628124773/0ce4f596c8f6ddd9328b63fe46311f7d.png",
+                    "discordID": "728441602628124773"
+                }
+            }
+        ],
+        "ticketOwner": "f4d5085d9cfd9c8366a0466cc5f42ef3ee7461f0",
+        "title": "Jayson is bothering me in city"
+    },
+    "ee05-00db-86b0-f992": {
+        "claimedAdmin": [],
+        "priority": {
+            "type": "critical",
+            "text": "Critical",
+            "color": "#F53D6B"
+        },
+        "date": "28-09-2024 22:37",
+        "addUser": [],
+        "ticketID": "ee05-00db-86b0-f992",
+        "status": "resolving",
+        "ticketOwnerDetails": {
+            "live": "985155883192101",
+            "ip": "71.201.93.81",
+            "licenseID": "3389f2301a77bad3a26633096992265908b40148",
+            "discordName": "pumauniverse",
+            "identifier": "3389f2301a77bad3a26633096992265908b40148",
+            "xbl": "2535414680691290",
+            "name": "Puma Universe",
+            "id": 1,
+            "ping": 42,
+            "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
+            "discordID": "507683090714329089"
+        },
+        "category": {
+            "text": "Player Report",
+            "type": "player"
+        },
+        "description": "She tried to walk in on me and my Girl Erping and then upped the FYE on me what the hell",
+        "claimed": false,
+        "solved": false,
+        "messages": [
+            {
+                "identifier": "3389f2301a77bad3a26633096992265908b40148",
+                "name": "Puma Universe",
+                "date": "28-09-2024 22:37",
+                "media": [
+                    {
+                        "select": true,
+                        "fileURL": "https://r2.fivemanage.com/video/eUV8pxRlrOJW",
+                        "video": true,
+                        "id": "76a1-591f",
+                        "fileDate": "26-09-2024 20:42",
+                        "fileName": "76a1-591f.mp4"
+                    }
+                ],
+                "avatar": "https://cdn.discordapp.com/avatars/507683090714329089/aee121337ae841bcbb18d666cc8621ea.png",
+                "message": "She tried to walk in on me and my Girl Erping and then upped the FYE on me what the hell"
+            }
+        ],
+        "ticketOwner": "3389f2301a77bad3a26633096992265908b40148",
+        "title": "Bugs is being a Meanie Poopie Shit Head "
+    },
+    "e609-907a-ae48-005d": {
+        "claimedAdmin": [
+            {
+                "identifier": "c9109e161d294aa63f3e5d28ec27cab3d7e08466",
+                "id": 3,
+                "ping": 150,
+                "name": "Nasty",
+                "admin": true,
+                "licenseID": "c9109e161d294aa63f3e5d28ec27cab3d7e08466",
+                "ip": "131.117.155.92",
+                "discordID": "366666266049773568"
+            }
+        ],
+        "priority": {
+            "type": "normal",
+            "text": "Normal",
+            "color": "#4CAF50"
+        },
+        "date": "18-10-2024 10:27",
+        "addUser": [],
+        "ticketID": "e609-907a-ae48-005d",
+        "status": "open",
+        "ticketOwnerDetails": {
+            "live": "914801514514971",
+            "ip": "69.251.65.13",
+            "id": 3,
+            "identifier": "8ebd419ef166059265f98ff7b667d42425bff2ce",
+            "xbl": "2535441757490670",
+            "name": "jrepo",
+            "licenseID": "8ebd419ef166059265f98ff7b667d42425bff2ce",
+            "ping": 47,
+            "discordID": "1161529762196488194"
+        },
+        "category": {
+            "text": "Question",
+            "type": "question"
+        },
+        "description": "help fishing cant find please",
+        "claimed": true,
+        "solved": false,
+        "messages": [
+            {
+                "media": [],
+                "message": "help fishing cant find please",
+                "date": "18-10-2024 10:27",
+                "identifier": "8ebd419ef166059265f98ff7b667d42425bff2ce",
+                "name": "jrepo"
+            }
+        ],
+        "ticketOwner": "8ebd419ef166059265f98ff7b667d42425bff2ce",
+        "title": "where do i go buy fishing supplies and where can i fish?"
     }
 }
