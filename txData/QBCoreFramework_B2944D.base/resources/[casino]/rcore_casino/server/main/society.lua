@@ -34,7 +34,7 @@ SocietyBanking = {
     },
     [Society.QbManagement] = {
         AddMoney = function(money)
-            exports["qb-management"]:addMoney(Config.SocietyName, money)
+            exports["qb-management"]:AddMoney(Config.SocietyName, money)
         end,
         RemoveMoney = function(money)
             exports["qb-management"]:removeMoney(Config.SocietyName, money)

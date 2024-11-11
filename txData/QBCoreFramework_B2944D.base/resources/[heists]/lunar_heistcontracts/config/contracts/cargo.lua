@@ -128,7 +128,7 @@ Config.contracts.cargo = {
                 unique = true, -- Player cant loot the same the weapons from one loot spot
                 ---@type { name: string, count: integer | { min: integer, max: integer }, metadata: any? }[]
                 items = {
-                    { name = 'weapon_carbinerifle', count = 1 },
+                    { name = 'weapon_appistol', count = 1 },
                     { name = 'weapon_assaultrifle', count = 1 },
                     { name = 'weapon_smg', count = 1 },
                     { name = 'weapon_microsmg', count = { min = 1, max = 2 } },
