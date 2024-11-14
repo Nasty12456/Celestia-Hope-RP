@@ -2698,6 +2698,60 @@ AC = {
             },
         },
     }, 
+    [22] = {
+        ["name"] = "TOOLSHOP",
+        ["category"] = "All In One",
+        ["job"] = "",
+        ["categoryList"] = {
+            ["General"] = "Diverse items for various needs.",
+            ["Knifes"] = "Assortment of sharp cutting tools.",
+            ---["Weapons"] = "Lethal tools for self-defense.",
+        },
+        ["itemList"] = {
+            ["General"] = { --["General Items"] --This category will be active when the page is first opened. This place should not be empty.
+            [1] = {
+                ["name"] = "Armor",
+                ["price"] = 25000,
+                ["amount"] = 1,
+                ["type"] = "weapon",
+                ["image"] = "armor.png",
+                ["itemname"] = "armor",
+            },
+            [2] = {
+                    ["name"] = "Handcuffs",
+                    ["price"] = 20000,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "handcuffs.png",
+                    ["itemname"] = "handcuffs",
+                },
+            [3] = {
+                    ["name"] = "weapon_crowbar",
+                    ["price"] = 2000,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "weapon_crowbar.png",
+                    ["itemname"] = "weapon_crowbar",
+                },
+            [4] = {
+                    ["name"] = "Radio",
+                    ["price"] = 160,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "radio.png",
+                    ["itemname"] = "radio",
+                },
+            [5] = {
+                    ["name"] = "Radioscanner",
+                    ["price"] = 110,
+                    ["amount"] = 1,
+                    ["type"] = "weapon",
+                    ["image"] = "radioscanner.png",
+                    ["itemname"] = "radioscanner",
+                },
+            },
+        },
+    },
 }
 
 
@@ -2723,6 +2777,7 @@ Pos = {
     [19] = vector3(1134.2, -982.91, 46.42),
     [20] = vector3(1134.2, -982.91, 46.42),
     [21] = vector3(46.62, -1749.7, 29.63),
+    [22] = vector3(-679.54, 5839.17, 17.33),
 }
 
 function AC.Error(cb)
